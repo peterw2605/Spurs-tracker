@@ -72,7 +72,32 @@ tabloids repeating each other is not twenty confirmations.
 **Recency** — evidence decays with a nine-day half-life, floored at 0.2, so old
 links fade without being deleted.
 
-Three deliberate guards against the noise that dominates transfer coverage:
+### Completed deals
+
+A transfer that has already happened is an outcome, not a probability, so it
+moves to the **Done** tab and stops competing with live rumours.
+
+A deal counts as done when **one tier-1 outlet** reports it complete, or **two
+independent outlets** do. One mid-tier headline is deliberately not enough:
+completion wording gets attached to the wrong player often enough — *"Tottenham's
+new signing: Pedro Porro was the reason the deal was completed"* is about
+somebody else's transfer — that a single source can't carry the claim. Those show
+as *"Reported complete (1 source)"* and stay on the live board, scored at
+imminent-level weight rather than confirmed, until something corroborates them.
+
+Completion detection tolerates the fee sitting inside the phrase, which is how
+these headlines are actually written: `complete £50m deal`, `seal £100m move
+for`, `seal signing of X for club record £46m`. Matching `complete\s+deal`
+misses all three. A speculation guard prevents `tipped to sign` from reading as
+a completed signing, while still allowing `complete £50m deal to sign X`.
+
+Once done, a deal **stays** done — recorded in `docs/data/done.json` so fading
+coverage can't walk a finished signing back down the board. Entries are
+re-validated against the current bar on every build, so tightening the rule
+retroactively evicts anything an earlier, looser build wrote, and they retire
+after 21 days.
+
+Three further guards against the noise that dominates transfer coverage:
 
 - **One article per outlet.** Only each outlet's strongest headline counts, so a
   busy transfer desk republishing all day cannot out-vote a single tier-1 report.
@@ -110,6 +135,7 @@ data/squad.json        editable roster — improves direction calls
 docs/                  the published site (GitHub Pages serves this folder)
 docs/data/rumours.json current board, committed each run
 docs/data/history.json probability history, drives the trend arrows
+docs/data/done.json     completed-deal ledger, keeps done deals done
 ```
 
 ## Running locally
@@ -153,6 +179,11 @@ Useful environment variables:
 - Player names are extracted from headlines with heuristics, so an unusual name
   or a headline typo can produce an odd entry. The evidence links make these easy
   to spot, and the Claude review layer catches most of them.
+- The heuristics can't tell who a sentence is *about*. When a headline quotes one
+  player about another's transfer, the completion wording may attach to the
+  quoted name — the confirmation bar stops that reaching the Done tab, but it can
+  still inflate a live rumour. Discarding these is the clearest thing the Claude
+  review layer adds.
 - Feeds occasionally return 403 to automated clients. The build treats a failed
   feed as non-fatal and the site reports which sources were unavailable.
 - Trend arrows need at least two runs of history before they mean anything.
