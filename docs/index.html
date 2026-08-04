@@ -31,9 +31,10 @@
 
     <nav class="controls" aria-label="Filters">
       <div class="tabs" role="tablist">
-        <button class="tab is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="tab is-active" data-filter="live" role="tab" aria-selected="true">Live</button>
         <button class="tab" data-filter="in" role="tab" aria-selected="false">Arrivals</button>
         <button class="tab" data-filter="out" role="tab" aria-selected="false">Exits</button>
+        <button class="tab" data-filter="done" role="tab" aria-selected="false">Done</button>
       </div>
       <label class="search">
         <span class="visually-hidden">Search player or club</span>
@@ -86,6 +87,16 @@
             Only the strongest headline from each outlet counts, and headlines from
             multi-club live blogs are treated as a mention only, because a phrase like
             “done deal” in them usually belongs to another club’s transfer.
+          </p>
+          <p>
+            <strong>Completed deals</strong> move to the Done tab rather than sitting on
+            the board as a probability. A deal counts as done when one tier&nbsp;1 outlet
+            reports it complete, or two independent outlets do. One mid-tier headline is
+            not enough — completion wording gets attached to the wrong player often
+            enough that a single source can’t carry it, so those read “Reported complete
+            (1 source)” and stay on the live board until something corroborates them.
+            Once a deal is done it stays done, so fading coverage can’t walk a finished
+            signing back down.
           </p>
           <p class="caveat">
             These numbers come from press coverage, not from inside the club. Treat them

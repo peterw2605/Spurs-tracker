@@ -21,6 +21,42 @@
 
 export const PRIOR_LOGIT = -1.75; // ~14.8% for a single unremarkable mention
 
+// Speculative markers. A headline carrying one of these is reporting a
+// possibility, not an outcome, so it can never reach the `confirmed` stage no
+// matter which completion verb it also contains ("Tottenham tipped to sign X").
+//
+// Kept deliberately narrow: phrases like "to sign", "move for", "bid" and
+// "talks" all appear inside genuinely completed-deal headlines ("Brighton
+// complete £50m deal to sign Tottenham defender"), so they are not listed here.
+const SPECULATION_GUARD = [
+  /\btipped\b/i,
+  /\bset\s+to\b/i,
+  /\bexpected\s+to\b/i,
+  /\b(?:could|would|might|may)\b/i,
+  /\breportedly\b/i,
+  /\brumou?rs?\b/i,
+  /\blinked\s+with\b/i,
+  /\binterested\s+in\b/i,
+  /\b(?:eyeing|targeting|chasing|pursuing|monitoring|scouting|weighing|considering)\b/i,
+  /\bwants?\s+to\b/i,
+  /\bhop(?:e|es|ing)\s+to\b/i,
+  /\bin\s+talks\b/i,
+  /\bclosing\s+in\b/i,
+  /\bon\s+the\s+verge\b/i,
+  /\bpoised\s+to\b/i,
+  /\burged\s+to\b/i,
+  /\b(?:shortlist|wishlist)\b/i,
+  /\btouted\b/i,
+  /\bplot(?:s|ting)?\b/i,
+  /\b(?:edging|inching|moving)\s+closer\b/i,
+  /\bcloser\s+to\b/i,
+  /\bnearing\b/i,
+];
+
+export function isSpeculative(headline) {
+  return SPECULATION_GUARD.some((re) => re.test(headline));
+}
+
 // Language stages, strongest first. The first pattern that matches an article
 // sets its stage, so order matters: "medical booked" should beat "interested in"
 // when a headline contains both.
@@ -29,19 +65,33 @@ export const STAGES = [
     id: 'confirmed',
     label: 'Done / confirmed',
     value: 3.2,
+    // Every pattern here tolerates an intervening fee or descriptor, because
+    // that is how completed deals are actually written: "complete £50m deal",
+    // "seal £100m move for", "seal signing of X for club record £46m". Matching
+    // `complete\s+deal` misses all of them.
+    guardedBySpeculation: true,
     patterns: [
-      /\bhere we go\b/i,
-      /\b(?:done deal|deal done|deal is done)\b/i,
-      /\b(?:completed?|complete)\s+(?:the\s+)?(?:signing|transfer|move|deal)\b/i,
-      /\bhave\s+(?:signed|completed)\b/i,
-      /\b(?:officially|official)\s+(?:sign|signed|announce|announced|confirmed|unveiled)\b/i,
-      /\b(?:announce|announces|announced)\s+(?:the\s+)?(?:signing|arrival|departure|transfer)\b/i,
-      /\b(?:sign|signs|joins|completes)\s+(?:for|on)\s+(?:a\s+)?(?:\S+\s+)?(?:deal|contract|loan)\b/i,
-      /\bunveiled\b/i,
+      /\b(?:done deal|deal done|deal is done|here we go)\b/i,
+      // seal / complete / finalise ... signing|transfer|move|deal|switch
+      /\b(?:seal|seals|sealed|sealing|complete|completes|completed|completing|wrap(?:s|ped)?\s+up|finalis\w+|finaliz\w+)\b[^.!?]{0,45}?\b(?:signing|transfer|move|deal|switch|arrival|departure|capture)\b/i,
+      // ... deal|move|transfer is complete|confirmed|official|done
+      /\b(?:signing|transfer|move|deal)\b[^.!?]{0,30}?\b(?:complete|completed|confirmed|official|finalised|finalized|is\s+done)\b/i,
+      // "signs for Brighton", "joined with", and "joins Brighton from Tottenham"
+      /\b(?:signs?|signed|joins?|joined)\s+(?:for|with)\s+\p{Lu}/u,
+      /\b(?:joins|joined)\s+\p{Lu}[\p{L}'’-]+(?:\s+\p{Lu}[\p{L}'’-]+)?\s+(?:from|on\s+a)\b/u,
+      // present-tense club action: "Tottenham sign Italy midfielder"
+      /\b(?:tottenham|spurs)\s+(?:sign|signs)\s+(?:\p{Lu}|the\b|\d|£|new\b|a\s+\p{Lu})/u,
+      /\p{Lu}[\p{L}'’-]+\s+(?:sign|signs)\s+(?:\p{Lu}[\p{L}'’-]+\s+)?(?:defender|midfielder|forward|striker|winger|goalkeeper|keeper)\b/u,
+      // "have sold", "has signed", "have completed"
+      /\b(?:has|have|had)\s+(?:sold|signed|completed|joined|left)\b/i,
+      /\bsold\b/i,
+      // Announcements and unveilings. The negative lookahead matters: "club
+      // chief confirms transfer talks" confirms the talks, not the transfer.
+      /\b(?:announce|announces|announced|unveil|unveils|unveiled|confirm|confirms|confirmed)\b[^.!?]{0,30}?\b(?:signing|arrival|transfer|deal|capture|departure)\b(?!\s+(?:talks|interest|negotiations|rumou?rs|saga|target))/i,
+      /\b(?:officially|official)\s+(?:sign|signed|announce|announced|confirmed|unveiled|joined)\b/i,
       /\bmedical\s+(?:complete|completed|passed)\b/i,
-      /\bsealed\b/i,
-      /\bconfirmed\s+signing\b/i,
-      /\bshirt\s+number\s+(?:confirmed|revealed)\b/i,
+      /\bshirt\s+number\s+(?:confirmed|revealed|handed)\b/i,
+      /\bfirst\s+(?:words|interview)\s+(?:as|after)\b/i,
     ],
   },
   {
@@ -156,7 +206,11 @@ export function classifyArticle(headline, { roundup = false } = {}) {
     return { stage: { id: 'roundup', label: 'Named in a roundup', value: 0.05 }, cooler: null };
   }
   let stage = { id: 'mention', label: 'Mentioned only', value: 0.05 };
+  const speculative = isSpeculative(headline);
   for (const candidate of STAGES) {
+    // "Tottenham tipped to sign X" contains a completion verb but reports a
+    // possibility, so guarded stages are skipped when speculation is present.
+    if (candidate.guardedBySpeculation && speculative) continue;
     if (candidate.patterns.some((re) => re.test(headline))) {
       stage = { id: candidate.id, label: candidate.label, value: candidate.value };
       break;
@@ -196,13 +250,42 @@ function sigmoid(x) {
  * @returns {{probability:number, logit:number, evidence:Array, breakdown:Object, stage:Object}}
  */
 export function scoreRumour(articles, now = Date.now()) {
-  const classified = articles.map((article) => {
-    const { stage, cooler } = classifyArticle(article.headline, { roundup: article.roundup });
+  const raw = articles.map((article) => ({
+    article,
+    ...classifyArticle(article.headline, { roundup: article.roundup }),
+  }));
+
+  // Decide whether the deal is actually done before scoring, because the answer
+  // changes how much a completion headline is worth. The bar is one tier-1
+  // outlet, or two independent outlets of any tier: completion verbs get
+  // attached to the wrong player often enough ("Tottenham's new signing: Pedro
+  // Porro was the reason the deal was completed") that one mid-tier headline
+  // cannot carry the claim.
+  const confirmedOutlets = new Map();
+  for (const { article, stage } of raw) {
+    if (stage.id !== 'confirmed') continue;
+    const key = (article.outlet || 'unknown').toLowerCase();
+    const tier = Math.min(confirmedOutlets.get(key) ?? 9, article.tier);
+    confirmedOutlets.set(key, tier);
+  }
+  const confirmedTiers = [...confirmedOutlets.values()];
+  const done = confirmedTiers.includes(1) || confirmedTiers.length >= 2;
+
+  // An uncorroborated completion report is downgraded in weight as well as in
+  // label — otherwise one misattributed headline alone reads as a coin flip.
+  const UNVERIFIED_STAGE = {
+    id: 'confirmed_unverified',
+    label: 'Reported complete (1 source)',
+    value: 1.9,
+  };
+
+  const classified = raw.map(({ article, stage, cooler }) => {
+    const effectiveStage = !done && stage.id === 'confirmed' ? UNVERIFIED_STAGE : stage;
     const recency = recencyFactor(article.publishedAt, now);
-    const strength = stage.value + (cooler ? cooler.value : 0);
+    const strength = effectiveStage.value + (cooler ? cooler.value : 0);
     return {
       ...article,
-      stage,
+      stage: effectiveStage,
       cooler,
       recency: Number(recency.toFixed(3)),
       // Raw per-article strength before per-outlet dedupe and damping.
@@ -254,9 +337,11 @@ export function scoreRumour(articles, now = Date.now()) {
   const logit = PRIOR_LOGIT + evidenceSum + corroboration;
   let probability = sigmoid(logit) * 100;
 
-  // A completed transfer reported by a credible outlet is not a 70% shout.
-  const confirmed = positives.find((a) => a.stage.id === 'confirmed' && a.tier <= 2);
-  if (confirmed) probability = Math.max(probability, 93);
+  // A transfer that has actually happened is not a probability any more. Treat
+  // it as done when a reliable outlet reports completion, or when two outlets of
+  // any tier agree on it.
+  // A transfer that has actually happened is not a probability any more.
+  if (done) probability = 98;
 
   probability = Math.min(98, Math.max(2, probability));
 
@@ -266,6 +351,21 @@ export function scoreRumour(articles, now = Date.now()) {
   return {
     probability: Math.round(probability),
     logit: Number(logit.toFixed(4)),
+    done,
+    confirmedBy: done
+      ? raw
+        .filter((r) => r.stage.id === 'confirmed')
+        .map((r) => r.article)
+        .sort((a, b) => a.tier - b.tier)
+        .slice(0, 3)
+        .map((a) => ({
+          outlet: a.outlet,
+          tier: a.tier,
+          headline: a.headline,
+          url: a.url,
+          publishedAt: a.publishedAt,
+        }))
+      : [],
     stage: strongest,
     cooler: activeCooler,
     evidence: evidence.sort((a, b) => {
@@ -280,7 +380,7 @@ export function scoreRumour(articles, now = Date.now()) {
       distinctOutlets: distinct.length,
       tier1Outlets: distinct.filter((a) => a.tier === 1).length,
       totalArticles: articles.length,
-      confirmedFloorApplied: Boolean(confirmed),
+      confirmedFloorApplied: done,
     },
   };
 }

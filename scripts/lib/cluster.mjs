@@ -7,9 +7,10 @@ import {
   mentionsSpurs,
   otherClubs,
   normaliseName,
+  isKnownPlayer,
 } from './entities.mjs';
 import { outletTier, tierWeight } from './sources.mjs';
-import { scoreRumour } from './score.mjs';
+import { scoreRumour, classifyArticle } from './score.mjs';
 
 // A headline has to be about a transfer for us to care. Match reports and
 // injury news mention players constantly and would otherwise flood the board.
@@ -61,9 +62,14 @@ function buildAliasMap(counts) {
 }
 
 export function buildRumours(articles, { now = Date.now() } = {}) {
-  const relevant = articles.filter(
-    (article) => mentionsSpurs(`${article.headline} ${article.outlet || ''}`) || article.spursFeed,
-  ).filter((article) => TRANSFER_CONTEXT.test(article.headline));
+  const relevant = articles.filter((article) => {
+    if (!TRANSFER_CONTEXT.test(article.headline)) return false;
+    // Requiring the club to be named costs us the occasional "Why we sold X"
+    // headline on a club feed, but those feeds also carry general transfer
+    // roundups and — observed in practice — horse racing. Naming the club is a
+    // cheap, reliable filter.
+    return mentionsSpurs(`${article.headline} ${article.outlet || ''}`);
+  });
 
   // Pass 1 — collect people and learn who is already at the club.
   const squadHints = new Set();
@@ -143,6 +149,21 @@ export function buildRumours(articles, { now = Date.now() } = {}) {
     const bestTier = Math.min(...bucket.articles.map((a) => a.tier));
     if (distinctOutlets < 2 && bestTier >= 4) continue;
 
+    // An unfamiliar name carried by one aggregator headline is more often a
+    // misparse than a player. But a reliable outlet naming a player once is
+    // usually right — that is how women's-team signings, academy moves and loans
+    // get reported — so this only applies below tier 3, and never to a headline
+    // reporting a completed deal. Syndication means two outlets can carry one
+    // identical headline, so count distinct headlines rather than articles.
+    const known = isKnownPlayer(bucket.playerKey);
+    const distinctHeadlines = new Set(
+      bucket.articles.map((a) => a.headline.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim()),
+    ).size;
+    const hasCompletion = bucket.articles.some(
+      (a) => !a.roundup && classifyArticle(a.headline).stage.id === 'confirmed',
+    );
+    if (!known && distinctHeadlines < 2 && bestTier >= 3 && !hasCompletion) continue;
+
     const scored = scoreRumour(bucket.articles, now);
     const timestamps = bucket.articles
       .map((a) => (a.publishedAt ? new Date(a.publishedAt).getTime() : null))
@@ -159,6 +180,8 @@ export function buildRumours(articles, { now = Date.now() } = {}) {
         .map(([club]) => club),
       probability: scored.probability,
       logit: scored.logit,
+      done: scored.done,
+      confirmedBy: scored.confirmedBy,
       stage: scored.stage,
       cooler: scored.cooler,
       breakdown: scored.breakdown,

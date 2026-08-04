@@ -3,7 +3,7 @@
 
 const state = {
   data: null,
-  filter: 'all',
+  filter: 'live',
   query: '',
   sort: 'probability',
 };
@@ -92,7 +92,13 @@ function mathsSummary(rumour) {
     `strongest claim: <strong>${escapeHtml(rumour.stage.label)}</strong>`,
   ];
   if (rumour.cooler) parts.push(`pushback: <strong>${escapeHtml(rumour.cooler.label)}</strong>`);
-  if (b.confirmedFloorApplied) parts.push('<strong>reported as complete</strong>');
+  if (rumour.done) {
+    const who = (rumour.confirmedBy ?? []).map((s) => s.outlet).join(', ');
+    parts.push(`<strong>completed</strong>${who ? ` — reported by ${escapeHtml(who)}` : ''}`);
+    if (rumour.doneCarriedForward) {
+      parts.push('held from an earlier confirmation as coverage faded');
+    }
+  }
 
   let note = '';
   if (rumour.llm?.note) {
@@ -128,27 +134,34 @@ function card(rumour) {
   const directionChip = rumour.direction === 'in'
     ? '<span class="chip chip-in">ARRIVAL</span>'
     : '<span class="chip chip-out">EXIT</span>';
-  const newChip = rumour.isNew ? '<span class="chip chip-new">NEW</span>' : '';
+  const newChip = rumour.isNew && !rumour.done ? '<span class="chip chip-new">NEW</span>' : '';
   const coolChip = rumour.cooler ? '<span class="chip chip-cool">PUSHBACK</span>' : '';
+  const doneChip = rumour.done ? '<span class="chip chip-done">DONE</span>' : '';
   const clubs = rumour.clubs.length
     ? `<span>${escapeHtml(rumour.clubs.join(' · '))}</span>`
     : '';
 
-  return `<details class="rumour" data-id="${escapeHtml(rumour.id)}">
-    <summary>
-      <span class="gauge ${probabilityClass(rumour.probability)}">
+  // A completed deal shows a tick rather than a percentage — putting "98%" on a
+  // transfer that has already happened invites the wrong reading.
+  const gauge = rumour.done
+    ? '<span class="gauge is-done"><span class="value">✓</span><span class="unit">DONE</span></span>'
+    : `<span class="gauge ${probabilityClass(rumour.probability)}">
         <span class="value">${rumour.probability}</span><span class="unit">PCT</span>
-      </span>
+      </span>`;
+
+  return `<details class="rumour${rumour.done ? ' is-done' : ''}" data-id="${escapeHtml(rumour.id)}">
+    <summary>
+      ${gauge}
       <span class="headline-block">
         <span class="player">${escapeHtml(rumour.player)}</span>
         <span class="tagline">
-          ${directionChip}${newChip}${coolChip}
+          ${directionChip}${doneChip}${newChip}${coolChip}
           ${clubs}
-          <span>${escapeHtml(rumour.stage.label)}</span>
-          <span>${relativeTime(rumour.latestAt)}</span>
+          ${rumour.done ? '' : `<span>${escapeHtml(rumour.stage.label)}</span>`}
+          <span>${relativeTime(rumour.done ? rumour.confirmedAt : rumour.latestAt)}</span>
         </span>
       </span>
-      ${trendBlock(rumour)}
+      ${rumour.done ? '' : trendBlock(rumour)}
     </summary>
     <div class="detail">
       ${mathsSummary(rumour)}
@@ -161,7 +174,10 @@ function visibleRumours() {
   const { data, filter, query, sort } = state;
   let list = data.rumours;
 
-  if (filter !== 'all') list = list.filter((rumour) => rumour.direction === filter);
+  // Completed deals live in their own tab — they are outcomes, not open questions.
+  if (filter === 'done') list = list.filter((rumour) => rumour.done);
+  else if (filter === 'live') list = list.filter((rumour) => !rumour.done);
+  else list = list.filter((rumour) => !rumour.done && rumour.direction === filter);
 
   if (query) {
     const needle = query.toLowerCase();
@@ -200,9 +216,10 @@ function renderHeader() {
   subtitle.textContent = `Updated ${relativeTime(generatedAt)} · ${model.type}`;
 
   const cells = [
-    ['Rumours', counts.rumours],
+    ['Live', counts.rumours],
     ['Arrivals', counts.incoming],
     ['Exits', counts.outgoing],
+    ['Done', counts.done ?? 0],
     ['At 65%+', counts.likely],
     ['Headlines', counts.articles],
   ];

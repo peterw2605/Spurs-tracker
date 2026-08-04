@@ -16,12 +16,46 @@ const dataDir = join(here, '..', '..', 'data');
 
 const roster = JSON.parse(readFileSync(join(dataDir, 'squad.json'), 'utf8'));
 
+// Lowercase words that join a surname rather than starting a new name. Declared
+// up here because the ignore-surname index below needs it at module load.
+const PARTICLE_WORDS = new Set([
+  'de', 'da', 'do', 'dos', 'das', 'del', 'della', 'di', 'du', 'van', 'von', 'der',
+  'den', 'ten', 'ter', 'la', 'le', 'el', 'al', 'bin', 'ibn', 'mac', 'mc', "o'", 'st',
+]);
+
 export const SQUAD = new Set(roster.squad.map(normaliseName));
 export const KNOWN_TARGETS = new Set(roster.knownTargets.map(normaliseName));
 export const IGNORE_PEOPLE = new Set(
   [...roster.ignorePeople, ...roster.staff].map(normaliseName),
 );
 const MONONYMS = new Set(roster.mononyms.map(normaliseName));
+
+// Surnames of people we never treat as transfer subjects, so a misspelled or
+// truncated first name ("Robert De Zerbi") is still recognised and skipped.
+const IGNORE_SURNAMES = new Set(
+  [...roster.ignorePeople, ...roster.staff]
+    .map(normaliseName)
+    .map((name) => {
+      const parts = name.split(' ');
+      // Keep the particle with the surname: "de zerbi", not "zerbi".
+      if (parts.length >= 3 && PARTICLE_WORDS.has(parts.at(-2))) return parts.slice(-2).join(' ');
+      return parts.at(-1);
+    })
+    .filter((surname) => surname && surname.length > 3),
+);
+
+export function isIgnoredPerson(key) {
+  if (IGNORE_PEOPLE.has(key)) return true;
+  const parts = key.split(' ');
+  if (parts.length < 2) return false;
+  const tail = PARTICLE_WORDS.has(parts.at(-2)) ? parts.slice(-2).join(' ') : parts.at(-1);
+  return IGNORE_SURNAMES.has(tail);
+}
+
+/** Names we already recognise as footballers, so single-source reports are trusted. */
+export function isKnownPlayer(key) {
+  return SQUAD.has(key) || KNOWN_TARGETS.has(key) || MONONYMS.has(key);
+}
 
 export function normaliseName(name) {
   return name
@@ -223,6 +257,10 @@ const STOP_WORDS = new Set([
   'admission', 'update', 'talk', 'talking', 'quotes', 'comment', 'comments',
   'expensive', 'cheap', 'huge', 'massive', 'shock', 'stunning', 'perfect', 'ideal',
   'positive', 'negative', 'green', 'light', 'step', 'stepped', 'move', 'switch',
+  'free', 'stream', 'live', 'watch', 'show', 'podcast', 'video', 'gallery',
+  'briefing', 'bulletin', 'column', 'blog', 'notebook', 'mailbox', 'mailbag',
+  'every', 'each', 'told', 'reveal', 'reveals', 'explains', 'explain', 'drops',
+  'tipped', 'urged', 'warned', 'linked', 'eyed', 'handed', 'given', 'faces',
   // football nouns
   'striker', 'strikers', 'forward', 'forwards', 'winger', 'wingers', 'midfielder',
   'midfielders', 'defender', 'defenders', 'goalkeeper', 'goalkeepers', 'keeper', 'star',
@@ -267,10 +305,7 @@ const STOP_WORDS = new Set([
   'madrid', 'milan', 'munich', 'lisbon', 'amsterdam', 'turkey', 'greece',
 ]);
 
-const PARTICLES = new Set([
-  'de', 'da', 'do', 'dos', 'das', 'del', 'della', 'di', 'du', 'van', 'von', 'der',
-  'den', 'ten', 'ter', 'la', 'le', 'el', 'al', 'bin', 'ibn', 'mac', 'mc', "o'", 'st',
-]);
+const PARTICLES = PARTICLE_WORDS;
 
 const NAME_TOKEN = /^[A-ZÀ-Þ][\p{L}'’\-]*$/u;
 
@@ -285,7 +320,9 @@ function tokenise(headline) {
 }
 
 function isRejectedToken(token) {
-  const key = normaliseName(token);
+  // Strip a trailing possessive first, or "Newcastle's" slips past the club
+  // filter and becomes part of a player name ("Newcastle's Tonali").
+  const key = normaliseName(token).replace(/'s$/, '').replace(/'$/, '');
   return STOP_WORDS.has(key) || CLUB_TOKENS.has(key);
 }
 
@@ -304,7 +341,10 @@ export function extractPeople(headline) {
   };
 
   for (let i = 0; i < tokens.length; i += 1) {
-    const token = tokens[i];
+    // "Archie Gray's" and "Rafael Leao's" are the same players as their
+    // unpossessed forms; keeping the "'s" forks them into separate rumours.
+    const token = tokens[i].replace(/[’']s$/, '').replace(/[’']$/, '');
+    if (!token) { flush(); continue; }
     const lower = normaliseName(token);
 
     if (NAME_TOKEN.test(token) && !isRejectedToken(token)) {
@@ -326,7 +366,7 @@ export function extractPeople(headline) {
     for (const candidate of candidatesFromRun(run)) {
       const key = normaliseName(candidate);
       if (seen.has(key)) continue;
-      if (IGNORE_PEOPLE.has(key)) continue;
+      if (isIgnoredPerson(key)) continue;
       seen.add(key);
       results.push({ name: candidate, key });
     }

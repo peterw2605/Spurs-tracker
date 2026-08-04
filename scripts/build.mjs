@@ -19,6 +19,8 @@ const root = join(here, '..');
 const dataDir = join(root, 'docs', 'data');
 
 const HISTORY_POINTS = 60;
+// How long a completed deal stays on the Done board before it is retired.
+const DONE_RETENTION_DAYS = 21;
 const HISTORY_RETENTION_DAYS = 45;
 const TREND_LOOKBACK_MS = 36 * 60 * 60 * 1000;
 const MAX_AGE_DAYS = Number(process.env.SPURS_MAX_AGE_DAYS || 30);
@@ -113,6 +115,61 @@ function updateHistory(history, rumours, now) {
   return next;
 }
 
+/**
+ * A completed transfer stays completed. Coverage of a done deal dries up within
+ * days, and without this the recency decay would quietly walk a finished signing
+ * back down the board as if it were still in doubt.
+ *
+ * Returns the updated ledger; mutates each rumour's done/probability in place.
+ */
+function applyDoneLedger(ledger, rumours, now) {
+  const next = {};
+  const cutoff = now - DONE_RETENTION_DAYS * 86_400_000;
+
+  // Carry forward entries that are still inside the retention window AND still
+  // clear the current confirmation bar. Re-validating rather than trusting the
+  // file means a tightened rule retroactively evicts entries an earlier, looser
+  // build wrote — otherwise a past false positive is pinned at 98% forever.
+  for (const [id, entry] of Object.entries(ledger)) {
+    if (entry.confirmedAt < cutoff) continue;
+    const sources = entry.confirmedBy ?? [];
+    const stillValid = sources.some((s) => s.tier === 1) || sources.length >= 2;
+    if (stillValid) next[id] = entry;
+    else log(`dropping stale done entry (no longer meets bar): ${entry.player}`);
+  }
+
+  for (const rumour of rumours) {
+    if (rumour.done) {
+      // Date the confirmation from the earliest article that reported it, not
+      // from when this build first noticed. A deal completed three weeks ago
+      // should not read "8m ago" because the ledger is new.
+      const reportedAt = (rumour.confirmedBy ?? [])
+        .map((s) => (s.publishedAt ? new Date(s.publishedAt).getTime() : null))
+        .filter((t) => t !== null && t <= now);
+      const existing = next[rumour.id];
+      next[rumour.id] = {
+        confirmedAt: existing?.confirmedAt
+          ?? (reportedAt.length ? Math.min(...reportedAt) : now),
+        player: rumour.player,
+        direction: rumour.direction,
+        clubs: rumour.clubs,
+        confirmedBy: rumour.confirmedBy,
+      };
+    } else if (next[rumour.id]) {
+      // Previously confirmed, current evidence has faded. Trust the earlier
+      // confirmation rather than the decay.
+      rumour.done = true;
+      rumour.probability = 98;
+      rumour.stage = { id: 'confirmed', label: 'Done / confirmed' };
+      rumour.confirmedBy = next[rumour.id].confirmedBy ?? [];
+      rumour.doneCarriedForward = true;
+    }
+    rumour.confirmedAt = rumour.done ? next[rumour.id].confirmedAt : null;
+  }
+
+  return next;
+}
+
 function attachTrends(rumours, history, now) {
   for (const rumour of rumours) {
     const series = history[rumour.id] ?? [];
@@ -146,22 +203,30 @@ async function main() {
 
   mkdirSync(dataDir, { recursive: true });
 
+  // Sticky "done" is applied before history so a carried-forward confirmation
+  // is what gets recorded, not the decayed score.
+  const donePath = join(dataDir, 'done.json');
+  const doneLedger = applyDoneLedger(loadJson(donePath, {}), rumours, now);
+
   const historyPath = join(dataDir, 'history.json');
   const history = updateHistory(loadJson(historyPath, {}), rumours, now);
   attachTrends(rumours, history, now);
 
-  const incoming = rumours.filter((r) => r.direction === 'in');
-  const outgoing = rumours.filter((r) => r.direction === 'out');
+  const done = rumours.filter((r) => r.done);
+  const live = rumours.filter((r) => !r.done);
+  const incoming = live.filter((r) => r.direction === 'in');
+  const outgoing = live.filter((r) => r.direction === 'out');
 
   const payload = {
     generatedAt: new Date(now).toISOString(),
     counts: {
-      rumours: rumours.length,
+      rumours: live.length,
       incoming: incoming.length,
       outgoing: outgoing.length,
+      done: done.length,
       articles: articles.length,
       transferArticles: consideredArticles,
-      likely: rumours.filter((r) => r.probability >= 65).length,
+      likely: live.filter((r) => r.probability >= 65).length,
     },
     model: {
       type: llm.applied ? 'heuristic + Claude review' : 'heuristic',
@@ -176,9 +241,18 @@ async function main() {
 
   writeFileSync(join(dataDir, 'rumours.json'), `${JSON.stringify(payload, null, 2)}\n`);
   writeFileSync(historyPath, `${JSON.stringify(history)}\n`);
+  writeFileSync(donePath, `${JSON.stringify(doneLedger, null, 2)}\n`);
 
-  log(`wrote docs/data/rumours.json (${incoming.length} in, ${outgoing.length} out)`);
-  for (const rumour of rumours.slice(0, 10)) {
+  log(`wrote docs/data/rumours.json (${incoming.length} in, ${outgoing.length} out, ${done.length} done)`);
+  if (done.length) {
+    log('completed:');
+    for (const rumour of done) {
+      const carried = rumour.doneCarriedForward ? ' (carried forward)' : '';
+      log(`  DONE  ${rumour.direction.toUpperCase()}  ${rumour.player}${carried}`);
+    }
+  }
+  log('live board:');
+  for (const rumour of live.slice(0, 10)) {
     log(`  ${String(rumour.probability).padStart(3)}%  ${rumour.direction.toUpperCase()}  ${rumour.player}  — ${rumour.stage.label}`);
   }
 }
