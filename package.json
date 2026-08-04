@@ -1,0 +1,18 @@
+{
+  "name": "spurs-transfer-tracker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Tracks Tottenham Hotspur transfer rumours from public news feeds and assigns an explainable probability to each one.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:no-llm": "SPURS_DISABLE_LLM=1 node scripts/build.mjs",
+    "serve": "node scripts/serve.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.68.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

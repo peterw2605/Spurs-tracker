@@ -1,0 +1,88 @@
+name: Update tracker
+
+on:
+  schedule:
+    # Every 3 hours. Transfer stories break in clusters, so a 3-hourly cadence
+    # keeps the board current without churning the repo history.
+    - cron: '17 */3 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+      - 'docs/**'
+      - 'data/**'
+      - '.github/workflows/update.yml'
+
+permissions:
+  contents: write # commit refreshed data so probability history survives
+  pages: write
+  id-token: write
+
+# Never let two runs commit data at once.
+concurrency:
+  group: tracker-update
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      # Optional. Without it the build runs the heuristic model only.
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # The fetch-and-score pipeline has no dependencies; the Anthropic SDK is
+      # imported lazily and only needed when a key is configured.
+      - name: Install Claude SDK
+        if: env.ANTHROPIC_API_KEY != ''
+        run: npm ci --no-audit --no-fund
+
+      - name: Build rumour data
+        run: node scripts/build.mjs
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name 'spurs-tracker-bot'
+          git config user.email 'spurs-tracker-bot@users.noreply.github.com'
+          git add docs/data
+          if git diff --staged --quiet; then
+            echo "No data changes."
+          else
+            git commit -m "data: refresh rumours $(date -u '+%Y-%m-%d %H:%M UTC')"
+            # Another scheduled run may have landed while we were fetching.
+            for attempt in 1 2 3 4; do
+              if git push; then
+                exit 0
+              fi
+              echo "Push failed (attempt $attempt), rebasing and retrying…"
+              sleep $((2 ** attempt))
+              git pull --rebase --autostash origin "${GITHUB_REF_NAME}" || true
+            done
+            echo "Could not push data changes." >&2
+            exit 1
+          fi
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
