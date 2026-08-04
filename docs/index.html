@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Spurs Transfer Tracker</title>
+    <meta
+      name="description"
+      content="Tottenham Hotspur transfer rumours from public news feeds, each with an explainable probability."
+    />
+    <meta name="theme-color" content="#0b1020" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Spurs Tracker" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.svg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="masthead-row">
+        <h1>Spurs Transfer Tracker</h1>
+        <button id="refresh" class="icon-button" type="button" title="Reload data" aria-label="Reload data">
+          &#x21bb;
+        </button>
+      </div>
+      <p class="subtitle" id="subtitle">Loading…</p>
+      <dl class="stats" id="stats"></dl>
+    </header>
+
+    <nav class="controls" aria-label="Filters">
+      <div class="tabs" role="tablist">
+        <button class="tab is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="tab" data-filter="in" role="tab" aria-selected="false">Arrivals</button>
+        <button class="tab" data-filter="out" role="tab" aria-selected="false">Exits</button>
+      </div>
+      <label class="search">
+        <span class="visually-hidden">Search player or club</span>
+        <input id="search" type="search" placeholder="Search player or club…" autocomplete="off" />
+      </label>
+      <label class="sort">
+        <span class="visually-hidden">Sort by</span>
+        <select id="sort">
+          <option value="probability">Sort: probability</option>
+          <option value="movement">Sort: biggest movers</option>
+          <option value="latest">Sort: most recent</option>
+          <option value="sources">Sort: most sources</option>
+        </select>
+      </label>
+    </nav>
+
+    <main id="board" class="board" aria-live="polite">
+      <p class="placeholder">Loading rumours…</p>
+    </main>
+
+    <footer class="footer">
+      <details>
+        <summary>How the probability is worked out</summary>
+        <div class="explainer">
+          <p>
+            Each rumour is scored from the headlines that mention it. Four things move
+            the number:
+          </p>
+          <ul>
+            <li>
+              <strong>Source reliability.</strong> Every outlet sits in a tier, from
+              tier&nbsp;1 (the outlets whose transfer stories are rarely wrong) down to
+              tier&nbsp;4 (aggregators and unranked blogs).
+            </li>
+            <li>
+              <strong>Language strength.</strong> “medical booked” counts for far more
+              than “monitoring”, and “not for sale” counts against.
+            </li>
+            <li>
+              <strong>Corroboration.</strong> Independent outlets agreeing raises the
+              number, with diminishing returns — twenty tabloids repeating each other
+              is not twenty confirmations.
+            </li>
+            <li>
+              <strong>Recency.</strong> Evidence decays with a nine-day half-life, so a
+              three-week-old link fades on its own.
+            </li>
+          </ul>
+          <p>
+            Only the strongest headline from each outlet counts, and headlines from
+            multi-club live blogs are treated as a mention only, because a phrase like
+            “done deal” in them usually belongs to another club’s transfer.
+          </p>
+          <p class="caveat">
+            These numbers come from press coverage, not from inside the club. Treat them
+            as a read on what the media is reporting, not a forecast — and check the
+            linked articles before believing any of it.
+          </p>
+        </div>
+      </details>
+      <p class="meta" id="sources-note"></p>
+    </footer>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
