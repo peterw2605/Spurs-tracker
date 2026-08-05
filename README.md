@@ -30,14 +30,35 @@ appears in the deploy job summary and under *Settings* → *Pages*.
 On your phone, open that URL and use **Share → Add to Home Screen**. It is
 installable as a standalone app — no App Store, no login.
 
-### Optional: Claude review
+### Optional: LLM review
 
-The probability model works on its own. If you add an `ANTHROPIC_API_KEY`
-secret (*Settings* → *Secrets and variables* → *Actions*), the build additionally
-sends the top rumours to Claude, which can correct a misparsed player name, fix a
-direction, add a one-line summary, and nudge the probability by up to ±18 points.
-Cost is a few cents per day at the 3-hourly cadence. Remove the secret and the
-build silently falls back to heuristics only.
+The probability model works on its own. With an API key configured, the build
+additionally sends rumours to an LLM, which can **discard entries that aren't
+real rumours**, correct a misparsed player name, fix a direction, add a one-line
+summary, and nudge the probability by up to ±18 points.
+
+Discarding is the most valuable part: the heuristics cannot tell who a sentence
+is *about*, so a headline quoting one player about another's move can attach to
+the wrong name. No regex fixes that.
+
+Two settings, both in `.github/workflows/update.yml`:
+
+| | |
+| --- | --- |
+| `OPENAI_API_KEY` | Read from the `SPURSTRACKER` repository secret |
+| `SPURS_LLM_MODEL` | The model ID — change this one line to switch model |
+
+Remove the key and the build falls back to heuristics only, logging the reason.
+It never fails the build: a missing key, an unset model, an API error, a refusal
+and a truncated response all degrade to the heuristic score.
+
+**Cost control.** The build runs eight times a day, so reviewing everything every
+run would be wasteful. Each rumour's evidence is fingerprinted, and only rumours
+whose evidence actually changed are sent — the rest reuse their previous review
+from `docs/data/llm-cache.json`. On a quiet run that means **zero API calls**; a
+run where one rumour picked up a headline sends one rumour, not thirty.
+`SPURS_LLM_MAX_RUMOURS` (default 30) caps any single run, and anything over the
+cap keeps its heuristic score and is picked up next time.
 
 ---
 
@@ -130,12 +151,13 @@ scripts/
   lib/entities.mjs     player/club extraction, arrival-vs-exit inference
   lib/score.mjs        the probability model
   lib/cluster.mjs      groups headlines into one rumour per (player, direction)
-  lib/llm.mjs          optional Claude review (lazily imported)
+  lib/llm.mjs          optional LLM review, cached (lazily imported)
 data/squad.json        editable roster — improves direction calls
 docs/                  the published site (GitHub Pages serves this folder)
 docs/data/rumours.json current board, committed each run
 docs/data/history.json probability history, drives the trend arrows
 docs/data/done.json     completed-deal ledger, keeps done deals done
+docs/data/llm-cache.json review cache, so unchanged rumours are never re-sent
 ```
 
 ## Running locally
@@ -146,7 +168,7 @@ npm run serve              # then open http://localhost:8080
 ```
 
 The fetch-and-score pipeline has **no dependencies** — plain Node 20+. `npm
-install` is only needed for the optional Claude review. To skip that layer even
+install` is only needed for the optional LLM review. To skip that layer even
 with a key present:
 
 ```bash
@@ -157,9 +179,10 @@ Useful environment variables:
 
 | Variable | Effect |
 | --- | --- |
-| `ANTHROPIC_API_KEY` | Enables the Claude review layer |
+| `OPENAI_API_KEY` | Enables the LLM review layer |
+| `SPURS_LLM_MODEL` | Model ID for the review layer (required when a key is set) |
+| `SPURS_LLM_MAX_RUMOURS` | Cap per run (default 30) |
 | `SPURS_DISABLE_LLM` | Forces heuristics only |
-| `SPURS_LLM_MODEL` | Override the model (default `claude-opus-5`) |
 | `SPURS_MAX_AGE_DAYS` | Ignore articles older than this (default 30) |
 
 ## Tuning it
@@ -178,11 +201,11 @@ Useful environment variables:
 
 - Player names are extracted from headlines with heuristics, so an unusual name
   or a headline typo can produce an odd entry. The evidence links make these easy
-  to spot, and the Claude review layer catches most of them.
+  to spot, and the LLM review layer catches most of them.
 - The heuristics can't tell who a sentence is *about*. When a headline quotes one
   player about another's transfer, the completion wording may attach to the
   quoted name — the confirmation bar stops that reaching the Done tab, but it can
-  still inflate a live rumour. Discarding these is the clearest thing the Claude
+  still inflate a live rumour. Discarding these is the clearest thing the LLM
   review layer adds.
 - Feeds occasionally return 403 to automated clients. The build treats a failed
   feed as non-fatal and the site reports which sources were unavailable.
