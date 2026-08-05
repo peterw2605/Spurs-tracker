@@ -57,6 +57,11 @@ export function isKnownPlayer(key) {
   return SQUAD.has(key) || KNOWN_TARGETS.has(key) || MONONYMS.has(key);
 }
 
+/** Is this name on the current squad list? Accepts a display name or a key. */
+export function isSquadPlayer(name) {
+  return SQUAD.has(normaliseName(name));
+}
+
 export function normaliseName(name) {
   return name
     .normalize('NFD')
