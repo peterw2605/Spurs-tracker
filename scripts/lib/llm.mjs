@@ -55,13 +55,15 @@ is the most valuable correction you can make. Common cases:
 - the real subject is described but unnamed ("USA striker", "Premier League
   defender") and a bystander's name was extracted;
 - the headline is a match report, an opinion piece, or about a different club;
-- the headline refers to a move the player completed in the past and is already
-  settled — a player described as an existing squad member rather than someone
-  arriving or leaving now. "Tottenham's new signing X said..." is about a deal
-  that already happened; it is not a live rumour.
+- the player is simply an established squad member being discussed, with no move
+  of his own being reported. "Tottenham's new signing X said the deal was
+  completed" is X commenting on somebody else's transfer, not news about X.
 
-Judge whether a transfer is being *reported as happening now*. If the player is
-simply at the club and being discussed, discard.
+Do NOT discard a transfer that has recently been completed. A player who has just
+joined or just left is tracked as a completed deal and belongs on the board —
+"Tottenham sign X", "X joins Brighton from Tottenham" and "Tottenham have sold X"
+are all wanted. Discard only when no move involving this player is being reported
+at all.
 
 Judge only from the headlines provided. Do not use outside knowledge of whether a
 transfer happened. Be conservative with adjustments: the heuristic already
@@ -258,7 +260,7 @@ export async function enrichRumours(rumours, cache = {}) {
       continue;
     }
     nextCache[rumour.id] = { signature, review };
-    if (review.discard) {
+    if (review.discard && !rumour.done) {
       discarded.add(rumour.id);
       continue;
     }
@@ -269,7 +271,7 @@ export async function enrichRumours(rumours, cache = {}) {
   // Carried over from the cache.
   for (const { rumour, signature, review } of reused) {
     nextCache[rumour.id] = { signature, review };
-    if (review.discard) {
+    if (review.discard && !rumour.done) {
       discarded.add(rumour.id);
       continue;
     }
