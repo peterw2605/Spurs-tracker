@@ -196,12 +196,17 @@ async function main() {
   const { rumours, consideredArticles, squadHints } = buildRumours(articles, { now });
   log(`${rumours.length} rumours from ${consideredArticles} transfer-related articles`);
 
-  const llm = await enrichRumours(rumours);
-  log(llm.applied
-    ? `Claude review applied (${llm.model}): ${llm.adjusted} adjusted, ${llm.discarded} discarded`
-    : `Claude review skipped: ${llm.reason}`);
-
   mkdirSync(dataDir, { recursive: true });
+
+  // Reviews are cached against an evidence fingerprint, so an unchanged rumour
+  // is never paid for twice.
+  const llmCachePath = join(dataDir, 'llm-cache.json');
+  const llm = await enrichRumours(rumours, loadJson(llmCachePath, {}));
+  log(llm.applied
+    ? `LLM review applied (${llm.model}): ${llm.sent} sent, ${llm.reusedFromCache} reused, `
+      + `${llm.deferred} deferred, ${llm.adjusted} adjusted, ${llm.discarded} discarded`
+    : `LLM review skipped: ${llm.reason}`);
+  writeFileSync(llmCachePath, `${JSON.stringify(llm.cache, null, 2)}\n`);
 
   // Sticky "done" is applied before history so a carried-forward confirmation
   // is what gets recorded, not the decayed score.
@@ -229,9 +234,16 @@ async function main() {
       likely: live.filter((r) => r.probability >= 65).length,
     },
     model: {
-      type: llm.applied ? 'heuristic + Claude review' : 'heuristic',
+      type: llm.applied ? 'heuristic + LLM review' : 'heuristic',
       llm: llm.applied
-        ? { model: llm.model, reviewed: llm.reviewed, adjusted: llm.adjusted, discarded: llm.discarded }
+        ? {
+          model: llm.model,
+          sent: llm.sent,
+          reusedFromCache: llm.reusedFromCache,
+          deferred: llm.deferred,
+          adjusted: llm.adjusted,
+          discarded: llm.discarded,
+        }
         : { skipped: llm.reason },
     },
     sources,

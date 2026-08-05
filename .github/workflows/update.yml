@@ -28,8 +28,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      # Optional. Without it the build runs the heuristic model only.
-      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      # Optional. Without a key the build runs the heuristic model only and the
+      # review step is skipped cleanly.
+      OPENAI_API_KEY: ${{ secrets.SPURSTRACKER }}
+      # The model used for the review pass. Change this one line to switch model.
+      SPURS_LLM_MODEL: gpt-5.6-luna
     steps:
       - uses: actions/checkout@v4
 
@@ -37,10 +40,10 @@ jobs:
         with:
           node-version: '22'
 
-      # The fetch-and-score pipeline has no dependencies; the Anthropic SDK is
+      # The fetch-and-score pipeline has no dependencies; the OpenAI SDK is
       # imported lazily and only needed when a key is configured.
-      - name: Install Claude SDK
-        if: env.ANTHROPIC_API_KEY != ''
+      - name: Install LLM SDK
+        if: env.OPENAI_API_KEY != ''
         run: npm ci --no-audit --no-fund
 
       - name: Build rumour data
