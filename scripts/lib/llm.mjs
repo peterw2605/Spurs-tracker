@@ -28,9 +28,10 @@ const model = () => process.env.SPURS_LLM_MODEL || '';
 const maxRumours = () => Number(process.env.SPURS_LLM_MAX_RUMOURS || 30);
 
 function apiKey() {
-  // SPURSTRACKER is the repository secret this project happens to use; the
-  // conventional names are accepted too so a local run needs no special setup.
-  return process.env.OPENAI_API_KEY || process.env.SPURSTRACKER || '';
+  // The workflow maps whichever repository secret holds the key onto
+  // OPENAI_API_KEY; the others are accepted so a local run needs no setup.
+  return process.env.OPENAI_API_KEY || process.env.OPEN_AI_KEY
+    || process.env.SPURSTRACKER || '';
 }
 
 const SYSTEM = `You review automatically extracted Tottenham Hotspur transfer rumours.

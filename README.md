@@ -45,8 +45,14 @@ Two settings, both in `.github/workflows/update.yml`:
 
 | | |
 | --- | --- |
-| `OPENAI_API_KEY` | Read from the `SPURSTRACKER` repository secret |
+| `OPENAI_API_KEY` | Read from the `OPEN_AI_KEY` **repository** secret |
 | `SPURS_LLM_MODEL` | The model ID — change this one line to switch model |
+
+The key must be a **repository** secret, not an environment secret. An
+environment secret is only visible to a job that declares that environment, and
+the build job deliberately declares none — attaching it to `github-pages` would
+make every data build register as a Pages deployment and re-enter the
+protection-rule gate.
 
 Remove the key and the build falls back to heuristics only, logging the reason.
 It never fails the build: a missing key, an unset model, an API error, a refusal
