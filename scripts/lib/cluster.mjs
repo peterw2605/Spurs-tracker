@@ -8,6 +8,7 @@ import {
   otherClubs,
   normaliseName,
   isKnownPlayer,
+  isSquadPlayer,
 } from './entities.mjs';
 import { outletTier, tierWeight } from './sources.mjs';
 import { scoreRumour, classifyArticle } from './score.mjs';
@@ -33,6 +34,30 @@ const ROUNDUP_PATTERNS = [
 export function isRoundup(headline, clubCount) {
   if (clubCount >= 3) return true;
   return ROUNDUP_PATTERNS.some((re) => re.test(headline));
+}
+
+/**
+ * Remove arrival rumours for players already on the squad list.
+ *
+ * A player on the books cannot be arriving — he is here. This shows up when a
+ * headline references a past, completed move ("Tottenham's new signing: Pedro
+ * Porro was the reason the deal was completed") and the parser reads it as
+ * current transfer news. Completed deals are exempt: a signing that has just
+ * landed is legitimately "in".
+ *
+ * Mutates `rumours` in place and returns the entries removed.
+ */
+export function dropContradictoryArrivals(rumours) {
+  const dropped = rumours.filter(
+    (rumour) => !rumour.done && rumour.direction === 'in' && isSquadPlayer(rumour.player),
+  );
+  if (dropped.length === 0) return dropped;
+
+  const ids = new Set(dropped.map((rumour) => rumour.id));
+  const remaining = rumours.filter((rumour) => !ids.has(rumour.id));
+  rumours.length = 0;
+  rumours.push(...remaining);
+  return dropped;
 }
 
 export function slug(value) {

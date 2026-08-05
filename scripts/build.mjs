@@ -11,7 +11,7 @@ import { dirname, join } from 'node:path';
 
 import { FEEDS, canonicalOutlet } from './lib/sources.mjs';
 import { fetchText, parseFeed, splitTitleOutlet } from './lib/rss.mjs';
-import { buildRumours } from './lib/cluster.mjs';
+import { buildRumours, dropContradictoryArrivals } from './lib/cluster.mjs';
 import { enrichRumours } from './lib/llm.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
@@ -207,6 +207,12 @@ async function main() {
       + `${llm.deferred} deferred, ${llm.adjusted} adjusted, ${llm.discarded} discarded`
     : `LLM review skipped: ${llm.reason}`);
   writeFileSync(llmCachePath, `${JSON.stringify(llm.cache, null, 2)}\n`);
+
+  // A player on the squad list cannot be arriving. Applied after the review
+  // layer, because the direction can be changed there too.
+  for (const rumour of dropContradictoryArrivals(rumours)) {
+    log(`dropping "${rumour.player}" — an arrival rumour for a current squad player`);
+  }
 
   // Sticky "done" is applied before history so a carried-forward confirmation
   // is what gets recorded, not the decayed score.

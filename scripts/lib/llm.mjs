@@ -49,11 +49,19 @@ For each rumour, return:
 - note: one short sentence (max 20 words) explaining the current state of the rumour.
 - discard: true only if this is not a real transfer rumour about this player.
 
-Set discard when the named person is not the subject of the transfer. This is the
-most valuable correction you can make. Common cases: the headline quotes one
-player about another player's move; the real subject is described but unnamed
-("USA striker", "Premier League defender") and a bystander's name was extracted;
-the headline is a match report, an opinion piece, or about a different club.
+Set discard when the named person is not the subject of a current transfer. This
+is the most valuable correction you can make. Common cases:
+- the headline quotes one player about another player's move;
+- the real subject is described but unnamed ("USA striker", "Premier League
+  defender") and a bystander's name was extracted;
+- the headline is a match report, an opinion piece, or about a different club;
+- the headline refers to a move the player completed in the past and is already
+  settled — a player described as an existing squad member rather than someone
+  arriving or leaving now. "Tottenham's new signing X said..." is about a deal
+  that already happened; it is not a live rumour.
+
+Judge whether a transfer is being *reported as happening now*. If the player is
+simply at the club and being discussed, discard.
 
 Judge only from the headlines provided. Do not use outside knowledge of whether a
 transfer happened. Be conservative with adjustments: the heuristic already
