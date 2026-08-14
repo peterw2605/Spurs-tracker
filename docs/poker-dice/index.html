@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Poker Dice Tracker</title>
+    <meta name="description" content="Scorecard for poker dice — tap in each roll, the totals take care of themselves." />
+    <meta name="theme-color" content="#0b1020" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Poker Dice" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.svg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="masthead-row">
+        <h1>Poker Dice</h1>
+        <div class="masthead-actions">
+          <button id="undo" class="icon-button" type="button" title="Undo last entry" aria-label="Undo last entry" disabled>
+            &#x21b6;
+          </button>
+          <button id="new-game" class="icon-button" type="button" title="New game" aria-label="New game">
+            &#x21bb;
+          </button>
+        </div>
+      </div>
+      <p class="subtitle" id="subtitle">Tap a cell to score it.</p>
+    </header>
+
+    <!-- Setup: shown until a game is started, and again on New game. -->
+    <main id="setup" class="setup" hidden>
+      <h2>Who's playing?</h2>
+      <ol class="player-inputs" id="player-inputs"></ol>
+      <div class="setup-actions">
+        <button id="add-player" class="button ghost" type="button">+ Add player</button>
+        <button id="start-game" class="button primary" type="button">Start game</button>
+      </div>
+      <p class="hint">
+        Each player fills every row once per column. Column <b>&times;1</b> counts the points as
+        they are, <b>&times;2</b> doubles them, <b>&times;4</b> quadruples them.
+      </p>
+    </main>
+
+    <!-- Game: the scorecards. -->
+    <main id="game" class="game" hidden>
+      <nav class="leaderboard" id="leaderboard" aria-label="Totals"></nav>
+      <div class="cards" id="cards"></div>
+      <p class="hint" id="progress"></p>
+      <details class="rules">
+        <summary>Scoring</summary>
+        <ul>
+          <li><b>9s</b> 1 point per die, <b>10s</b> 2, <b>jacks</b> 3, <b>queens</b> 4, <b>kings</b> 5, <b>aces</b> 6.</li>
+          <li><b>Straight</b> 20, <b>full house</b> 30, <b>poker</b> 40, <b>grande</b> 50, <b>shit</b> 10.</li>
+          <li>The column multiplier (&times;1, &times;2, &times;4) applies to whatever the row scores.</li>
+          <li>Any cell can be crossed out for 0 when nothing fits.</li>
+        </ul>
+      </details>
+    </main>
+
+    <!-- Entry sheet: opens on tapping a cell. -->
+    <div id="sheet" class="sheet" hidden>
+      <div class="sheet-backdrop" data-close></div>
+      <div class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+        <div class="sheet-head">
+          <div>
+            <h2 id="sheet-title">Score</h2>
+            <p class="sheet-sub" id="sheet-sub"></p>
+          </div>
+          <button class="icon-button" type="button" data-close aria-label="Close">&times;</button>
+        </div>
+        <div class="sheet-options" id="sheet-options"></div>
+        <button class="button ghost wide" type="button" id="sheet-clear" hidden>Clear this cell</button>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,465 @@
+/* Shares the palette of the tracker next door so the two feel like one site. */
+
+:root {
+  --navy: #0b1020;
+  --card: #171f38;
+  --card-hover: #1d2643;
+  --line: #2a3557;
+  --text: #eef1fa;
+  --muted: #9aa4c4;
+  --accent: #7aa2ff;
+  --good: #3ddc97;
+  --radius: 14px;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0 0 2rem;
+  background: linear-gradient(180deg, #0b1020 0%, #0d1326 60%, #0b1020 100%);
+  color: var(--text);
+  font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  min-height: 100vh;
+}
+
+body.sheet-open {
+  overflow: hidden;
+}
+
+/* ---------- masthead ---------- */
+
+.masthead {
+  padding: max(1rem, env(safe-area-inset-top)) 1rem 0.75rem;
+  border-bottom: 1px solid var(--line);
+  background: rgba(11, 16, 32, 0.9);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  backdrop-filter: blur(8px);
+}
+
+.masthead-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.masthead h1 {
+  margin: 0;
+  font-size: 1.25rem;
+  letter-spacing: 0.01em;
+  flex: 1;
+}
+
+.masthead-actions {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.subtitle {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.icon-button {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--text);
+  border-radius: 10px;
+  width: 2.25rem;
+  height: 2.25rem;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.icon-button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.icon-button:not(:disabled):hover {
+  background: var(--card-hover);
+}
+
+/* ---------- buttons ---------- */
+
+.button {
+  appearance: none;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  padding: 0.7rem 1.1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--card);
+  color: var(--text);
+}
+
+.button.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #0b1020;
+}
+
+.button.ghost:hover {
+  background: var(--card-hover);
+}
+
+.button.wide {
+  width: 100%;
+  margin-top: 0.75rem;
+}
+
+/* ---------- setup ---------- */
+
+.setup,
+.game {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.setup {
+  max-width: 520px;
+}
+
+.setup h2 {
+  margin: 0.25rem 0 0.75rem;
+  font-size: 1.05rem;
+}
+
+.player-inputs {
+  list-style: none;
+  margin: 0 0 0.9rem;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.player-inputs li {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.player-input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.7rem 0.85rem;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.player-input:focus-visible,
+.cell:focus-visible,
+.option:focus-visible,
+.button:focus-visible,
+.icon-button:focus-visible,
+.chip:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.setup-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.hint {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin: 1rem 0 0;
+}
+
+/* ---------- leaderboard ---------- */
+
+.leaderboard {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.85rem;
+  scrollbar-width: none;
+}
+
+.leaderboard::-webkit-scrollbar {
+  display: none;
+}
+
+.chip {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex: 0 0 auto;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--text);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.chip-total {
+  font-weight: 700;
+  color: var(--good);
+}
+
+/* ---------- cards ---------- */
+
+.cards {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(min(100%, 300px), 1fr);
+  gap: 0.85rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 0.5rem;
+}
+
+.card {
+  scroll-snap-align: start;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0.75rem;
+}
+
+.card-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.card-head h2 {
+  margin: 0;
+  font-size: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-total {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--good);
+}
+
+.score-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.score-table th,
+.score-table td {
+  padding: 0.15rem;
+  text-align: center;
+}
+
+.score-table thead th {
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding-bottom: 0.3rem;
+}
+
+.score-table tbody th {
+  text-align: left;
+  font-size: 0.9rem;
+  font-weight: 600;
+  width: 38%;
+}
+
+.score-table tbody th small {
+  display: block;
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+
+.cell {
+  width: 100%;
+  appearance: none;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #10182e;
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  padding: 0.55rem 0.2rem;
+  cursor: pointer;
+}
+
+.cell:hover {
+  background: var(--card-hover);
+}
+
+.cell.empty {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.cell.zero {
+  color: var(--muted);
+}
+
+.score-table tfoot th,
+.score-table tfoot td {
+  padding-top: 0.5rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  border-top: 1px solid var(--line);
+}
+
+.score-table tfoot th {
+  text-align: left;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* ---------- rules ---------- */
+
+.rules {
+  margin-top: 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0.6rem 0.85rem;
+  background: var(--card);
+}
+
+.rules summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.rules ul {
+  margin: 0.6rem 0 0.2rem;
+  padding-left: 1.1rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.rules li {
+  margin-bottom: 0.3rem;
+}
+
+/* ---------- entry sheet ---------- */
+
+/* [hidden] alone loses to display:flex below, and an invisible backdrop would
+   still swallow every tap. */
+[hidden] {
+  display: none !important;
+}
+
+.sheet {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.sheet-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(4, 7, 16, 0.7);
+}
+
+.sheet-panel {
+  position: relative;
+  width: min(100%, 460px);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius) var(--radius) 0 0;
+  padding: 1rem 1rem calc(1rem + env(safe-area-inset-bottom));
+}
+
+.sheet-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
+.sheet-head h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.sheet-sub {
+  margin: 0.2rem 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.sheet-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.sheet-options.two-up {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.option {
+  appearance: none;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #10182e;
+  color: var(--text);
+  padding: 0.7rem 0.4rem;
+  cursor: pointer;
+  display: grid;
+  gap: 0.15rem;
+}
+
+.option:hover {
+  background: var(--card-hover);
+}
+
+.option.selected {
+  border-color: var(--accent);
+  background: rgba(122, 162, 255, 0.16);
+}
+
+.option-label {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.option-note {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+@media (min-width: 700px) {
+  .sheet {
+    align-items: center;
+  }
+
+  .sheet-panel {
+    border-radius: var(--radius);
+  }
+}
