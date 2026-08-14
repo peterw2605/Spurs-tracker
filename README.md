@@ -216,3 +216,22 @@ Useful environment variables:
 - Feeds occasionally return 403 to automated clients. The build treats a failed
   feed as non-fatal and the site reports which sources were unavailable.
 - Trend arrows need at least two runs of history before they mean anything.
+
+---
+
+## Also here: the poker dice scorecard
+
+`docs/poker-dice/` is an unrelated static page that ships to the same Pages
+site, at `/poker-dice/`. It keeps score for a game of poker dice: eleven rows
+(9s through aces, straight, full house, poker, grande, shit) times three
+columns (×1, ×2, ×4), one entry per cell.
+
+Scoring a cell is one tap on the cell and one on the number of matching dice —
+the app multiplies and sums. Number rows pay per die (9s 1, 10s 2, jacks 3,
+queens 4, kings 5, aces 6); straight 20, full house 30, poker 40, grande 50,
+shit 10; any cell can be crossed out for 0. The column multiplier applies to
+whatever the row scored.
+
+The game lives in `localStorage`, so a card survives a reload or a locked
+phone. There is no build step, no data, and no network call — it does not touch
+the transfer tracker.
