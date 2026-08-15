@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-08-15T07:00:11.374Z",
+  "generatedAt": "2026-08-15T09:43:28.100Z",
   "counts": {
-    "rumours": 13,
+    "rumours": 14,
     "incoming": 7,
-    "outgoing": 6,
+    "outgoing": 7,
     "done": 5,
-    "articles": 401,
-    "transferArticles": 308,
+    "articles": 398,
+    "transferArticles": 309,
     "likely": 0
   },
   "model": {
     "type": "heuristic + LLM review",
     "llm": {
       "model": "gpt-5.6-luna",
-      "sent": 11,
-      "reusedFromCache": 18,
+      "sent": 14,
+      "reusedFromCache": 15,
       "deferred": 0,
-      "adjusted": 3,
-      "discarded": 10
+      "adjusted": 4,
+      "discarded": 9
     }
   },
   "sources": [
@@ -29,7 +29,7 @@
     {
       "name": "The Guardian — Tottenham",
       "ok": true,
-      "itemCount": 12
+      "itemCount": 13
     },
     {
       "name": "Sky Sports — Tottenham",
@@ -44,32 +44,32 @@
     {
       "name": "Evening Standard — Tottenham",
       "ok": true,
-      "itemCount": 6
+      "itemCount": 7
     },
     {
       "name": "Google News — Tottenham transfer",
       "ok": true,
-      "itemCount": 85
+      "itemCount": 84
     },
     {
       "name": "Google News — Spurs transfer news",
       "ok": true,
-      "itemCount": 56
+      "itemCount": 55
     },
     {
       "name": "Google News — Tottenham sign",
       "ok": true,
-      "itemCount": 42
+      "itemCount": 45
     },
     {
       "name": "Google News — Tottenham exit",
       "ok": true,
-      "itemCount": 67
+      "itemCount": 64
     },
     {
       "name": "Google News — Tottenham medical/agreed",
       "ok": true,
-      "itemCount": 51
+      "itemCount": 48
     },
     {
       "name": "Google News — Tottenham loan",
@@ -79,8 +79,8 @@
   ],
   "squadHints": [
     "romero",
-    "cristian romero",
     "djed spence",
+    "cristian romero",
     "jamie o'hara",
     "vincent janssen"
   ],
@@ -93,18 +93,18 @@
       "clubs": [
         "Atletico Madrid",
         "Real Madrid",
-        "Inter Milan"
+        "Arsenal"
       ],
       "probability": 98,
-      "logit": 4.2698,
+      "logit": 6.2628,
       "done": true,
       "confirmedBy": [
         {
-          "outlet": "Sky Sports",
+          "outlet": "BBC Sport",
           "tier": 1,
-          "headline": "Romero announces Spurs exit ahead of Atletico transfer",
-          "url": "https://www.skysports.com/football/news/11095/13572603/cristian-romero-spurs-captain-announces-exit-ahead-of-atletico-madrid-transfer-as-he-makes-statement-on-instagram",
-          "publishedAt": null
+          "headline": "Romero reflects on Spurs stay as Atletico move confirmed",
+          "url": "https://www.bbc.co.uk/sport/football/articles/c20dyz4vrero?at_medium=RSS&at_campaign=rss",
+          "publishedAt": "2026-08-15T07:44:59.000Z"
         },
         {
           "outlet": "Evening Standard",
@@ -118,7 +118,7 @@
           "tier": 2,
           "headline": "Romero sends Tottenham farewell message as £32.4m transfer confirmed",
           "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQR2dGa0pybXh0QmUzQmk4d1J0WUNuUDIxMHJ6NVV6Rk8wcjNkMVZnWU1IOEFFaVpURk9maGdFWUlfYjJmNTBPRExROHNYSTFYMDN5SUFmcHZBZDdsQVdJZnl6amI1cVgtODFsUWxiaVgwaG9wNGE4b09vdG1TZjUyZ2ZoZU1wTjlwQmEycDktR2FqMWFvR2JNdnJFYlk5YTZtb2FXZTBFTW0zMmY2enhrRGd0UEE?oc=5",
-          "publishedAt": "2026-08-15T06:43:57.000Z"
+          "publishedAt": "2026-08-15T02:57:49.000Z"
         }
       ],
       "stage": {
@@ -127,41 +127,162 @@
         "value": 3.2
       },
       "cooler": {
-        "id": "cooling",
-        "label": "Cooling",
-        "value": -1.1
+        "id": "rival",
+        "label": "Rival competition",
+        "value": -0.55
       },
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 5.2698,
+        "evidenceSum": 7.2628,
         "corroboration": 0.75,
-        "distinctOutlets": 30,
-        "tier1Outlets": 5,
-        "totalArticles": 53,
+        "distinctOutlets": 34,
+        "tier1Outlets": 7,
+        "totalArticles": 60,
         "confirmedFloorApplied": true
       },
       "evidence": [
+        {
+          "outlet": "football.london",
+          "tier": 2,
+          "headline": "Tottenham transfer news LIVE: Romero's goodbye, Gakpo agreement, £30m deal gets green light",
+          "url": "https://www.football.london/tottenham-hotspur-fc/news/tottenham-transfer-news-live-romeros-34463774",
+          "publishedAt": "2026-08-15T09:18:44.000Z",
+          "stage": "Named in a roundup",
+          "cooler": null,
+          "recency": 0.999,
+          "contribution": 0.0044
+        },
+        {
+          "outlet": "Reuters",
+          "tier": 1,
+          "headline": "Atletico Madrid sign Spurs captain Cristian Romero",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNQ1RWZHdQQl9CWFdiRGFlYmlKZ1daUU9ZWERCMnlVZjBYQVJrNE5rX0ZlYS1MN1ZnWDhJYXZZemw5YjlhUGF1S2NRRDEzMzNEMXIzc1dORkk3cGg4NzV6dWdVSS1FX0ROYUlrX0VkYlQwQlRMaGxfZURpem1MZUZ5c1FTWE83clllOGx5NXFmcDd5NkJoMkVzb1NMQ0hDS293SkE?oc=5",
+          "publishedAt": "2026-08-15T08:19:33.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.996,
+          "contribution": 0.0088
+        },
+        {
+          "outlet": "Devdiscourse",
+          "tier": 4,
+          "headline": "Atletico Madrid Signs Tottenham's Cristian Romero in Major Transfer Until 2031",
+          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPc2JXX242a3hFS3hJc3BicEpqWEd1SXJaX1otVWVCb1hCczZySzVNN2dJcUgycllvTVdiOEwzRXFBd1lHakdIa05SY3N4WXJRaXNPQm9xZkd1cEwwbEZYYnFXSmRReE9MMWRGRUFzOUFodnRNc3c0M3BjN1Z4REZWYkNfUDZaVXpqRXlvRVNHeWNhejU1aFppS0ZpZGtHQm10ZVVfdkNyY3JDVEFVUkJDcXRvNlozT2VzQS1EcUFfLVpGZkJLaE1GQ3prOGZzeFRZ0gHWAUFVX3lxTFBNT2JXVTY4ZnFDdHAtLVJTQ3ZtSW43a2Vfc1N2eUp5eVJ1emZyaUZubE80MXlWczg5NTJLeWRXaEQtaGRtTFRFTkJwS19CZjhLSlVSLXdIc0MtSlVLLTUxZWIydF9QNjF0WWwwdWhaUUhmel9hZzJKc1ItaDZzVl9UMW9LNFp3aVh0VFdvSE1nOV9Ocy1pb1Fhb2x4U1pYN1BoYU1wMzM3Tk5nOG1Qc2h1OHNhQ1FxeGNFdUx4OWRCYjZUXzBzOFdPOVROcHd1RzNDbzZ2REE?oc=5",
+          "publishedAt": "2026-08-15T08:13:16.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.995,
+          "contribution": 0.0008
+        },
+        {
+          "outlet": "Sportstar",
+          "tier": 4,
+          "headline": "Atletico Madrid confirms signing of Cristian Romero from Tottenham Hotspur",
+          "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOX0pTb2lKYlFUeFRfblNhTU0wLVZoSTBYQnFaOHFfc2xQdXpJakRhV0l6Nmkwd0FGSVBBTXliRFN3YVU4N2szYTFFWE1uSVVQTTZqdkNvdE1NTTNhbk9xLXJXS3J5UDBBZkxfZTNBNmYtb25aWnNRMnYyT1RxLUZhS2lHbVBnMUFQZ25WSWFCOU5WZjFRZ1J2YlNoNERWR1JKYjJyTTd0NGRmSGoxVWY1THVtUlVMNWJmUHROZUYtWVNyM1hpWDBEV3dYY2QwQTZURTJRMXM1V0o3UVkydmFaa3BGLTBUQdIB7AFBVV95cUxOTXJoNWt2ejlxRk9tRzNMVGJucDRaQi11Nk9xZFk5OUFQdGY1Y2dFYlF3blNTelpLaG1wSnVudjA3M3FxelFEN2szREhzamxkVFlEVnBlbHhQc3BtNjF3VUFTZ0J5Q0Q5Ykt5V1A2UVRlZE1DMGRNN0NuTS1oNHBuYU9URWxha1lwVTRZNHZZQUJnaS0wdGFReDVFdHR1T3E1UjRSbDlVdEx0U19OenZOOWV5MElUMGNYeDJkR3dSWTBhVTZRMHAzNGNWQWk4bER1Y1haMEs0cW1uSkNDUnZLWW43eUpSd0lkbTJrRg?oc=5",
+          "publishedAt": "2026-08-15T08:10:50.000Z",
+          "stage": "Done / confirmed",
+          "cooler": null,
+          "recency": 0.995,
+          "contribution": 0.1498
+        },
+        {
+          "outlet": "vanguardngr.com",
+          "tier": 4,
+          "headline": "Atletico complete €40m Romero signing from Tottenham",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQSlhHekhEOVhnLVp6SnI0QXg3bWRIVnhxb2VHN2pTM2hYWGNzTFBGQ0JmeTV4c0lKcXJSdEVNNU9KcUpaTVEtRDdYWElpRUEwcHhQNFBMaW9OYWZHMUxON2ZWdGlyM2xlU3IxdFBBREZNbGhJZ3RzdGlGTzdiX0NtajBUWWpxbDRWVTJVenkwbnJwZ3PSAZgBQVVfeXFMT3VRd1FfQm9QSWNLREdKUU9YMmFOY2RfODlKdWZtMWVZcVdQYnBsQUp4M1VkLXJiLVBlMTBGRnlTQlpicFFaaWtLTm94NXlkMExtVktXSGRoUlR0blhHT2NETXFOYTBuWGEtRkJ5TWxaeDU4V0p5TG00MVk0TER3bjN5M0ZWMW5LTWpZbkVzTzlBTm51WU5vRmI?oc=5",
+          "publishedAt": "2026-08-15T08:09:25.000Z",
+          "stage": "Done / confirmed",
+          "cooler": null,
+          "recency": 0.995,
+          "contribution": 0.1341
+        },
+        {
+          "outlet": "LiveScore",
+          "tier": 4,
+          "headline": "Atletico Madrid complete signing of Tottenham defender Cristian Romero on contract until 2031",
+          "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOZ29PZ1RRMHRrekozeU5Xdzg0YVZ6YzhZakoyb3plWVE2YVZnVjN3dzZ0aFowb1l6bnU2aTFobzdsU3lwOEhUNDhkSWF5NEtrWjhIQnZMMjZja01sdkZFb2wyMHQ4NWlHZEZCUEh0MDdaX0xGX0JlWU9zSVRMSWwwbDFrbEx6bmRrVzJrRXBhMS1fM3RmdjBzam9ZWExsNjVEVktyeGV0RUVlaWQzMUJEOEFfengxSEtwX2lKXy0yM1ZZelpmNFdQRXpXWkVGTVRfMGNNRE9kajZWeFVFd09Hd1hDVkRzbjJXS19Cb3V3?oc=5",
+          "publishedAt": "2026-08-15T08:05:47.000Z",
+          "stage": "Done / confirmed",
+          "cooler": null,
+          "recency": 0.995,
+          "contribution": 0.1213
+        },
+        {
+          "outlet": "BBC Sport",
+          "tier": 1,
+          "headline": "Romero reflects on Spurs stay as Atletico move confirmed",
+          "url": "https://www.bbc.co.uk/sport/football/articles/c20dyz4vrero?at_medium=RSS&at_campaign=rss",
+          "publishedAt": "2026-08-15T07:44:59.000Z",
+          "stage": "Done / confirmed",
+          "cooler": null,
+          "recency": 0.994,
+          "contribution": 3.0208
+        },
+        {
+          "outlet": "TNT Sports",
+          "tier": 4,
+          "headline": "Romero joins Atletico as Spurs confirm departure",
+          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPdGk1bXNDbklGV3NzUE9rN0w0aEotTnBPVDJ4MC1PVEV4Z3o1ajhzWGhCUTU5Mml1Njc5UFpCcjl1d0swRWdSbnVSNWhaS0J4OFNIYWNIRnVBRmxZMFRpcXZLcVFFMXVscl9LY3l1TXFSdHMwOW9mU19fUGVfREVGZ1lPcGN6dWxUenhyQWtFbGJVSzByc0Z2RnJGa1gyMUZsM3hwejNJMXdXc2lYbFVCb1pERDgzM0F1YXJWOVhFZEIxSm94Sk9xejVB?oc=5",
+          "publishedAt": "2026-08-15T07:37:00.000Z",
+          "stage": "Done / confirmed",
+          "cooler": null,
+          "recency": 0.993,
+          "contribution": 0.1106
+        },
+        {
+          "outlet": "AOL.co.uk",
+          "tier": 4,
+          "headline": "Cristian Romero leaves Tottenham as transfer announced after Arsenal controversy",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOa1ZFeThkdWwtZWJPMEtIc1BOSjF2UjBHTDl5eWJIWUJyaG0xYVlGcmdEc0dMZWs4S21ZUFlXb25uUTdHcEhaOWFwVmJ6T2VDdXRCc2VrSjhDSXBPMGp2bHc2bWwxSVdKdDVQbGpfOTNldkltcDBralQtTzgtMmFiYXI0R0dxLTBTZlNGS3NfWWs?oc=5",
+          "publishedAt": "2026-08-15T07:27:56.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.993,
+          "contribution": 0.0008
+        },
+        {
+          "outlet": "Tottenham Independent",
+          "tier": 1,
+          "headline": "Cristian Romero bids emotional farewell to Spurs after moving to Atletico Madrid",
+          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPTWMxYnhWX2M0dnVBbHlKOVBxbDQzM3ZuUEptZFktV2d4eW9YWW5pLUw0Z3hnamdhbTlZcVdZaGFOdXc4RmVYNkxHZk4zY3Z2NXZRNzMtNEZTdVYteGJLRUJUOTZXRnhzVEVkR2NfVGhfMVJ0ejZCNVVoU09jYjRFN2lMTHY2dFozNjVsSGxhNWd4cjdSa3lDOUszTC04VFNtdllVOGozcnpOQ3VoLXVRbkdtNFF2WUR6dGNjVHBIUTdEdUI2dDVrWWVCRGhlQVA4?oc=5",
+          "publishedAt": "2026-08-15T07:22:12.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.992,
+          "contribution": 0.0081
+        },
+        {
+          "outlet": "ESPN",
+          "tier": 2,
+          "headline": "Cristian Romero seals transfer to Atlético Madrid from Tottenham",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQUGdpVDBTWV9QV2NwMjJKcjAxaE10UGhOd21Ddndwa0hPWDVPMktlc0dqQm9pZ3lOLVNhc3RvRFZFNjZtSzFUZERxd2hNQnppSVBFNzdCY29RR0dITGdTODJVSnlRSldjemtxNTFsYjJmYUtRX01kQ3BsVlEycDV5Qjc0YUsxNW40YWJjMWlPR082UjJLSG5RbW5LSjJBM0wxLTBGYkktQQ?oc=5",
+          "publishedAt": "2026-08-15T07:10:00.000Z",
+          "stage": "Done / confirmed",
+          "cooler": null,
+          "recency": 0.992,
+          "contribution": 1.4056
+        },
+        {
+          "outlet": "Sports Mole",
+          "tier": 3,
+          "headline": "Tottenham transfer news LIVE: Cristian Romero confirmation, Cody Gakpo agreement",
+          "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQNlVRZHlBWWw0ZVZJUTItTXlCTkdvU0loUVFHNko0dFJ6ak9VWUlwMlZNVUJtbm44VVg2U09lNUFzUzlfREQ3THg5Nm15YjZDWlB4cG42M0VZLXpaZUdpMmIya016elFXR0lPVWN0ZWtvUzRadXlPdXNNcUN1TXFQTHNwZmNCdnlNMnJYUXM3TUZIUV9FVk9zUkVDa1ItakdlbWFwSHJ3ZUJJX1VnaHJPVktrbklhNnRrNzZoV1dkRktoR3AwbmVhcFhZcm1YUlNfZXBNQzJxam93Q3F1dURWZW5OMXEyNEZD?oc=5",
+          "publishedAt": "2026-08-15T06:35:38.000Z",
+          "stage": "Named in a roundup",
+          "cooler": null,
+          "recency": 0.99,
+          "contribution": 0.0021
+        },
         {
           "outlet": "Evening Standard",
           "tier": 2,
           "headline": "Romero sends Tottenham farewell message as £32.4m transfer confirmed",
           "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQR2dGa0pybXh0QmUzQmk4d1J0WUNuUDIxMHJ6NVV6Rk8wcjNkMVZnWU1IOEFFaVpURk9maGdFWUlfYjJmNTBPRExROHNYSTFYMDN5SUFmcHZBZDdsQVdJZnl6amI1cVgtODFsUWxiaVgwaG9wNGE4b09vdG1TZjUyZ2ZoZU1wTjlwQmEycDktR2FqMWFvR2JNdnJFYlk5YTZtb2FXZTBFTW0zMmY2enhrRGd0UEE?oc=5",
-          "publishedAt": "2026-08-15T06:43:57.000Z",
+          "publishedAt": "2026-08-15T02:57:49.000Z",
           "stage": "Done / confirmed",
           "cooler": null,
-          "recency": 0.999,
-          "contribution": 1.9823
-        },
-        {
-          "outlet": "Sportstar",
-          "tier": 4,
-          "headline": "Cristian Romero bids farewell to Tottenham ahead of Atletico Madrid move",
-          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPYnpkY0h2c09wLXpMR0ZoeXk5LUJBNjZHTFJBMnFiMnFMdUxwbmxNOVhCeVZKellpNVBNZEwxWWZHZ0Yyck5rZVQtVG5EMXdJSVlyVno2UVdRM2RZZ09HUU40WDVucDJhMUFPMFhFbkRYVm5pRzFVV21NRG53UlhzMEVrOG5Da2cxUFUzU2pvWUNSS3N3V0ItUDdNdkN2YzR0TWhVaUFobE4yOEhfR1dGOWtFRzlfUUNjOTZycXlRWVZ6dDgtdC04NTFlSmdnVmo30gHXAUFVX3lxTE1LYzNkUXFVXzFNcTU0UF9OMHZRN3dVM2ZNY1ZVUEVhQUFSNEw1czZsS2tLN09EVzY2LWRFUUZJa1JfQjNod212SDhCQnBFYXRXUWpuNWFNWEJhNVA5emY0d3VFcENsbktOODVPYm9yR0pzb29zUXFoTTFpUExWSksxVUxoQnN0RDZHZmNIbkdpTnJ1ekI1SDNZZVcwVFVjb1NnVlctNHhRWTRkMDRmZGFkMW9IZkl3M01vVWdDNllwQWNybGZZZUJnNmJiQ2w1WUFpOHc4NVFr?oc=5",
-          "publishedAt": "2026-08-15T02:58:20.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.987,
-          "contribution": 0.0012
+          "recency": 0.979,
+          "contribution": 1.0786
         },
         {
           "outlet": "OneFootball",
@@ -171,30 +292,30 @@
           "publishedAt": "2026-08-15T01:38:17.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.983,
-          "contribution": 0.0066
+          "recency": 0.974,
+          "contribution": 0.0041
+        },
+        {
+          "outlet": "LEADERSHIP Newspapers",
+          "tier": 4,
+          "headline": "Argentina’s Romero Confirms Tottenham Exit As Atletico Move Looms",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPS290b05RSFcwWnNIZk9LWWh2QmNMNE1LeW9qNjBKVTNuODc0cXRXNEpJSFB1NVlydFRMQ1ZTRGFJZmhaWUpKaXZsekRWdnNXVWt3SHBEbnRHdWd4T3NMRVpiNWlkb3l3bERZanBJdUFTYXQzRVdiS01oejRnT0N4bG1JLTB6WEIxZmU4U0RTa2s?oc=5",
+          "publishedAt": "2026-08-14T21:03:50.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.96,
+          "contribution": 0.0008
         },
         {
           "outlet": "Flashscore.com",
           "tier": 4,
           "headline": "Cristian Romero says goodbye to Spurs ahead of Atletico Madrid transfer",
           "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOWlRUUUMyT0VacDNEanFUYkRVUmJRYXpWWGdpamNTRlpNaW5GWkNodUNTX3pYS0ctQjZNT3ozcTZJUzhPQmdZeGx0OFMxZF9Vb2oxUHh5emljTEwwNU5POGNubXhDNFlSNkRtSGl4M0VsV2NUZUpWa0xuUkFlcU9EUTNFYjVoR3c2aGI0ampnZTJKcmllT3RuRHZ0cFZ5MnZkVDJ4VURhQjN4ckZuVmV6VUl3Yw?oc=5",
-          "publishedAt": "2026-08-15T01:04:33.000Z",
+          "publishedAt": "2026-08-14T20:27:23.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.981,
-          "contribution": 0.0011
-        },
-        {
-          "outlet": "Free Malaysia Today",
-          "tier": 4,
-          "headline": "Argentina’s Romero confirms Tottenham exit as Atletico move looms",
-          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPa05aUUhwNS1tazBvNmF4LUxKcDVkYmJtc0pLb3FfZ1Y3WjQzT0g4RVRab0lDWk8zTXNzTERZdTNWNEMwR0lQMEVWcTgwU1FQNW1oVHgxR3BDUjdEYnBrTmJFbDlCMmpMb09Vc09xZUVld2NoOEZyV1h0UVBPeWJpZ3dGRVNuRUxNeG1MNEJUQUJ5TWlJWnFXN3RVWkFDWklodTd2MWl6T0k0akU4QWhoNnZrc0I1UmZRRk1fMDBTbHhuWDEw?oc=5",
-          "publishedAt": "2026-08-14T23:18:40.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.976,
-          "contribution": 0.0011
+          "recency": 0.958,
+          "contribution": 0.0007
         },
         {
           "outlet": "The Independent",
@@ -204,19 +325,8 @@
           "publishedAt": "2026-08-14T20:24:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.967,
-          "contribution": 0.0109
-        },
-        {
-          "outlet": "The Irish News",
-          "tier": 4,
-          "headline": "Tottenham defender Cristian Romero confirms he is leaving the club",
-          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQQkxjMllhaUZNblVSRHlLS3RRekhJclJTRGZrOGZDUkhYanFpeDNKQVRESjMyZGJJZ2lWWDhSSE9ual8zdVVuNzNlWjBjWHd3LXJLbm56NmtfSkF1eF9oUzlkc3pNVjJxRlhSTzY0VzJ0dlJfZEgyNi13bnI4cnQtVnJNSzAtQTJMYXd1d0pxZVRBRENGQzQxTklrdkdZUllwME5UVkN6LURMTWZLdTZUM3VLMTA5UmR3dUpxQ3lzQzM0QnJ4UzBvMW81M2ItZw?oc=5",
-          "publishedAt": "2026-08-14T19:26:13.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.964,
-          "contribution": 0.001
+          "recency": 0.958,
+          "contribution": 0.0073
         },
         {
           "outlet": "Irish Examiner",
@@ -226,30 +336,19 @@
           "publishedAt": "2026-08-14T19:18:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.963,
-          "contribution": 0.0009
+          "recency": 0.955,
+          "contribution": 0.0007
         },
         {
-          "outlet": "espn.co.uk",
-          "tier": 4,
-          "headline": "Cristian Romero confirms Tottenham exit; 'I wasn't perfect'",
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOZnFPcC12WmozZ2RpaGpNUm8zQk43YUVOcVJ5Mm1pWkxxZmJLY3dnVUhWTVR2TmdDVTdVaHUxOWJlU0pxV01BRWxCSWpKalJweHFzZXFodDY5dmFOblN2MG1MTkpyWkUtT1VCMUl4blpNZVozVGx5TGMzRzc2eGJfYkotdUxFZ21hXy0zZDlVSWNyUDhUcHJaV3o3dlN6cG9D?oc=5",
-          "publishedAt": "2026-08-14T19:17:00.000Z",
+          "outlet": "Sky Sports",
+          "tier": 1,
+          "headline": "Cristian Romero: Spurs captain announces exit ahead of Atletico Madrid transfer as he makes statement on Instagram",
+          "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxPRWdUbjBDdVUzbHBsYjI4STB5UEMwSmdfQmJRdm9nQy1pZnlMWnd6R0ZKMDVZR1ZUeW1VT29Rd3Q4cDVxUUhaMV8zV3FPLVViVFFXMDRKdjVWRzV1RFNfMXJ2Z0hBZURtVkhYYjA3Z3Zfcmx6MUhPU0pud0ktZFYyT1JRTjk1QkxlWmU5UUp2ejBySWI4bU9fYlYwTUEyajRiR1R2Z004Njg0Vk11RzBuenlaNUhzLVJPTVpCRjktOHBjb2dTQzJSdldhc3RWQmtSRU1fU3A5bmxSOERQRWZ1ZUdINWpsc1ItamEtMjdpaXpXLWxtd2RDR0pDM08?oc=5",
+          "publishedAt": "2026-08-14T18:55:46.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.963,
-          "contribution": 0.0009
-        },
-        {
-          "outlet": "AOL.co.uk",
-          "tier": 4,
-          "headline": "Cristian Romero sends emotional Tottenham farewell message ahead of Atletico Madrid transfer",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOcTh2ZVBILUZPU0lybzZFZUltQ3FRY19uZHlyYU40azBSX3VjSE5vTDZYZ3k0WkphZEo1amNMRkFkMS1Sb183Y0Y4ajJRSTJkamVjal9iVUs3ZV9sR21ScHdwcFFxazNBSV9Lam5jeWNqQi1UUEVIWnhkYi1TTkJfUW9nMFVvZzJlQUZtbkhPZ0Q?oc=5",
-          "publishedAt": "2026-08-14T18:51:48.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.962,
-          "contribution": 0.0009
+          "recency": 0.954,
+          "contribution": 0.0069
         },
         {
           "outlet": "talkSPORT",
@@ -259,30 +358,8 @@
           "publishedAt": "2026-08-14T18:50:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.962,
-          "contribution": 0.006
-        },
-        {
-          "outlet": "football.london",
-          "tier": 2,
-          "headline": "Cristian Romero sends emotional Tottenham farewell message ahead of Atletico Madrid transfer",
-          "url": "https://www.football.london/tottenham-hotspur-fc/transfer-news/cristian-romero-tottenham-atletico-transfer-34463279",
-          "publishedAt": "2026-08-14T18:38:47.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.961,
-          "contribution": 0.0055
-        },
-        {
-          "outlet": "Yahoo Sports",
-          "tier": 3,
-          "headline": "Tottenham Agree £34m Cristian Romero Sale to Atletico Madrid After Turbulent Season",
-          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOMzl5QU9COUtZd2QyU28tLXZacDZhc1JxR3Y4OXpWWWl5dnllaTYxNFU0R0lFdUxRYVNIenB4M0dTYTlHWFpPbnlTU0V5b1JqakVXTm9ZeEJWWkhfbGpWVm13NW11VUdtcm5YYUlGaUE2R3R1U0JTdVNaRlBpV2M5eEhiMUs0aGFqYnpZNA?oc=5",
-          "publishedAt": "2026-08-13T18:11:28.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.889,
-          "contribution": 0.0026
+          "recency": 0.953,
+          "contribution": 0.0038
         },
         {
           "outlet": "Transfermarkt",
@@ -292,8 +369,8 @@
           "publishedAt": "2026-08-13T11:07:22.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.869,
-          "contribution": 0.0024
+          "recency": 0.861,
+          "contribution": 0.0017
         },
         {
           "outlet": "Chosunbiz",
@@ -303,19 +380,19 @@
           "publishedAt": "2026-08-13T06:50:00.000Z",
           "stage": "Done / confirmed",
           "cooler": null,
-          "recency": 0.857,
-          "contribution": 0.129
+          "recency": 0.849,
+          "contribution": 0.087
         },
         {
-          "outlet": "LiveScore",
-          "tier": 4,
-          "headline": "Source reveals sell-on clause Tottenham have secured in €40m Romero transfer to Atletico Madrid",
-          "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQbVhjS3FWVWg2VVFWd0daeVFFOWlYLXJsODRTTkJLUS1ha0pVZ0J0RUdRZGZSQ01keFBWU3U4eUYwOHliaHBMQkJlcUs5dDJzc2hXaTF1RGdXekFmOThKOGxfNy1EZl9NYTZib01aLVMya3BQLWFPcWtFSEVOZzIyNU1leFNmOFVFWUgxODd2UFozRUY0M1FOUFVlS0VsNVZoU3AtWkdybkJNb3Y3elg1ODJGY093QU9iNlk2WkkwYzdfaFI1Z3lTUng3SXNnQjdLNXZBcjlLR3NyVXdSS18wMGtLTE5pM3Q0TDNMMkdGT3VFcmNi?oc=5",
-          "publishedAt": "2026-08-13T04:33:57.000Z",
+          "outlet": "Yahoo Sports",
+          "tier": 3,
+          "headline": "Atlético win Cuti Romero race as €40 million Spurs transfer agreed",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5LM1ZSR2dzYk5QWjBmV2lHdGd6enh0NXl4T1ZJQlZSSUpnSGtaQjIxSDNXOEpxSmtPUnJ5cjN6WmVORlF3TUEtb01qRVN2Nkkzclg2VFQybUMta05rblJnNlpLNnI4dTNwakE3LVlPdnZlSHo4VnZwZlRxNllLZw?oc=5",
+          "publishedAt": "2026-08-13T01:18:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.851,
-          "contribution": 0.0007
+          "recency": 0.834,
+          "contribution": 0.0016
         },
         {
           "outlet": "Into the Calderon",
@@ -325,8 +402,8 @@
           "publishedAt": "2026-08-13T01:18:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.842,
-          "contribution": 0.0007
+          "recency": 0.834,
+          "contribution": 0.0006
         },
         {
           "outlet": "The New York Times",
@@ -336,19 +413,8 @@
           "publishedAt": "2026-08-12T21:20:37.000Z",
           "stage": "Imminent",
           "cooler": null,
-          "recency": 0.831,
-          "contribution": 0.8334
-        },
-        {
-          "outlet": "BBC Sport",
-          "tier": 1,
-          "headline": "Tottenham transfer news: Atletico Madrid agree deal for Tottenham's Cristian Romero",
-          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE4tSVdhOUFnSTFPdVJ4aThFUklYajNrMlVaT0JsMEJqakgwdW01Y1hzTWJWNVpxUGdyeldZVGRmQl9Vdzg1M0dUQzVzNGhxbDc4ZXJFTWxOQ3JJMmVGMGxDSkhPMWRGV3o4LXc?oc=5",
-          "publishedAt": "2026-08-12T21:18:21.000Z",
-          "stage": "Imminent",
-          "cooler": null,
-          "recency": 0.831,
-          "contribution": 0.6818
+          "recency": 0.824,
+          "contribution": 0.6759
         },
         {
           "outlet": "The Mirror",
@@ -358,8 +424,8 @@
           "publishedAt": "2026-08-12T08:37:00.000Z",
           "stage": "Imminent",
           "cooler": null,
-          "recency": 0.798,
-          "contribution": 0.1718
+          "recency": 0.791,
+          "contribution": 0.1703
         },
         {
           "outlet": "SportyTV",
@@ -369,8 +435,8 @@
           "publishedAt": "2026-08-08T21:21:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.611,
-          "contribution": 0.0005
+          "recency": 0.605,
+          "contribution": 0.0004
         },
         {
           "outlet": "The Guardian",
@@ -380,19 +446,8 @@
           "publishedAt": "2026-08-07T10:37:43.000Z",
           "stage": "Imminent",
           "cooler": null,
-          "recency": 0.546,
-          "contribution": 0.3793
-        },
-        {
-          "outlet": "theguardian.com",
-          "tier": 4,
-          "headline": "Tottenham and Atlético in talks over Romero with Van de Ven set to sign new deal",
-          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNbmZ0Z2dCNllSbmRYM253ZlFBU0RaVVVQbkZ5QVFsMzZpY21RcGZwUU1kWjNTYnhWekhYNDFqMEg0ZkdKQ08xdF9fazJMT3VLdWFIQzlFcWxwYkVsQThxWVozbUpqdlhCMGtPVVRRdW1PVktvYzF4ZFRBalBlNUVTM0RYcHMwZGVEcUJWck4tcDgzaTV5Wm1Uenc1LW5USnVpOE1uczBYWDU1M1dfdldVTXJjQmtFbkhOMHRtWGJkRXh3TFFXa2NCcg?oc=5",
-          "publishedAt": "2026-08-07T10:37:00.000Z",
-          "stage": "Imminent",
-          "cooler": null,
-          "recency": 0.546,
-          "contribution": 0.0437
+          "recency": 0.542,
+          "contribution": 0.376
         },
         {
           "outlet": "Read Tottenham",
@@ -402,19 +457,19 @@
           "publishedAt": "2026-08-07T09:07:04.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.544,
-          "contribution": 0.0004
+          "recency": 0.539,
+          "contribution": 0.0003
         },
         {
-          "outlet": "football365.com",
-          "tier": 4,
+          "outlet": "Football365",
+          "tier": 3,
           "headline": "Triple Tottenham exit nearly done as Romero hijack 'agreed', Spurs allow 'medical'",
           "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxORVYzTWJsdkpwcy1xZ3ozN0txNmVLdEt3TjdBRGRjY0pCLVNzRElKSTZSNkZuRkNVaTJvd3NLbnB0UjQtdjN6NWgwamI2RkgxNEVOWERicXJJeXJUNXFXR3lKMHlZUmFCNWZma1ZvXzdFSWo0YWIwWGdHWElYdkdISlFIdUt0S2dwSlpnLTl6T1l2Q3p4TVd4NTI3U0JsX25uTU0zbkNhRlVRVFpwLWc?oc=5",
           "publishedAt": "2026-08-06T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": "Rival competition",
-          "recency": 0.5,
-          "contribution": -0.0286
+          "recency": 0.496,
+          "contribution": -0.0843
         },
         {
           "outlet": "Metro.co.uk",
@@ -424,7 +479,7 @@
           "publishedAt": "2026-08-01T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.34,
+          "recency": 0.337,
           "contribution": 0.0002
         },
         {
@@ -435,8 +490,8 @@
           "publishedAt": "2026-07-31T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": "Cooling",
-          "recency": 0.315,
-          "contribution": -0.0529
+          "recency": 0.312,
+          "contribution": -0.0375
         },
         {
           "outlet": "TribalFootball",
@@ -446,8 +501,8 @@
           "publishedAt": "2026-07-30T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.292,
-          "contribution": 0.0005
+          "recency": 0.289,
+          "contribution": 0.0004
         },
         {
           "outlet": "FourFourTwo",
@@ -457,27 +512,16 @@
           "publishedAt": "2026-07-28T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.25,
-          "contribution": 0.0002
-        },
-        {
-          "outlet": "Sky Sports",
-          "tier": 1,
-          "headline": "Romero announces Spurs exit ahead of Atletico transfer",
-          "url": "https://www.skysports.com/football/news/11095/13572603/cristian-romero-spurs-captain-announces-exit-ahead-of-atletico-madrid-transfer-as-he-makes-statement-on-instagram",
-          "publishedAt": null,
-          "stage": "Done / confirmed",
-          "cooler": null,
-          "recency": 0.5,
-          "contribution": 1.0857
+          "recency": 0.248,
+          "contribution": 0.0001
         }
       ],
-      "latestAt": "2026-08-15T06:43:57.000Z",
+      "latestAt": "2026-08-15T09:18:44.000Z",
       "earliestAt": "2026-07-17T07:00:00.000Z",
       "heuristicProbability": 98,
       "llm": {
         "adjustment": 0,
-        "note": "Romero has confirmed his Tottenham departure, with a reported Atletico Madrid transfer completed.",
+        "note": "Romero’s completed move from Tottenham to Atlético Madrid is strongly confirmed by multiple headlines.",
         "renamedFrom": null,
         "redirectedFrom": null
       },
@@ -486,10 +530,6 @@
       "change": 0,
       "isNew": false,
       "history": [
-        {
-          "t": 1786155835034,
-          "p": 80
-        },
         {
           "t": 1786163407722,
           "p": 81
@@ -725,564 +765,9 @@
         {
           "t": 1786777211374,
           "p": 98
-        }
-      ]
-    },
-    {
-      "id": "out-djed-spence",
-      "player": "Djed Spence",
-      "direction": "out",
-      "directionConfidence": 1,
-      "clubs": [
-        "Inter Milan",
-        "AC Milan",
-        "Liverpool"
-      ],
-      "probability": 98,
-      "logit": 3.3129,
-      "done": true,
-      "confirmedBy": [
-        {
-          "outlet": "ESPN",
-          "tier": 2,
-          "headline": "Tottenham's Djed Spence lands in Italy to complete Inter transfer",
-          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNVFR0dFFLekFnXzhxbFdIMmVhSmhkUVRGY1JwVVZVN1lIcmgyYnhEa2p5TXNsZmFpemxEY0cwVzBXVFRHV1hCY3g4NTBrTGd6bXRCVDNsSFoyRHRub19KTUgyWGVwSVltLS0zaFhrM2oxNnZlWWhnUjA2dmIwM0Rwc1E4REZWaUNya3o4ZHY5SkpGT3RZ?oc=5",
-          "publishedAt": "2026-08-13T23:41:00.000Z"
-        },
-        {
-          "outlet": "espn.co.uk",
-          "tier": 4,
-          "headline": "Tottenham's Djed Spence lands in Italy to complete Inter transfer",
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNQWxwejcySlB4R2U2b1BCcHgya3p5UU5ubEdrUWgtQlQ4emRpU2ZTclZMWE9JeE5paU8xZmo2ejBucGxzcUt2dXQ4VFpqdkdoeU5TN1pja1NfYzNrSHlzcVZqLWFtX2N5SGpnQkpsb0lYYlE1VWJDNW9UUEt5WVFSTzltSEZmYlZqWFhLSDBYVFVwMDlsMEZEWU1B?oc=5",
-          "publishedAt": "2026-08-13T23:41:00.000Z"
-        }
-      ],
-      "stage": {
-        "id": "confirmed",
-        "label": "Done / confirmed",
-        "value": 3.2
-      },
-      "cooler": {
-        "id": "rejected",
-        "label": "Rejected / not for sale",
-        "value": -1.7
-      },
-      "breakdown": {
-        "prior": -1.75,
-        "evidenceSum": 4.3129,
-        "corroboration": 0.75,
-        "distinctOutlets": 23,
-        "tier1Outlets": 4,
-        "totalArticles": 41,
-        "confirmedFloorApplied": true
-      },
-      "evidence": [
-        {
-          "outlet": "Evening Standard",
-          "tier": 2,
-          "headline": "Why Tottenham are willing to sell Spence in cut-price deal",
-          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPcnpPLXRmdDJ5aWU1M2lGUk1PYVZqYVA4TVhmdmdtVHR6ZHdrS09qVm1CWlNyYWpFVGpYMHdPUWhMZlZpUE52ZHlLX1dJSktoTDFiMlNnOGtPcWRrWDQ3UDEyT0d0WWZBNkxGT0VpMDNjTjRUczRwYU1udEhhQWlMb3gtekZPTG11S1hzYkdRSHZNZ0RPekk2Q05sMjZmZw?oc=5",
-          "publishedAt": "2026-08-15T01:53:58.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.984,
-          "contribution": 0.0053
-        },
-        {
-          "outlet": "Radio Kerry",
-          "tier": 4,
-          "headline": "Tottenham agreed fee to sell Djed Spence",
-          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPbzI0MVc1UG9lTm01anZzQko2RG1iUG5MbmhlSzEyeHMwdTRSOHMxR2NqS25GWHJ1M3dZQ0FlTjhzNEcwSEVvRlhydmc5d2w5Q2pWLWQzLVRjN0ZTaTRKTkVCUUsyb014d0VUNWtLQmhPbE5rSS1fUFBtNHFrQWYzQmlEajRJdw?oc=5",
-          "publishedAt": "2026-08-14T12:10:41.000Z",
-          "stage": "Imminent",
-          "cooler": null,
-          "recency": 0.941,
-          "contribution": 0.0753
-        },
-        {
-          "outlet": "The New York Times",
-          "tier": 1,
-          "headline": "Tottenham’s Djed Spence set to join Inter after €35m transfer agreed",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQX2NtUzhwRnJ1cDB0NW9YRzFMMnJhOFUxSWlQOXZMeEVROGJBZG5iWWlnay1JTVlvUl9SSV8zamdYWEc1MFFCTWFWeGw3Njk5UE83NVYxS2F3MU4xSTQ0TDhWV0RWTG9IQU5zTGMzaTVvUHV3ZWt6cWlSdUhLc2kyWWRHSk1GOEI4MlVZQ0tLRU5BTHBZXzNR?oc=5",
-          "publishedAt": "2026-08-14T09:51:25.000Z",
-          "stage": "Imminent",
-          "cooler": null,
-          "recency": 0.934,
-          "contribution": 1.2047
-        },
-        {
-          "outlet": "Goal.com",
-          "tier": 2,
-          "headline": "Djed Spence arrives in Italy for Inter medical ahead of €35m transfer from Tottenham",
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQWXlPVDIxdXBMRjFiV1MwUmxwUW52RFBMNW1WSjZxZFZvb09SWElvSldXTGhFQk4xdy1yX0dEV2VSRVVhdGlRVHZlRS1scUNKS0EydEtSdDBYSEN5NzRKc1c2Ml9yY1RCektFZk9kRC1iR0xmTHlvaU5RNTZ5cmxMRkw5MzFpejdRdDJ0LVVnNmJSU0hKVWRVakxB?oc=5",
-          "publishedAt": "2026-08-14T06:31:58.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.924,
-          "contribution": 0.0046
-        },
-        {
-          "outlet": "SempreInter.com",
-          "tier": 4,
-          "headline": "Djed Spence Inter transfer agreement with Tottenham",
-          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE03djFaNWwzbTFBWndNNmRWRGsycEtKOVQwT1gyM1ZhVWw2U1JzYUVYcnVJbDN5dExPMUJzZEJDMWwwZWVJdlFNeTdHSkhGVkxJb0JsVS00clJLMTEtYTZkVUd0d3VROW5SWGxWcHBpTQ?oc=5",
-          "publishedAt": "2026-08-14T01:57:32.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.911,
-          "contribution": 0.0009
-        },
-        {
-          "outlet": "News.com.au",
-          "tier": 4,
-          "headline": "Tottenham’s Jed Spence arrives in Milan for medical ahead of proposed move to Inter",
-          "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQYXZFTk5lM2lvM2JhS20wd0g5bXN2dUUyc3UwcXl6Sy1GZHdCbjZnUEdocjlEVDUwZFhmZkx1S3dIUGUwRUtPUVpDVFczdmU3R0dZZnp5elRwTlJKZmUtb2ktNW80WXduSlVCSFdGdEZJNEJLelpDSFNqaHRZRlFrY08wMzN5UUgtZjlNRXFBaElWMUt2TFUwUkZWTHp0SVhLVlZZNGpTNC1vU0FON3BJV2U4N3JEQy0xTHBZMFBTSWxyS0tFUXBWRENsbzJsUmt1NzlEV29JbkpycWFrQkRpSXRKLW90Z9IB6wFBVV95cUxNVDdDUjBKd1FXbm02eC1YV0hQTTdVTlRJTEEyMF94N0thUGN3VGdvMUZVRzJ6Tk1HZ3dSdFBUZzY3c0lRbEdHUS1TNUJTZDVSYmgtX3M1eHQ1Z1FGeUxESG91R2pSdXJWaHVFWk0tcUdlU0lnbjBJMGlmYzdGS1VlTDhEN0lDNVdpZ1BhNG8xWnc2QmZTM0MwTVBpZ09SUTlDY0VSU05vNmVpTG1MVlhJZU1wN21IaDR5Q1dyaDFEaXVPbEJRTGxSUmh3T0dDOEs4REtnTXp6ZnIxbEVVS2lmRVlVYW1kaVF6RTVj?oc=5",
-          "publishedAt": "2026-08-14T00:22:36.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.906,
-          "contribution": 0.0009
-        },
-        {
-          "outlet": "ESPN",
-          "tier": 2,
-          "headline": "Tottenham's Djed Spence lands in Italy to complete Inter transfer",
-          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNVFR0dFFLekFnXzhxbFdIMmVhSmhkUVRGY1JwVVZVN1lIcmgyYnhEa2p5TXNsZmFpemxEY0cwVzBXVFRHV1hCY3g4NTBrTGd6bXRCVDNsSFoyRHRub19KTUgyWGVwSVltLS0zaFhrM2oxNnZlWWhnUjA2dmIwM0Rwc1E4REZWaUNya3o4ZHY5SkpGT3RZ?oc=5",
-          "publishedAt": "2026-08-13T23:41:00.000Z",
-          "stage": "Done / confirmed",
-          "cooler": null,
-          "recency": 0.904,
-          "contribution": 1.7943
-        },
-        {
-          "outlet": "espn.co.uk",
-          "tier": 4,
-          "headline": "Tottenham's Djed Spence lands in Italy to complete Inter transfer",
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNQWxwejcySlB4R2U2b1BCcHgya3p5UU5ubEdrUWgtQlQ4emRpU2ZTclZMWE9JeE5paU8xZmo2ejBucGxzcUt2dXQ4VFpqdkdoeU5TN1pja1NfYzNrSHlzcVZqLWFtX2N5SGpnQkpsb0lYYlE1VWJDNW9UUEt5WVFSTzltSEZmYlZqWFhLSDBYVFVwMDlsMEZEWU1B?oc=5",
-          "publishedAt": "2026-08-13T23:41:00.000Z",
-          "stage": "Done / confirmed",
-          "cooler": null,
-          "recency": 0.904,
-          "contribution": 0.1362
-        },
-        {
-          "outlet": "The Sun Nigeria",
-          "tier": 3,
-          "headline": "Spence set for Inter medical after Tottenham agree €35m transfer",
-          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPZHFkWnZBVmYyYXZaYlJ4NzNTdUVFUVd1c2pQckJIVkR2dkZ0Y1d2bWd5aWp4dGZ6MXlMYlJhaERCTTNVcE5SN0lyRThmV2ZYdmJCWHk2aXFicE9jdnFJN3dBN1VPVUtYVkZoRGNFNjNqTlJmbUtJWVVValhoMVNHbkltaGxWSTRlS3JB0gGQAUFVX3lxTE9ZVTRMZFpJV09jd05NajJMWENqZkdzRzVNM3haRWNzdXpjNDZTRlhmRzlhUjFRdkhEbVgxRFRjX2FoVS1rRkhteFVhelJpLUdZYjJwNlJ4S3AySEUyMUVwRlBWNktuRUZwMUNQekFIX2Z2SlpzajlnLVplaW5QYjRyNGlyVFpXSnAzTHZGdlRzSQ?oc=5",
-          "publishedAt": "2026-08-13T17:53:03.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.888,
-          "contribution": 0.002
-        },
-        {
-          "outlet": "football.london",
-          "tier": 2,
-          "headline": "Roberto De Zerbi explains why Tottenham had to agree Cristian Romero and Djed Spence transfers",
-          "url": "https://www.football.london/tottenham-hotspur-fc/transfer-news/roberto-de-zerbi-explains-tottenham-34453909",
-          "publishedAt": "2026-08-13T15:47:06.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.882,
-          "contribution": 0.0041
-        },
-        {
-          "outlet": "The Cult of Calcio",
-          "tier": 4,
-          "headline": "Inter to Sign Spence from Tottenham and Sell Frattesi",
-          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNOVVGaXVLUUhUby1aZEFzQ3psa2tzRUFBMVFRMThKSmYwcWM2eDdQVjl4X3RXS3Y5akVCZW5FUFd1VjVTVkNGaGc3Tjlzd3hJTW9TTDd3cEZuUTRqQjNLakUyOFJ0ZW1TSWFzRU93QnpmZlRNcXp0NWZyemxaelA5NG5hYmFqd9IBiwFBVV95cUxQVV9OdXpqVXlUbF96d1N3RDV0RlV2V1VtRXpmdHZuZVMyU0htRUlzRV9ZWDZzQ1lkNm9hVy1KWEY3Qmdhd285c3pNS1FFcmJkMmlfYktBRjVvV2dYb2R3NnEtc1RpeHlxTUJneXdSYU9xenNUNnpac04xaEltbFRIUUJELXpRR3p2aDVv?oc=5",
-          "publishedAt": "2026-08-13T09:00:00.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.863,
-          "contribution": 0.0008
-        },
-        {
-          "outlet": "LiveScore",
-          "tier": 4,
-          "headline": "Tottenham Transfer News: Five Right-Backs Spurs Could Target to Replace Djed Spence",
-          "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNUEluUzd6N05kLUc1X05IN2ZfOUN4MlNuN09PUmN5MTBXbjFLQlR0MXVMTURFb2FTeEdyMVdxMU9mZFUzeThqd2ZZMS03cldueXo4dUVIb0k0ajc1RnN5NUpNRGJ4aWo4cnlhMlJUNFZZMFRGa1c1NkN6TVhfTnhfT2t1cnNHY05jb3FSN29WOVFtdkc5R1R1WG8wckV2X1c4QkE5cDBhdzFadUdrOUZVWldBYTZ1czAxTDJwV2l4ZGFRQTh4YnBXUU1TQno0NWk3SVNDNVJPd1dyeGZmSmwwbQ?oc=5",
-          "publishedAt": "2026-08-12T17:18:26.000Z",
-          "stage": "Interest / link",
-          "cooler": null,
-          "recency": 0.82,
-          "contribution": 0.0038
-        },
-        {
-          "outlet": "Yahoo Sports UK",
-          "tier": 3,
-          "headline": "Tottenham Hotspur reach agreement to sell Djed Spence: report",
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQTC04YUtTelV2MlN3WGRoMnRNNG8xZk1nNlJXcmtKV3JrRmtsOEtVVG9la3p3c2x2bDd6YUtoRW9vY2RqTXZaWVF0YWFHMllQRWVYMzR5RzFLTkFMZ0NfdGdpRG1iQkI4V082cnlhUFZyaXJPTDMtR1BVcnBJTURaTExvOGE3V2tCNm5MQndyOA?oc=5",
-          "publishedAt": "2026-08-12T14:32:47.000Z",
-          "stage": "Imminent",
-          "cooler": null,
-          "recency": 0.813,
-          "contribution": 0.1751
-        },
-        {
-          "outlet": "FourFourTwo",
-          "tier": 4,
-          "headline": "Tottenham Hotspur reach agreement to sell Djed Spence: report",
-          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNU0NpS0xDanZDREFFdnlKc3lORFBlVXRzOVZUcUdIZ2sxQ1hJOHlFbEk4VUFUeEl1Y1NYLTVxWjR0MmZqQktycGxBS19WcDgwZnI4Nmg3THcwanFZQ2htdjd0QzlKYk43dWVNazRUOHdHeXRuZDIyQnh5ME1ZQmlnTlBIcG9mR0ZqMjRTTGJ0azh2c1pJN2psc2JuLUpjUQ?oc=5",
-          "publishedAt": "2026-08-12T14:32:47.000Z",
-          "stage": "Imminent",
-          "cooler": null,
-          "recency": 0.813,
-          "contribution": 0.0589
-        },
-        {
-          "outlet": "BBC Sport",
-          "tier": 1,
-          "headline": "Inter in advanced talks for Spurs full-back Spence",
-          "url": "https://www.bbc.co.uk/sport/football/articles/cvgxz9xd95zo?at_medium=RSS&at_campaign=rss",
-          "publishedAt": "2026-08-12T13:43:30.000Z",
-          "stage": "Advanced talks",
-          "cooler": null,
-          "recency": 0.811,
-          "contribution": 0.4066
-        },
-        {
-          "outlet": "Football Italia",
-          "tier": 4,
-          "headline": "Tottenham reject Inter’s €30m Spence bid and hold out for €35m",
-          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9EUjhqbXU3VW9BWXgtWm5qcENiZ3JiRmEweHJhcVVtREJPTUFxM3FiaGp5TjJYaldzWEx6bjJwUlJva1NYbWhyc19PVEM4akx4eE9lbU1MREphVUlWRGUzcXBlSU96bjlfaF9Ed3Rra2vSAXZBVV95cUxOcFZzb2ZkTzdEZXZWZzVtaWR6QmpXdGlFb05ub0VIeW9qTng1c3Z5RDJ3ZFpnZE1jTzZMQkh2WjJ3NWpyVmd3eW12bjRURVVVOUh1ZzJtZlhtdG5ubEt6Y28zYnJWVkNKTzNsNjkwOWV6OVVJWTNR?oc=5",
-          "publishedAt": "2026-08-12T10:50:31.000Z",
-          "stage": "Mentioned only",
-          "cooler": "Rejected / not for sale",
-          "recency": 0.804,
-          "contribution": -0.2121
-        },
-        {
-          "outlet": "Sky Sports",
-          "tier": 1,
-          "headline": "Djed Spence transfer news: Inter Milan in talks to sign Spurs and England defender",
-          "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQNi0tSG0wS3FuS2NndG8tLWdWNjdvWnUwY2lqYVRBMlB0X2lQSlhwYlFuZWZrcU1Sd1ZUYjBGOUVSQ2hreGZIZnpSXzZQYmMzdkpTWElfYlBrQUljNzJRNmdHX2JaUEg1WWJ3SUVrRzRicXltbXd3NjFRZndSenFxWHFPUmRpX0hxeDM0VFJ2UUJCODdadDdleHBKMENLOEpSVDlkWUdFaER5SXJXdWlzakd2a21lRjJWRmNKbVdLUTlBcFhIcGtzR1RUNnlmWGtlVVE?oc=5",
-          "publishedAt": "2026-08-12T07:41:16.000Z",
-          "stage": "Advanced talks",
-          "cooler": null,
-          "recency": 0.795,
-          "contribution": 0.3263
-        },
-        {
-          "outlet": "Football Place",
-          "tier": 4,
-          "headline": "Inter submit Djed Spence bid as Tottenham transfer talks intensify",
-          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE0weHQtZmwteFJzN0ljTWEtZGNXM0xqM1k4WkpHTkhBYjlmZ1Rla2hwLTRCTFhCeE8xSjlGVGdwU3dWa3FpOFJ3OXdjQlkwZ1FCQWdxTEZrVkNXMnhrbmN6bVRYQzZPRUxQdnk3UjJNQmNpN2RCRVhFWg?oc=5",
-          "publishedAt": "2026-08-12T07:30:04.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.795,
-          "contribution": 0.0007
-        },
-        {
-          "outlet": "revolutionradio.com",
-          "tier": 4,
-          "headline": "Djed Spence transfer news: Inter Milan in talks to sign Spurs and England defender",
-          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOSjlOdDZnbS0zeVhGMXEyekJQLWctTTRacHo0M1VIcWVwQlE5VzZEZGxMWUp5b1pSMEs4Vkp3c2tqcl9pcnFtS21EbUZsVlAyUTF2Z2FmdnR0VEtZemNlN1VJZXd1dTlWZ2lrbXFQczFwLUhCNDR2T2U5N1Y4ZHp3blRvbmRVd1picEh2dGI2Yk9aR2cydWFZV3lWZTVBTUdydzg4VHk4NU9mSXBCWV81bG9TWmFWOHpVLUlBY045N2FyYjZLYzFvdWd5dw?oc=5",
-          "publishedAt": "2026-08-12T06:07:17.000Z",
-          "stage": "Advanced talks",
-          "cooler": null,
-          "recency": 0.791,
-          "contribution": 0.0262
-        },
-        {
-          "outlet": "theguardian.com",
-          "tier": 4,
-          "headline": "Djed Spence nears Tottenham exit with Inter in talks over £25.6m move",
-          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdjJnbk5hcjdLd0VKQXRmbVlfN0FtWFFNck9HRmVOdWYyZjlCNGtpbk5KM0hoREh1M2lzWXZCTm5MUG9XNnVSYmlVX3Z4anRwQjFrRVRrME5mMmNpbU1PUXdIcThWcHBxN2pvUnR6Rm5IV2w1N0wyQUd1RWZhNHdrNzNuV2FYeEg2MXlKRDFJMF9adkZrZ3FmbWEyanRJelQxbENYc2dnSkFpUQ?oc=5",
-          "publishedAt": "2026-08-11T21:31:00.000Z",
-          "stage": "Advanced talks",
-          "cooler": null,
-          "recency": 0.77,
-          "contribution": 0.0234
-        },
-        {
-          "outlet": "The Guardian",
-          "tier": 1,
-          "headline": "Djed Spence nears Tottenham exit with Inter in talks over £25.6m move",
-          "url": "https://www.theguardian.com/football/2026/aug/11/djed-spence-nears-tottenham-exit-inter-in-talks-over-move",
-          "publishedAt": "2026-08-11T16:22:46.000Z",
-          "stage": "Advanced talks",
-          "cooler": null,
-          "recency": 0.757,
-          "contribution": 0.2629
-        },
-        {
-          "outlet": "football365.com",
-          "tier": 4,
-          "headline": "Liverpool reach decision on signing Djed Spence after Tottenham star gives green light",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQTWZISlUzMGpzOVpwQ1FpS09lcHJNUEMwUFVlaXhhRDBlQ04tWERKYlhwVFo3ejJ2MXBzbk41WldSS2pjUFZPVU81TFFGcFRmS2ZWX2M5dzNjWEFaV2h0dmFFVFpSd180cHJZQ0Q2N0w2bFlKd0hCMUozZ0t4WHE5dGNJbFRfdHl1c0YwVUdYOGo?oc=5",
-          "publishedAt": "2026-08-07T06:13:40.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.539,
-          "contribution": 0.0005
-        },
-        {
-          "outlet": "talkSPORT",
-          "tier": 2,
-          "headline": "Djed Spence open to Tottenham exit and offered to clubs",
-          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPa0phblBqSHI1aEE5RUFCZTNhZnRteUZmUktpaEtzSVYtWkZwbTBRUFJsSmtWTnY3U21IcEd6WUJ5ZlRVNXdQekFLbll6ZkNyZkFrbk1QS3F6SEUxZE4tQmVwNTY4WWs3WTVTb3lUM3pfWVVfWVYwVHVGNXlBRnRidGRUZUs4TEVodWVMT1VR?oc=5",
-          "publishedAt": "2026-08-06T07:00:00.000Z",
-          "stage": "Interest / link",
-          "cooler": null,
-          "recency": 0.5,
-          "contribution": 0.0115
-        }
-      ],
-      "latestAt": "2026-08-15T01:53:58.000Z",
-      "earliestAt": "2026-07-20T07:00:00.000Z",
-      "heuristicProbability": 98,
-      "llm": {
-        "adjustment": 0,
-        "note": "Spence is completing a confirmed €35m transfer from Tottenham to Inter.",
-        "renamedFrom": null,
-        "redirectedFrom": null
-      },
-      "confirmedAt": 1786521296158,
-      "previousProbability": 98,
-      "change": 0,
-      "isNew": false,
-      "history": [
-        {
-          "t": 1786139859616,
-          "p": 17
-        },
-        {
-          "t": 1786155835034,
-          "p": 17
-        },
-        {
-          "t": 1786163407722,
-          "p": 17
-        },
-        {
-          "t": 1786173483995,
-          "p": 17
-        },
-        {
-          "t": 1786182993154,
-          "p": 20
-        },
-        {
-          "t": 1786194856470,
-          "p": 17
-        },
-        {
-          "t": 1786204112430,
-          "p": 17
-        },
-        {
-          "t": 1786215659090,
-          "p": 17
-        },
-        {
-          "t": 1786225694923,
-          "p": 19
-        },
-        {
-          "t": 1786242691738,
-          "p": 16
-        },
-        {
-          "t": 1786250329542,
-          "p": 16
-        },
-        {
-          "t": 1786259931792,
-          "p": 21
-        },
-        {
-          "t": 1786269528623,
-          "p": 16
-        },
-        {
-          "t": 1786290564342,
-          "p": 16
-        },
-        {
-          "t": 1786302250374,
-          "p": 16
-        },
-        {
-          "t": 1786312221883,
-          "p": 20
-        },
-        {
-          "t": 1786329420099,
-          "p": 26
-        },
-        {
-          "t": 1786337819331,
-          "p": 26
-        },
-        {
-          "t": 1786349227667,
-          "p": 26
-        },
-        {
-          "t": 1786358279945,
-          "p": 20
-        },
-        {
-          "t": 1786369640947,
-          "p": 26
-        },
-        {
-          "t": 1786378248794,
-          "p": 25
-        },
-        {
-          "t": 1786389563343,
-          "p": 25
-        },
-        {
-          "t": 1786399229902,
-          "p": 18
-        },
-        {
-          "t": 1786415404631,
-          "p": 16
-        },
-        {
-          "t": 1786423332911,
-          "p": 16
-        },
-        {
-          "t": 1786434015207,
-          "p": 23
-        },
-        {
-          "t": 1786443208894,
-          "p": 19
-        },
-        {
-          "t": 1786455942735,
-          "p": 20
-        },
-        {
-          "t": 1786464730579,
-          "p": 27
-        },
-        {
-          "t": 1786476507809,
-          "p": 70
-        },
-        {
-          "t": 1786486050106,
-          "p": 70
-        },
-        {
-          "t": 1786502852706,
-          "p": 77
-        },
-        {
-          "t": 1786511173154,
-          "p": 71
-        },
-        {
-          "t": 1786521296158,
-          "p": 98
-        },
-        {
-          "t": 1786530500017,
-          "p": 98
-        },
-        {
-          "t": 1786542674747,
-          "p": 98
-        },
-        {
-          "t": 1786551079954,
-          "p": 98
-        },
-        {
-          "t": 1786562957979,
-          "p": 98
-        },
-        {
-          "t": 1786572309779,
-          "p": 98
-        },
-        {
-          "t": 1786590107336,
-          "p": 98
-        },
-        {
-          "t": 1786597798730,
-          "p": 98
-        },
-        {
-          "t": 1786607804433,
-          "p": 98
-        },
-        {
-          "t": 1786616981791,
-          "p": 98
-        },
-        {
-          "t": 1786629061758,
-          "p": 98
-        },
-        {
-          "t": 1786637492653,
-          "p": 98
-        },
-        {
-          "t": 1786649308479,
-          "p": 98
-        },
-        {
-          "t": 1786658728946,
-          "p": 98
-        },
-        {
-          "t": 1786675729027,
-          "p": 98
-        },
-        {
-          "t": 1786683982514,
-          "p": 98
-        },
-        {
-          "t": 1786694001397,
-          "p": 98
-        },
-        {
-          "t": 1786699074013,
-          "p": 98
-        },
-        {
-          "t": 1786702737506,
-          "p": 98
-        },
-        {
-          "t": 1786715188035,
-          "p": 98
-        },
-        {
-          "t": 1786723659111,
-          "p": 98
-        },
-        {
-          "t": 1786734988605,
-          "p": 98
-        },
-        {
-          "t": 1786743791755,
-          "p": 98
-        },
-        {
-          "t": 1786758725260,
-          "p": 98
-        },
-        {
-          "t": 1786766184268,
-          "p": 98
         },
         {
-          "t": 1786777211374,
+          "t": 1786787008100,
           "p": 98
         }
       ]
@@ -1297,7 +782,7 @@
         "Manchester United"
       ],
       "probability": 98,
-      "logit": 0.6842,
+      "logit": 0.6631,
       "done": true,
       "confirmedBy": [
         {
@@ -1323,7 +808,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 2.4342,
+        "evidenceSum": 2.4131,
         "corroboration": 0,
         "distinctOutlets": 6,
         "tier1Outlets": 1,
@@ -1339,8 +824,8 @@
           "publishedAt": "2026-08-10T18:21:02.000Z",
           "stage": "Done / confirmed",
           "cooler": null,
-          "recency": 0.706,
-          "contribution": 0.2581
+          "recency": 0.699,
+          "contribution": 0.2558
         },
         {
           "outlet": "Yahoo Sports",
@@ -1350,8 +835,8 @@
           "publishedAt": "2026-08-10T08:15:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.683,
-          "contribution": 0.0039
+          "recency": 0.677,
+          "contribution": 0.0038
         },
         {
           "outlet": "The New York Times",
@@ -1361,8 +846,8 @@
           "publishedAt": "2026-08-10T05:21:48.000Z",
           "stage": "Done / confirmed",
           "cooler": null,
-          "recency": 0.677,
-          "contribution": 2.0575
+          "recency": 0.671,
+          "contribution": 2.0397
         },
         {
           "outlet": "Evening Standard",
@@ -1372,7 +857,7 @@
           "publishedAt": "2026-08-08T18:29:48.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.605,
+          "recency": 0.6,
           "contribution": 0.0085
         },
         {
@@ -1383,8 +868,8 @@
           "publishedAt": "2026-08-08T16:10:45.000Z",
           "stage": "Imminent",
           "cooler": null,
-          "recency": 0.601,
-          "contribution": 0.1015
+          "recency": 0.595,
+          "contribution": 0.1006
         },
         {
           "outlet": "talkSPORT",
@@ -1394,7 +879,7 @@
           "publishedAt": "2026-08-03T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.397,
+          "recency": 0.393,
           "contribution": 0.0047
         }
       ],
@@ -1412,10 +897,6 @@
       "change": 0,
       "isNew": false,
       "history": [
-        {
-          "t": 1786139859616,
-          "p": 14
-        },
         {
           "t": 1786155835034,
           "p": 18
@@ -1651,6 +1132,10 @@
         {
           "t": 1786777211374,
           "p": 98
+        },
+        {
+          "t": 1786787008100,
+          "p": 98
         }
       ]
     },
@@ -1661,7 +1146,7 @@
       "directionConfidence": 1,
       "clubs": [],
       "probability": 98,
-      "logit": -1.1409,
+      "logit": -1.1352,
       "done": true,
       "confirmedBy": [
         {
@@ -1680,10 +1165,10 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.6091,
+        "evidenceSum": 0.6148,
         "corroboration": 0,
         "distinctOutlets": 2,
-        "tier1Outlets": 1,
+        "tier1Outlets": 2,
         "totalArticles": 2,
         "confirmedFloorApplied": true
       },
@@ -1700,15 +1185,15 @@
           "contribution": 0.608
         },
         {
-          "outlet": "theguardian.com",
-          "tier": 4,
+          "outlet": "The Guardian",
+          "tier": 1,
           "headline": "Spurs break their women’s transfer record to sign Alice Sombath from Lyonnes | Tottenham Hotspur Women",
           "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQdFhGRzctdi10cENmLTNsYUM0ejFKVDNHM0ZFUnc3eHlPdkt3d1FwdERUcW1ycnlTcGtITXNsM2ZvcDhfTmQ5WWh6WGFTRXZ2VU1wdGZodm0wMmhvV256aWZSUXpOZkRTbngtZWdfZGlRQUhwMGNsQjdWVGhGVGpYM1BEX09NZnlOVjJiazBNNURNUkV4U3RXLVlXTzZTX3V6ZDcyVQ?oc=5",
           "publishedAt": "2026-07-21T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
           "recency": 0.2,
-          "contribution": 0.0011
+          "contribution": 0.0068
         }
       ],
       "latestAt": "2026-07-21T07:00:00.000Z",
@@ -1716,7 +1201,7 @@
       "heuristicProbability": 98,
       "llm": {
         "adjustment": 0,
-        "note": "Tottenham have completed the signing of France defender Alice Sombath from Lyonnes.",
+        "note": "Tottenham’s signing of France defender Alice Sombath is confirmed by BBC Sport and The Guardian.",
         "renamedFrom": null,
         "redirectedFrom": null
       },
@@ -1725,10 +1210,6 @@
       "change": 0,
       "isNew": false,
       "history": [
-        {
-          "t": 1786130325452,
-          "p": 98
-        },
         {
           "t": 1786139859616,
           "p": 98
@@ -1964,6 +1445,10 @@
         {
           "t": 1786777211374,
           "p": 98
+        },
+        {
+          "t": 1786787008100,
+          "p": 98
         }
       ]
     },
@@ -2047,10 +1532,6 @@
       "change": 0,
       "isNew": false,
       "history": [
-        {
-          "t": 1785940587133,
-          "p": 34
-        },
         {
           "t": 1785948868809,
           "p": 34
@@ -2286,6 +1767,525 @@
         {
           "t": 1786777211374,
           "p": 98
+        },
+        {
+          "t": 1786787008100,
+          "p": 98
+        }
+      ]
+    },
+    {
+      "id": "out-djed-spence",
+      "player": "Djed Spence",
+      "direction": "out",
+      "directionConfidence": 1,
+      "clubs": [
+        "Inter Milan",
+        "AC Milan",
+        "Liverpool"
+      ],
+      "probability": 98,
+      "logit": 2.5893,
+      "done": true,
+      "confirmedBy": [
+        {
+          "outlet": "ESPN",
+          "tier": 2,
+          "headline": "Tottenham's Djed Spence lands in Italy to complete Inter transfer",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNVFR0dFFLekFnXzhxbFdIMmVhSmhkUVRGY1JwVVZVN1lIcmgyYnhEa2p5TXNsZmFpemxEY0cwVzBXVFRHV1hCY3g4NTBrTGd6bXRCVDNsSFoyRHRub19KTUgyWGVwSVltLS0zaFhrM2oxNnZlWWhnUjA2dmIwM0Rwc1E4REZWaUNya3o4ZHY5SkpGT3RZ?oc=5",
+          "publishedAt": "2026-08-13T23:41:00.000Z"
+        },
+        {
+          "outlet": "espn.co.uk",
+          "tier": 4,
+          "headline": "Tottenham's Djed Spence lands in Italy to complete Inter transfer",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNQWxwejcySlB4R2U2b1BCcHgya3p5UU5ubEdrUWgtQlQ4emRpU2ZTclZMWE9JeE5paU8xZmo2ejBucGxzcUt2dXQ4VFpqdkdoeU5TN1pja1NfYzNrSHlzcVZqLWFtX2N5SGpnQkpsb0lYYlE1VWJDNW9UUEt5WVFSTzltSEZmYlZqWFhLSDBYVFVwMDlsMEZEWU1B?oc=5",
+          "publishedAt": "2026-08-13T23:41:00.000Z"
+        }
+      ],
+      "stage": {
+        "id": "confirmed",
+        "label": "Done / confirmed"
+      },
+      "cooler": {
+        "id": "rejected",
+        "label": "Rejected / not for sale",
+        "value": -1.7
+      },
+      "breakdown": {
+        "prior": -1.75,
+        "evidenceSum": 3.5893,
+        "corroboration": 0.75,
+        "distinctOutlets": 19,
+        "tier1Outlets": 4,
+        "totalArticles": 33,
+        "confirmedFloorApplied": false
+      },
+      "evidence": [
+        {
+          "outlet": "Evening Standard",
+          "tier": 2,
+          "headline": "Why Tottenham are willing to sell Spence in cut-price deal",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPcnpPLXRmdDJ5aWU1M2lGUk1PYVZqYVA4TVhmdmdtVHR6ZHdrS09qVm1CWlNyYWpFVGpYMHdPUWhMZlZpUE52ZHlLX1dJSktoTDFiMlNnOGtPcWRrWDQ3UDEyT0d0WWZBNkxGT0VpMDNjTjRUczRwYU1udEhhQWlMb3gtekZPTG11S1hzYkdRSHZNZ0RPekk2Q05sMjZmZw?oc=5",
+          "publishedAt": "2026-08-15T07:27:20.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.993,
+          "contribution": 0.0062
+        },
+        {
+          "outlet": "Radio Kerry",
+          "tier": 4,
+          "headline": "Tottenham agreed fee to sell Djed Spence",
+          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPbzI0MVc1UG9lTm01anZzQko2RG1iUG5MbmhlSzEyeHMwdTRSOHMxR2NqS25GWHJ1M3dZQ0FlTjhzNEcwSEVvRlhydmc5d2w5Q2pWLWQzLVRjN0ZTaTRKTkVCUUsyb014d0VUNWtLQmhPbE5rSS1fUFBtNHFrQWYzQmlEajRJdw?oc=5",
+          "publishedAt": "2026-08-14T12:10:41.000Z",
+          "stage": "Imminent",
+          "cooler": null,
+          "recency": 0.933,
+          "contribution": 0.0834
+        },
+        {
+          "outlet": "The New York Times",
+          "tier": 1,
+          "headline": "Tottenham’s Djed Spence set to join Inter after €35m transfer agreed",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQX2NtUzhwRnJ1cDB0NW9YRzFMMnJhOFUxSWlQOXZMeEVROGJBZG5iWWlnay1JTVlvUl9SSV8zamdYWEc1MFFCTWFWeGw3Njk5UE83NVYxS2F3MU4xSTQ0TDhWV0RWTG9IQU5zTGMzaTVvUHV3ZWt6cWlSdUhLc2kyWWRHSk1GOEI4MlVZQ0tLRU5BTHBZXzNR?oc=5",
+          "publishedAt": "2026-08-14T09:51:25.000Z",
+          "stage": "Imminent",
+          "cooler": null,
+          "recency": 0.926,
+          "contribution": 1.6719
+        },
+        {
+          "outlet": "Goal.com",
+          "tier": 2,
+          "headline": "Djed Spence arrives in Italy for Inter medical ahead of €35m transfer from Tottenham",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQWXlPVDIxdXBMRjFiV1MwUmxwUW52RFBMNW1WSjZxZFZvb09SWElvSldXTGhFQk4xdy1yX0dEV2VSRVVhdGlRVHZlRS1scUNKS0EydEtSdDBYSEN5NzRKc1c2Ml9yY1RCektFZk9kRC1iR0xmTHlvaU5RNTZ5cmxMRkw5MzFpejdRdDJ0LVVnNmJSU0hKVWRVakxB?oc=5",
+          "publishedAt": "2026-08-14T06:31:58.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.916,
+          "contribution": 0.0053
+        },
+        {
+          "outlet": "SempreInter.com",
+          "tier": 4,
+          "headline": "Djed Spence Inter transfer agreement with Tottenham",
+          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE03djFaNWwzbTFBWndNNmRWRGsycEtKOVQwT1gyM1ZhVWw2U1JzYUVYcnVJbDN5dExPMUJzZEJDMWwwZWVJdlFNeTdHSkhGVkxJb0JsVS00clJLMTEtYTZkVUd0d3VROW5SWGxWcHBpTQ?oc=5",
+          "publishedAt": "2026-08-14T01:57:32.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.903,
+          "contribution": 0.001
+        },
+        {
+          "outlet": "News.com.au",
+          "tier": 4,
+          "headline": "Tottenham’s Jed Spence arrives in Milan for medical ahead of proposed move to Inter",
+          "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQYXZFTk5lM2lvM2JhS20wd0g5bXN2dUUyc3UwcXl6Sy1GZHdCbjZnUEdocjlEVDUwZFhmZkx1S3dIUGUwRUtPUVpDVFczdmU3R0dZZnp5elRwTlJKZmUtb2ktNW80WXduSlVCSFdGdEZJNEJLelpDSFNqaHRZRlFrY08wMzN5UUgtZjlNRXFBaElWMUt2TFUwUkZWTHp0SVhLVlZZNGpTNC1vU0FON3BJV2U4N3JEQy0xTHBZMFBTSWxyS0tFUXBWRENsbzJsUmt1NzlEV29JbkpycWFrQkRpSXRKLW90Z9IB6wFBVV95cUxNVDdDUjBKd1FXbm02eC1YV0hQTTdVTlRJTEEyMF94N0thUGN3VGdvMUZVRzJ6Tk1HZ3dSdFBUZzY3c0lRbEdHUS1TNUJTZDVSYmgtX3M1eHQ1Z1FGeUxESG91R2pSdXJWaHVFWk0tcUdlU0lnbjBJMGlmYzdGS1VlTDhEN0lDNVdpZ1BhNG8xWnc2QmZTM0MwTVBpZ09SUTlDY0VSU05vNmVpTG1MVlhJZU1wN21IaDR5Q1dyaDFEaXVPbEJRTGxSUmh3T0dDOEs4REtnTXp6ZnIxbEVVS2lmRVlVYW1kaVF6RTVj?oc=5",
+          "publishedAt": "2026-08-14T00:22:36.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.899,
+          "contribution": 0.001
+        },
+        {
+          "outlet": "ESPN",
+          "tier": 2,
+          "headline": "Tottenham's Djed Spence lands in Italy to complete Inter transfer",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNQWxwejcySlB4R2U2b1BCcHgya3p5UU5ubEdrUWgtQlQ4emRpU2ZTclZMWE9JeE5paU8xZmo2ejBucGxzcUt2dXQ4VFpqdkdoeU5TN1pja1NfYzNrSHlzcVZqLWFtX2N5SGpnQkpsb0lYYlE1VWJDNW9UUEt5WVFSTzltSEZmYlZqWFhLSDBYVFVwMDlsMEZEWU1B?oc=5",
+          "publishedAt": "2026-08-13T23:41:00.000Z",
+          "stage": "Reported complete (1 source)",
+          "cooler": null,
+          "recency": 0.897,
+          "contribution": 0.7544
+        },
+        {
+          "outlet": "thesun.ng",
+          "tier": 4,
+          "headline": "Spence set for Inter medical after Tottenham agree €35m transfer",
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPZHFkWnZBVmYyYXZaYlJ4NzNTdUVFUVd1c2pQckJIVkR2dkZ0Y1d2bWd5aWp4dGZ6MXlMYlJhaERCTTNVcE5SN0lyRThmV2ZYdmJCWHk2aXFicE9jdnFJN3dBN1VPVUtYVkZoRGNFNjNqTlJmbUtJWVVValhoMVNHbkltaGxWSTRlS3JB0gGQAUFVX3lxTE9ZVTRMZFpJV09jd05NajJMWENqZkdzRzVNM3haRWNzdXpjNDZTRlhmRzlhUjFRdkhEbVgxRFRjX2FoVS1rRkhteFVhelJpLUdZYjJwNlJ4S3AySEUyMUVwRlBWNktuRUZwMUNQekFIX2Z2SlpzajlnLVplaW5QYjRyNGlyVFpXSnAzTHZGdlRzSQ?oc=5",
+          "publishedAt": "2026-08-13T17:53:03.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.88,
+          "contribution": 0.0009
+        },
+        {
+          "outlet": "football.london",
+          "tier": 2,
+          "headline": "Roberto De Zerbi explains why Tottenham had to agree Cristian Romero and Djed Spence transfers",
+          "url": "https://www.football.london/tottenham-hotspur-fc/transfer-news/roberto-de-zerbi-explains-tottenham-34453909",
+          "publishedAt": "2026-08-13T15:47:06.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.874,
+          "contribution": 0.0047
+        },
+        {
+          "outlet": "Yahoo Sports",
+          "tier": 3,
+          "headline": "Inter to Sign Spence from Tottenham and Sell Frattesi",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNREhmek91SVExY0hNNXBFdk9ITWozODBfWl82djQ0bTdhYWZlY1VKbmNEVFhTQ1B0VExocVpMYzAxT2RqVG90ZWtuUEs2cjNZOWtnTktaQk9lNTNSMjhmRjZocTVTZG8tRkZ1OHYxcl9WQjAxZzFyUmlSbjVQWHlyUnBtbkhmYmJ0?oc=5",
+          "publishedAt": "2026-08-13T14:15:00.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.87,
+          "contribution": 0.0024
+        },
+        {
+          "outlet": "Yahoo Sports UK",
+          "tier": 3,
+          "headline": "Tottenham Hotspur reach agreement to sell Djed Spence: report",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQTC04YUtTelV2MlN3WGRoMnRNNG8xZk1nNlJXcmtKV3JrRmtsOEtVVG9la3p3c2x2bDd6YUtoRW9vY2RqTXZaWVF0YWFHMllQRWVYMzR5RzFLTkFMZ0NfdGdpRG1iQkI4V082cnlhUFZyaXJPTDMtR1BVcnBJTURaTExvOGE3V2tCNm5MQndyOA?oc=5",
+          "publishedAt": "2026-08-12T14:32:47.000Z",
+          "stage": "Imminent",
+          "cooler": null,
+          "recency": 0.806,
+          "contribution": 0.1736
+        },
+        {
+          "outlet": "FourFourTwo",
+          "tier": 4,
+          "headline": "Tottenham Hotspur reach agreement to sell Djed Spence: report",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNU0NpS0xDanZDREFFdnlKc3lORFBlVXRzOVZUcUdIZ2sxQ1hJOHlFbEk4VUFUeEl1Y1NYLTVxWjR0MmZqQktycGxBS19WcDgwZnI4Nmg3THcwanFZQ2htdjd0QzlKYk43dWVNazRUOHdHeXRuZDIyQnh5ME1ZQmlnTlBIcG9mR0ZqMjRTTGJ0azh2c1pJN2psc2JuLUpjUQ?oc=5",
+          "publishedAt": "2026-08-12T14:32:47.000Z",
+          "stage": "Imminent",
+          "cooler": null,
+          "recency": 0.806,
+          "contribution": 0.0645
+        },
+        {
+          "outlet": "BBC Sport",
+          "tier": 1,
+          "headline": "Inter in advanced talks for Spurs full-back Spence",
+          "url": "https://www.bbc.co.uk/sport/football/articles/cvgxz9xd95zo?at_medium=RSS&at_campaign=rss",
+          "publishedAt": "2026-08-12T13:43:30.000Z",
+          "stage": "Advanced talks",
+          "cooler": null,
+          "recency": 0.804,
+          "contribution": 0.4031
+        },
+        {
+          "outlet": "Football Italia",
+          "tier": 4,
+          "headline": "Tottenham reject Inter’s €30m Spence bid and hold out for €35m",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9EUjhqbXU3VW9BWXgtWm5qcENiZ3JiRmEweHJhcVVtREJPTUFxM3FiaGp5TjJYaldzWEx6bjJwUlJva1NYbWhyc19PVEM4akx4eE9lbU1MREphVUlWRGUzcXBlSU96bjlfaF9Ed3Rra2vSAXZBVV95cUxOcFZzb2ZkTzdEZXZWZzVtaWR6QmpXdGlFb05ub0VIeW9qTng1c3Z5RDJ3ZFpnZE1jTzZMQkh2WjJ3NWpyVmd3eW12bjRURVVVOUh1ZzJtZlhtdG5ubEt6Y28zYnJWVkNKTzNsNjkwOWV6OVVJWTNR?oc=5",
+          "publishedAt": "2026-08-12T10:50:31.000Z",
+          "stage": "Mentioned only",
+          "cooler": "Rejected / not for sale",
+          "recency": 0.797,
+          "contribution": -0.2103
+        },
+        {
+          "outlet": "Sky Sports",
+          "tier": 1,
+          "headline": "Djed Spence transfer news: Inter Milan in talks to sign Spurs and England defender",
+          "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQNi0tSG0wS3FuS2NndG8tLWdWNjdvWnUwY2lqYVRBMlB0X2lQSlhwYlFuZWZrcU1Sd1ZUYjBGOUVSQ2hreGZIZnpSXzZQYmMzdkpTWElfYlBrQUljNzJRNmdHX2JaUEg1WWJ3SUVrRzRicXltbXd3NjFRZndSenFxWHFPUmRpX0hxeDM0VFJ2UUJCODdadDdleHBKMENLOEpSVDlkWUdFaER5SXJXdWlzakd2a21lRjJWRmNKbVdLUTlBcFhIcGtzR1RUNnlmWGtlVVE?oc=5",
+          "publishedAt": "2026-08-12T07:41:16.000Z",
+          "stage": "Advanced talks",
+          "cooler": null,
+          "recency": 0.789,
+          "contribution": 0.3235
+        },
+        {
+          "outlet": "revolutionradio.com",
+          "tier": 4,
+          "headline": "Djed Spence transfer news: Inter Milan in talks to sign Spurs and England defender",
+          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOSjlOdDZnbS0zeVhGMXEyekJQLWctTTRacHo0M1VIcWVwQlE5VzZEZGxMWUp5b1pSMEs4Vkp3c2tqcl9pcnFtS21EbUZsVlAyUTF2Z2FmdnR0VEtZemNlN1VJZXd1dTlWZ2lrbXFQczFwLUhCNDR2T2U5N1Y4ZHp3blRvbmRVd1picEh2dGI2Yk9aR2cydWFZV3lWZTVBTUdydzg4VHk4NU9mSXBCWV81bG9TWmFWOHpVLUlBY045N2FyYjZLYzFvdWd5dw?oc=5",
+          "publishedAt": "2026-08-12T06:07:17.000Z",
+          "stage": "Advanced talks",
+          "cooler": null,
+          "recency": 0.785,
+          "contribution": 0.0284
+        },
+        {
+          "outlet": "The Guardian",
+          "tier": 1,
+          "headline": "Djed Spence nears Tottenham exit with Inter in talks over £25.6m move",
+          "url": "https://www.theguardian.com/football/2026/aug/11/djed-spence-nears-tottenham-exit-inter-in-talks-over-move",
+          "publishedAt": "2026-08-11T16:22:46.000Z",
+          "stage": "Advanced talks",
+          "cooler": null,
+          "recency": 0.751,
+          "contribution": 0.2606
+        },
+        {
+          "outlet": "talkSPORT",
+          "tier": 2,
+          "headline": "Djed Spence open to Tottenham exit and offered to clubs",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPa0phblBqSHI1aEE5RUFCZTNhZnRteUZmUktpaEtzSVYtWkZwbTBRUFJsSmtWTnY3U21IcEd6WUJ5ZlRVNXdQekFLbll6ZkNyZkFrbk1QS3F6SEUxZE4tQmVwNTY4WWs3WTVTb3lUM3pfWVVfWVYwVHVGNXlBRnRidGRUZUs4TEVodWVMT1VR?oc=5",
+          "publishedAt": "2026-08-06T07:00:00.000Z",
+          "stage": "Interest / link",
+          "cooler": null,
+          "recency": 0.496,
+          "contribution": 0.0134
+        },
+        {
+          "outlet": "Football365",
+          "tier": 3,
+          "headline": "Djed Spence reaches decision on joining Liverpool as Tottenham set price for sale",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPTV81UVJiMHgwdWFHbVZrTWFOalFGcE1WcDlYc2owaG1vNV9JZ01sMXJETGVPQmNsR1hocy1VektPbHpKMzNLQVo2MVBneHVNcXVCdGRzQ05XQ25GS2ZjS0Vqbjd4d0NwSDl2SXh4M25jRjM3bEpxOTJVZ2tpYVBUVHc2dEN2R3NsQmpuODR4bjdQcjRNVngyTnp6M2JiLS1nMkpQNXhMYw?oc=5",
+          "publishedAt": "2026-08-06T07:00:00.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.496,
+          "contribution": 0.0013
+        }
+      ],
+      "latestAt": "2026-08-15T07:27:20.000Z",
+      "earliestAt": "2026-07-20T07:00:00.000Z",
+      "heuristicProbability": 93,
+      "llm": {
+        "adjustment": 0,
+        "note": "Spence has agreed a move to Inter and reportedly completed his medical ahead of the transfer.",
+        "renamedFrom": null,
+        "redirectedFrom": null
+      },
+      "doneCarriedForward": true,
+      "confirmedAt": 1786521296158,
+      "previousProbability": 98,
+      "change": 0,
+      "isNew": false,
+      "history": [
+        {
+          "t": 1786155835034,
+          "p": 17
+        },
+        {
+          "t": 1786163407722,
+          "p": 17
+        },
+        {
+          "t": 1786173483995,
+          "p": 17
+        },
+        {
+          "t": 1786182993154,
+          "p": 20
+        },
+        {
+          "t": 1786194856470,
+          "p": 17
+        },
+        {
+          "t": 1786204112430,
+          "p": 17
+        },
+        {
+          "t": 1786215659090,
+          "p": 17
+        },
+        {
+          "t": 1786225694923,
+          "p": 19
+        },
+        {
+          "t": 1786242691738,
+          "p": 16
+        },
+        {
+          "t": 1786250329542,
+          "p": 16
+        },
+        {
+          "t": 1786259931792,
+          "p": 21
+        },
+        {
+          "t": 1786269528623,
+          "p": 16
+        },
+        {
+          "t": 1786290564342,
+          "p": 16
+        },
+        {
+          "t": 1786302250374,
+          "p": 16
+        },
+        {
+          "t": 1786312221883,
+          "p": 20
+        },
+        {
+          "t": 1786329420099,
+          "p": 26
+        },
+        {
+          "t": 1786337819331,
+          "p": 26
+        },
+        {
+          "t": 1786349227667,
+          "p": 26
+        },
+        {
+          "t": 1786358279945,
+          "p": 20
+        },
+        {
+          "t": 1786369640947,
+          "p": 26
+        },
+        {
+          "t": 1786378248794,
+          "p": 25
+        },
+        {
+          "t": 1786389563343,
+          "p": 25
+        },
+        {
+          "t": 1786399229902,
+          "p": 18
+        },
+        {
+          "t": 1786415404631,
+          "p": 16
+        },
+        {
+          "t": 1786423332911,
+          "p": 16
+        },
+        {
+          "t": 1786434015207,
+          "p": 23
+        },
+        {
+          "t": 1786443208894,
+          "p": 19
+        },
+        {
+          "t": 1786455942735,
+          "p": 20
+        },
+        {
+          "t": 1786464730579,
+          "p": 27
+        },
+        {
+          "t": 1786476507809,
+          "p": 70
+        },
+        {
+          "t": 1786486050106,
+          "p": 70
+        },
+        {
+          "t": 1786502852706,
+          "p": 77
+        },
+        {
+          "t": 1786511173154,
+          "p": 71
+        },
+        {
+          "t": 1786521296158,
+          "p": 98
+        },
+        {
+          "t": 1786530500017,
+          "p": 98
+        },
+        {
+          "t": 1786542674747,
+          "p": 98
+        },
+        {
+          "t": 1786551079954,
+          "p": 98
+        },
+        {
+          "t": 1786562957979,
+          "p": 98
+        },
+        {
+          "t": 1786572309779,
+          "p": 98
+        },
+        {
+          "t": 1786590107336,
+          "p": 98
+        },
+        {
+          "t": 1786597798730,
+          "p": 98
+        },
+        {
+          "t": 1786607804433,
+          "p": 98
+        },
+        {
+          "t": 1786616981791,
+          "p": 98
+        },
+        {
+          "t": 1786629061758,
+          "p": 98
+        },
+        {
+          "t": 1786637492653,
+          "p": 98
+        },
+        {
+          "t": 1786649308479,
+          "p": 98
+        },
+        {
+          "t": 1786658728946,
+          "p": 98
+        },
+        {
+          "t": 1786675729027,
+          "p": 98
+        },
+        {
+          "t": 1786683982514,
+          "p": 98
+        },
+        {
+          "t": 1786694001397,
+          "p": 98
+        },
+        {
+          "t": 1786699074013,
+          "p": 98
+        },
+        {
+          "t": 1786702737506,
+          "p": 98
+        },
+        {
+          "t": 1786715188035,
+          "p": 98
+        },
+        {
+          "t": 1786723659111,
+          "p": 98
+        },
+        {
+          "t": 1786734988605,
+          "p": 98
+        },
+        {
+          "t": 1786743791755,
+          "p": 98
+        },
+        {
+          "t": 1786758725260,
+          "p": 98
+        },
+        {
+          "t": 1786766184268,
+          "p": 98
+        },
+        {
+          "t": 1786777211374,
+          "p": 98
+        },
+        {
+          "t": 1786787008100,
+          "p": 98
         }
       ]
     },
@@ -2297,8 +2297,8 @@
       "clubs": [
         "Liverpool"
       ],
-      "probability": 29,
-      "logit": -1.0954,
+      "probability": 36,
+      "logit": -0.8093,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -2309,14 +2309,58 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.1546,
-        "corroboration": 0.5,
-        "distinctOutlets": 11,
-        "tier1Outlets": 1,
-        "totalArticles": 12,
+        "evidenceSum": 0.1907,
+        "corroboration": 0.75,
+        "distinctOutlets": 13,
+        "tier1Outlets": 2,
+        "totalArticles": 15,
         "confirmedFloorApplied": false
       },
       "evidence": [
+        {
+          "outlet": "football.london",
+          "tier": 2,
+          "headline": "Tottenham transfer news LIVE: Romero's goodbye, Gakpo agreement, £30m deal gets green light",
+          "url": "https://www.football.london/tottenham-hotspur-fc/news/tottenham-transfer-news-live-romeros-34463774",
+          "publishedAt": "2026-08-15T09:18:44.000Z",
+          "stage": "Named in a roundup",
+          "cooler": null,
+          "recency": 0.999,
+          "contribution": 0.0141
+        },
+        {
+          "outlet": "The Independent",
+          "tier": 1,
+          "headline": "Transfer news LIVE: Arsenal ‘lead race’ to sign £50m target, Tottenham reach Gakpo agreement, Fernandez latest",
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPQVVjbjhJdjRMTmM0VnpaNzZuTVYxd0U1TUxad3pacUMxYVJKNzcwWmt0TmhuT3BCY1o0bWFneVA5cXJhRU1hQzZRUGkwV0l0bmlqa2NtYVh6VUtEODBTQ3FZWTdaT3hJOEt4Q0liWDFpU002OHh1UzY1Y3c0b1AxU29ZLWNPcU1PQlYydDJwM1VFMVdPekRqNjBhTG0zNnZrN2drN2ctU0hrZEJTbjZCTQ?oc=5",
+          "publishedAt": "2026-08-15T08:45:30.000Z",
+          "stage": "Named in a roundup",
+          "cooler": null,
+          "recency": 0.997,
+          "contribution": 0.0338
+        },
+        {
+          "outlet": "LiveScore",
+          "tier": 4,
+          "headline": "Cody Gakpo tells Liverpool he wants Tottenham move with terms AGREED and giant bid readied – Exclusive",
+          "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxOUU1TNVY0MVBkNW55ZUtyMHAtZDZhNk5sV3RGbi1DdzlFMldSX0hLUjJrbW1NS0JpSnRUMWJVbDcxTUpWOFd1eXFCUkdMQ0lJTXZoRndpRjhHWTZBQ3Jld3RUNjdOMjB3OVBXUllsRmF4Y0xfXzNmRnpob1lrb2dtc282em5seXlIb0NOUjFQZkhuT2F0NXlfQzBUaGtzd0xEQ0F6WXI4S3Vib0FoTFJaekxLb1VjemdTeFRvQ0pPOGVBUks4NURFQ3o1eGNzVEFCdXdpTFhaY01wRVhpejZrcHRES05sSk1xTEJYTWpHd1kzN2hqMDZXaDhHMW4?oc=5",
+          "publishedAt": "2026-08-15T08:26:37.000Z",
+          "stage": "Interest / link",
+          "cooler": null,
+          "recency": 0.996,
+          "contribution": 0.0177
+        },
+        {
+          "outlet": "Sports Mole",
+          "tier": 3,
+          "headline": "Tottenham transfer news LIVE: Cristian Romero confirmation, Cody Gakpo agreement",
+          "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQNlVRZHlBWWw0ZVZJUTItTXlCTkdvU0loUVFHNko0dFJ6ak9VWUlwMlZNVUJtbm44VVg2U09lNUFzUzlfREQ3THg5Nm15YjZDWlB4cG42M0VZLXpaZUdpMmIya016elFXR0lPVWN0ZWtvUzRadXlPdXNNcUN1TXFQTHNwZmNCdnlNMnJYUXM3TUZIUV9FVk9zUkVDa1ItakdlbWFwSHJ3ZUJJX1VnaHJPVktrbklhNnRrNzZoV1dkRktoR3AwbmVhcFhZcm1YUlNfZXBNQzJxam93Q3F1dURWZW5OMXEyNEZD?oc=5",
+          "publishedAt": "2026-08-15T06:35:38.000Z",
+          "stage": "Named in a roundup",
+          "cooler": null,
+          "recency": 0.99,
+          "contribution": 0.0056
+        },
         {
           "outlet": "FlashScore UK",
           "tier": 4,
@@ -2325,52 +2369,30 @@
           "publishedAt": "2026-08-14T21:24:04.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.97,
-          "contribution": 0.003
+          "recency": 0.961,
+          "contribution": 0.002
         },
         {
           "outlet": "ESPN",
           "tier": 2,
           "headline": "Transfer rumors, news: Tottenham continue interest for Liverpool's Gakpo",
-          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPSHc0WThYaXMxVmlJZDNEYnYzQ3dJN0lranVGcHdlRnRFR2M5a2Q5Qmc0UmVya2duMFdMZEdSU1d5NnQ5R0tGYU4ta0ViY0p2c2ZkcWVLRXNieGhhZ0VYeGJub2JBZlNidGNJaVlkWURnYklVZGZSc3Y5WUJmRHhTQVJmNnNRa0dIM1VDaW1pN2h4YlJZYjdvcFFXWjJVSE9QcTMxdHk4VHhGTXc4R05rczBBSEFlVThyX3pr?oc=5",
-          "publishedAt": "2026-08-14T20:39:00.000Z",
-          "stage": "Named in a roundup",
-          "cooler": null,
-          "recency": 0.967,
-          "contribution": 0.0214
-        },
-        {
-          "outlet": "espn.co.uk",
-          "tier": 4,
-          "headline": "Transfer rumors, news: Tottenham continue interest for Liverpool's Gakpo",
           "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQaWJIR0FzVGJuVzhDTk9Ob0taQll5MXpmYUN1MFhrVHhlMlJIOE40cmNaZ05tVkJhbjk4WHBjb3B5QTFBWVZVR3BoX1dRX2NvQ1hFY0t6VGpWVWxMV3pURml6RE4wWGZ3bGJsenQ1M2R1MzlhaGVMVi1URXhiaGJqTlZHSlZEaEQ1WWxJcUlCX2E4b3NXY3ZHRERDeTF5dU91UFpoc182c1hPU0VzUlRhclJXQmxvNHl3UEdvUUw3Njc?oc=5",
           "publishedAt": "2026-08-14T20:39:00.000Z",
           "stage": "Named in a roundup",
           "cooler": null,
-          "recency": 0.967,
-          "contribution": 0.0026
+          "recency": 0.959,
+          "contribution": 0.0114
         },
         {
-          "outlet": "SPORTbible",
+          "outlet": "sportbible.com",
           "tier": 4,
           "headline": "Spurs have decided on their next blockbuster transfer after Savinho and Cody Gakpo deals completed",
           "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNMFZJbHl2eHZHOVFFYXJpb1NJZFpENGw5RGNrWmFLMXR6ZlRkeVFyUjlzWVBjcWVEUE1FZ2R2NkZrRU5oUlFaSllqQ190UFk0S3kwbjRUeDlIdjg1SmF4a0l1V2d1eHVUUHZuWmxJWnFzRkF2bjJKZ2F4TEI1UnUxMnk1LUVxQmwzM0FxNVZ2NjI3ZEtDNS05N01kN0xxWGlkMjZCRnZRU0ZmYTBtZGtsYmRFaC1aQQ?oc=5",
           "publishedAt": "2026-08-14T16:59:03.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.956,
-          "contribution": 0.0022
-        },
-        {
-          "outlet": "football.london",
-          "tier": 2,
-          "headline": "Tottenham transfer news LIVE: Savinho 'bid', Victor Osimhen twist, Cody Gakpo update",
-          "url": "https://www.football.london/tottenham-hotspur-fc/news/tottenham-transfer-news-live-cody-34456777",
-          "publishedAt": "2026-08-14T16:53:04.000Z",
-          "stage": "Named in a roundup",
-          "cooler": null,
-          "recency": 0.956,
-          "contribution": 0.0165
+          "recency": 0.948,
+          "contribution": 0.0018
         },
         {
           "outlet": "TribalFootball",
@@ -2380,8 +2402,8 @@
           "publishedAt": "2026-08-14T16:09:42.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.953,
-          "contribution": 0.0074
+          "recency": 0.945,
+          "contribution": 0.0047
         },
         {
           "outlet": "FourFourTwo",
@@ -2391,8 +2413,8 @@
           "publishedAt": "2026-08-14T15:06:32.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.95,
-          "contribution": 0.002
+          "recency": 0.942,
+          "contribution": 0.0016
         },
         {
           "outlet": "Metro.co.uk",
@@ -2402,19 +2424,19 @@
           "publishedAt": "2026-08-14T15:04:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.95,
-          "contribution": 0.0018
+          "recency": 0.942,
+          "contribution": 0.0015
         },
         {
-          "outlet": "This Is Anfield",
+          "outlet": "thisisanfield.com",
           "tier": 4,
           "headline": "Cody Gakpo ‘agrees Tottenham deal’: Claims of £60m+ bid to Liverpool",
           "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOSm1aQ0ZCOUpvbFdmenpxWlhvaHB5NWkxX01KOG1RUWIyR2dwNEw5T1o3cWRXUEhWQ0w4a1JEQU1kaFZ6QUNVMFlWbWVHVkV6NUJLMkppbUxuS1lVMy1SdERVRGh3bnZpekhwM1VZT082cC1rM25mcHBSWU1GcUtJM2dybEdVVjQ1TzIzTE9LeHJpRUU?oc=5",
           "publishedAt": "2026-08-14T13:54:35.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.947,
-          "contribution": 0.0016
+          "recency": 0.938,
+          "contribution": 0.0014
         },
         {
           "outlet": "Football Place",
@@ -2424,8 +2446,8 @@
           "publishedAt": "2026-08-14T13:15:36.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.945,
-          "contribution": 0.0015
+          "recency": 0.936,
+          "contribution": 0.0013
         },
         {
           "outlet": "BBC Sport",
@@ -2435,28 +2457,24 @@
           "publishedAt": "2026-08-06T05:36:11.000Z",
           "stage": "Interest / link",
           "cooler": null,
-          "recency": 0.498,
-          "contribution": 0.0946
+          "recency": 0.493,
+          "contribution": 0.0938
         }
       ],
-      "latestAt": "2026-08-14T21:24:04.000Z",
+      "latestAt": "2026-08-15T09:18:44.000Z",
       "earliestAt": "2026-08-06T05:36:11.000Z",
-      "heuristicProbability": 25,
+      "heuristicProbability": 31,
       "llm": {
-        "adjustment": 4,
-        "note": "Tottenham interest has reportedly advanced to concrete talks, with some reports claiming an agreement for Gakpo.",
+        "adjustment": 5,
+        "note": "Tottenham reportedly have an agreement and are in concrete talks for Gakpo, though confirmation remains limited.",
         "renamedFrom": null,
         "redirectedFrom": null
       },
       "confirmedAt": null,
-      "previousProbability": 16,
-      "change": 13,
+      "previousProbability": 20,
+      "change": 16,
       "isNew": false,
       "history": [
-        {
-          "t": 1786088680139,
-          "p": 40
-        },
         {
           "t": 1786097593206,
           "p": 34
@@ -2692,6 +2710,10 @@
         {
           "t": 1786777211374,
           "p": 29
+        },
+        {
+          "t": 1786787008100,
+          "p": 36
         }
       ]
     },
@@ -2704,7 +2726,7 @@
         "Manchester City"
       ],
       "probability": 24,
-      "logit": -1.4386,
+      "logit": -1.4431,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -2719,7 +2741,7 @@
       },
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.3114,
+        "evidenceSum": 0.3069,
         "corroboration": 0,
         "distinctOutlets": 3,
         "tier1Outlets": 0,
@@ -2735,8 +2757,8 @@
           "publishedAt": "2026-08-13T10:09:04.000Z",
           "stage": "Advanced talks",
           "cooler": null,
-          "recency": 0.866,
-          "contribution": 0.51
+          "recency": 0.858,
+          "contribution": 0.5056
         },
         {
           "outlet": "talkSPORT",
@@ -2746,8 +2768,8 @@
           "publishedAt": "2026-07-29T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.27,
-          "contribution": 0.006
+          "recency": 0.268,
+          "contribution": 0.0059
         },
         {
           "outlet": "Evening Standard",
@@ -2775,10 +2797,6 @@
       "change": 4,
       "isNew": false,
       "history": [
-        {
-          "t": 1786130325452,
-          "p": 15
-        },
         {
           "t": 1786139859616,
           "p": 15
@@ -3014,6 +3032,315 @@
         {
           "t": 1786777211374,
           "p": 24
+        },
+        {
+          "t": 1786787008100,
+          "p": 24
+        }
+      ]
+    },
+    {
+      "id": "out-mikey-moore",
+      "player": "Mikey Moore",
+      "direction": "out",
+      "directionConfidence": 1,
+      "clubs": [],
+      "probability": 22,
+      "logit": -1.4384,
+      "done": false,
+      "confirmedBy": [],
+      "stage": {
+        "id": "imminent",
+        "label": "Imminent",
+        "value": 1.9
+      },
+      "cooler": null,
+      "breakdown": {
+        "prior": -1.75,
+        "evidenceSum": 0.3116,
+        "corroboration": 0,
+        "distinctOutlets": 2,
+        "tier1Outlets": 1,
+        "totalArticles": 2,
+        "confirmedFloorApplied": false
+      },
+      "evidence": [
+        {
+          "outlet": "Football Place",
+          "tier": 4,
+          "headline": "Tottenham delay Mikey Moore loan as Spurs close in on attacking signing",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1kcWNuUGxNUjdYS2Y0Ul9uWG16QXNCNDFwcHJSOHBWTm9VZGVFSnpleGlvMi1aUVkyR3ZMMDZ1Q1JkQXVDT1U0MURTVnVGR184cGpVTE1fVXNiU09aTWs4UzBfR3N6eEpJaF9pUmh2TzBxZEFQelI1RlgwZDFTdw?oc=5",
+          "publishedAt": "2026-08-15T09:29:42.000Z",
+          "stage": "Imminent",
+          "cooler": null,
+          "recency": 0.999,
+          "contribution": 0.3038
+        },
+        {
+          "outlet": "BBC Sport",
+          "tier": 1,
+          "headline": "Tottenham transfer rumours: Savinho, Mikey Moore",
+          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBmU3V6NXpZbVlHRFFrRWZ2SzNSZjhYWEs1b0pheklXVFZEemZlUmEtYUd2N0J5dDJ0WkcxRTJEMERjZ0VYODY2cUE2WndwZDVwRl9pNklMaDdDUnZwVW5VZ1QwNlB4Qk0?oc=5",
+          "publishedAt": "2026-07-27T07:00:00.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.229,
+          "contribution": 0.0078
+        }
+      ],
+      "latestAt": "2026-08-15T09:29:42.000Z",
+      "earliestAt": "2026-07-27T07:00:00.000Z",
+      "heuristicProbability": 19,
+      "llm": {
+        "adjustment": 3,
+        "note": "Tottenham have reportedly delayed Moore’s proposed loan while pursuing another attacker.",
+        "renamedFrom": null,
+        "redirectedFrom": null
+      },
+      "confirmedAt": null,
+      "previousProbability": 16,
+      "change": 6,
+      "isNew": false,
+      "history": [
+        {
+          "t": 1785882619951,
+          "p": 16
+        },
+        {
+          "t": 1785900986694,
+          "p": 24
+        },
+        {
+          "t": 1785909526700,
+          "p": 16
+        },
+        {
+          "t": 1785909528315,
+          "p": 24
+        },
+        {
+          "t": 1785909530815,
+          "p": 16
+        },
+        {
+          "t": 1785910567151,
+          "p": 24
+        },
+        {
+          "t": 1785910983867,
+          "p": 19
+        },
+        {
+          "t": 1785911205010,
+          "p": 27
+        },
+        {
+          "t": 1785911543962,
+          "p": 19
+        },
+        {
+          "t": 1785911594537,
+          "p": 27
+        },
+        {
+          "t": 1785920917418,
+          "p": 19
+        },
+        {
+          "t": 1785929504936,
+          "p": 19
+        },
+        {
+          "t": 1785940587133,
+          "p": 19
+        },
+        {
+          "t": 1785948868809,
+          "p": 22
+        },
+        {
+          "t": 1785959863268,
+          "p": 22
+        },
+        {
+          "t": 1785968941023,
+          "p": 22
+        },
+        {
+          "t": 1785987758497,
+          "p": 22
+        },
+        {
+          "t": 1786007314427,
+          "p": 19
+        },
+        {
+          "t": 1786016090879,
+          "p": 29
+        },
+        {
+          "t": 1786027048123,
+          "p": 25
+        },
+        {
+          "t": 1786061891772,
+          "p": 27
+        },
+        {
+          "t": 1786079076919,
+          "p": 23
+        },
+        {
+          "t": 1786088680139,
+          "p": 16
+        },
+        {
+          "t": 1786097593206,
+          "p": 16
+        },
+        {
+          "t": 1786110115696,
+          "p": 16
+        },
+        {
+          "t": 1786119031662,
+          "p": 16
+        },
+        {
+          "t": 1786130325452,
+          "p": 16
+        },
+        {
+          "t": 1786139859616,
+          "p": 16
+        },
+        {
+          "t": 1786155835034,
+          "p": 16
+        },
+        {
+          "t": 1786163407722,
+          "p": 16
+        },
+        {
+          "t": 1786173483995,
+          "p": 16
+        },
+        {
+          "t": 1786182993154,
+          "p": 16
+        },
+        {
+          "t": 1786194856470,
+          "p": 15
+        },
+        {
+          "t": 1786204112430,
+          "p": 20
+        },
+        {
+          "t": 1786225694923,
+          "p": 15
+        },
+        {
+          "t": 1786242691738,
+          "p": 20
+        },
+        {
+          "t": 1786250329542,
+          "p": 20
+        },
+        {
+          "t": 1786259931792,
+          "p": 19
+        },
+        {
+          "t": 1786269528623,
+          "p": 19
+        },
+        {
+          "t": 1786290564342,
+          "p": 18
+        },
+        {
+          "t": 1786302250374,
+          "p": 18
+        },
+        {
+          "t": 1786312221883,
+          "p": 19
+        },
+        {
+          "t": 1786329420099,
+          "p": 19
+        },
+        {
+          "t": 1786337819331,
+          "p": 19
+        },
+        {
+          "t": 1786349227667,
+          "p": 19
+        },
+        {
+          "t": 1786358279945,
+          "p": 19
+        },
+        {
+          "t": 1786369640947,
+          "p": 19
+        },
+        {
+          "t": 1786378248794,
+          "p": 18
+        },
+        {
+          "t": 1786389563343,
+          "p": 16
+        },
+        {
+          "t": 1786399229902,
+          "p": 17
+        },
+        {
+          "t": 1786415404631,
+          "p": 16
+        },
+        {
+          "t": 1786423332911,
+          "p": 16
+        },
+        {
+          "t": 1786434015207,
+          "p": 16
+        },
+        {
+          "t": 1786443208894,
+          "p": 16
+        },
+        {
+          "t": 1786464730579,
+          "p": 16
+        },
+        {
+          "t": 1786476507809,
+          "p": 16
+        },
+        {
+          "t": 1786486050106,
+          "p": 16
+        },
+        {
+          "t": 1786502852706,
+          "p": 16
+        },
+        {
+          "t": 1786511173154,
+          "p": 16
+        },
+        {
+          "t": 1786787008100,
+          "p": 22
         }
       ]
     },
@@ -3026,7 +3353,7 @@
         "Chelsea"
       ],
       "probability": 20,
-      "logit": -1.3804,
+      "logit": -1.3814,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -3037,7 +3364,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.1196,
+        "evidenceSum": 0.1186,
         "corroboration": 0.25,
         "distinctOutlets": 3,
         "tier1Outlets": 2,
@@ -3046,15 +3373,15 @@
       },
       "evidence": [
         {
-          "outlet": "DAZN",
+          "outlet": "dazn.com",
           "tier": 4,
           "headline": "Tottenham eye blockbuster signing as Richarlison edges towards exit",
           "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOVjJuc1hjTjU0cHRzcDJMaGZoTlRoVDl4UWMwN3RmRF9Sd0xsVmdWRGFrS1dYQldpOEgzZVpLRkRJTDRfYl9YWmZNbk9XZ0NvV2dUSlppcXFFUFpMWF9IY0xpYzA4aUpXZ3VJVzU0c3FJbXBkaGF3Tk16V1ZxOXdoUjFXZzE5ZlR0WFRZYWpzT3ZrY3pRb0NES2JXQ3Rta3ZITVR4d2NyMXRQRGF5ZWd5S3lJOGhEcjVwamtIaTFHM0dZOUVQbm9kck8wQkw4UQ?oc=5",
           "publishedAt": "2026-08-03T07:00:00.000Z",
           "stage": "Interest / link",
           "cooler": null,
-          "recency": 0.397,
-          "contribution": 0.0071
+          "recency": 0.393,
+          "contribution": 0.007
         },
         {
           "outlet": "The Guardian",
@@ -3064,8 +3391,8 @@
           "publishedAt": "2026-08-01T15:02:52.000Z",
           "stage": "Interest / link",
           "cooler": null,
-          "recency": 0.349,
-          "contribution": 0.0663
+          "recency": 0.346,
+          "contribution": 0.0658
         },
         {
           "outlet": "The New York Times",
@@ -3075,8 +3402,8 @@
           "publishedAt": "2026-08-01T07:00:00.000Z",
           "stage": "Interest / link",
           "cooler": null,
-          "recency": 0.34,
-          "contribution": 0.0462
+          "recency": 0.337,
+          "contribution": 0.0458
         }
       ],
       "latestAt": "2026-08-03T07:00:00.000Z",
@@ -3084,7 +3411,7 @@
       "heuristicProbability": 20,
       "llm": {
         "adjustment": 0,
-        "note": "Richarlison’s future is unsettled, with reports of possible departure alongside De Zerbi’s wish for him to stay.",
+        "note": "Richarlison has been linked with leaving, although De Zerbi publicly wants him to remain at Tottenham.",
         "renamedFrom": null,
         "redirectedFrom": null
       },
@@ -3093,10 +3420,6 @@
       "change": 3,
       "isNew": false,
       "history": [
-        {
-          "t": 1786130325452,
-          "p": 22
-        },
         {
           "t": 1786139859616,
           "p": 22
@@ -3332,6 +3655,10 @@
         {
           "t": 1786777211374,
           "p": 20
+        },
+        {
+          "t": 1786787008100,
+          "p": 20
         }
       ]
     },
@@ -3342,7 +3669,7 @@
       "directionConfidence": 1,
       "clubs": [],
       "probability": 20,
-      "logit": -1.3949,
+      "logit": -1.398,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -3353,7 +3680,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.3551,
+        "evidenceSum": 0.352,
         "corroboration": 0,
         "distinctOutlets": 1,
         "tier1Outlets": 0,
@@ -3369,8 +3696,8 @@
           "publishedAt": "2026-08-08T17:18:38.000Z",
           "stage": "Advanced talks",
           "cooler": null,
-          "recency": 0.603,
-          "contribution": 0.3551
+          "recency": 0.598,
+          "contribution": 0.352
         }
       ],
       "latestAt": "2026-08-08T17:18:38.000Z",
@@ -3566,6 +3893,10 @@
         {
           "t": 1786777211374,
           "p": 20
+        },
+        {
+          "t": 1786787008100,
+          "p": 20
         }
       ]
     },
@@ -3621,10 +3952,6 @@
       "change": 0,
       "isNew": false,
       "history": [
-        {
-          "t": 1786130325452,
-          "p": 22
-        },
         {
           "t": 1786139859616,
           "p": 22
@@ -3860,6 +4187,10 @@
         {
           "t": 1786777211374,
           "p": 20
+        },
+        {
+          "t": 1786787008100,
+          "p": 20
         }
       ]
     },
@@ -3873,7 +4204,7 @@
         "Galatasaray"
       ],
       "probability": 18,
-      "logit": -1.6216,
+      "logit": -1.6227,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -3884,7 +4215,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.1284,
+        "evidenceSum": 0.1273,
         "corroboration": 0,
         "distinctOutlets": 3,
         "tier1Outlets": 0,
@@ -3900,8 +4231,8 @@
           "publishedAt": "2026-08-14T18:22:04.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.96,
-          "contribution": 0.0117
+          "recency": 0.952,
+          "contribution": 0.0116
         },
         {
           "outlet": "football.london",
@@ -3911,8 +4242,8 @@
           "publishedAt": "2026-08-13T18:41:33.000Z",
           "stage": "Interest / link",
           "cooler": null,
-          "recency": 0.89,
-          "contribution": 0.1104
+          "recency": 0.882,
+          "contribution": 0.1094
         },
         {
           "outlet": "Evening Standard",
@@ -3922,11 +4253,11 @@
           "publishedAt": "2026-08-02T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.367,
+          "recency": 0.364,
           "contribution": 0.0063
         }
       ],
-      "latestAt": "2026-08-14T18:22:04.000Z",
+      "latestAt": "2026-08-15T07:23:51.000Z",
       "earliestAt": "2026-08-02T07:00:00.000Z",
       "heuristicProbability": 16,
       "llm": {
@@ -3936,14 +4267,10 @@
         "redirectedFrom": null
       },
       "confirmedAt": null,
-      "previousProbability": 15,
-      "change": 3,
+      "previousProbability": 17,
+      "change": 1,
       "isNew": false,
       "history": [
-        {
-          "t": 1786139859616,
-          "p": 17
-        },
         {
           "t": 1786155835034,
           "p": 17
@@ -4179,232 +4506,9 @@
         {
           "t": 1786777211374,
           "p": 18
-        }
-      ]
-    },
-    {
-      "id": "in-harry-kane",
-      "player": "Harry Kane",
-      "direction": "in",
-      "directionConfidence": 1,
-      "clubs": [
-        "Bayern Munich"
-      ],
-      "probability": 18,
-      "logit": -1.725,
-      "done": false,
-      "confirmedBy": [],
-      "stage": {
-        "id": "mention",
-        "label": "Mentioned only",
-        "value": 0.05
-      },
-      "cooler": null,
-      "breakdown": {
-        "prior": -1.75,
-        "evidenceSum": 0.025,
-        "corroboration": 0,
-        "distinctOutlets": 2,
-        "tier1Outlets": 0,
-        "totalArticles": 2,
-        "confirmedFloorApplied": false
-      },
-      "evidence": [
-        {
-          "outlet": "Evening Standard",
-          "tier": 2,
-          "headline": "Harry Kane makes Tottenham transfer decision ahead of Bayern talks",
-          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQSWVxQUUzNEZwbl9IUHpHSVczdlpLd2ljVzl6LWlTMTM2bXExbXJvNEQzOHNrYmVqS1J5RkZDWU9kMHNDUGxjWlVPNTVNQWVRdXl1NmNOXzdGMWRLSjI3WElSR3E1aTJnbmlCZ3plZzlmRXRwcTI1U2l0VHBISURqSVhzNDU1bmw4ckFmeHV6N2VTNmM3X2dyMHhCRlM5eGNOUDVaTDRkcw?oc=5",
-          "publishedAt": "2026-08-11T21:17:56.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.769,
-          "contribution": 0.0239
         },
         {
-          "outlet": "football365.com",
-          "tier": 4,
-          "headline": "Harry Kane reaches decision on joining Tottenham from Bayern Munich after World Cup exit",
-          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOSXJmS2E4LXVHbUlJMU8weTM3UUljOEhEYnNpdDBlMHlHLVRvM1dIX2VuZ2RwWE9NX2U3alpjaU1ZZjRWdjBDTHA1Uy1GOEVCZ09PLXZrNG12MGkzeDltdjd0b3JCNV9tSVM2X2thc3ZvMEZvWXhsMG9paVFWV1lfY2xKanhRZ2puU2c4RGYzUkZVd2dhYjJEMWEyS0pmLUxDTVcwSThKZ3hsa19OZC1KaDhCa3Q4cExoWXc?oc=5",
-          "publishedAt": "2026-07-19T07:00:00.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.2,
-          "contribution": 0.0011
-        }
-      ],
-      "latestAt": "2026-08-11T21:17:56.000Z",
-      "earliestAt": "2026-07-19T07:00:00.000Z",
-      "heuristicProbability": 15,
-      "llm": {
-        "adjustment": 3,
-        "note": "Kane is reportedly deciding whether to return to Tottenham from Bayern Munich.",
-        "renamedFrom": null,
-        "redirectedFrom": null
-      },
-      "confirmedAt": null,
-      "previousProbability": 15,
-      "change": 3,
-      "isNew": false,
-      "history": [
-        {
-          "t": 1786358279945,
-          "p": 15
-        },
-        {
-          "t": 1786369640947,
-          "p": 15
-        },
-        {
-          "t": 1786378248794,
-          "p": 15
-        },
-        {
-          "t": 1786389563343,
-          "p": 15
-        },
-        {
-          "t": 1786399229902,
-          "p": 15
-        },
-        {
-          "t": 1786415404631,
-          "p": 15
-        },
-        {
-          "t": 1786423332911,
-          "p": 15
-        },
-        {
-          "t": 1786434015207,
-          "p": 15
-        },
-        {
-          "t": 1786443208894,
-          "p": 15
-        },
-        {
-          "t": 1786464730579,
-          "p": 15
-        },
-        {
-          "t": 1786476507809,
-          "p": 15
-        },
-        {
-          "t": 1786486050106,
-          "p": 15
-        },
-        {
-          "t": 1786502852706,
-          "p": 15
-        },
-        {
-          "t": 1786511173154,
-          "p": 15
-        },
-        {
-          "t": 1786521296158,
-          "p": 15
-        },
-        {
-          "t": 1786530500017,
-          "p": 15
-        },
-        {
-          "t": 1786542674747,
-          "p": 15
-        },
-        {
-          "t": 1786551079954,
-          "p": 15
-        },
-        {
-          "t": 1786562957979,
-          "p": 15
-        },
-        {
-          "t": 1786572309779,
-          "p": 15
-        },
-        {
-          "t": 1786590107336,
-          "p": 15
-        },
-        {
-          "t": 1786597798730,
-          "p": 15
-        },
-        {
-          "t": 1786607804433,
-          "p": 15
-        },
-        {
-          "t": 1786616981791,
-          "p": 15
-        },
-        {
-          "t": 1786629061758,
-          "p": 15
-        },
-        {
-          "t": 1786637492653,
-          "p": 15
-        },
-        {
-          "t": 1786649308479,
-          "p": 15
-        },
-        {
-          "t": 1786658728946,
-          "p": 15
-        },
-        {
-          "t": 1786675729027,
-          "p": 15
-        },
-        {
-          "t": 1786683982514,
-          "p": 15
-        },
-        {
-          "t": 1786694001397,
-          "p": 15
-        },
-        {
-          "t": 1786699074013,
-          "p": 15
-        },
-        {
-          "t": 1786702737506,
-          "p": 15
-        },
-        {
-          "t": 1786715188035,
-          "p": 15
-        },
-        {
-          "t": 1786723659111,
-          "p": 15
-        },
-        {
-          "t": 1786734988605,
-          "p": 15
-        },
-        {
-          "t": 1786743791755,
-          "p": 15
-        },
-        {
-          "t": 1786758725260,
-          "p": 15
-        },
-        {
-          "t": 1786766184268,
-          "p": 15
-        },
-        {
-          "t": 1786777211374,
+          "t": 1786787008100,
           "p": 18
         }
       ]
@@ -4415,40 +4519,28 @@
       "direction": "out",
       "directionConfidence": 1,
       "clubs": [
-        "PSG",
         "Juventus"
       ],
       "probability": 17,
-      "logit": -1.7143,
+      "logit": -1.7352,
       "done": false,
       "confirmedBy": [],
       "stage": {
-        "id": "mention",
-        "label": "Mentioned only",
-        "value": 0.05
+        "id": "interest",
+        "label": "Interest / link",
+        "value": 0.2
       },
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0357,
+        "evidenceSum": 0.0148,
         "corroboration": 0,
-        "distinctOutlets": 3,
+        "distinctOutlets": 2,
         "tier1Outlets": 0,
-        "totalArticles": 3,
+        "totalArticles": 2,
         "confirmedFloorApplied": false
       },
       "evidence": [
-        {
-          "outlet": "football.london",
-          "tier": 2,
-          "headline": "Tottenham dealt fresh Guglielmo Vicario blow after £30m PSG transfer agreement",
-          "url": "https://www.football.london/tottenham-hotspur-fc/transfer-news/tottenham-transfer-news-guglielmo-vicario-34443680",
-          "publishedAt": "2026-08-12T09:34:20.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.8,
-          "contribution": 0.0248
-        },
         {
           "outlet": "Football Italia",
           "tier": 4,
@@ -4457,8 +4549,8 @@
           "publishedAt": "2026-08-03T07:00:00.000Z",
           "stage": "Interest / link",
           "cooler": null,
-          "recency": 0.397,
-          "contribution": 0.0091
+          "recency": 0.393,
+          "contribution": 0.0126
         },
         {
           "outlet": "Get Italian Football News",
@@ -4468,16 +4560,16 @@
           "publishedAt": "2026-08-03T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.397,
-          "contribution": 0.0018
+          "recency": 0.393,
+          "contribution": 0.0022
         }
       ],
-      "latestAt": "2026-08-12T09:34:20.000Z",
+      "latestAt": "2026-08-03T07:00:00.000Z",
       "earliestAt": "2026-08-03T07:00:00.000Z",
       "heuristicProbability": 15,
       "llm": {
         "adjustment": 2,
-        "note": "Vicario is linked with a Tottenham exit, including reported interest and a possible PSG agreement.",
+        "note": "Two reports say Vicario is actively seeking a Tottenham exit with Juventus monitoring the situation.",
         "renamedFrom": null,
         "redirectedFrom": null
       },
@@ -4486,10 +4578,6 @@
       "change": 2,
       "isNew": false,
       "history": [
-        {
-          "t": 1786088680139,
-          "p": 15
-        },
         {
           "t": 1786097593206,
           "p": 15
@@ -4725,6 +4813,10 @@
         {
           "t": 1786777211374,
           "p": 17
+        },
+        {
+          "t": 1786787008100,
+          "p": 17
         }
       ]
     },
@@ -4738,7 +4830,7 @@
         "Chelsea"
       ],
       "probability": 15,
-      "logit": -2.2365,
+      "logit": -2.2074,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -4753,9 +4845,9 @@
       },
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": -0.7365,
+        "evidenceSum": -0.7074,
         "corroboration": 0.25,
-        "distinctOutlets": 10,
+        "distinctOutlets": 11,
         "tier1Outlets": 1,
         "totalArticles": 20,
         "confirmedFloorApplied": false
@@ -4766,21 +4858,21 @@
           "tier": 2,
           "headline": "Tottenham get fresh Savinho update as transfer saga rumbles on",
           "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPYzZsT3VfQVF0aE9WR3VlZHc5TzNPcTVaYk1ydU9vbmUxdTZzcDJuaGNtb1BuQm4yeDhlbEpZVTh0RHU3Q2Rfa0s2eW1KOGRrV1lyQjFVTkhVNVFqYlpqR2tEeHRLXzJNcFFBZkpJOEw5V2JhWkJJUlRtZnBaWDNVZjRmWVZfTjJOSVk2cUFZMmJCbjg5YUtsREtn?oc=5",
-          "publishedAt": "2026-08-15T06:36:05.000Z",
+          "publishedAt": "2026-08-15T09:36:28.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.999,
-          "contribution": 0.0172
+          "recency": 1,
+          "contribution": 0.0141
         },
         {
-          "outlet": "SPORTbible",
+          "outlet": "sportbible.com",
           "tier": 4,
           "headline": "Spurs have decided on their next blockbuster transfer after Savinho and Cody Gakpo deals completed",
           "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNMFZJbHl2eHZHOVFFYXJpb1NJZFpENGw5RGNrWmFLMXR6ZlRkeVFyUjlzWVBjcWVEUE1FZ2R2NkZrRU5oUlFaSllqQ190UFk0S3kwbjRUeDlIdjg1SmF4a0l1V2d1eHVUUHZuWmxJWnFzRkF2bjJKZ2F4TEI1UnUxMnk1LUVxQmwzM0FxNVZ2NjI3ZEtDNS05N01kN0xxWGlkMjZCRnZRU0ZmYTBtZGtsYmRFaC1aQQ?oc=5",
           "publishedAt": "2026-08-14T16:59:03.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.956,
+          "recency": 0.948,
           "contribution": 0.002
         },
         {
@@ -4791,19 +4883,19 @@
           "publishedAt": "2026-08-14T12:32:42.000Z",
           "stage": "Interest / link",
           "cooler": null,
-          "recency": 0.942,
-          "contribution": 0.0137
+          "recency": 0.934,
+          "contribution": 0.0115
         },
         {
-          "outlet": "SportsAdda",
+          "outlet": "sportsadda.asia",
           "tier": 4,
           "headline": "Savinho wants Tottenham, and City cannot sell him until Chelsea sell them Pedro Neto",
           "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPLU5BOXRlUG1hLVFlX0dLZ204a0RfWTlFakFDUGZRTTRPTXoxRXd1TC1FRk1RaXRsNTYxeVlKN05QWHhXZGUydmRHSGQ0M0RqWFFxZjdaMUtEekw2c1ptN0VJNmlseEI0Ml9DYmxOX2hlRlZkY254d092U1E1dXFfa1B0T3Y2Nk12bmZtODlTQTFaNnV2VGlQdUVHb0dTZGFLcHp0RTdObFpEOG5UaHFDbFhucHpMOXpJdHF6cVJobGl5M2VwREhZVUpFV3A4bGp3?oc=5",
           "publishedAt": "2026-08-14T09:42:24.000Z",
           "stage": "Interest / link",
           "cooler": null,
-          "recency": 0.934,
-          "contribution": 0.0115
+          "recency": 0.926,
+          "contribution": 0.0099
         },
         {
           "outlet": "football.london",
@@ -4813,8 +4905,19 @@
           "publishedAt": "2026-08-14T06:37:04.000Z",
           "stage": "Mentioned only",
           "cooler": "Rejected / not for sale",
-          "recency": 0.925,
-          "contribution": -0.946
+          "recency": 0.917,
+          "contribution": -0.9378
+        },
+        {
+          "outlet": "Yahoo Sports UK",
+          "tier": 3,
+          "headline": "How much Tottenham have offered for Savinho amid Manchester City mystery",
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOaWNLeGhIR2E0aGI2b25wN1dXU3lRaW5fNnJ4eExZZzlBbUZNNVYzTHBsVXNnN29CZ2t4NVZnYWgtaTVEMk5MV0MwenUwZ1JWRTI3SDNwZW1HWDBJZEh0d0VZZFpJZF9lNThlRkRiSXZGRDRmNVpha2c0SGhwSTdjb21Bank2bEVuM1Rv?oc=5",
+          "publishedAt": "2026-08-14T05:45:00.000Z",
+          "stage": "Interest / link",
+          "cooler": null,
+          "recency": 0.914,
+          "contribution": 0.0444
         },
         {
           "outlet": "Cartilage Free Captain",
@@ -4824,8 +4927,19 @@
           "publishedAt": "2026-08-13T18:46:53.000Z",
           "stage": "Interest / link",
           "cooler": null,
-          "recency": 0.89,
-          "contribution": 0.0095
+          "recency": 0.883,
+          "contribution": 0.0083
+        },
+        {
+          "outlet": "Football Place",
+          "tier": 4,
+          "headline": "Tottenham submit £85m Savinho bid as Manchester City delay transfer decision",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPU29FM19mUk8xOHh0UU1uSVgyNldYTHBxT1ltTGRqcVdyZWF4TVlIMGlxenVhNE9RWl9yNS1KWDVnLTdBMEhnMWYtZjF3YWtGelJ6cmhubzI5V3ZUSEc0MWVTVlJwT1hrVDF0VExTZFlwOFJITVBYc3AzcjZXUV9Oamp4Zw?oc=5",
+          "publishedAt": "2026-08-13T18:05:02.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.881,
+          "contribution": 0.0015
         },
         {
           "outlet": "talkSPORT",
@@ -4835,19 +4949,8 @@
           "publishedAt": "2026-08-13T16:39:30.000Z",
           "stage": "Interest / link",
           "cooler": null,
-          "recency": 0.884,
-          "contribution": 0.1096
-        },
-        {
-          "outlet": "Football Place",
-          "tier": 4,
-          "headline": "Savinho tells Man City he wants Tottenham as Spurs prepare £70m-plus bid",
-          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFAxTVAyN2JleUFoTVgxVGJNODdzcFVGLUtoQmpDeGV2Ym55eHBjblRvWnZ3ci1CTG1ZVTVvdTY0Q0JUeXFZV2lyWWNaVkd6VmtjVHJFcFJ3aXZkalRMQ0JlWUJKY1VFUlktTWFuN29NUXc1SnBxb0l3?oc=5",
-          "publishedAt": "2026-08-12T16:01:12.000Z",
-          "stage": "Interest / link",
-          "cooler": null,
-          "recency": 0.817,
-          "contribution": 0.0077
+          "recency": 0.877,
+          "contribution": 0.1087
         },
         {
           "outlet": "BBC Sport",
@@ -4857,8 +4960,8 @@
           "publishedAt": "2026-07-29T07:00:00.000Z",
           "stage": "Interest / link",
           "cooler": null,
-          "recency": 0.27,
-          "contribution": 0.0366
+          "recency": 0.268,
+          "contribution": 0.0283
         },
         {
           "outlet": "Manchester Evening News",
@@ -4868,28 +4971,24 @@
           "publishedAt": "2026-07-27T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.231,
+          "recency": 0.229,
           "contribution": 0.0017
         }
       ],
-      "latestAt": "2026-08-15T06:36:05.000Z",
+      "latestAt": "2026-08-15T09:36:28.000Z",
       "earliestAt": "2026-07-24T07:00:00.000Z",
       "heuristicProbability": 10,
       "llm": {
         "adjustment": 5,
-        "note": "Multiple reports claim Savinho wants Tottenham, with Spurs linked to substantial bids for the Manchester City winger.",
+        "note": "Tottenham are repeatedly reported to have made a substantial bid for Savinho, though Manchester City’s decision is unresolved.",
         "renamedFrom": null,
         "redirectedFrom": null
       },
       "confirmedAt": null,
-      "previousProbability": 24,
-      "change": -9,
+      "previousProbability": 34,
+      "change": -19,
       "isNew": false,
       "history": [
-        {
-          "t": 1786155835034,
-          "p": 33
-        },
         {
           "t": 1786163407722,
           "p": 31
@@ -5125,6 +5224,10 @@
         {
           "t": 1786777211374,
           "p": 15
+        },
+        {
+          "t": 1786787008100,
+          "p": 15
         }
       ]
     },
@@ -5137,7 +5240,7 @@
         "Manchester United"
       ],
       "probability": 15,
-      "logit": -1.697,
+      "logit": -1.7011,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -5148,24 +5251,24 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.053,
+        "evidenceSum": 0.0489,
         "corroboration": 0,
-        "distinctOutlets": 3,
+        "distinctOutlets": 4,
         "tier1Outlets": 1,
-        "totalArticles": 3,
+        "totalArticles": 4,
         "confirmedFloorApplied": false
       },
       "evidence": [
         {
-          "outlet": "The Sun",
-          "tier": 3,
+          "outlet": "thesun.co.uk",
+          "tier": 4,
           "headline": "Spurs urged to raid Man Utd for Marcus Rashford despite Michael Carrick offer",
           "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPUW10aF9OZU9zX3BMNXpRa3R1QjhjSkFELW9IdzRNcFRQenZLRnlrT19BMndZTXhQaXdDczhKMnJ3QUdvTTZ5LW9CaXJGQTNyb0VJclZ5Zjhna28tSUFwNnFqeHRkUlFoZEtYbFdUdWFYVXMtMXUyOU5GS3ZKUkVCX3FaeWRNRlJmNExDbV9wcUZWSlFlZDNiMDVB?oc=5",
           "publishedAt": "2026-08-13T16:54:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.885,
-          "contribution": 0.0107
+          "recency": 0.877,
+          "contribution": 0.0039
         },
         {
           "outlet": "football.london",
@@ -5175,8 +5278,8 @@
           "publishedAt": "2026-07-28T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.25,
-          "contribution": 0.0043
+          "recency": 0.248,
+          "contribution": 0.0055
         },
         {
           "outlet": "BBC Sport",
@@ -5188,6 +5291,17 @@
           "cooler": null,
           "recency": 0.2,
           "contribution": 0.038
+        },
+        {
+          "outlet": "Yahoo Sports",
+          "tier": 3,
+          "headline": "Marcus Rashford to Tottenham: Odds slashed on Man United deal being agreed",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQMzVjcWJobjd1Z1IwY2pHN01EZjRIbXRmY2c1QzFId25uQlFreW1keUNrZF9Fc3VkSW9OZjhVRUJZSFctUmtQb0xkajlEX0ZLME55QVN4RnZLVkV5dGFaaTJKWm92ZGx2aTV0ZzVlQnV6QXBMRDJCS0ExTUJZdDNSRU85SkVvaWNOalo3blBheUk?oc=5",
+          "publishedAt": "2026-07-22T07:00:00.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.2,
+          "contribution": 0.0015
         }
       ],
       "latestAt": "2026-08-13T16:54:00.000Z",
@@ -5195,19 +5309,15 @@
       "heuristicProbability": 15,
       "llm": {
         "adjustment": 0,
-        "note": "Tottenham continue to be linked with Rashford, though the reports describe interest rather than advanced negotiations.",
+        "note": "Rashford remains an ongoing Tottenham target, but the headlines describe interest rather than advanced negotiations.",
         "renamedFrom": null,
         "redirectedFrom": null
       },
       "confirmedAt": null,
-      "previousProbability": 20,
-      "change": -5,
+      "previousProbability": 21,
+      "change": -6,
       "isNew": false,
       "history": [
-        {
-          "t": 1786130325452,
-          "p": 15
-        },
         {
           "t": 1786139859616,
           "p": 15
@@ -5443,6 +5553,252 @@
         {
           "t": 1786777211374,
           "p": 15
+        },
+        {
+          "t": 1786787008100,
+          "p": 15
+        }
+      ]
+    },
+    {
+      "id": "in-harry-kane",
+      "player": "Harry Kane",
+      "direction": "in",
+      "directionConfidence": 1,
+      "clubs": [
+        "Bayern Munich"
+      ],
+      "probability": 15,
+      "logit": -1.7195,
+      "done": false,
+      "confirmedBy": [],
+      "stage": {
+        "id": "mention",
+        "label": "Mentioned only",
+        "value": 0.05
+      },
+      "cooler": null,
+      "breakdown": {
+        "prior": -1.75,
+        "evidenceSum": 0.0305,
+        "corroboration": 0,
+        "distinctOutlets": 3,
+        "tier1Outlets": 0,
+        "totalArticles": 3,
+        "confirmedFloorApplied": false
+      },
+      "evidence": [
+        {
+          "outlet": "sportbible.com",
+          "tier": 4,
+          "headline": "Tottenham urged to sign £350k-a-week Premier League star who Harry Kane loves",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPRlJob25RNkdVeTZvcWt3UzkybFA2SGoxZXczUV9qRDJwVXFOYkFhNzNVQlFTVXlNOVNlRUE3R3dYWmQyalc0cjQzaTJTMWFJREkzOGxrT3pxSUhiTXRLMjJ1OHRjcnBORGNjWWx0YmdnTkJSeE1wQUgyWHB0cnA1THBaQ3BwUDAtbXkxOFZ4SUhlRVNCa3F2bHRXaXdCaDktSGwtZjRvbk81X2gyX1V1T0V3?oc=5",
+          "publishedAt": "2026-08-13T16:32:44.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.876,
+          "contribution": 0.005
+        },
+        {
+          "outlet": "Evening Standard",
+          "tier": 2,
+          "headline": "Harry Kane makes Tottenham transfer decision ahead of Bayern talks",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQSWVxQUUzNEZwbl9IUHpHSVczdlpLd2ljVzl6LWlTMTM2bXExbXJvNEQzOHNrYmVqS1J5RkZDWU9kMHNDUGxjWlVPNTVNQWVRdXl1NmNOXzdGMWRLSjI3WElSR3E1aTJnbmlCZ3plZzlmRXRwcTI1U2l0VHBISURqSVhzNDU1bmw4ckFmeHV6N2VTNmM3X2dyMHhCRlM5eGNOUDVaTDRkcw?oc=5",
+          "publishedAt": "2026-08-11T21:17:56.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.763,
+          "contribution": 0.0236
+        },
+        {
+          "outlet": "Football365",
+          "tier": 3,
+          "headline": "Harry Kane reaches decision on joining Tottenham from Bayern Munich after World Cup exit",
+          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOSXJmS2E4LXVHbUlJMU8weTM3UUljOEhEYnNpdDBlMHlHLVRvM1dIX2VuZ2RwWE9NX2U3alpjaU1ZZjRWdjBDTHA1Uy1GOEVCZ09PLXZrNG12MGkzeDltdjd0b3JCNV9tSVM2X2thc3ZvMEZvWXhsMG9paVFWV1lfY2xKanhRZ2puU2c4RGYzUkZVd2dhYjJEMWEyS0pmLUxDTVcwSThKZ3hsa19OZC1KaDhCa3Q4cExoWXc?oc=5",
+          "publishedAt": "2026-07-19T07:00:00.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.2,
+          "contribution": 0.0019
+        }
+      ],
+      "latestAt": "2026-08-13T16:32:44.000Z",
+      "earliestAt": "2026-07-19T07:00:00.000Z",
+      "heuristicProbability": 15,
+      "llm": {
+        "adjustment": 0,
+        "note": "Kane has been linked with a return to Tottenham, but the available reports offer no confirmed progress.",
+        "renamedFrom": null,
+        "redirectedFrom": null
+      },
+      "confirmedAt": null,
+      "previousProbability": 15,
+      "change": 0,
+      "isNew": false,
+      "history": [
+        {
+          "t": 1786358279945,
+          "p": 15
+        },
+        {
+          "t": 1786369640947,
+          "p": 15
+        },
+        {
+          "t": 1786378248794,
+          "p": 15
+        },
+        {
+          "t": 1786389563343,
+          "p": 15
+        },
+        {
+          "t": 1786399229902,
+          "p": 15
+        },
+        {
+          "t": 1786415404631,
+          "p": 15
+        },
+        {
+          "t": 1786423332911,
+          "p": 15
+        },
+        {
+          "t": 1786434015207,
+          "p": 15
+        },
+        {
+          "t": 1786443208894,
+          "p": 15
+        },
+        {
+          "t": 1786464730579,
+          "p": 15
+        },
+        {
+          "t": 1786476507809,
+          "p": 15
+        },
+        {
+          "t": 1786486050106,
+          "p": 15
+        },
+        {
+          "t": 1786502852706,
+          "p": 15
+        },
+        {
+          "t": 1786511173154,
+          "p": 15
+        },
+        {
+          "t": 1786521296158,
+          "p": 15
+        },
+        {
+          "t": 1786530500017,
+          "p": 15
+        },
+        {
+          "t": 1786542674747,
+          "p": 15
+        },
+        {
+          "t": 1786551079954,
+          "p": 15
+        },
+        {
+          "t": 1786562957979,
+          "p": 15
+        },
+        {
+          "t": 1786572309779,
+          "p": 15
+        },
+        {
+          "t": 1786590107336,
+          "p": 15
+        },
+        {
+          "t": 1786597798730,
+          "p": 15
+        },
+        {
+          "t": 1786607804433,
+          "p": 15
+        },
+        {
+          "t": 1786616981791,
+          "p": 15
+        },
+        {
+          "t": 1786629061758,
+          "p": 15
+        },
+        {
+          "t": 1786637492653,
+          "p": 15
+        },
+        {
+          "t": 1786649308479,
+          "p": 15
+        },
+        {
+          "t": 1786658728946,
+          "p": 15
+        },
+        {
+          "t": 1786675729027,
+          "p": 15
+        },
+        {
+          "t": 1786683982514,
+          "p": 15
+        },
+        {
+          "t": 1786694001397,
+          "p": 15
+        },
+        {
+          "t": 1786699074013,
+          "p": 15
+        },
+        {
+          "t": 1786702737506,
+          "p": 15
+        },
+        {
+          "t": 1786715188035,
+          "p": 15
+        },
+        {
+          "t": 1786723659111,
+          "p": 15
+        },
+        {
+          "t": 1786734988605,
+          "p": 15
+        },
+        {
+          "t": 1786743791755,
+          "p": 15
+        },
+        {
+          "t": 1786758725260,
+          "p": 15
+        },
+        {
+          "t": 1786766184268,
+          "p": 15
+        },
+        {
+          "t": 1786777211374,
+          "p": 18
+        },
+        {
+          "t": 1786787008100,
+          "p": 15
         }
       ]
     },
@@ -5455,7 +5811,7 @@
         "Manchester United"
       ],
       "probability": 15,
-      "logit": -1.7056,
+      "logit": -1.706,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -5466,7 +5822,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0444,
+        "evidenceSum": 0.044,
         "corroboration": 0,
         "distinctOutlets": 1,
         "tier1Outlets": 1,
@@ -5482,8 +5838,8 @@
           "publishedAt": "2026-08-14T10:09:56.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.935,
-          "contribution": 0.0444
+          "recency": 0.927,
+          "contribution": 0.044
         }
       ],
       "latestAt": "2026-08-14T10:09:56.000Z",
@@ -5563,6 +5919,10 @@
         {
           "t": 1786777211374,
           "p": 15
+        },
+        {
+          "t": 1786787008100,
+          "p": 15
         }
       ]
     },
@@ -5600,7 +5960,7 @@
           "publishedAt": "2026-07-28T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.25,
+          "recency": 0.248,
           "contribution": 0.0077
         }
       ],
@@ -5618,10 +5978,6 @@
       "change": 0,
       "isNew": false,
       "history": [
-        {
-          "t": 1786130325452,
-          "p": 25
-        },
         {
           "t": 1786139859616,
           "p": 25
@@ -5857,6 +6213,10 @@
         {
           "t": 1786777211374,
           "p": 15
+        },
+        {
+          "t": 1786787008100,
+          "p": 15
         }
       ]
     },
@@ -5866,8 +6226,8 @@
       "direction": "in",
       "directionConfidence": 1,
       "clubs": [],
-      "probability": 6,
-      "logit": -2.6693,
+      "probability": 7,
+      "logit": -2.6494,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -5882,11 +6242,11 @@
       },
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": -0.9193,
+        "evidenceSum": -0.8994,
         "corroboration": 0,
-        "distinctOutlets": 3,
+        "distinctOutlets": 2,
         "tier1Outlets": 1,
-        "totalArticles": 5,
+        "totalArticles": 4,
         "confirmedFloorApplied": false
       },
       "evidence": [
@@ -5898,50 +6258,35 @@
           "publishedAt": "2026-08-14T06:37:04.000Z",
           "stage": "Mentioned only",
           "cooler": "Rejected / not for sale",
-          "recency": 0.925,
-          "contribution": -0.946
+          "recency": 0.917,
+          "contribution": -0.9378
         },
         {
-          "outlet": "theguardian.com",
-          "tier": 4,
+          "outlet": "The Guardian",
+          "tier": 1,
           "headline": "Football transfer rumours: Folarin Balogun to Tottenham? Gabriel Jesus to Napoli?",
           "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOaUh4dDZBTlN0STdnNkNGOWlYYkpFdGJ6TmlEcHE5QjlMZWtyZWdtYi1mQXZWZElMVGpoZ2ZiQktCak5qRmlndDRJT3VNemJVdmZhNWNfU1hhUlJldldGcFk3bkNiZjJTMEF2WnZzM2RROTVrWGhCNllScVRsbkVZTmpncktwcXhoMzZtYVNHbHdsQjM0R2JmLWJnQUloZzBZSXhRcGJJRHRGX1BxWmdQWWpJSDZQSVlSM1ZrNGRzQUl4ekU5SEE?oc=5",
           "publishedAt": "2026-08-12T15:20:00.000Z",
           "stage": "Named in a roundup",
           "cooler": null,
-          "recency": 0.815,
-          "contribution": 0.0047
-        },
-        {
-          "outlet": "The Guardian",
-          "tier": 1,
-          "headline": "Football transfer rumours: Folarin Balogun to Spurs? Pedro Neto to Manchester City?",
-          "url": "https://www.theguardian.com/football/2026/aug/05/football-transfer-rumours-folarin-balogun-tottenham-hotspur-pedro-neto-manchester-city",
-          "publishedAt": "2026-08-05T07:31:34.000Z",
-          "stage": "Named in a roundup",
-          "cooler": null,
-          "recency": 0.464,
-          "contribution": 0.022
+          "recency": 0.808,
+          "contribution": 0.0384
         }
       ],
       "latestAt": "2026-08-14T06:37:04.000Z",
-      "earliestAt": "2026-08-05T07:00:00.000Z",
-      "heuristicProbability": 6,
+      "earliestAt": "2026-08-05T07:31:34.000Z",
+      "heuristicProbability": 7,
       "llm": {
         "adjustment": 0,
-        "note": "Balogun remains a Tottenham transfer possibility mentioned in roundups and transfer-rumour reports.",
+        "note": "Balogun is mentioned as a possible Tottenham target, but the reports provide little detail beyond a roundup.",
         "renamedFrom": null,
         "redirectedFrom": null
       },
       "confirmedAt": null,
-      "previousProbability": 34,
-      "change": -28,
+      "previousProbability": 33,
+      "change": -26,
       "isNew": false,
       "history": [
-        {
-          "t": 1785864808824,
-          "p": 16
-        },
         {
           "t": 1785909528315,
           "p": 16
@@ -6177,6 +6522,10 @@
         {
           "t": 1786777211374,
           "p": 6
+        },
+        {
+          "t": 1786787008100,
+          "p": 7
         }
       ]
     }
