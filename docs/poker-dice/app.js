@@ -1,10 +1,16 @@
 // Poker dice scorecard. No build step, no framework, no network — the whole
 // game lives in localStorage so a half-finished card survives a phone lock.
 
-const STORAGE_KEY = 'pokerDice.v1';
+// Bumped from v1, which stored points multiplied by the column. Those cards
+// would read wrong under the current scoring, so they are left behind.
+const STORAGE_KEY = 'pokerDice.v2';
+
+// Rolling a combination in one throw — serving it — is worth five on top.
+const SERVE_BONUS = 5;
 
 // Rows of the card. `perDie` rows score (matching dice x value); the rest are
-// fixed-value combinations. `shit` is a scoring row here, not a zero.
+// fixed-value combinations, all of which can be served. `shit` is a scoring
+// row here, not a zero.
 const ROWS = [
   { key: 'nines', label: '9s', perDie: 1 },
   { key: 'tens', label: '10s', perDie: 2 },
@@ -19,10 +25,12 @@ const ROWS = [
   { key: 'shit', label: 'Shit', fixed: 10 },
 ];
 
+// Three passes over the same rows. Every column scores at face value — the
+// ×1/×2/×4 headers are kept as labels only, and multiply nothing.
 const COLUMNS = [
-  { key: 'x1', label: '×1', multiplier: 1 },
-  { key: 'x2', label: '×2', multiplier: 2 },
-  { key: 'x4', label: '×4', multiplier: 4 },
+  { key: 'x1', label: '×1' },
+  { key: 'x2', label: '×2' },
+  { key: 'x4', label: '×4' },
 ];
 
 const CELLS_PER_CARD = ROWS.length * COLUMNS.length;
@@ -258,7 +266,8 @@ function buildCard(player) {
     const tr = document.createElement('tr');
     const th = document.createElement('th');
     th.scope = 'row';
-    th.innerHTML = `${row.label}<small>${row.perDie ? `${row.perDie}/die` : row.fixed}</small>`;
+    // Kept to one line so the combination rows stay as tall as the number rows.
+    th.innerHTML = `${row.label}<small>${row.perDie ? `${row.perDie}/die` : `${row.fixed} (+${SERVE_BONUS})`}</small>`;
     tr.append(th);
 
     COLUMNS.forEach((col) => {
@@ -315,21 +324,21 @@ function openSheet(playerId, rowKey, colKey) {
 
   el.sheetTitle.textContent = `${row.label} ${col.label}`;
   el.sheetSub.textContent = row.perDie
-    ? `${player.name} — how many ${row.label}? (${row.perDie} point${row.perDie === 1 ? '' : 's'} per die${col.multiplier > 1 ? `, ${col.label}` : ''})`
-    : `${player.name} — ${row.fixed} points${col.multiplier > 1 ? ` ${col.label}` : ''}`;
+    ? `${player.name} — how many ${row.label}? (${row.perDie} point${row.perDie === 1 ? '' : 's'} per die)`
+    : `${player.name} — ${row.fixed} points, ${row.fixed + SERVE_BONUS} if served`;
 
   el.sheetOptions.innerHTML = '';
   const options = row.perDie
     ? [0, 1, 2, 3, 4, 5].map((count) => ({
         label: String(count),
-        note: `${count * row.perDie * col.multiplier}`,
-        points: count * row.perDie * col.multiplier,
+        note: `${count * row.perDie}`,
+        points: count * row.perDie,
       }))
     : [
-        { label: 'Rolled it', note: `${row.fixed * col.multiplier}`, points: row.fixed * col.multiplier },
+        { label: 'Rolled it', note: `${row.fixed}`, points: row.fixed },
+        { label: 'Served', note: `${row.fixed + SERVE_BONUS}`, points: row.fixed + SERVE_BONUS },
         { label: 'Cross out', note: '0', points: 0 },
       ];
-  el.sheetOptions.classList.toggle('two-up', !row.perDie);
 
   options.forEach((option) => {
     const button = document.createElement('button');
@@ -434,8 +443,7 @@ document.addEventListener('keydown', (event) => {
   // Number rows take a digit straight from the keyboard.
   const row = rowByKey(state.open?.rowKey);
   if (row?.perDie && /^[0-5]$/.test(event.key)) {
-    const col = colByKey(state.open.colKey);
-    writeCell(Number(event.key) * row.perDie * col.multiplier);
+    writeCell(Number(event.key) * row.perDie);
   }
 });
 
