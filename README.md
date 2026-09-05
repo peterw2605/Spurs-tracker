@@ -227,10 +227,13 @@ site, at `/poker-dice/`. It keeps score for a game of poker dice: eleven rows
 columns (×1, ×2, ×4), one entry per cell.
 
 Scoring a cell is one tap on the cell and one on the number of matching dice —
-the app multiplies and sums. Number rows pay per die (9s 1, 10s 2, jacks 3,
+the app does the arithmetic. Number rows pay per die (9s 1, 10s 2, jacks 3,
 queens 4, kings 5, aces 6); straight 20, full house 30, poker 40, grande 50,
-shit 10; any cell can be crossed out for 0. The column multiplier applies to
-whatever the row scored.
+shit 10. A combination *served* — rolled in a single throw — is worth five
+more, so 25/35/45/55/15. Any cell can be crossed out for 0.
+
+The three columns all score at face value; each is one pass over the card. The
+×1/×2/×4 headers are labels only and multiply nothing.
 
 The game lives in `localStorage`, so a card survives a reload or a locked
 phone. There is no build step, no data, and no network call — it does not touch
