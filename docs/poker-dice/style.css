@@ -9,6 +9,8 @@
   --muted: #9aa4c4;
   --accent: #7aa2ff;
   --good: #3ddc97;
+  --bad: #ff7b7b;
+  --tie: #f5c451;
   --radius: 14px;
   color-scheme: dark;
 }
@@ -321,6 +323,32 @@ body.sheet-open {
   color: var(--muted);
 }
 
+/* Comparison against the rest of the table, once every player has written the
+   cell. Listed after .zero so a crossed-out 0 still takes its colour. */
+.cell.tie,
+.cell.above,
+.cell.below {
+  font-weight: 700;
+}
+
+.cell.tie {
+  color: var(--tie);
+  border-color: rgba(245, 196, 81, 0.5);
+  background: rgba(245, 196, 81, 0.14);
+}
+
+.cell.above {
+  color: var(--good);
+  border-color: rgba(61, 220, 151, 0.5);
+  background: rgba(61, 220, 151, 0.14);
+}
+
+.cell.below {
+  color: var(--bad);
+  border-color: rgba(255, 123, 123, 0.5);
+  background: rgba(255, 123, 123, 0.14);
+}
+
 .score-table tfoot th,
 .score-table tfoot td {
   padding-top: 0.5rem;
@@ -360,6 +388,50 @@ body.sheet-open {
 
 .rules li {
   margin-bottom: 0.3rem;
+}
+
+.legend-intro {
+  margin: 0.7rem 0 0.4rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.legend {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.swatch {
+  width: 0.85rem;
+  height: 0.85rem;
+  border-radius: 4px;
+  border: 1px solid currentColor;
+  flex: 0 0 auto;
+}
+
+.swatch.tie {
+  color: var(--tie);
+  background: rgba(245, 196, 81, 0.3);
+}
+
+.swatch.above {
+  color: var(--good);
+  background: rgba(61, 220, 151, 0.3);
+}
+
+.swatch.below {
+  color: var(--bad);
+  background: rgba(255, 123, 123, 0.3);
 }
 
 /* ---------- entry sheet ---------- */

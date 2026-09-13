@@ -82,6 +82,36 @@ function total(player) {
 const cardComplete = (player) => filledCount(player) === CELLS_PER_CARD;
 const gameComplete = () => state.players.length > 0 && state.players.every(cardComplete);
 
+/* ---------- cell comparison ---------- */
+
+// Once every player has written the same cell, it can be compared across the
+// table: all square is yellow, otherwise a player is green or red against the
+// average of the others. A crossed-out 0 counts as written, so a row everyone
+// gave up on comes out yellow rather than uncoloured.
+function cellComparison(player, key) {
+  if (state.players.length < 2) return null;
+
+  const mine = player.scores[key];
+  if (mine === undefined) return null;
+
+  const others = state.players.filter((other) => other !== player).map((other) => other.scores[key]);
+  if (others.some((value) => value === undefined)) return null;
+
+  if (others.every((value) => value === mine)) return 'tie';
+
+  const average = others.reduce((sum, value) => sum + value, 0) / others.length;
+  if (mine > average) return 'above';
+  if (mine < average) return 'below';
+  // Dead on the others' average without matching them — nothing useful to say.
+  return null;
+}
+
+const COMPARISON_LABEL = {
+  tie: 'level with everyone',
+  above: 'above the others’ average',
+  below: 'below the others’ average',
+};
+
 /* ---------- storage ---------- */
 
 function save() {
@@ -275,7 +305,8 @@ function buildCard(player) {
       const button = document.createElement('button');
       button.type = 'button';
       button.className = 'cell';
-      const value = player.scores[cellKey(row.key, col.key)];
+      const key = cellKey(row.key, col.key);
+      const value = player.scores[key];
       if (value === undefined) {
         button.textContent = '–';
         button.classList.add('empty');
@@ -283,10 +314,16 @@ function buildCard(player) {
         button.textContent = value;
         if (value === 0) button.classList.add('zero');
       }
+      // Colour never carries meaning on its own: the same comparison goes into
+      // the label a screen reader reads and into the tooltip.
+      const comparison = cellComparison(player, key);
+      if (comparison) button.classList.add(comparison);
       button.setAttribute(
         'aria-label',
-        `${player.name}, ${row.label}, ${col.label}: ${value === undefined ? 'empty' : value}`,
+        `${player.name}, ${row.label}, ${col.label}: ${value === undefined ? 'empty' : value}` +
+          (comparison ? `, ${COMPARISON_LABEL[comparison]}` : ''),
       );
+      if (comparison) button.title = COMPARISON_LABEL[comparison];
       button.addEventListener('click', () => openSheet(player.id, row.key, col.key));
       td.append(button);
       tr.append(td);
