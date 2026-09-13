@@ -235,6 +235,11 @@ more, so 25/35/45/55/15. Any cell can be crossed out for 0.
 The three columns all score at face value; each is one pass over the card. The
 ×1/×2/×4 headers are labels only and multiply nothing.
 
+Once every player has filled the same cell, that cell is coloured on each card:
+yellow when everyone is level, green when the player is above the average of
+the others, red when below. A cell nobody has finished stays plain, as does one
+where a player lands exactly on the others' average.
+
 The game lives in `localStorage`, so a card survives a reload or a locked
 phone. There is no build step, no data, and no network call — it does not touch
 the transfer tracker.
