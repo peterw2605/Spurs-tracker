@@ -1,31 +1,30 @@
 {
-  "generatedAt": "2026-09-24T17:15:29.845Z",
+  "generatedAt": "2026-09-24T21:34:26.602Z",
   "counts": {
-    "rumours": 14,
-    "incoming": 8,
+    "rumours": 15,
+    "incoming": 9,
     "outgoing": 6,
-    "done": 6,
-    "articles": 310,
-    "transferArticles": 202,
+    "done": 5,
+    "articles": 337,
+    "transferArticles": 203,
     "likely": 0
   },
   "model": {
     "type": "heuristic + LLM review",
     "llm": {
       "model": "gpt-5.6-luna",
-      "sent": 11,
-      "reusedFromCache": 15,
+      "sent": 6,
+      "reusedFromCache": 20,
       "deferred": 0,
       "adjusted": 1,
-      "discarded": 5
+      "discarded": 6
     }
   },
   "sources": [
     {
       "name": "BBC Sport — Tottenham",
-      "ok": false,
-      "itemCount": 0,
-      "error": "fetch failed"
+      "ok": true,
+      "itemCount": 24
     },
     {
       "name": "The Guardian — Tottenham",
@@ -45,17 +44,17 @@
     {
       "name": "Evening Standard — Tottenham",
       "ok": true,
-      "itemCount": 6
+      "itemCount": 4
     },
     {
       "name": "Google News — Tottenham transfer",
       "ok": true,
-      "itemCount": 77
+      "itemCount": 81
     },
     {
       "name": "Google News — Spurs transfer news",
       "ok": true,
-      "itemCount": 31
+      "itemCount": 30
     },
     {
       "name": "Google News — Tottenham sign",
@@ -65,12 +64,12 @@
     {
       "name": "Google News — Tottenham exit",
       "ok": true,
-      "itemCount": 50
+      "itemCount": 51
     },
     {
       "name": "Google News — Tottenham medical/agreed",
       "ok": true,
-      "itemCount": 44
+      "itemCount": 45
     },
     {
       "name": "Google News — Tottenham loan",
@@ -92,7 +91,7 @@
         "Manchester City"
       ],
       "probability": 98,
-      "logit": 0.4363,
+      "logit": -0.1442,
       "done": true,
       "confirmedBy": [
         {
@@ -100,13 +99,6 @@
           "tier": 1,
           "headline": "Tottenham confirm Omar Marmoush signing to complete double Man City raid",
           "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNaUpTY2tRREJ2eThkRTlHY2ZERlJQX2ExdE9aUURaQ3pCR2FEamo0LW9RZWU5MjRnWEhEYWl2RDFEd1Y5NUxvb01CUGpxeTMtM0psX3dhNm1yQzJicTRiaG1zZnA0bkxZNzBEdEN3N3luaEhaYTFqbzV0am1NNlpoR2l3bFk3UVgtVF9YRnk5ZnRTNFV4cUtnZUVPRkFvaVJlYWNxd2hUQXJDZw?oc=5",
-          "publishedAt": "2026-08-27T07:00:00.000Z"
-        },
-        {
-          "outlet": "The New York Times",
-          "tier": 1,
-          "headline": "Tottenham announce Omar Marmoush arrival on season-long loan from Manchester City - The Athletic",
-          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOb0Rxdm1peHhCOGhPdUlNdUltazFEX3RuS1dRRXhaQ2hrbl92N2VPSWppSjYxYnA1QUtpellySkl6UURTOW85N2dqWGo5WlJETnpNTG5tWVNBLWdweUFLb1lrU0ZlLVdtT1FhalJpY1NYZ2R6MEdWcVV5T0tHVE9odE02dGZrdnFfMkxvQ0p0b0daWkdtZEVfZXhGWVdNQQ?oc=5",
           "publishedAt": "2026-08-27T07:00:00.000Z"
         },
         {
@@ -125,8 +117,8 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 1.4363,
-        "corroboration": 0.75,
+        "evidenceSum": 1.1058,
+        "corroboration": 0.5,
         "distinctOutlets": 16,
         "tier1Outlets": 4,
         "totalArticles": 20,
@@ -145,17 +137,6 @@
           "contribution": 0.608
         },
         {
-          "outlet": "The New York Times",
-          "tier": 1,
-          "headline": "Tottenham announce Omar Marmoush arrival on season-long loan from Manchester City - The Athletic",
-          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOb0Rxdm1peHhCOGhPdUlNdUltazFEX3RuS1dRRXhaQ2hrbl92N2VPSWppSjYxYnA1QUtpellySkl6UURTOW85N2dqWGo5WlJETnpNTG5tWVNBLWdweUFLb1lrU0ZlLVdtT1FhalJpY1NYZ2R6MEdWcVV5T0tHVE9odE02dGZrdnFfMkxvQ0p0b0daWkdtZEVfZXhGWVdNQQ?oc=5",
-          "publishedAt": "2026-08-27T07:00:00.000Z",
-          "stage": "Done / confirmed",
-          "cooler": null,
-          "recency": 0.2,
-          "contribution": 0.4343
-        },
-        {
           "outlet": "football.london",
           "tier": 2,
           "headline": "Tottenham confirm Omar Marmoush signing as Roberto De Zerbi makes exciting claim",
@@ -164,7 +145,7 @@
           "stage": "Done / confirmed",
           "cooler": null,
           "recency": 0.2,
-          "contribution": 0.2204
+          "contribution": 0.2834
         },
         {
           "outlet": "BBC Sport",
@@ -175,7 +156,7 @@
           "stage": "Mentioned only",
           "cooler": null,
           "recency": 0.2,
-          "contribution": 0.0037
+          "contribution": 0.0043
         },
         {
           "outlet": "Al Jazeera",
@@ -230,7 +211,18 @@
           "stage": "Imminent",
           "cooler": null,
           "recency": 0.2,
-          "contribution": 0.1641
+          "contribution": 0.2006
+        },
+        {
+          "outlet": "Knutsford Guardian",
+          "tier": 1,
+          "headline": "Omar Marmoush set for Tottenham medical after deal agreed with Man City",
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOZjZNUzR3UzAzY1M5MU9laWY1MUt3N2RscE0yWDctTnBUZzJLMlBHSGt3b1RsLUIyc1kwOER5eThUR1FHbnlWTTFRdTRSZ0h2cHlOOUlycHoxVTBOalF0end5UFJMeDZSdFZaV1dPM2ZXNVhYM2NDaG8yZGhSX0NCMUJJaVl1SDRVcWNTLW5mZTJyb0xYX1dLN3FTRVJJaUZkUy1oTVBrZ3V0YTVySmJablRoMGdKMjlj?oc=5",
+          "publishedAt": "2026-08-26T07:00:00.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.2,
+          "contribution": 0.0037
         },
         {
           "outlet": "ESPN",
@@ -277,10 +269,10 @@
           "contribution": 0.0003
         },
         {
-          "outlet": "knutsfordguardian.co.uk",
+          "outlet": "Brentwood Live",
           "tier": 4,
           "headline": "Omar Marmoush set for Tottenham medical after deal agreed with Man City",
-          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOZjZNUzR3UzAzY1M5MU9laWY1MUt3N2RscE0yWDctTnBUZzJLMlBHSGt3b1RsLUIyc1kwOER5eThUR1FHbnlWTTFRdTRSZ0h2cHlOOUlycHoxVTBOalF0end5UFJMeDZSdFZaV1dPM2ZXNVhYM2NDaG8yZGhSX0NCMUJJaVl1SDRVcWNTLW5mZTJyb0xYX1dLN3FTRVJJaUZkUy1oTVBrZ3V0YTVySmJablRoMGdKMjlj?oc=5",
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNR2NJeGk0NjVNNmdJUW5mQjg0ODVIdk84SnhTcF9sZ2ltSkRCQzRjc2RLWk5nWjRhcFF5M0J0OEpiTlRkVnF0dncyNFc5Nm4zSXJnYVhzWGJHVkZTZUI2alR5U3U4ZW04czVySW9tM1Q1YTkwZ0dkRHhtN0JsVHdBbXRJeEVLeDBHQ2dqcklhM3NaYUlVNUlzMGg0Q1NtcEZwUGpPSVhycmdWMF9HMTNaVmEwOA?oc=5",
           "publishedAt": "2026-08-26T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
@@ -315,7 +307,7 @@
       "heuristicProbability": 98,
       "llm": {
         "adjustment": 0,
-        "note": "Tottenham have confirmed Marmoush’s season-long loan arrival from Manchester City.",
+        "note": "Tottenham have confirmed Marmoush’s season-long loan from Manchester City.",
         "renamedFrom": null,
         "redirectedFrom": null
       },
@@ -324,10 +316,6 @@
       "change": 0,
       "isNew": false,
       "history": [
-        {
-          "t": 1789057688606,
-          "p": 98
-        },
         {
           "t": 1789073686628,
           "p": 98
@@ -562,6 +550,10 @@
         },
         {
           "t": 1790270129845,
+          "p": 98
+        },
+        {
+          "t": 1790285666602,
           "p": 98
         }
       ]
@@ -658,10 +650,6 @@
       "isNew": false,
       "history": [
         {
-          "t": 1789057688606,
-          "p": 98
-        },
-        {
           "t": 1789073686628,
           "p": 98
         },
@@ -895,6 +883,10 @@
         },
         {
           "t": 1790270129845,
+          "p": 98
+        },
+        {
+          "t": 1790285666602,
           "p": 98
         }
       ]
@@ -962,10 +954,6 @@
       "isNew": false,
       "history": [
         {
-          "t": 1789057688606,
-          "p": 98
-        },
-        {
           "t": 1789073686628,
           "p": 98
         },
@@ -1199,6 +1187,10 @@
         },
         {
           "t": 1790270129845,
+          "p": 98
+        },
+        {
+          "t": 1790285666602,
           "p": 98
         }
       ]
@@ -1267,10 +1259,6 @@
       "isNew": false,
       "history": [
         {
-          "t": 1789039545279,
-          "p": 98
-        },
-        {
           "t": 1789057688606,
           "p": 98
         },
@@ -1505,6 +1493,10 @@
         {
           "t": 1790270129845,
           "p": 98
+        },
+        {
+          "t": 1790285666602,
+          "p": 98
         }
       ]
     },
@@ -1517,7 +1509,7 @@
         "Everton"
       ],
       "probability": 45,
-      "logit": -0.1824,
+      "logit": -0.1985,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -1528,11 +1520,11 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.8176,
+        "evidenceSum": 0.8015,
         "corroboration": 0.75,
         "distinctOutlets": 14,
-        "tier1Outlets": 5,
-        "totalArticles": 37,
+        "tier1Outlets": 4,
+        "totalArticles": 38,
         "confirmedFloorApplied": false
       },
       "evidence": [
@@ -1544,8 +1536,8 @@
           "publishedAt": "2026-09-18T07:21:30.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.61,
-          "contribution": 0.0069
+          "recency": 0.602,
+          "contribution": 0.0075
         },
         {
           "outlet": "Football365",
@@ -1555,8 +1547,8 @@
           "publishedAt": "2026-09-15T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.484,
-          "contribution": 0.0015
+          "recency": 0.477,
+          "contribution": 0.0016
         },
         {
           "outlet": "football.london",
@@ -1566,8 +1558,8 @@
           "publishedAt": "2026-09-12T07:00:00.000Z",
           "stage": "Imminent",
           "cooler": null,
-          "recency": 0.384,
-          "contribution": 0.4524
+          "recency": 0.379,
+          "contribution": 0.4461
         },
         {
           "outlet": "Evening Standard",
@@ -1577,8 +1569,8 @@
           "publishedAt": "2026-09-12T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.384,
-          "contribution": 0.0026
+          "recency": 0.379,
+          "contribution": 0.0028
         },
         {
           "outlet": "ESPN",
@@ -1588,8 +1580,8 @@
           "publishedAt": "2026-09-11T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.356,
-          "contribution": 0.0022
+          "recency": 0.351,
+          "contribution": 0.0024
         },
         {
           "outlet": "talkSPORT",
@@ -1599,8 +1591,8 @@
           "publishedAt": "2026-09-10T07:00:00.000Z",
           "stage": "Advanced talks",
           "cooler": null,
-          "recency": 0.329,
-          "contribution": 0.1385
+          "recency": 0.325,
+          "contribution": 0.1366
         },
         {
           "outlet": "LiveScore",
@@ -1610,8 +1602,8 @@
           "publishedAt": "2026-09-10T07:00:00.000Z",
           "stage": "Advanced talks",
           "cooler": null,
-          "recency": 0.329,
-          "contribution": 0.0192
+          "recency": 0.325,
+          "contribution": 0.019
         },
         {
           "outlet": "The Guardian",
@@ -1625,15 +1617,15 @@
           "contribution": 0.0127
         },
         {
-          "outlet": "The Times",
-          "tier": 1,
+          "outlet": "thetimes.com",
+          "tier": 4,
           "headline": "Tottenham prepare to sell Richarlison amid Trabzonspor interest",
           "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNdndKOEtKcDhxdTNaRUpvRFRiNlRuOE8tc3k5dDYzLTZwMUJPM3FqdzdxbmxWbHctQXZCeFBBR29uaDgtT0txU2NYZFRYSktudms0aEYxZ1pYQ1NxRkdta3ZVaFg3VnFNRmtHR000aXhYdFhEZ01Ubld3dmhnZU11dnJWeUp6Y05wQkZidG11T3g0ZGtDeDZkNnRUbGJoWWhJR2dfNF9qRF8xR2VFV3BKdV9EWnJTZEdha2RBNg?oc=5",
           "publishedAt": "2026-09-02T07:00:00.000Z",
           "stage": "Interest / link",
           "cooler": null,
           "recency": 0.2,
-          "contribution": 0.01
+          "contribution": 0.0012
         },
         {
           "outlet": "Goal.com",
@@ -1696,7 +1688,7 @@
       "heuristicProbability": 45,
       "llm": {
         "adjustment": 0,
-        "note": "Richarlison remains involved in active exit discussions, including reported talks with Vasco da Gama.",
+        "note": "Richarlison remains involved in multiple reported exit discussions, though potential moves have faced uncertainty.",
         "renamedFrom": null,
         "redirectedFrom": null
       },
@@ -1705,10 +1697,6 @@
       "change": 29,
       "isNew": false,
       "history": [
-        {
-          "t": 1789057688606,
-          "p": 98
-        },
         {
           "t": 1789073686628,
           "p": 98
@@ -1944,6 +1932,10 @@
         {
           "t": 1790270129845,
           "p": 45
+        },
+        {
+          "t": 1790285666602,
+          "p": 45
         }
       ]
     },
@@ -2061,10 +2053,6 @@
       "change": -73,
       "isNew": false,
       "history": [
-        {
-          "t": 1789057688606,
-          "p": 98
-        },
         {
           "t": 1789073686628,
           "p": 98
@@ -2300,6 +2288,317 @@
         {
           "t": 1790270129845,
           "p": 25
+        },
+        {
+          "t": 1790285666602,
+          "p": 25
+        }
+      ]
+    },
+    {
+      "id": "out-kevin-danso",
+      "player": "Kevin Danso",
+      "direction": "out",
+      "directionConfidence": 1,
+      "clubs": [
+        "Sunderland"
+      ],
+      "probability": 18,
+      "logit": -1.7394,
+      "done": false,
+      "confirmedBy": [],
+      "stage": {
+        "id": "mention",
+        "label": "Mentioned only",
+        "value": 0.05
+      },
+      "cooler": null,
+      "breakdown": {
+        "prior": -1.75,
+        "evidenceSum": 0.0106,
+        "corroboration": 0,
+        "distinctOutlets": 2,
+        "tier1Outlets": 1,
+        "totalArticles": 2,
+        "confirmedFloorApplied": false
+      },
+      "evidence": [
+        {
+          "outlet": "tribalfootball.com",
+          "tier": 4,
+          "headline": "Tottenham's Kevin Danso to undergo Sunderland medical",
+          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPTWF0dFdRdkZzdlpVMWVuVHpXQ1ozejhSUmxuMTdUQ3VtOEstWlExWHRGaGxPcF8xUk9DQndzdjhES3llc1NoNndydG9icmZNaHY4YklUWTNhenJDWjNVdXlxWGJxdmVEc2hmWXg5dlZLaDFha2tma2VTWXN0Z2llcWFhdkNVTHBuQ1R6eVlSRFJPRUFaZEhCQVVNQ09uMDVRMkZUd0ZHOTJaU0w3VVpNNEJSYWhRYTVHWUJIQmNvelZvdzZCZGxNZQ?oc=5",
+          "publishedAt": "2026-09-01T07:00:00.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.2,
+          "contribution": 0.0011
+        },
+        {
+          "outlet": "BBC Sport",
+          "tier": 1,
+          "headline": "Kevin Danso: Sunderland to sign Tottenham defender on season-long loan",
+          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBFRlF3VUFoZWQ2cXR6QmFxSGllTHc2NUdlLUEydmZzUHJUekt4VlQtck5kTDNEZ0hBb0o5Mkhtb0s5eHI2ZXVJTEdXYVlzczYyOUsyanZFYkhFaUczenQ3OTRTRFRMZjA?oc=5",
+          "publishedAt": "2026-08-30T07:00:00.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.2,
+          "contribution": 0.0095
+        }
+      ],
+      "latestAt": "2026-09-01T07:00:00.000Z",
+      "earliestAt": "2026-08-30T07:00:00.000Z",
+      "heuristicProbability": 15,
+      "llm": {
+        "adjustment": 3,
+        "note": "Sunderland are reportedly signing Danso on a season-long loan, with a medical scheduled.",
+        "renamedFrom": null,
+        "redirectedFrom": null
+      },
+      "confirmedAt": null,
+      "previousProbability": 15,
+      "change": 3,
+      "isNew": false,
+      "history": [
+        {
+          "t": 1789073686628,
+          "p": 98
+        },
+        {
+          "t": 1789081965611,
+          "p": 98
+        },
+        {
+          "t": 1789101981161,
+          "p": 98
+        },
+        {
+          "t": 1789126047192,
+          "p": 98
+        },
+        {
+          "t": 1789144336267,
+          "p": 98
+        },
+        {
+          "t": 1789160449792,
+          "p": 98
+        },
+        {
+          "t": 1789168701765,
+          "p": 98
+        },
+        {
+          "t": 1789188018598,
+          "p": 98
+        },
+        {
+          "t": 1789210335236,
+          "p": 98
+        },
+        {
+          "t": 1789227294067,
+          "p": 98
+        },
+        {
+          "t": 1789245437959,
+          "p": 98
+        },
+        {
+          "t": 1789331886322,
+          "p": 98
+        },
+        {
+          "t": 1789341107914,
+          "p": 98
+        },
+        {
+          "t": 1789362124543,
+          "p": 98
+        },
+        {
+          "t": 1789390520151,
+          "p": 98
+        },
+        {
+          "t": 1789415477939,
+          "p": 98
+        },
+        {
+          "t": 1789430009548,
+          "p": 98
+        },
+        {
+          "t": 1789448317309,
+          "p": 98
+        },
+        {
+          "t": 1789473000648,
+          "p": 98
+        },
+        {
+          "t": 1789491819558,
+          "p": 98
+        },
+        {
+          "t": 1789507496386,
+          "p": 98
+        },
+        {
+          "t": 1789534457506,
+          "p": 98
+        },
+        {
+          "t": 1789558931138,
+          "p": 98
+        },
+        {
+          "t": 1789578206608,
+          "p": 98
+        },
+        {
+          "t": 1789593704359,
+          "p": 98
+        },
+        {
+          "t": 1789621048110,
+          "p": 98
+        },
+        {
+          "t": 1789645640472,
+          "p": 98
+        },
+        {
+          "t": 1789664635203,
+          "p": 98
+        },
+        {
+          "t": 1789680377810,
+          "p": 98
+        },
+        {
+          "t": 1789706955188,
+          "p": 98
+        },
+        {
+          "t": 1789730505789,
+          "p": 98
+        },
+        {
+          "t": 1789748905536,
+          "p": 98
+        },
+        {
+          "t": 1789765011364,
+          "p": 98
+        },
+        {
+          "t": 1789773613299,
+          "p": 98
+        },
+        {
+          "t": 1789792924500,
+          "p": 98
+        },
+        {
+          "t": 1789815938304,
+          "p": 98
+        },
+        {
+          "t": 1789833335651,
+          "p": 98
+        },
+        {
+          "t": 1789850709693,
+          "p": 98
+        },
+        {
+          "t": 1789859424674,
+          "p": 98
+        },
+        {
+          "t": 1789880281537,
+          "p": 98
+        },
+        {
+          "t": 1789903808999,
+          "p": 98
+        },
+        {
+          "t": 1789920691672,
+          "p": 98
+        },
+        {
+          "t": 1789937565908,
+          "p": 98
+        },
+        {
+          "t": 1789946172266,
+          "p": 98
+        },
+        {
+          "t": 1789966945069,
+          "p": 98
+        },
+        {
+          "t": 1789995287136,
+          "p": 98
+        },
+        {
+          "t": 1790020803208,
+          "p": 98
+        },
+        {
+          "t": 1790035778789,
+          "p": 98
+        },
+        {
+          "t": 1790053424403,
+          "p": 98
+        },
+        {
+          "t": 1790077477114,
+          "p": 15
+        },
+        {
+          "t": 1790096427263,
+          "p": 15
+        },
+        {
+          "t": 1790112180190,
+          "p": 98
+        },
+        {
+          "t": 1790139000301,
+          "p": 15
+        },
+        {
+          "t": 1790163827538,
+          "p": 15
+        },
+        {
+          "t": 1790183268093,
+          "p": 15
+        },
+        {
+          "t": 1790199168715,
+          "p": 15
+        },
+        {
+          "t": 1790225857774,
+          "p": 15
+        },
+        {
+          "t": 1790250766234,
+          "p": 15
+        },
+        {
+          "t": 1790270129845,
+          "p": 15
+        },
+        {
+          "t": 1790285666602,
+          "p": 18
         }
       ]
     },
@@ -2312,7 +2611,7 @@
         "Ajax"
       ],
       "probability": 98,
-      "logit": -1.6699,
+      "logit": -1.6709,
       "done": true,
       "confirmedBy": [
         {
@@ -2337,7 +2636,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0801,
+        "evidenceSum": 0.0791,
         "corroboration": 0,
         "distinctOutlets": 3,
         "tier1Outlets": 1,
@@ -2353,7 +2652,7 @@
           "publishedAt": "2026-09-16T16:38:48.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.539,
+          "recency": 0.532,
           "contribution": 0.0024
         },
         {
@@ -2364,8 +2663,8 @@
           "publishedAt": "2026-09-16T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.523,
-          "contribution": 0.0177
+          "recency": 0.515,
+          "contribution": 0.0175
         },
         {
           "outlet": "talkSPORT",
@@ -2375,8 +2674,8 @@
           "publishedAt": "2026-09-15T07:00:00.000Z",
           "stage": "Interest / link",
           "cooler": null,
-          "recency": 0.484,
-          "contribution": 0.06
+          "recency": 0.477,
+          "contribution": 0.0592
         }
       ],
       "latestAt": "2026-09-16T16:38:48.000Z",
@@ -2609,6 +2908,10 @@
         {
           "t": 1790270129845,
           "p": 98
+        },
+        {
+          "t": 1790285666602,
+          "p": 98
         }
       ]
     },
@@ -2621,7 +2924,7 @@
         "Liverpool"
       ],
       "probability": 16,
-      "logit": -1.6395,
+      "logit": -1.641,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -2632,7 +2935,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.1105,
+        "evidenceSum": 0.109,
         "corroboration": 0,
         "distinctOutlets": 2,
         "tier1Outlets": 0,
@@ -2648,8 +2951,8 @@
           "publishedAt": "2026-09-24T06:45:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.967,
-          "contribution": 0.0055
+          "recency": 0.954,
+          "contribution": 0.0054
         },
         {
           "outlet": "Liverpool Echo",
@@ -2659,8 +2962,8 @@
           "publishedAt": "2026-09-22T13:30:00.000Z",
           "stage": "Interest / link",
           "cooler": null,
-          "recency": 0.847,
-          "contribution": 0.105
+          "recency": 0.835,
+          "contribution": 0.1036
         }
       ],
       "latestAt": "2026-09-24T06:45:00.000Z",
@@ -2711,6 +3014,10 @@
         },
         {
           "t": 1790270129845,
+          "p": 16
+        },
+        {
+          "t": 1790285666602,
           "p": 16
         }
       ]
@@ -2767,10 +3074,6 @@
       "change": 0,
       "isNew": false,
       "history": [
-        {
-          "t": 1788995884542,
-          "p": 98
-        },
         {
           "t": 1789015736311,
           "p": 98
@@ -3006,6 +3309,10 @@
         {
           "t": 1790270129845,
           "p": 16
+        },
+        {
+          "t": 1790285666602,
+          "p": 16
         }
       ]
     },
@@ -3019,7 +3326,7 @@
         "Manchester United"
       ],
       "probability": 15,
-      "logit": -1.7091,
+      "logit": -1.7096,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -3030,7 +3337,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0409,
+        "evidenceSum": 0.0404,
         "corroboration": 0,
         "distinctOutlets": 2,
         "tier1Outlets": 0,
@@ -3046,8 +3353,8 @@
           "publishedAt": "2026-09-24T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.968,
-          "contribution": 0.03
+          "recency": 0.954,
+          "contribution": 0.0296
         },
         {
           "outlet": "Football365",
@@ -3057,8 +3364,8 @@
           "publishedAt": "2026-09-23T08:48:49.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.901,
-          "contribution": 0.0109
+          "recency": 0.889,
+          "contribution": 0.0108
         }
       ],
       "latestAt": "2026-09-24T07:00:00.000Z",
@@ -3075,10 +3382,6 @@
       "change": 0,
       "isNew": false,
       "history": [
-        {
-          "t": 1786972143058,
-          "p": 15
-        },
         {
           "t": 1786981424816,
           "p": 15
@@ -3314,6 +3617,10 @@
         {
           "t": 1790270129845,
           "p": 15
+        },
+        {
+          "t": 1790285666602,
+          "p": 15
         }
       ]
     },
@@ -3321,59 +3628,57 @@
       "id": "in-morgan-gibbs-white",
       "player": "Morgan Gibbs-White",
       "direction": "in",
-      "directionConfidence": 1,
-      "clubs": [
-        "Nottingham Forest"
-      ],
+      "directionConfidence": 0.3,
+      "clubs": [],
       "probability": 15,
-      "logit": -1.7216,
+      "logit": -1.7036,
       "done": false,
       "confirmedBy": [],
       "stage": {
-        "id": "mention",
-        "label": "Mentioned only",
+        "id": "roundup",
+        "label": "Named in a roundup",
         "value": 0.05
       },
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0284,
+        "evidenceSum": 0.0464,
         "corroboration": 0,
         "distinctOutlets": 2,
-        "tier1Outlets": 0,
+        "tier1Outlets": 1,
         "totalArticles": 2,
         "confirmedFloorApplied": false
       },
       "evidence": [
         {
-          "outlet": "TEAMtalk",
-          "tier": 3,
-          "headline": "Morgan Gibbs-White reaches decision on joining Tottenham from Nott'm Forest amid new issue",
-          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOclFUS2F4ekpmYXRSalNwQThJa1JJLXVWT2h2QVp2R2dnZnZFM096TFZpem5HNlBPdXpXbjBLWVpiVmprZlVXamVpWGFjbU9jSkxsWVRERFlNVS1hV0E1bGVGWC12TC1YeTJkc3M4c2F3RHJCX3UwaXJGN1FTdDQ1bEl3MEc1aERSdXkzd1c2czBNRUJPbERzdE1XRGtWaGlQOXJHd3E2cW94NHlVeko0WlJn?oc=5",
-          "publishedAt": "2026-09-24T09:13:49.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.975,
-          "contribution": 0.0166
-        },
-        {
           "outlet": "Football365",
           "tier": 3,
           "headline": "Morgan Gibbs-White open to stunning £125m Tottenham move on one condition",
           "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPYk4wa1BQbU5kQW5FbUJCcU1WR1hKbS1NdHk4TF9rc1lzYkhoa21tVDBhY2stbE83LWhzOTk4MGJ3SDgtMWlhaEluTU9POFlBYXJfYWJiaU5XdGFXNFhhZnVpdTVHXy02MDhwVVBlVUFiMXJFVWY4NFEyNW85YmhzaEVWVWZuWlR2NFMxNDU0cFVFRVJEWVQ0U09Id1dwN0xCX0FV?oc=5",
-          "publishedAt": "2026-09-24T07:02:28.000Z",
+          "publishedAt": "2026-09-24T10:31:43.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.968,
-          "contribution": 0.0118
+          "recency": 0.965,
+          "contribution": 0.0117
+        },
+        {
+          "outlet": "BBC Sport",
+          "tier": 1,
+          "headline": "Football gossip: Tottenham Hotspur eye £125m move for Morgan Gibbs-White",
+          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5rQ3FHa0hTdGZHeFJ4NXRMZDdwckVOcVpMVFNBM1pJb0hoU0hZVWY3dks5cXVGYUpCVVpCRThOQ01NY1RGSms0R0JZX2JfbnNrV3NubFFlTzBnLTBaX0lJbTl4WXhYd0xR?oc=5",
+          "publishedAt": "2026-09-20T20:04:52.000Z",
+          "stage": "Named in a roundup",
+          "cooler": null,
+          "recency": 0.731,
+          "contribution": 0.0347
         }
       ],
-      "latestAt": "2026-09-24T09:13:49.000Z",
-      "earliestAt": "2026-09-24T07:02:28.000Z",
+      "latestAt": "2026-09-24T10:31:43.000Z",
+      "earliestAt": "2026-09-20T20:04:52.000Z",
       "heuristicProbability": 15,
       "llm": {
         "adjustment": 0,
-        "note": "Gibbs-White is reportedly open to a Tottenham move, subject to conditions.",
+        "note": "Tottenham are reportedly considering a major move, while Gibbs-White is said to be open to joining.",
         "renamedFrom": null,
         "redirectedFrom": null
       },
@@ -3521,6 +3826,10 @@
         {
           "t": 1790270129845,
           "p": 15
+        },
+        {
+          "t": 1790285666602,
+          "p": 15
         }
       ]
     },
@@ -3531,7 +3840,7 @@
       "directionConfidence": 1,
       "clubs": [],
       "probability": 15,
-      "logit": -1.7387,
+      "logit": -1.7389,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -3542,7 +3851,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0113,
+        "evidenceSum": 0.0111,
         "corroboration": 0,
         "distinctOutlets": 2,
         "tier1Outlets": 0,
@@ -3558,8 +3867,8 @@
           "publishedAt": "2026-09-07T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.261,
-          "contribution": 0.0081
+          "recency": 0.258,
+          "contribution": 0.008
         },
         {
           "outlet": "Football365",
@@ -3569,8 +3878,8 @@
           "publishedAt": "2026-09-07T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.261,
-          "contribution": 0.0032
+          "recency": 0.258,
+          "contribution": 0.0031
         }
       ],
       "latestAt": "2026-09-07T07:00:00.000Z",
@@ -3587,10 +3896,6 @@
       "change": 0,
       "isNew": false,
       "history": [
-        {
-          "t": 1789057688606,
-          "p": 27
-        },
         {
           "t": 1789073686628,
           "p": 27
@@ -3826,19 +4131,21 @@
         {
           "t": 1790270129845,
           "p": 15
+        },
+        {
+          "t": 1790285666602,
+          "p": 15
         }
       ]
     },
     {
-      "id": "out-kevin-danso",
-      "player": "Kevin Danso",
-      "direction": "out",
-      "directionConfidence": 1,
-      "clubs": [
-        "Sunderland"
-      ],
+      "id": "in-mauro-icardi",
+      "player": "Mauro Icardi",
+      "direction": "in",
+      "directionConfidence": 0.3,
+      "clubs": [],
       "probability": 15,
-      "logit": -1.7381,
+      "logit": -1.7112,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -3849,43 +4156,32 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0119,
+        "evidenceSum": 0.0388,
         "corroboration": 0,
-        "distinctOutlets": 2,
+        "distinctOutlets": 1,
         "tier1Outlets": 1,
-        "totalArticles": 2,
+        "totalArticles": 1,
         "confirmedFloorApplied": false
       },
       "evidence": [
         {
-          "outlet": "TribalFootball",
-          "tier": 3,
-          "headline": "Tottenham's Kevin Danso to undergo Sunderland medical",
-          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPTWF0dFdRdkZzdlpVMWVuVHpXQ1ozejhSUmxuMTdUQ3VtOEstWlExWHRGaGxPcF8xUk9DQndzdjhES3llc1NoNndydG9icmZNaHY4YklUWTNhenJDWjNVdXlxWGJxdmVEc2hmWXg5dlZLaDFha2tma2VTWXN0Z2llcWFhdkNVTHBuQ1R6eVlSRFJPRUFaZEhCQVVNQ09uMDVRMkZUd0ZHOTJaU0w3VVpNNEJSYWhRYTVHWUJIQmNvelZvdzZCZGxNZQ?oc=5",
-          "publishedAt": "2026-09-01T07:00:00.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.2,
-          "contribution": 0.0024
-        },
-        {
           "outlet": "BBC Sport",
           "tier": 1,
-          "headline": "Kevin Danso: Sunderland to sign Tottenham defender on season-long loan",
-          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBFRlF3VUFoZWQ2cXR6QmFxSGllTHc2NUdlLUEydmZzUHJUekt4VlQtck5kTDNEZ0hBb0o5Mkhtb0s5eHI2ZXVJTEdXYVlzczYyOUsyanZFYkhFaUczenQ3OTRTRFRMZjA?oc=5",
-          "publishedAt": "2026-08-30T07:00:00.000Z",
+          "headline": "Tottenham transfer rumours: Mauro Icardi",
+          "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQaU1tTE9PTzM4MGFOWm81TGZmeXAyNm1Xa1o5elRNZ3pseVFnQWp5dm5jZWlGb2FhQnJyb1daTnRXcHltMEVSaTBqbjhuN2pqRldfWE1NOHNqaUdqUUNtd0l6UTBpNE5ockktN3R6NGFiZ29yNFpOOGFodklqeld2WFd0RnBMZXdjNFVHZnVPQkpnYUlNUkJxejRmcDNSeW1RSjVETWJjWFhyd0VvdERWUDc4azdPM1paQlB4NWE2ZGRUVVpsVHpUUVJxMXdFYXZGZ242dG85M3BubWxXdHlmTkJqekpEbFVwbDYtNmFEZzFsUQ?oc=5",
+          "publishedAt": "2026-09-22T06:12:06.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.2,
-          "contribution": 0.0095
+          "recency": 0.816,
+          "contribution": 0.0388
         }
       ],
-      "latestAt": "2026-09-01T07:00:00.000Z",
-      "earliestAt": "2026-08-30T07:00:00.000Z",
+      "latestAt": "2026-09-22T06:12:06.000Z",
+      "earliestAt": "2026-09-22T06:12:06.000Z",
       "heuristicProbability": 15,
       "llm": {
         "adjustment": 0,
-        "note": "Sunderland’s season-long loan signing of Danso is confirmed.",
+        "note": "Icardi is listed in Tottenham transfer-rumour coverage, but no further details are provided.",
         "renamedFrom": null,
         "redirectedFrom": null
       },
@@ -3895,216 +4191,88 @@
       "isNew": false,
       "history": [
         {
-          "t": 1789057688606,
-          "p": 98
-        },
-        {
-          "t": 1789073686628,
-          "p": 98
-        },
-        {
-          "t": 1789081965611,
-          "p": 98
-        },
-        {
-          "t": 1789101981161,
-          "p": 98
-        },
-        {
-          "t": 1789126047192,
-          "p": 98
-        },
-        {
-          "t": 1789144336267,
-          "p": 98
-        },
-        {
-          "t": 1789160449792,
-          "p": 98
-        },
-        {
-          "t": 1789168701765,
-          "p": 98
-        },
-        {
-          "t": 1789188018598,
-          "p": 98
-        },
-        {
-          "t": 1789210335236,
-          "p": 98
-        },
-        {
-          "t": 1789227294067,
-          "p": 98
-        },
-        {
-          "t": 1789245437959,
-          "p": 98
-        },
-        {
-          "t": 1789331886322,
-          "p": 98
-        },
-        {
-          "t": 1789341107914,
-          "p": 98
-        },
-        {
-          "t": 1789362124543,
-          "p": 98
-        },
-        {
-          "t": 1789390520151,
-          "p": 98
-        },
-        {
-          "t": 1789415477939,
-          "p": 98
-        },
-        {
-          "t": 1789430009548,
-          "p": 98
-        },
-        {
-          "t": 1789448317309,
-          "p": 98
-        },
-        {
-          "t": 1789473000648,
-          "p": 98
-        },
-        {
-          "t": 1789491819558,
-          "p": 98
-        },
-        {
-          "t": 1789507496386,
-          "p": 98
-        },
-        {
-          "t": 1789534457506,
-          "p": 98
-        },
-        {
-          "t": 1789558931138,
-          "p": 98
-        },
-        {
-          "t": 1789578206608,
-          "p": 98
-        },
-        {
-          "t": 1789593704359,
-          "p": 98
-        },
-        {
-          "t": 1789621048110,
-          "p": 98
-        },
-        {
-          "t": 1789645640472,
-          "p": 98
-        },
-        {
           "t": 1789664635203,
-          "p": 98
+          "p": 15
         },
         {
           "t": 1789680377810,
-          "p": 98
+          "p": 16
         },
         {
           "t": 1789706955188,
-          "p": 98
+          "p": 17
         },
         {
           "t": 1789730505789,
-          "p": 98
+          "p": 17
         },
         {
           "t": 1789748905536,
-          "p": 98
+          "p": 16
         },
         {
           "t": 1789765011364,
-          "p": 98
+          "p": 16
         },
         {
           "t": 1789773613299,
-          "p": 98
+          "p": 16
         },
         {
           "t": 1789792924500,
-          "p": 98
+          "p": 16
         },
         {
           "t": 1789815938304,
-          "p": 98
+          "p": 16
         },
         {
           "t": 1789833335651,
-          "p": 98
+          "p": 16
         },
         {
           "t": 1789850709693,
-          "p": 98
+          "p": 16
         },
         {
           "t": 1789859424674,
-          "p": 98
+          "p": 16
         },
         {
           "t": 1789880281537,
-          "p": 98
+          "p": 16
         },
         {
           "t": 1789903808999,
-          "p": 98
+          "p": 16
         },
         {
           "t": 1789920691672,
-          "p": 98
+          "p": 16
         },
         {
           "t": 1789937565908,
-          "p": 98
+          "p": 16
         },
         {
           "t": 1789946172266,
-          "p": 98
+          "p": 16
         },
         {
           "t": 1789966945069,
-          "p": 98
-        },
-        {
-          "t": 1789995287136,
-          "p": 98
-        },
-        {
-          "t": 1790020803208,
-          "p": 98
-        },
-        {
-          "t": 1790035778789,
-          "p": 98
-        },
-        {
-          "t": 1790053424403,
-          "p": 98
+          "p": 16
         },
         {
           "t": 1790077477114,
-          "p": 15
+          "p": 13
         },
         {
           "t": 1790096427263,
-          "p": 15
+          "p": 13
         },
         {
           "t": 1790112180190,
-          "p": 98
+          "p": 13
         },
         {
           "t": 1790139000301,
@@ -4127,11 +4295,7 @@
           "p": 15
         },
         {
-          "t": 1790250766234,
-          "p": 15
-        },
-        {
-          "t": 1790270129845,
+          "t": 1790285666602,
           "p": 15
         }
       ]
@@ -4143,7 +4307,7 @@
       "directionConfidence": 0.3,
       "clubs": [],
       "probability": 15,
-      "logit": -1.7344,
+      "logit": -1.7346,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -4154,7 +4318,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0156,
+        "evidenceSum": 0.0154,
         "corroboration": 0,
         "distinctOutlets": 1,
         "tier1Outlets": 1,
@@ -4170,8 +4334,8 @@
           "publishedAt": "2026-09-10T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.329,
-          "contribution": 0.0156
+          "recency": 0.325,
+          "contribution": 0.0154
         }
       ],
       "latestAt": "2026-09-10T07:00:00.000Z",
@@ -4251,6 +4415,10 @@
         {
           "t": 1790270129845,
           "p": 15
+        },
+        {
+          "t": 1790285666602,
+          "p": 15
         }
       ]
     },
@@ -4306,10 +4474,6 @@
       "change": 0,
       "isNew": false,
       "history": [
-        {
-          "t": 1788929272958,
-          "p": 15
-        },
         {
           "t": 1788953359472,
           "p": 15
@@ -4545,6 +4709,10 @@
         {
           "t": 1790270129845,
           "p": 15
+        },
+        {
+          "t": 1790285666602,
+          "p": 15
         }
       ]
     },
@@ -4600,10 +4768,6 @@
       "change": -83,
       "isNew": false,
       "history": [
-        {
-          "t": 1789057688606,
-          "p": 98
-        },
         {
           "t": 1789073686628,
           "p": 98
@@ -4839,6 +5003,10 @@
         {
           "t": 1790270129845,
           "p": 15
+        },
+        {
+          "t": 1790285666602,
+          "p": 15
         }
       ]
     },
@@ -4899,10 +5067,6 @@
       "change": -18,
       "isNew": false,
       "history": [
-        {
-          "t": 1788909952478,
-          "p": 14
-        },
         {
           "t": 1788929272958,
           "p": 14
@@ -5138,6 +5302,10 @@
         {
           "t": 1790270129845,
           "p": 15
+        },
+        {
+          "t": 1790285666602,
+          "p": 15
         }
       ]
     },
@@ -5218,10 +5386,6 @@
       "change": -9,
       "isNew": false,
       "history": [
-        {
-          "t": 1789057688606,
-          "p": 98
-        },
         {
           "t": 1789073686628,
           "p": 98
@@ -5457,337 +5621,10 @@
         {
           "t": 1790270129845,
           "p": 14
-        }
-      ]
-    },
-    {
-      "id": "out-lucas-bergvall",
-      "player": "Lucas Bergvall",
-      "direction": "out",
-      "directionConfidence": 1,
-      "clubs": [],
-      "probability": 98,
-      "logit": -1.6893,
-      "done": true,
-      "confirmedBy": [
-        {
-          "outlet": "OneFootball",
-          "tier": 2,
-          "headline": "Confirmed Transfer: Tottenham Hotspur signs Lucas Bergvall.",
-          "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1DOFJBa1BTa3NQLUJWRTk1WS03dDlCZ1dFcWFuLUcySUwtMFRUVF9WMUJ2Y2JTN0QwaUg1VTR3UDRCbndudHlZOWlrMjRzbE9zUmI4SDY4dl8?oc=5",
-          "publishedAt": "2026-09-11T15:53:43.000Z"
         },
         {
-          "outlet": "Yahoo Sports",
-          "tier": 3,
-          "headline": "Lucas Bergvall Completes Major Tottenham U-Turn By Signing New Contract",
-          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNWk5ZQVByZXpYXzk1YlU1TUJDWVpFVHloa1pXN3BBWEtENXRaQUxiTjhiVmw2LTMybUMzckJfUzNBYmFObjBocE12UWh6Sk1SS2VlbUxicng1VXBoRUVkSDJRUXZTcFh4aFhRLU8wT1Rncm5TRUdaY0VTTlJ5M0p6RVllRTJXelR0TzBVNGhNb1FsMzA?oc=5",
-          "publishedAt": "2026-09-11T13:31:01.000Z"
-        }
-      ],
-      "stage": {
-        "id": "confirmed",
-        "label": "Done / confirmed"
-      },
-      "cooler": null,
-      "breakdown": {
-        "prior": -1.75,
-        "evidenceSum": 0.0607,
-        "corroboration": 0,
-        "distinctOutlets": 3,
-        "tier1Outlets": 1,
-        "totalArticles": 5,
-        "confirmedFloorApplied": false
-      },
-      "evidence": [
-        {
-          "outlet": "Evening Standard",
-          "tier": 2,
-          "headline": "Bergvall responds to Tottenham exit speculation: 'I just tried to be happy'",
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQMml3MVRLUkRRNmxSWlNMLUhmc3JfdXhNQXBTS1ItNXVWWWdtRUx1MmZqbkQ2MER3VmUybUp6ZEJPVkFGRFFReDFQREZ0enRZVE45OEZlX3V6TndzUWQ5TXJjQjJVS2ZYQzR0bTNlUkY0QmVwWmwtR19pU0d5ZmJIbHFwSFRoRkdENUFLMlAwQ095aklacDZXRnNwb3ZoUDhI?oc=5",
-          "publishedAt": "2026-09-24T13:59:23.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.99,
-          "contribution": 0.0307
-        },
-        {
-          "outlet": "football.london",
-          "tier": 2,
-          "headline": "Lucas Bergvall gives cryptic response to question over Tottenham release clause",
-          "url": "https://www.football.london/tottenham-hotspur-fc/news/lucas-bergvall-tottenham-release-clause-34662657",
-          "publishedAt": "2026-09-23T19:06:56.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.931,
-          "contribution": 0.0206
-        },
-        {
-          "outlet": "BBC Sport",
-          "tier": 1,
-          "headline": "Tottenham news: Lucas Bergvall signs new deal after uncertainty over his future",
-          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5rakpwOThfTmVXNjFKUEZLSDljODBOVW1ET1VvMklKN3BvQUpxNU8xZlJPR2JtMm45QlhkeWFQTFZvSE8yaVhwdFVrWFI1dnUzN3hVQ1AzZFQwanBmek81R19kZ3ZXMHc?oc=5",
-          "publishedAt": "2026-09-11T07:00:00.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.356,
-          "contribution": 0.0094
-        }
-      ],
-      "latestAt": "2026-09-24T13:59:23.000Z",
-      "earliestAt": "2026-09-11T07:00:00.000Z",
-      "heuristicProbability": 16,
-      "llm": {
-        "adjustment": -3,
-        "note": "Exit speculation exists, but Bergvall’s new Tottenham contract weakens the likelihood of departure.",
-        "renamedFrom": null,
-        "redirectedFrom": null
-      },
-      "doneCarriedForward": true,
-      "confirmedAt": 1789135071000,
-      "previousProbability": 98,
-      "change": 0,
-      "isNew": false,
-      "history": [
-        {
-          "t": 1788692530220,
-          "p": 10
-        },
-        {
-          "t": 1788708643462,
-          "p": 10
-        },
-        {
-          "t": 1788726439390,
-          "p": 10
-        },
-        {
-          "t": 1788735276236,
-          "p": 10
-        },
-        {
-          "t": 1788756486223,
-          "p": 10
-        },
-        {
-          "t": 1788784834852,
-          "p": 15
-        },
-        {
-          "t": 1788808354774,
-          "p": 15
-        },
-        {
-          "t": 1788823942478,
-          "p": 15
-        },
-        {
-          "t": 1788842617494,
-          "p": 15
-        },
-        {
-          "t": 1788866656020,
-          "p": 18
-        },
-        {
-          "t": 1788885677731,
-          "p": 18
-        },
-        {
-          "t": 1788901988054,
-          "p": 18
-        },
-        {
-          "t": 1788909952478,
-          "p": 18
-        },
-        {
-          "t": 1788929272958,
-          "p": 18
-        },
-        {
-          "t": 1788953359472,
-          "p": 18
-        },
-        {
-          "t": 1788972126648,
-          "p": 18
-        },
-        {
-          "t": 1788987491131,
-          "p": 18
-        },
-        {
-          "t": 1788995884542,
-          "p": 18
-        },
-        {
-          "t": 1789015736311,
-          "p": 18
-        },
-        {
-          "t": 1789039545279,
-          "p": 18
-        },
-        {
-          "t": 1789057688606,
-          "p": 18
-        },
-        {
-          "t": 1789073686628,
-          "p": 18
-        },
-        {
-          "t": 1789081965611,
-          "p": 18
-        },
-        {
-          "t": 1789101981161,
-          "p": 18
-        },
-        {
-          "t": 1789126047192,
-          "p": 15
-        },
-        {
-          "t": 1789144336267,
-          "p": 98
-        },
-        {
-          "t": 1789160449792,
-          "p": 98
-        },
-        {
-          "t": 1789168701765,
-          "p": 98
-        },
-        {
-          "t": 1789188018598,
-          "p": 98
-        },
-        {
-          "t": 1789210335236,
-          "p": 98
-        },
-        {
-          "t": 1789227294067,
-          "p": 98
-        },
-        {
-          "t": 1789245437959,
-          "p": 98
-        },
-        {
-          "t": 1789332811313,
-          "p": 98
-        },
-        {
-          "t": 1789390520151,
-          "p": 98
-        },
-        {
-          "t": 1789430009548,
-          "p": 98
-        },
-        {
-          "t": 1789448317309,
-          "p": 98
-        },
-        {
-          "t": 1789473000648,
-          "p": 98
-        },
-        {
-          "t": 1789491819558,
-          "p": 98
-        },
-        {
-          "t": 1789507496386,
-          "p": 98
-        },
-        {
-          "t": 1789558931138,
-          "p": 98
-        },
-        {
-          "t": 1789593704359,
-          "p": 98
-        },
-        {
-          "t": 1789645640472,
-          "p": 98
-        },
-        {
-          "t": 1789664635203,
-          "p": 98
-        },
-        {
-          "t": 1789833335651,
-          "p": 98
-        },
-        {
-          "t": 1789850709693,
-          "p": 98
-        },
-        {
-          "t": 1789859424674,
-          "p": 98
-        },
-        {
-          "t": 1789880281537,
-          "p": 98
-        },
-        {
-          "t": 1789903808999,
-          "p": 98
-        },
-        {
-          "t": 1790035778789,
-          "p": 98
-        },
-        {
-          "t": 1790053424403,
-          "p": 98
-        },
-        {
-          "t": 1790077477114,
-          "p": 98
-        },
-        {
-          "t": 1790096427263,
-          "p": 98
-        },
-        {
-          "t": 1790112180190,
-          "p": 98
-        },
-        {
-          "t": 1790139000301,
-          "p": 98
-        },
-        {
-          "t": 1790163827538,
-          "p": 98
-        },
-        {
-          "t": 1790183268093,
-          "p": 98
-        },
-        {
-          "t": 1790199168715,
-          "p": 98
-        },
-        {
-          "t": 1790225857774,
-          "p": 98
-        },
-        {
-          "t": 1790250766234,
-          "p": 98
-        },
-        {
-          "t": 1790270129845,
-          "p": 98
+          "t": 1790285666602,
+          "p": 14
         }
       ]
     },
@@ -5797,8 +5634,8 @@
       "direction": "out",
       "directionConfidence": 0.3,
       "clubs": [],
-      "probability": 4,
-      "logit": -1.2897,
+      "probability": 3,
+      "logit": -1.2961,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -5809,7 +5646,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.4603,
+        "evidenceSum": 0.4539,
         "corroboration": 0,
         "distinctOutlets": 2,
         "tier1Outlets": 0,
@@ -5825,8 +5662,8 @@
           "publishedAt": "2026-09-12T07:00:00.000Z",
           "stage": "Imminent",
           "cooler": null,
-          "recency": 0.384,
-          "contribution": 0.4524
+          "recency": 0.379,
+          "contribution": 0.4461
         },
         {
           "outlet": "ESPN",
@@ -5836,13 +5673,13 @@
           "publishedAt": "2026-09-11T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.356,
-          "contribution": 0.0079
+          "recency": 0.351,
+          "contribution": 0.0078
         }
       ],
       "latestAt": "2026-09-12T07:00:00.000Z",
       "earliestAt": "2026-09-11T07:00:00.000Z",
-      "heuristicProbability": 22,
+      "heuristicProbability": 21,
       "llm": {
         "adjustment": -18,
         "note": "The headlines concern Richarlison potentially leaving Tottenham for Vasco da Gama, not Vasco da Gama joining Spurs.",
@@ -5851,7 +5688,7 @@
       },
       "confirmedAt": null,
       "previousProbability": 5,
-      "change": -1,
+      "change": -2,
       "isNew": false,
       "history": [
         {
@@ -6037,6 +5874,10 @@
         {
           "t": 1790270129845,
           "p": 4
+        },
+        {
+          "t": 1790285666602,
+          "p": 3
         }
       ]
     }
