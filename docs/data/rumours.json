@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-10-02T17:53:37.278Z",
+  "generatedAt": "2026-10-02T22:17:44.116Z",
   "counts": {
-    "rumours": 7,
-    "incoming": 4,
+    "rumours": 6,
+    "incoming": 3,
     "outgoing": 3,
     "done": 1,
-    "articles": 217,
-    "transferArticles": 100,
+    "articles": 216,
+    "transferArticles": 98,
     "likely": 0
   },
   "model": {
     "type": "heuristic + LLM review",
     "llm": {
       "model": "gpt-5.6-luna",
-      "sent": 7,
-      "reusedFromCache": 13,
+      "sent": 3,
+      "reusedFromCache": 15,
       "deferred": 0,
-      "adjusted": 4,
-      "discarded": 12
+      "adjusted": 2,
+      "discarded": 11
     }
   },
   "sources": [
@@ -44,12 +44,12 @@
     {
       "name": "Evening Standard — Tottenham",
       "ok": true,
-      "itemCount": 5
+      "itemCount": 4
     },
     {
       "name": "Google News — Tottenham transfer",
       "ok": true,
-      "itemCount": 41
+      "itemCount": 44
     },
     {
       "name": "Google News — Spurs transfer news",
@@ -59,12 +59,12 @@
     {
       "name": "Google News — Tottenham sign",
       "ok": true,
-      "itemCount": 19
+      "itemCount": 18
     },
     {
       "name": "Google News — Tottenham exit",
       "ok": true,
-      "itemCount": 38
+      "itemCount": 37
     },
     {
       "name": "Google News — Tottenham medical/agreed",
@@ -74,7 +74,7 @@
     {
       "name": "Google News — Tottenham loan",
       "ok": true,
-      "itemCount": 9
+      "itemCount": 8
     }
   ],
   "squadHints": [
@@ -91,7 +91,7 @@
         "Newcastle United"
       ],
       "probability": 33,
-      "logit": -1.7165,
+      "logit": -1.7349,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -102,57 +102,46 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0335,
+        "evidenceSum": 0.0151,
         "corroboration": 0,
-        "distinctOutlets": 4,
+        "distinctOutlets": 3,
         "tier1Outlets": 0,
-        "totalArticles": 4,
+        "totalArticles": 3,
         "confirmedFloorApplied": false
       },
       "evidence": [
         {
-          "outlet": "Get Italian Football News",
+          "outlet": "getfootballnewsitaly.com",
           "tier": 4,
           "headline": "Sandro Tonali’s agent reveals why he joined Tottenham in record transfer",
           "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNS09JOUY1Q0pLSHd6MzFYd01IeTRDd09BQm10VURBXzhlWE9IMjktY2N4R2QxeFJ0YXpmNFFXS1pQcDdkdjZ6TU9oNm1hb3NuUWppY045SlBsWGEyQkNBVFAwaDFMRkhIZE1NNjRWUDBaLW02QUhjckZsVVIyOUlTQUhzNE5sVXk4Vk1tMF94YkpQenJxTThDZ3NtYzYyVjJyaFQtbnd6YkI4MXIyelE2MF9aQm4?oc=5",
           "publishedAt": "2026-10-02T16:25:06.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.995,
-          "contribution": 0.0044
+          "recency": 0.981,
+          "contribution": 0.0079
         },
         {
-          "outlet": "Yahoo Sports",
-          "tier": 3,
-          "headline": "Sandro Tonali’s agent reveals why he joined Tottenham in record transfer",
-          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNR3FDOHhLczR3eGgxdG1JY3pNS0ZfXzYySmpocHgtckxiOWRKRlFRSHhBcG92a1lGU0VuaGRWaEluNUljVl8zYUwtUXBQN09IMEd6T1hQQzhPNk1WeVZVVFhtUGFBTjcyTTF4bV9WR2JDMXl2Vk84bGNmZER6MVlLS3BfRXg2UUU?oc=5",
-          "publishedAt": "2026-10-02T16:25:00.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.995,
-          "contribution": 0.0169
-        },
-        {
-          "outlet": "The Mirror",
-          "tier": 3,
+          "outlet": "mirror.co.uk",
+          "tier": 4,
           "headline": "Tottenham star Sandro Tonali's former £4m Newcastle home 'rented for £13k-a-month' after failing to sell",
           "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQTkVxbUhWU2c3NnR3bHlNRnM5amU5YVI4cXVVYWFQQ19OdTN2alJya3VzbHhwRGo4bXdFLXMzaDlxOTJKVC1jeXBUVl9hZG03bVc1NXREMmEwMUQxTDhWWEdfb0VfZkpaelZMQVp6V1JSLVpOOThmbXktS25pSGZ1Z2xjRkZpX1lhSWJyRXdtVXfSAZYBQVVfeXFMTnp3RF9BdEkzLW1UTjhUQkpPMnFQUDk1ZDZRTDJlWng1LVBSMkhIVlBCMElTRlMzZE1NSTNRbVg5aElRblEwYW56bzR5czlraTRNNGZlTUYtN051QWNnV1FONGNWNmJBcTQ0cWZST1JFZl9EZFRXV2ZpWDE5eHFrcmZWV21GY19RVG1VNVRmY0xRZ0hxVFdB?oc=5",
           "publishedAt": "2026-09-30T12:42:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.843,
-          "contribution": 0.0102
+          "recency": 0.831,
+          "contribution": 0.0047
         },
         {
-          "outlet": "Chronicle Live",
+          "outlet": "chroniclelive.co.uk",
           "tier": 4,
           "headline": "Sandro Tonali caught in 'downed tools' row as £100m Spurs signing shows true colours",
           "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOekZjZ0VCZzF4YlprZGJJNzhoVl9TWDd4cVc0djg4aE9rSXpIdUZna3VlU29XMHg5S1VhSVFyeG9DNzdQLUhXcl91ODJiX3MxNDdRU3c3U0xFZ3FqakhHRnVGZEZFSkJaQkpKb0MtWXFrMjdSdnVZZDVLbjNJZkxzTzhFZk1jNzZKWE84ZXVzdkc3azlIaXU0bUIwQXNVM01FX0JlZDhn0gGrAUFVX3lxTE9kMGpvQ19ZWGVGUjhkWUR2MHYxX3hBTjJVWktXd3FZX2lpRUxlc3dBMWo1elRNN2h5bjFPWThOQTRyU1ZZcFFfa19YWndNa2dzUEt3c3ZOZlJEMVlYeDN2aU9IcWZDdlV1TWJMaEphdFdvSkprbkZBS1Z1T0hRZjVfNFEwTUNCRHR1WFhSaWVYaVhFcnh0cDBoTEctTTA5amFESmdveXNkQlFlZw?oc=5",
           "publishedAt": "2026-09-25T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.563,
-          "contribution": 0.002
+          "recency": 0.555,
+          "contribution": 0.0025
         }
       ],
       "latestAt": "2026-10-02T16:25:06.000Z",
@@ -160,17 +149,21 @@
       "heuristicProbability": 15,
       "llm": {
         "adjustment": 18,
-        "note": "Reports say Tonali has joined Tottenham, making this a completed incoming transfer.",
+        "note": "Headlines describe Tonali’s completed move to Tottenham, not a possible departure.",
         "renamedFrom": null,
         "redirectedFrom": "out"
       },
       "confirmedAt": null,
       "previousProbability": 33,
       "change": 0,
-      "isNew": true,
+      "isNew": false,
       "history": [
         {
           "t": 1790963617278,
+          "p": 33
+        },
+        {
+          "t": 1790979464116,
           "p": 33
         }
       ]
@@ -184,7 +177,7 @@
         "Ajax"
       ],
       "probability": 98,
-      "logit": -1.7081,
+      "logit": -1.7087,
       "done": true,
       "confirmedBy": [
         {
@@ -209,7 +202,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0419,
+        "evidenceSum": 0.0413,
         "corroboration": 0,
         "distinctOutlets": 2,
         "tier1Outlets": 1,
@@ -225,8 +218,8 @@
           "publishedAt": "2026-09-16T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.282,
-          "contribution": 0.0096
+          "recency": 0.278,
+          "contribution": 0.0094
         },
         {
           "outlet": "talkSPORT",
@@ -236,8 +229,8 @@
           "publishedAt": "2026-09-15T07:00:00.000Z",
           "stage": "Interest / link",
           "cooler": null,
-          "recency": 0.261,
-          "contribution": 0.0323
+          "recency": 0.257,
+          "contribution": 0.0319
         }
       ],
       "latestAt": "2026-09-16T07:00:00.000Z",
@@ -255,10 +248,6 @@
       "change": 0,
       "isNew": false,
       "history": [
-        {
-          "t": 1789680377810,
-          "p": 98
-        },
         {
           "t": 1789706955188,
           "p": 98
@@ -494,6 +483,10 @@
         {
           "t": 1790963617278,
           "p": 98
+        },
+        {
+          "t": 1790979464116,
+          "p": 98
         }
       ]
     },
@@ -504,7 +497,7 @@
       "directionConfidence": 1,
       "clubs": [],
       "probability": 28,
-      "logit": -1.407,
+      "logit": -1.4024,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -519,7 +512,7 @@
       },
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": -0.157,
+        "evidenceSum": -0.1524,
         "corroboration": 0.5,
         "distinctOutlets": 9,
         "tier1Outlets": 1,
@@ -535,7 +528,7 @@
           "publishedAt": "2026-09-25T10:48:08.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.57,
+          "recency": 0.562,
           "contribution": 0.0037
         },
         {
@@ -546,8 +539,8 @@
           "publishedAt": "2026-09-18T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": "Rejected / not for sale",
-          "recency": 0.329,
-          "contribution": -0.3361
+          "recency": 0.324,
+          "contribution": -0.3314
         },
         {
           "outlet": "Sky Sports",
@@ -557,8 +550,8 @@
           "publishedAt": "2026-09-12T07:00:00.000Z",
           "stage": "Named in a roundup",
           "cooler": null,
-          "recency": 0.207,
-          "contribution": 0.0045
+          "recency": 0.204,
+          "contribution": 0.0044
         },
         {
           "outlet": "Evening Standard",
@@ -568,7 +561,7 @@
           "publishedAt": "2026-09-12T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.207,
+          "recency": 0.204,
           "contribution": 0.0021
         },
         {
@@ -637,14 +630,10 @@
         "redirectedFrom": null
       },
       "confirmedAt": null,
-      "previousProbability": 37,
-      "change": -9,
+      "previousProbability": 31,
+      "change": -3,
       "isNew": false,
       "history": [
-        {
-          "t": 1789680377810,
-          "p": 98
-        },
         {
           "t": 1789706955188,
           "p": 98
@@ -880,97 +869,10 @@
         {
           "t": 1790963617278,
           "p": 28
-        }
-      ]
-    },
-    {
-      "id": "out-harry-kane",
-      "player": "Harry Kane",
-      "direction": "in",
-      "directionConfidence": 1,
-      "clubs": [
-        "Bayern Munich"
-      ],
-      "probability": 20,
-      "logit": -1.6893,
-      "done": false,
-      "confirmedBy": [],
-      "stage": {
-        "id": "interest",
-        "label": "Interest / link",
-        "value": 0.2
-      },
-      "cooler": null,
-      "breakdown": {
-        "prior": -1.75,
-        "evidenceSum": 0.0607,
-        "corroboration": 0,
-        "distinctOutlets": 2,
-        "tier1Outlets": 0,
-        "totalArticles": 2,
-        "confirmedFloorApplied": false
-      },
-      "evidence": [
-        {
-          "outlet": "Sports Mole",
-          "tier": 3,
-          "headline": "Tottenham transfer news: Spurs 'show interest' in 'monster' Harry Kane teammate available for £34m",
-          "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQc1VKakkwdmlMTW1DLV9pNE5oRXFDemp2blJpeG1CSUNyT1VSMW8yZFBUTExuRXppUjdrSVVOdzNRYVhzU2E5c2NMaEJjNFhSbkU1Zll1WUhKYmp4UkFlYnNLc0xfZXdEMGNRbVRvS2tPajVFaE55ZlNiSlRSdVZpZUdxcE5SZVNRTnU2R3ZaOHdmM000OGZUOVJBSVFmTU1zazFnU0MxS0VDckdXaFJveTMxcHByOXhnWWZYdDNULXd6WUxtdmh5OXVia0xVVzNXZmxhWlBXZ3QxRWhQdXJrRUpDMTJBdw?oc=5",
-          "publishedAt": "2026-09-30T06:29:01.000Z",
-          "stage": "Interest / link",
-          "cooler": null,
-          "recency": 0.826,
-          "contribution": 0.0562
         },
         {
-          "outlet": "roundtable.io",
-          "tier": 4,
-          "headline": "Harry Kane Tottenham Return Door Could Remain Open As Bayern Munich Contract Talks Progress",
-          "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQdWFLWDFVbmxMbGJteHF3QzdTRmFqN29pdmFWc25SdkVObXkzb2VPY1RRSVFXZzZoZlV6MDk1UW1rYXpkLUNFR3FxMjZRcDhBV0prelFjZmNPeHpObEJ4cW5OZ0Nqc3RMLWd5akk1eUJuNll1TGUwZktGTGlWaEpOV1A2dGpmNTFONWdvZGFvR3l6SC1DalNmcDJKSXd6REVZUnM0X2FRRVFHNTYzWVptVEgzRlhfQkQ1SDFyeDRyY01aaDg2dVZfSERpeGxHNHMzVXJoYUtfaXJ0d01GMm44LW0xcGJoRHNmU3UxaUhnMTdrQQ?oc=5",
-          "publishedAt": "2026-09-29T16:09:04.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.789,
-          "contribution": 0.0045
-        }
-      ],
-      "latestAt": "2026-09-30T06:29:01.000Z",
-      "earliestAt": "2026-09-29T16:09:04.000Z",
-      "heuristicProbability": 16,
-      "llm": {
-        "adjustment": 4,
-        "note": "Headline links Kane with a possible Tottenham return while Bayern contract talks continue.",
-        "renamedFrom": null,
-        "redirectedFrom": "out"
-      },
-      "confirmedAt": null,
-      "previousProbability": 16,
-      "change": 4,
-      "isNew": false,
-      "history": [
-        {
-          "t": 1790798687364,
-          "p": 16
-        },
-        {
-          "t": 1790814909867,
-          "p": 16
-        },
-        {
-          "t": 1790849607238,
-          "p": 16
-        },
-        {
-          "t": 1790879198388,
-          "p": 16
-        },
-        {
-          "t": 1790902196932,
-          "p": 9
-        },
-        {
-          "t": 1790963617278,
-          "p": 20
+          "t": 1790979464116,
+          "p": 28
         }
       ]
     },
@@ -1037,10 +939,6 @@
       "change": 0,
       "isNew": false,
       "history": [
-        {
-          "t": 1789680377810,
-          "p": 15
-        },
         {
           "t": 1789706955188,
           "p": 15
@@ -1276,6 +1174,10 @@
         {
           "t": 1790963617278,
           "p": 15
+        },
+        {
+          "t": 1790979464116,
+          "p": 15
         }
       ]
     },
@@ -1286,7 +1188,7 @@
       "directionConfidence": 0.3,
       "clubs": [],
       "probability": 15,
-      "logit": -1.7163,
+      "logit": -1.7168,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -1297,7 +1199,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0337,
+        "evidenceSum": 0.0332,
         "corroboration": 0,
         "distinctOutlets": 1,
         "tier1Outlets": 1,
@@ -1313,8 +1215,8 @@
           "publishedAt": "2026-09-28T06:58:03.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.71,
-          "contribution": 0.0337
+          "recency": 0.7,
+          "contribution": 0.0332
         }
       ],
       "latestAt": "2026-09-28T06:58:03.000Z",
@@ -1390,6 +1292,10 @@
         {
           "t": 1790963617278,
           "p": 15
+        },
+        {
+          "t": 1790979464116,
+          "p": 15
         }
       ]
     },
@@ -1400,7 +1306,7 @@
       "directionConfidence": 0.3,
       "clubs": [],
       "probability": 15,
-      "logit": -1.7232,
+      "logit": -1.7236,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -1411,7 +1317,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0268,
+        "evidenceSum": 0.0264,
         "corroboration": 0,
         "distinctOutlets": 1,
         "tier1Outlets": 1,
@@ -1427,8 +1333,8 @@
           "publishedAt": "2026-09-25T07:16:50.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.564,
-          "contribution": 0.0268
+          "recency": 0.556,
+          "contribution": 0.0264
         }
       ],
       "latestAt": "2026-09-25T07:16:50.000Z",
@@ -1548,6 +1454,10 @@
         {
           "t": 1790963617278,
           "p": 15
+        },
+        {
+          "t": 1790979464116,
+          "p": 15
         }
       ]
     },
@@ -1557,8 +1467,8 @@
       "direction": "out",
       "directionConfidence": 1,
       "clubs": [],
-      "probability": 5,
-      "logit": -1.7195,
+      "probability": 10,
+      "logit": -1.72,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -1569,7 +1479,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0305,
+        "evidenceSum": 0.03,
         "corroboration": 0,
         "distinctOutlets": 4,
         "tier1Outlets": 1,
@@ -1578,26 +1488,26 @@
       },
       "evidence": [
         {
-          "outlet": "readtottenham.com",
+          "outlet": "Read Tottenham",
           "tier": 4,
           "headline": "Lucas Bergvall on Spurs Contract",
           "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPMXA1dGJlUWxMb0dTeXpnSDMybktQUERHNW1zRDlvbUF6Q1VLd1VIaDd1SVd1Ri12SWV1VFdld3dSVHl5VnRYcjQ4V1JLTEtxeDNZLXJTdWxzMjJFMFA0elFVcll4YmY0RkR6RHdXQWFZT0FNUVl1LXpVZkdYMFMxQW9VSXhYczNrM2QyZldBVENKcnJOUTBDXw?oc=5",
           "publishedAt": "2026-10-02T13:15:12.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.985,
-          "contribution": 0.0036
+          "recency": 0.971,
+          "contribution": 0.0035
         },
         {
           "outlet": "Yahoo Sports",
           "tier": 3,
           "headline": "Lucas Bergvall Addresses Tottenham Exit Speculation After Signing New Contract",
           "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPSlhZaDZ2aFVVSmlweTczbVNNamJ5Yk4yblYxcnhrSTJNTEd2OWN5eDhqTmFRSUhNdnZiOXV2T1lmNTl3QUozUi1sZllaUnZhTndFTGdTaVpVNlJXYmJya3pnaWdzSXNkZ2Y0ZDZUUDRHX0plWGhIN19ySDI0cnBpV3FHUFN3c1pYOUpiUHIwam04QQ?oc=5",
-          "publishedAt": "2026-09-24T19:15:46.000Z",
+          "publishedAt": "2026-09-24T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.542,
-          "contribution": 0.0051
+          "recency": 0.514,
+          "contribution": 0.0049
         },
         {
           "outlet": "Evening Standard",
@@ -1607,8 +1517,8 @@
           "publishedAt": "2026-09-23T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.483,
-          "contribution": 0.015
+          "recency": 0.476,
+          "contribution": 0.0148
         },
         {
           "outlet": "BBC Sport",
@@ -1618,7 +1528,7 @@
           "publishedAt": "2026-09-11T21:40:56.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.201,
+          "recency": 0.2,
           "contribution": 0.0068
         }
       ],
@@ -1626,20 +1536,16 @@
       "earliestAt": "2026-09-11T07:00:00.000Z",
       "heuristicProbability": 15,
       "llm": {
-        "adjustment": -10,
-        "note": "A new contract and Bergvall’s response to speculation weaken the reported exit.",
+        "adjustment": -5,
+        "note": "Exit speculation is being weakened by Bergvall’s new Tottenham contract and comments addressing the reports.",
         "renamedFrom": null,
         "redirectedFrom": null
       },
       "confirmedAt": null,
       "previousProbability": 98,
-      "change": -93,
+      "change": -88,
       "isNew": false,
       "history": [
-        {
-          "t": 1789144336267,
-          "p": 98
-        },
         {
           "t": 1789160449792,
           "p": 98
@@ -1875,6 +1781,10 @@
         {
           "t": 1790963617278,
           "p": 5
+        },
+        {
+          "t": 1790979464116,
+          "p": 10
         }
       ]
     }
