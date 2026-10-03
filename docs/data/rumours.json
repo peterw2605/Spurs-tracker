@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-10-03T05:23:30.041Z",
+  "generatedAt": "2026-10-03T11:44:05.276Z",
   "counts": {
-    "rumours": 7,
-    "incoming": 4,
+    "rumours": 6,
+    "incoming": 3,
     "outgoing": 3,
     "done": 1,
-    "articles": 213,
-    "transferArticles": 92,
+    "articles": 220,
+    "transferArticles": 99,
     "likely": 0
   },
   "model": {
@@ -14,10 +14,10 @@
     "llm": {
       "model": "gpt-5.6-luna",
       "sent": 4,
-      "reusedFromCache": 12,
+      "reusedFromCache": 13,
       "deferred": 0,
-      "adjusted": 3,
-      "discarded": 8
+      "adjusted": 1,
+      "discarded": 10
     }
   },
   "sources": [
@@ -49,7 +49,7 @@
     {
       "name": "Google News — Tottenham transfer",
       "ok": true,
-      "itemCount": 44
+      "itemCount": 50
     },
     {
       "name": "Google News — Spurs transfer news",
@@ -59,12 +59,12 @@
     {
       "name": "Google News — Tottenham sign",
       "ok": true,
-      "itemCount": 16
+      "itemCount": 15
     },
     {
       "name": "Google News — Tottenham exit",
       "ok": true,
-      "itemCount": 35
+      "itemCount": 37
     },
     {
       "name": "Google News — Tottenham medical/agreed",
@@ -88,8 +88,8 @@
       "direction": "out",
       "directionConfidence": 1,
       "clubs": [],
-      "probability": 38,
-      "logit": -0.5908,
+      "probability": 35,
+      "logit": -0.9361,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -97,12 +97,16 @@
         "label": "Imminent",
         "value": 1.9
       },
-      "cooler": null,
+      "cooler": {
+        "id": "cooling",
+        "label": "Cooling",
+        "value": -1.1
+      },
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.4092,
-        "corroboration": 0.75,
-        "distinctOutlets": 9,
+        "evidenceSum": 0.3139,
+        "corroboration": 0.5,
+        "distinctOutlets": 8,
         "tier1Outlets": 1,
         "totalArticles": 15,
         "confirmedFloorApplied": false
@@ -116,8 +120,8 @@
           "publishedAt": "2026-09-25T10:48:08.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.549,
-          "contribution": 0.0031
+          "recency": 0.538,
+          "contribution": 0.0035
         },
         {
           "outlet": "football.london",
@@ -139,7 +143,7 @@
           "stage": "Mentioned only",
           "cooler": null,
           "recency": 0.2,
-          "contribution": 0.0018
+          "contribution": 0.0021
         },
         {
           "outlet": "talkSPORT",
@@ -161,29 +165,18 @@
           "stage": "Advanced talks",
           "cooler": null,
           "recency": 0.2,
-          "contribution": 0.0138
+          "contribution": 0.0169
         },
         {
-          "outlet": "Yahoo",
-          "tier": 3,
-          "headline": "The FIFA rule that's forcing Tottenham to rethink Richarlison exit talks",
-          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNXzNXSTlUbGJxYWRTdmEzOEpyanhTakMtUDlBbzRJN2V0ZFNoM1hUTVlNWlB1UUF1eVhpLWhvSC05UXpGNUV0Tk85LUlqZnd5UWJveVI3T3F5Q1hrbEg1WDkwdmJVQzZHcjg2eFh4SzFVQWdoN25WeFRrTUs2djJCaG5IbWlGLUk2?oc=5",
-          "publishedAt": "2026-09-09T07:00:00.000Z",
+          "outlet": "uk.sports.yahoo.com",
+          "tier": 4,
+          "headline": "What Richarlison is demanding as Tottenham exit stalls",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNY0FtempOVDVTUTJ2QVNzaTNZQXV5bll2R2lYLS1VeFQzeWhjOWd3OGNMODNEUmJSVHRmT0FCRlo1Tmd0djhGTFFiLThIZ3IwUW9MeUEyQVJTeWNnYkk5ZXBwb1RMTmF4Qk9yV0RkelFZSHRNam1XejZmd0xaWVlFMTlPelpkUXF5aXdwaVBaMVZ0bVgtN3c?oc=5",
+          "publishedAt": "2026-09-10T07:00:00.000Z",
           "stage": "Mentioned only",
-          "cooler": null,
+          "cooler": "Cooling",
           "recency": 0.2,
-          "contribution": 0.0008
-        },
-        {
-          "outlet": "OneFootball",
-          "tier": 2,
-          "headline": "Vasco open talks with Tottenham over loan for Richarlison",
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQODhmSlB6WExiYWMwSE9QTThEM3lJYmdoaDhTaHVnRVphb09QS284bnY4eDlsNWpxSG9rejFvMjExX21wdVlGWThYY0JSTjhySXBWVHB2ckNNZzZCSlphbUlYZVVYUFhSUWZBVFpoaGpOMklPSnpxR1N5azBYZFh1T1F4amstYnpUUjdPUklGM202WG9YTUFNbWl0MW5vOFU?oc=5",
-          "publishedAt": "2026-09-08T07:00:00.000Z",
-          "stage": "Advanced talks",
-          "cooler": null,
-          "recency": 0.2,
-          "contribution": 0.0654
+          "contribution": -0.0336
         },
         {
           "outlet": "Yahoo Sports",
@@ -194,7 +187,7 @@
           "stage": "Mentioned only",
           "cooler": null,
           "recency": 0.2,
-          "contribution": 0.0009
+          "contribution": 0.001
         },
         {
           "outlet": "Sky Sports",
@@ -205,27 +198,23 @@
           "stage": "Named in a roundup",
           "cooler": null,
           "recency": 0.2,
-          "contribution": 0.0037
+          "contribution": 0.0043
         }
       ],
       "latestAt": "2026-09-25T10:48:08.000Z",
       "earliestAt": "2026-09-04T07:00:00.000Z",
-      "heuristicProbability": 36,
+      "heuristicProbability": 28,
       "llm": {
-        "adjustment": 2,
-        "note": "Multiple reports link Richarlison with a Tottenham exit, though negotiations have reportedly stalled or collapsed.",
+        "adjustment": 7,
+        "note": "Multiple reports link Richarlison with an exit, though negotiations have stalled and one move collapsed.",
         "renamedFrom": null,
         "redirectedFrom": null
       },
       "confirmedAt": null,
-      "previousProbability": 31,
-      "change": 7,
+      "previousProbability": 29,
+      "change": 6,
       "isNew": false,
       "history": [
-        {
-          "t": 1789730505789,
-          "p": 98
-        },
         {
           "t": 1789748905536,
           "p": 98
@@ -461,6 +450,10 @@
         {
           "t": 1791005010041,
           "p": 38
+        },
+        {
+          "t": 1791027845276,
+          "p": 35
         }
       ]
     },
@@ -473,7 +466,7 @@
         "Ajax"
       ],
       "probability": 98,
-      "logit": -1.7096,
+      "logit": -1.7105,
       "done": true,
       "confirmedBy": [
         {
@@ -498,7 +491,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0404,
+        "evidenceSum": 0.0395,
         "corroboration": 0,
         "distinctOutlets": 2,
         "tier1Outlets": 1,
@@ -514,8 +507,8 @@
           "publishedAt": "2026-09-16T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.271,
-          "contribution": 0.0092
+          "recency": 0.266,
+          "contribution": 0.009
         },
         {
           "outlet": "talkSPORT",
@@ -525,8 +518,8 @@
           "publishedAt": "2026-09-15T07:00:00.000Z",
           "stage": "Interest / link",
           "cooler": null,
-          "recency": 0.251,
-          "contribution": 0.0312
+          "recency": 0.246,
+          "contribution": 0.0305
         }
       ],
       "latestAt": "2026-09-16T07:00:00.000Z",
@@ -544,10 +537,6 @@
       "change": 0,
       "isNew": false,
       "history": [
-        {
-          "t": 1789730505789,
-          "p": 98
-        },
         {
           "t": 1789748905536,
           "p": 98
@@ -783,325 +772,23 @@
         {
           "t": 1791005010041,
           "p": 98
+        },
+        {
+          "t": 1791027845276,
+          "p": 98
         }
       ]
     },
     {
-      "id": "in-harry-kane",
-      "player": "Harry Kane",
+      "id": "out-sandro-tonali",
+      "player": "Sandro Tonali",
       "direction": "in",
-      "directionConfidence": 0.3,
+      "directionConfidence": 1,
       "clubs": [
-        "Manchester United",
-        "Bayern Munich"
+        "Newcastle United"
       ],
-      "probability": 22,
-      "logit": -0.7408,
-      "done": false,
-      "confirmedBy": [],
-      "stage": {
-        "id": "imminent",
-        "label": "Imminent",
-        "value": 1.9
-      },
-      "cooler": null,
-      "breakdown": {
-        "prior": -1.75,
-        "evidenceSum": 1.0092,
-        "corroboration": 0,
-        "distinctOutlets": 2,
-        "tier1Outlets": 1,
-        "totalArticles": 2,
-        "confirmedFloorApplied": false
-      },
-      "evidence": [
-        {
-          "outlet": "Tottenham Independent",
-          "tier": 1,
-          "headline": "Harry Kane closing in on new Bayern Munich contract",
-          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNcS1sbkFRWGo3ell1OUNBaGlDUTRIbHU4UFFiX0dUcll6NjM4eFpQM3NDUmdRVTRMRjBKSl9FNXhrMWI2eFN6eVVjQ190OEQzT2VQVDhWX1pJU3hxU0VSMmVqeUwyM3BTV0k4THo1VzRTT2ZheUU5VHBDMGZhaVoxZWtrVTJGNlMwUzR3WUVFWHhCczRULVEtb0Zoa0FmT01pVnd1Yzg3U0tOUVEyOGFmbXR3?oc=5",
-          "publishedAt": "2026-09-25T15:02:17.000Z",
-          "stage": "Imminent",
-          "cooler": null,
-          "recency": 0.557,
-          "contribution": 1.0054
-        },
-        {
-          "outlet": "Yahoo",
-          "tier": 3,
-          "headline": "Tottenham and Man United's chances of signing Harry Kane revealed as talks get underway",
-          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxONm9uM3E3NzZYeEl6QmxUZEJ5R1VKSnFkT1pieVBmVW45NmRBeHRlQTFwY01CYlZMNzBzU25rT2lDanZYbXJxa3VfUFRoLWh6MUlyeVJqa2pZU3cxbmJtOUpoT0ZvMkV1b2RfS0tkc2h4TFpiYWRoQUtoQmItelRqS0stMGNQM3Zodkh5TGZn?oc=5",
-          "publishedAt": "2026-09-18T07:00:00.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.317,
-          "contribution": 0.0038
-        }
-      ],
-      "latestAt": "2026-09-25T15:02:17.000Z",
-      "earliestAt": "2026-09-18T07:00:00.000Z",
-      "heuristicProbability": 32,
-      "llm": {
-        "adjustment": -10,
-        "note": "Tottenham interest is reported, but Kane appears closer to extending his Bayern Munich contract.",
-        "renamedFrom": null,
-        "redirectedFrom": null
-      },
-      "confirmedAt": null,
-      "previousProbability": 24,
-      "change": -2,
-      "isNew": false,
-      "history": [
-        {
-          "t": 1787285060720,
-          "p": 15
-        },
-        {
-          "t": 1787296199309,
-          "p": 15
-        },
-        {
-          "t": 1787306026064,
-          "p": 15
-        },
-        {
-          "t": 1787317995428,
-          "p": 15
-        },
-        {
-          "t": 1787327397415,
-          "p": 15
-        },
-        {
-          "t": 1787511013535,
-          "p": 15
-        },
-        {
-          "t": 1787521107292,
-          "p": 15
-        },
-        {
-          "t": 1787876758104,
-          "p": 15
-        },
-        {
-          "t": 1787930817217,
-          "p": 15
-        },
-        {
-          "t": 1787967979615,
-          "p": 15
-        },
-        {
-          "t": 1787998166086,
-          "p": 15
-        },
-        {
-          "t": 1788021915209,
-          "p": 15
-        },
-        {
-          "t": 1788037073808,
-          "p": 15
-        },
-        {
-          "t": 1788045772529,
-          "p": 15
-        },
-        {
-          "t": 1788067732043,
-          "p": 15
-        },
-        {
-          "t": 1788091097857,
-          "p": 15
-        },
-        {
-          "t": 1788108261352,
-          "p": 15
-        },
-        {
-          "t": 1788124232751,
-          "p": 15
-        },
-        {
-          "t": 1788132772978,
-          "p": 15
-        },
-        {
-          "t": 1788154919693,
-          "p": 15
-        },
-        {
-          "t": 1788184698254,
-          "p": 15
-        },
-        {
-          "t": 1788209502466,
-          "p": 15
-        },
-        {
-          "t": 1788223165021,
-          "p": 15
-        },
-        {
-          "t": 1788252183828,
-          "p": 15
-        },
-        {
-          "t": 1788271826468,
-          "p": 15
-        },
-        {
-          "t": 1788287710443,
-          "p": 15
-        },
-        {
-          "t": 1788304852905,
-          "p": 15
-        },
-        {
-          "t": 1788324051531,
-          "p": 15
-        },
-        {
-          "t": 1788823942478,
-          "p": 15
-        },
-        {
-          "t": 1790250766234,
-          "p": 15
-        },
-        {
-          "t": 1790270129845,
-          "p": 15
-        },
-        {
-          "t": 1790285666602,
-          "p": 15
-        },
-        {
-          "t": 1790312534982,
-          "p": 15
-        },
-        {
-          "t": 1790337333949,
-          "p": 15
-        },
-        {
-          "t": 1790356555721,
-          "p": 42
-        },
-        {
-          "t": 1790372289763,
-          "p": 41
-        },
-        {
-          "t": 1790399116216,
-          "p": 15
-        },
-        {
-          "t": 1790422199161,
-          "p": 35
-        },
-        {
-          "t": 1790440043451,
-          "p": 36
-        },
-        {
-          "t": 1790457242816,
-          "p": 15
-        },
-        {
-          "t": 1790465993804,
-          "p": 19
-        },
-        {
-          "t": 1790486584466,
-          "p": 47
-        },
-        {
-          "t": 1790510881302,
-          "p": 41
-        },
-        {
-          "t": 1790528497630,
-          "p": 40
-        },
-        {
-          "t": 1790544216095,
-          "p": 40
-        },
-        {
-          "t": 1790573388812,
-          "p": 38
-        },
-        {
-          "t": 1790604203729,
-          "p": 35
-        },
-        {
-          "t": 1790630121396,
-          "p": 38
-        },
-        {
-          "t": 1790643784717,
-          "p": 38
-        },
-        {
-          "t": 1790675672782,
-          "p": 37
-        },
-        {
-          "t": 1790705207060,
-          "p": 36
-        },
-        {
-          "t": 1790720393645,
-          "p": 31
-        },
-        {
-          "t": 1790746681433,
-          "p": 30
-        },
-        {
-          "t": 1790772078358,
-          "p": 30
-        },
-        {
-          "t": 1790798687364,
-          "p": 29
-        },
-        {
-          "t": 1790814909867,
-          "p": 28
-        },
-        {
-          "t": 1790849607238,
-          "p": 24
-        },
-        {
-          "t": 1790879198388,
-          "p": 27
-        },
-        {
-          "t": 1790902196932,
-          "p": 26
-        },
-        {
-          "t": 1791005010041,
-          "p": 22
-        }
-      ]
-    },
-    {
-      "id": "in-ibrahim-maza",
-      "player": "Ibrahim Maza",
-      "direction": "in",
-      "directionConfidence": 0.3,
-      "clubs": [],
       "probability": 15,
-      "logit": -1.7175,
+      "logit": -1.7287,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -1112,7 +799,99 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0325,
+        "evidenceSum": 0.0213,
+        "corroboration": 0,
+        "distinctOutlets": 3,
+        "tier1Outlets": 0,
+        "totalArticles": 3,
+        "confirmedFloorApplied": false
+      },
+      "evidence": [
+        {
+          "outlet": "getfootballnewsitaly.com",
+          "tier": 4,
+          "headline": "Sandro Tonali’s agent reveals why he joined Tottenham in record transfer",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNS09JOUY1Q0pLSHd6MzFYd01IeTRDd09BQm10VURBXzhlWE9IMjktY2N4R2QxeFJ0YXpmNFFXS1pQcDdkdjZ6TU9oNm1hb3NuUWppY045SlBsWGEyQkNBVFAwaDFMRkhIZE1NNjRWUDBaLW02QUhjckZsVVIyOUlTQUhzNE5sVXk4Vk1tMF94YkpQenJxTThDZ3NtYzYyVjJyaFQtbnd6YkI4MXIyelE2MF9aQm4?oc=5",
+          "publishedAt": "2026-10-02T16:25:06.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.94,
+          "contribution": 0.0054
+        },
+        {
+          "outlet": "The Mirror",
+          "tier": 3,
+          "headline": "Tottenham star Sandro Tonali's former £4m Newcastle home 'rented for £13k-a-month' after failing to sell",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQTkVxbUhWU2c3NnR3bHlNRnM5amU5YVI4cXVVYWFQQ19OdTN2alJya3VzbHhwRGo4bXdFLXMzaDlxOTJKVC1jeXBUVl9hZG03bVc1NXREMmEwMUQxTDhWWEdfb0VfZkpaelZMQVp6V1JSLVpOOThmbXktS25pSGZ1Z2xjRkZpX1lhSWJyRXdtVXfSAZYBQVVfeXFMTnp3RF9BdEkzLW1UTjhUQkpPMnFQUDk1ZDZRTDJlWng1LVBSMkhIVlBCMElTRlMzZE1NSTNRbVg5aElRblEwYW56bzR5czlraTRNNGZlTUYtN051QWNnV1FONGNWNmJBcTQ0cWZST1JFZl9EZFRXV2ZpWDE5eHFrcmZWV21GY19RVG1VNVRmY0xRZ0hxVFdB?oc=5",
+          "publishedAt": "2026-09-30T12:42:00.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.796,
+          "contribution": 0.0135
+        },
+        {
+          "outlet": "Chronicle Live",
+          "tier": 4,
+          "headline": "Sandro Tonali caught in 'downed tools' row as £100m Spurs signing shows true colours",
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOekZjZ0VCZzF4YlprZGJJNzhoVl9TWDd4cVc0djg4aE9rSXpIdUZna3VlU29XMHg5S1VhSVFyeG9DNzdQLUhXcl91ODJiX3MxNDdRU3c3U0xFZ3FqakhHRnVGZEZFSkJaQkpKb0MtWXFrMjdSdnVZZDVLbjNJZkxzTzhFZk1jNzZKWE84ZXVzdkc3azlIaXU0bUIwQXNVM01FX0JlZDhn0gGrAUFVX3lxTE9kMGpvQ19ZWGVGUjhkWUR2MHYxX3hBTjJVWktXd3FZX2lpRUxlc3dBMWo1elRNN2h5bjFPWThOQTRyU1ZZcFFfa19YWndNa2dzUEt3c3ZOZlJEMVlYeDN2aU9IcWZDdlV1TWJMaEphdFdvSkprbkZBS1Z1T0hRZjVfNFEwTUNCRHR1WFhSaWVYaVhFcnh0cDBoTEctTTA5amFESmdveXNkQlFlZw?oc=5",
+          "publishedAt": "2026-09-25T07:00:00.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.532,
+          "contribution": 0.0024
+        }
+      ],
+      "latestAt": "2026-10-02T16:25:06.000Z",
+      "earliestAt": "2026-09-25T07:00:00.000Z",
+      "heuristicProbability": 15,
+      "llm": {
+        "adjustment": 0,
+        "note": "Tonali's completed move to Tottenham is reported, while other headlines concern his circumstances there.",
+        "renamedFrom": null,
+        "redirectedFrom": "out"
+      },
+      "confirmedAt": null,
+      "previousProbability": 33,
+      "change": -18,
+      "isNew": false,
+      "history": [
+        {
+          "t": 1790963617278,
+          "p": 33
+        },
+        {
+          "t": 1790979464116,
+          "p": 33
+        },
+        {
+          "t": 1791005010041,
+          "p": 2
+        },
+        {
+          "t": 1791027845276,
+          "p": 15
+        }
+      ]
+    },
+    {
+      "id": "in-ibrahim-maza",
+      "player": "Ibrahim Maza",
+      "direction": "in",
+      "directionConfidence": 0.3,
+      "clubs": [],
+      "probability": 15,
+      "logit": -1.7182,
+      "done": false,
+      "confirmedBy": [],
+      "stage": {
+        "id": "mention",
+        "label": "Mentioned only",
+        "value": 0.05
+      },
+      "cooler": null,
+      "breakdown": {
+        "prior": -1.75,
+        "evidenceSum": 0.0318,
         "corroboration": 0,
         "distinctOutlets": 1,
         "tier1Outlets": 1,
@@ -1128,8 +907,8 @@
           "publishedAt": "2026-09-28T06:58:03.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.684,
-          "contribution": 0.0325
+          "recency": 0.67,
+          "contribution": 0.0318
         }
       ],
       "latestAt": "2026-09-28T06:58:03.000Z",
@@ -1213,6 +992,10 @@
         {
           "t": 1791005010041,
           "p": 15
+        },
+        {
+          "t": 1791027845276,
+          "p": 15
         }
       ]
     },
@@ -1223,7 +1006,7 @@
       "directionConfidence": 0.3,
       "clubs": [],
       "probability": 15,
-      "logit": -1.7242,
+      "logit": -1.7247,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -1234,7 +1017,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0258,
+        "evidenceSum": 0.0253,
         "corroboration": 0,
         "distinctOutlets": 1,
         "tier1Outlets": 1,
@@ -1250,8 +1033,8 @@
           "publishedAt": "2026-09-25T07:16:50.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.543,
-          "contribution": 0.0258
+          "recency": 0.532,
+          "contribution": 0.0253
         }
       ],
       "latestAt": "2026-09-25T07:16:50.000Z",
@@ -1379,6 +1162,10 @@
         {
           "t": 1791005010041,
           "p": 15
+        },
+        {
+          "t": 1791027845276,
+          "p": 15
         }
       ]
     },
@@ -1432,10 +1219,14 @@
       "confirmedAt": null,
       "previousProbability": 15,
       "change": 0,
-      "isNew": true,
+      "isNew": false,
       "history": [
         {
           "t": 1791005010041,
+          "p": 15
+        },
+        {
+          "t": 1791027845276,
           "p": 15
         }
       ]
@@ -1447,7 +1238,7 @@
       "directionConfidence": 1,
       "clubs": [],
       "probability": 10,
-      "logit": -1.7206,
+      "logit": -1.721,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -1458,7 +1249,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0294,
+        "evidenceSum": 0.029,
         "corroboration": 0,
         "distinctOutlets": 4,
         "tier1Outlets": 1,
@@ -1474,8 +1265,8 @@
           "publishedAt": "2026-10-02T13:15:12.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.95,
-          "contribution": 0.0035
+          "recency": 0.93,
+          "contribution": 0.0034
         },
         {
           "outlet": "Yahoo Sports",
@@ -1485,7 +1276,7 @@
           "publishedAt": "2026-09-24T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.503,
+          "recency": 0.492,
           "contribution": 0.0047
         },
         {
@@ -1496,8 +1287,8 @@
           "publishedAt": "2026-09-23T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.465,
-          "contribution": 0.0144
+          "recency": 0.456,
+          "contribution": 0.0141
         },
         {
           "outlet": "BBC Sport",
@@ -1525,10 +1316,6 @@
       "change": -88,
       "isNew": false,
       "history": [
-        {
-          "t": 1789168701765,
-          "p": 98
-        },
         {
           "t": 1789188018598,
           "p": 98
@@ -1764,96 +1551,10 @@
         {
           "t": 1791005010041,
           "p": 10
-        }
-      ]
-    },
-    {
-      "id": "out-sandro-tonali",
-      "player": "Sandro Tonali",
-      "direction": "in",
-      "directionConfidence": 1,
-      "clubs": [
-        "Newcastle United"
-      ],
-      "probability": 2,
-      "logit": -1.7283,
-      "done": false,
-      "confirmedBy": [],
-      "stage": {
-        "id": "mention",
-        "label": "Mentioned only",
-        "value": 0.05
-      },
-      "cooler": null,
-      "breakdown": {
-        "prior": -1.75,
-        "evidenceSum": 0.0217,
-        "corroboration": 0,
-        "distinctOutlets": 3,
-        "tier1Outlets": 0,
-        "totalArticles": 3,
-        "confirmedFloorApplied": false
-      },
-      "evidence": [
-        {
-          "outlet": "Get Italian Football News",
-          "tier": 4,
-          "headline": "Sandro Tonali’s agent reveals why he joined Tottenham in record transfer",
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNS09JOUY1Q0pLSHd6MzFYd01IeTRDd09BQm10VURBXzhlWE9IMjktY2N4R2QxeFJ0YXpmNFFXS1pQcDdkdjZ6TU9oNm1hb3NuUWppY045SlBsWGEyQkNBVFAwaDFMRkhIZE1NNjRWUDBaLW02QUhjckZsVVIyOUlTQUhzNE5sVXk4Vk1tMF94YkpQenJxTThDZ3NtYzYyVjJyaFQtbnd6YkI4MXIyelE2MF9aQm4?oc=5",
-          "publishedAt": "2026-10-02T16:25:06.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.959,
-          "contribution": 0.0055
         },
         {
-          "outlet": "The Mirror",
-          "tier": 3,
-          "headline": "Tottenham star Sandro Tonali's former £4m Newcastle home 'rented for £13k-a-month' after failing to sell",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQTkVxbUhWU2c3NnR3bHlNRnM5amU5YVI4cXVVYWFQQ19OdTN2alJya3VzbHhwRGo4bXdFLXMzaDlxOTJKVC1jeXBUVl9hZG03bVc1NXREMmEwMUQxTDhWWEdfb0VfZkpaelZMQVp6V1JSLVpOOThmbXktS25pSGZ1Z2xjRkZpX1lhSWJyRXdtVXfSAZYBQVVfeXFMTnp3RF9BdEkzLW1UTjhUQkpPMnFQUDk1ZDZRTDJlWng1LVBSMkhIVlBCMElTRlMzZE1NSTNRbVg5aElRblEwYW56bzR5czlraTRNNGZlTUYtN051QWNnV1FONGNWNmJBcTQ0cWZST1JFZl9EZFRXV2ZpWDE5eHFrcmZWV21GY19RVG1VNVRmY0xRZ0hxVFdB?oc=5",
-          "publishedAt": "2026-09-30T12:42:00.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.813,
-          "contribution": 0.0138
-        },
-        {
-          "outlet": "Chronicle Live",
-          "tier": 4,
-          "headline": "Sandro Tonali caught in 'downed tools' row as £100m Spurs signing shows true colours",
-          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOekZjZ0VCZzF4YlprZGJJNzhoVl9TWDd4cVc0djg4aE9rSXpIdUZna3VlU29XMHg5S1VhSVFyeG9DNzdQLUhXcl91ODJiX3MxNDdRU3c3U0xFZ3FqakhHRnVGZEZFSkJaQkpKb0MtWXFrMjdSdnVZZDVLbjNJZkxzTzhFZk1jNzZKWE84ZXVzdkc3azlIaXU0bUIwQXNVM01FX0JlZDhn0gGrAUFVX3lxTE9kMGpvQ19ZWGVGUjhkWUR2MHYxX3hBTjJVWktXd3FZX2lpRUxlc3dBMWo1elRNN2h5bjFPWThOQTRyU1ZZcFFfa19YWndNa2dzUEt3c3ZOZlJEMVlYeDN2aU9IcWZDdlV1TWJMaEphdFdvSkprbkZBS1Z1T0hRZjVfNFEwTUNCRHR1WFhSaWVYaVhFcnh0cDBoTEctTTA5amFESmdveXNkQlFlZw?oc=5",
-          "publishedAt": "2026-09-25T07:00:00.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.543,
-          "contribution": 0.0024
-        }
-      ],
-      "latestAt": "2026-10-02T16:25:06.000Z",
-      "earliestAt": "2026-09-25T07:00:00.000Z",
-      "heuristicProbability": 15,
-      "llm": {
-        "adjustment": -18,
-        "note": "Headlines describe Tonali as having joined Tottenham in a completed record transfer, not leaving.",
-        "renamedFrom": null,
-        "redirectedFrom": "out"
-      },
-      "confirmedAt": null,
-      "previousProbability": 33,
-      "change": -31,
-      "isNew": false,
-      "history": [
-        {
-          "t": 1790963617278,
-          "p": 33
-        },
-        {
-          "t": 1790979464116,
-          "p": 33
-        },
-        {
-          "t": 1791005010041,
-          "p": 2
+          "t": 1791027845276,
+          "p": 10
         }
       ]
     }
