@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-10-16T04:37:30.150Z",
+  "generatedAt": "2026-10-16T11:30:16.962Z",
   "counts": {
-    "rumours": 13,
+    "rumours": 11,
     "incoming": 8,
-    "outgoing": 5,
+    "outgoing": 3,
     "done": 0,
-    "articles": 209,
-    "transferArticles": 89,
+    "articles": 207,
+    "transferArticles": 87,
     "likely": 0
   },
   "model": {
     "type": "heuristic + LLM review",
     "llm": {
       "model": "gpt-5.6-luna",
-      "sent": 3,
-      "reusedFromCache": 16,
+      "sent": 1,
+      "reusedFromCache": 15,
       "deferred": 0,
-      "adjusted": 0,
-      "discarded": 6
+      "adjusted": 1,
+      "discarded": 5
     }
   },
   "sources": [
@@ -44,12 +44,12 @@
     {
       "name": "Evening Standard — Tottenham",
       "ok": true,
-      "itemCount": 5
+      "itemCount": 6
     },
     {
       "name": "Google News — Tottenham transfer",
       "ok": true,
-      "itemCount": 40
+      "itemCount": 41
     },
     {
       "name": "Google News — Spurs transfer news",
@@ -64,7 +64,7 @@
     {
       "name": "Google News — Tottenham exit",
       "ok": true,
-      "itemCount": 32
+      "itemCount": 28
     },
     {
       "name": "Google News — Tottenham medical/agreed",
@@ -80,15 +80,16 @@
   "squadHints": [],
   "rumours": [
     {
-      "id": "out-yves-bissouma",
-      "player": "Yves Bissouma",
+      "id": "out-pedro-porro",
+      "player": "Pedro Porro",
       "direction": "out",
       "directionConfidence": 1,
       "clubs": [
-        "Ajax"
+        "Real Madrid",
+        "Barcelona"
       ],
-      "probability": 33,
-      "logit": -1.7405,
+      "probability": 18,
+      "logit": -1.695,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -99,279 +100,165 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0095,
+        "evidenceSum": 0.055,
         "corroboration": 0,
-        "distinctOutlets": 1,
+        "distinctOutlets": 3,
         "tier1Outlets": 1,
-        "totalArticles": 1,
+        "totalArticles": 3,
         "confirmedFloorApplied": false
       },
       "evidence": [
         {
-          "outlet": "The New York Times",
-          "tier": 1,
-          "headline": "Yves Bissouma joins Ajax on one-year contract after Tottenham exit - The Athletic",
-          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPN3F6N3ByaWlXb21neElnUkZ4aDI4Y3dVTEtKUndpWk54d0dnbUVZZXJ0amlUSVFiSFMzSHhyVWdtZDBuVVZlTjNycFp5M0JLSjJCT0NPQm5iSU1VLWNzOHNvUFVSdGlJSmVfelJiX0loRmxzX3hFN1VqdmNmTVUtNndsR2dFSDA?oc=5",
-          "publishedAt": "2026-09-16T07:00:00.000Z",
+          "outlet": "Football365",
+          "tier": 3,
+          "headline": "Tottenham: Barcelona, Real Madrid rocked as world-record Pedro Porro asking price set",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPRUVHTmVqTm9maVRYNzExbHduMm5HbEZzb0oyQldTNDV4Qzh0M3ZJQ3gwTklnMkI3Yjl6aEk3V0owN1FFamdmQnRZOFM3ckI3V05oQzZGTzc4T3REbEZDbXZPejQ2TkZTRmxSdXVLVjFHSXM4YThxWnBSanpqMGVlZndaaG4yRzdDRDl6emdPVF9Qdm5VZDV4eDhpMXFhYWJuak8xOXg4RFpZSVMyOHpLWEZhVnQ0QQ?oc=5",
+          "publishedAt": "2026-10-15T09:02:40.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.2,
-          "contribution": 0.0095
+          "recency": 0.919,
+          "contribution": 0.0112
+        },
+        {
+          "outlet": "BBC Sport",
+          "tier": 1,
+          "headline": "Tottenham transfer rumours: Pedro Porro, Dion Beljo, Daniel Banjaqui",
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1YWXpnZXJLc2lsbU9VVFlxSElZVTF4S3UwckQ3eEVadkpiX3JhVE1rNnhmRnRZQ29vb0x4US1Za3JXN0tQaVp1eC1TdldCOEtXMkEzVENKVjR4QmVPbnhPSlZYZ1BZS1h6OTdJ?oc=5",
+          "publishedAt": "2026-10-14T06:28:18.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.844,
+          "contribution": 0.0401
+        },
+        {
+          "outlet": "AOL.co.uk",
+          "tier": 4,
+          "headline": "Gossip: Porro nears Tottenham exit as Barcelona eye move",
+          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQRjhIY1Q1ME85YnYyaXRUWERMOEgxb0dhakhwaENwZXlVSDd2NHJOSHBPeHplcWR4eThWXzlNaWpKYy1BYm5SN3BKQW81QTk1VFBxSGRnc0JVTnQ2cTFVcEs1MHJsX3BxNkdoWVJCdFgtTjM3RVgyLVZRU2VyNnRWeTJOODdtQQ?oc=5",
+          "publishedAt": "2026-10-14T06:28:00.000Z",
+          "stage": "Named in a roundup",
+          "cooler": null,
+          "recency": 0.843,
+          "contribution": 0.0037
         }
       ],
-      "latestAt": "2026-09-16T07:00:00.000Z",
-      "earliestAt": "2026-09-16T07:00:00.000Z",
-      "heuristicProbability": 15,
+      "latestAt": "2026-10-15T09:02:40.000Z",
+      "earliestAt": "2026-10-14T06:28:00.000Z",
+      "heuristicProbability": 16,
       "llm": {
-        "adjustment": 18,
-        "note": "Bissouma has reportedly completed a one-year move to Ajax following his Tottenham exit.",
+        "adjustment": 2,
+        "note": "Barcelona and Real Madrid are linked, with Tottenham reportedly setting a substantial asking price for Porro.",
         "renamedFrom": null,
         "redirectedFrom": null
       },
       "confirmedAt": null,
-      "previousProbability": 33,
+      "previousProbability": 18,
       "change": 0,
       "isNew": false,
       "history": [
         {
+          "t": 1790465993804,
+          "p": 16
+        },
+        {
+          "t": 1790486584466,
+          "p": 16
+        },
+        {
+          "t": 1790510881302,
+          "p": 16
+        },
+        {
+          "t": 1790544216095,
+          "p": 16
+        },
+        {
+          "t": 1790573388812,
+          "p": 16
+        },
+        {
+          "t": 1790604203729,
+          "p": 16
+        },
+        {
           "t": 1790630121396,
-          "p": 98
+          "p": 16
         },
         {
           "t": 1790643784717,
-          "p": 98
+          "p": 16
         },
         {
           "t": 1790675672782,
-          "p": 98
+          "p": 16
         },
         {
           "t": 1790705207060,
-          "p": 98
+          "p": 15
         },
         {
           "t": 1790720393645,
-          "p": 98
+          "p": 16
         },
         {
           "t": 1790746681433,
-          "p": 98
+          "p": 15
         },
         {
           "t": 1790772078358,
-          "p": 98
-        },
-        {
-          "t": 1790798687364,
-          "p": 98
-        },
-        {
-          "t": 1790814909867,
-          "p": 98
-        },
-        {
-          "t": 1790849607238,
-          "p": 98
-        },
-        {
-          "t": 1790879198388,
-          "p": 98
-        },
-        {
-          "t": 1790902196932,
-          "p": 98
-        },
-        {
-          "t": 1790934672039,
-          "p": 98
-        },
-        {
-          "t": 1790963617278,
-          "p": 98
-        },
-        {
-          "t": 1790979464116,
-          "p": 98
-        },
-        {
-          "t": 1791005010041,
-          "p": 98
-        },
-        {
-          "t": 1791027845276,
-          "p": 98
-        },
-        {
-          "t": 1791044763092,
-          "p": 98
-        },
-        {
-          "t": 1791062505063,
-          "p": 98
-        },
-        {
-          "t": 1791093551554,
-          "p": 98
-        },
-        {
-          "t": 1791116825712,
-          "p": 98
-        },
-        {
-          "t": 1791139161367,
-          "p": 98
-        },
-        {
-          "t": 1791158311644,
-          "p": 98
-        },
-        {
-          "t": 1791179272191,
-          "p": 98
-        },
-        {
-          "t": 1791211716531,
-          "p": 98
-        },
-        {
-          "t": 1791237810138,
-          "p": 98
-        },
-        {
-          "t": 1791268024002,
-          "p": 98
-        },
-        {
-          "t": 1791302352685,
-          "p": 98
-        },
-        {
-          "t": 1791326428263,
-          "p": 98
-        },
-        {
-          "t": 1791353165713,
-          "p": 98
-        },
-        {
-          "t": 1791379851595,
-          "p": 33
-        },
-        {
-          "t": 1791405551651,
-          "p": 33
-        },
-        {
-          "t": 1791421355750,
-          "p": 33
-        },
-        {
-          "t": 1791456035552,
-          "p": 33
-        },
-        {
-          "t": 1791485564747,
-          "p": 33
-        },
-        {
-          "t": 1791508495602,
-          "p": 33
-        },
-        {
-          "t": 1791542375582,
-          "p": 33
-        },
-        {
-          "t": 1791570195391,
-          "p": 33
-        },
-        {
-          "t": 1791593748720,
-          "p": 33
-        },
-        {
-          "t": 1791626137764,
-          "p": 33
-        },
-        {
-          "t": 1791652916025,
-          "p": 33
-        },
-        {
-          "t": 1791668896018,
-          "p": 33
-        },
-        {
-          "t": 1791698007475,
-          "p": 33
-        },
-        {
-          "t": 1791723440072,
-          "p": 33
-        },
-        {
-          "t": 1791747284882,
-          "p": 33
-        },
-        {
-          "t": 1791765366525,
-          "p": 33
-        },
-        {
-          "t": 1791802677683,
-          "p": 33
-        },
-        {
-          "t": 1791839874784,
-          "p": 33
+          "p": 15
         },
         {
           "t": 1791874234290,
-          "p": 33
+          "p": 15
         },
         {
           "t": 1791910718172,
-          "p": 33
+          "p": 15
         },
         {
           "t": 1791931773938,
-          "p": 33
+          "p": 17
         },
         {
           "t": 1791953952644,
-          "p": 33
+          "p": 15
         },
         {
           "t": 1791979165389,
-          "p": 33
+          "p": 18
         },
         {
           "t": 1791998192014,
-          "p": 33
+          "p": 19
         },
         {
           "t": 1792014308669,
-          "p": 33
+          "p": 18
         },
         {
           "t": 1792039625273,
-          "p": 33
+          "p": 16
         },
         {
           "t": 1792064168670,
-          "p": 33
+          "p": 18
         },
         {
           "t": 1792083928919,
-          "p": 33
+          "p": 18
         },
         {
           "t": 1792099650181,
-          "p": 33
+          "p": 18
         },
         {
           "t": 1792125450150,
-          "p": 33
+          "p": 16
+        },
+        {
+          "t": 1792150216962,
+          "p": 18
         }
       ]
     },
@@ -382,7 +269,7 @@
       "directionConfidence": 1,
       "clubs": [],
       "probability": 18,
-      "logit": -1.4921,
+      "logit": -1.4977,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -393,7 +280,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.2579,
+        "evidenceSum": 0.2523,
         "corroboration": 0,
         "distinctOutlets": 2,
         "tier1Outlets": 0,
@@ -409,8 +296,8 @@
           "publishedAt": "2026-10-12T14:00:00.000Z",
           "stage": "Advanced talks",
           "cooler": null,
-          "recency": 0.757,
-          "contribution": 0.2446
+          "recency": 0.741,
+          "contribution": 0.2393
         },
         {
           "outlet": "The False 9",
@@ -420,8 +307,8 @@
           "publishedAt": "2026-10-09T02:47:12.000Z",
           "stage": "Interest / link",
           "cooler": null,
-          "recency": 0.58,
-          "contribution": 0.0133
+          "recency": 0.567,
+          "contribution": 0.013
         }
       ],
       "latestAt": "2026-10-12T14:00:00.000Z",
@@ -434,8 +321,8 @@
         "redirectedFrom": null
       },
       "confirmedAt": null,
-      "previousProbability": 15,
-      "change": 3,
+      "previousProbability": 19,
+      "change": -1,
       "isNew": false,
       "history": [
         {
@@ -516,6 +403,10 @@
         },
         {
           "t": 1792125450150,
+          "p": 18
+        },
+        {
+          "t": 1792150216962,
           "p": 18
         }
       ]
@@ -582,14 +473,10 @@
         "redirectedFrom": null
       },
       "confirmedAt": null,
-      "previousProbability": 15,
-      "change": 2,
+      "previousProbability": 17,
+      "change": 0,
       "isNew": false,
       "history": [
-        {
-          "t": 1788252183828,
-          "p": 15
-        },
         {
           "t": 1788271826468,
           "p": 15
@@ -797,409 +684,10 @@
         {
           "t": 1792125450150,
           "p": 17
-        }
-      ]
-    },
-    {
-      "id": "out-manor-solomon",
-      "player": "Manor Solomon",
-      "direction": "out",
-      "directionConfidence": 1,
-      "clubs": [
-        "Shakhtar"
-      ],
-      "probability": 17,
-      "logit": -1.7139,
-      "done": false,
-      "confirmedBy": [],
-      "stage": {
-        "id": "mention",
-        "label": "Mentioned only",
-        "value": 0.05
-      },
-      "cooler": null,
-      "breakdown": {
-        "prior": -1.75,
-        "evidenceSum": 0.0361,
-        "corroboration": 0,
-        "distinctOutlets": 1,
-        "tier1Outlets": 1,
-        "totalArticles": 1,
-        "confirmedFloorApplied": false
-      },
-      "evidence": [
-        {
-          "outlet": "BBC Sport",
-          "tier": 1,
-          "headline": "Tottenham news: Shakhtar Donetsk CEO plans Spurs talks over Manor Solomon fee",
-          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE4xWmNfVWw5alJTRnpvcXN3ZjVMVU0wRUQ4ak44RUplS0xCb1pRcFJLRW1xZEtLWmNsS3o0VUcwQnNpaHlNSWg0UDRMdkpidHVVS1JoUU1NSDVkdHNQQzRubk0tcldtbVlO?oc=5",
-          "publishedAt": "2026-10-12T14:44:08.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.759,
-          "contribution": 0.0361
-        }
-      ],
-      "latestAt": "2026-10-12T14:44:08.000Z",
-      "earliestAt": "2026-10-12T14:44:08.000Z",
-      "heuristicProbability": 15,
-      "llm": {
-        "adjustment": 2,
-        "note": "Shakhtar’s CEO reportedly plans talks with Tottenham over the fee for Solomon.",
-        "renamedFrom": null,
-        "redirectedFrom": null
-      },
-      "confirmedAt": null,
-      "previousProbability": 26,
-      "change": -9,
-      "isNew": false,
-      "history": [
-        {
-          "t": 1788252183828,
-          "p": 15
         },
         {
-          "t": 1788271826468,
-          "p": 15
-        },
-        {
-          "t": 1788287710443,
-          "p": 15
-        },
-        {
-          "t": 1788304852905,
-          "p": 15
-        },
-        {
-          "t": 1788324051531,
-          "p": 15
-        },
-        {
-          "t": 1788348235468,
-          "p": 15
-        },
-        {
-          "t": 1788367079593,
-          "p": 15
-        },
-        {
-          "t": 1788383168763,
-          "p": 34
-        },
-        {
-          "t": 1788391243041,
-          "p": 29
-        },
-        {
-          "t": 1788410258768,
-          "p": 29
-        },
-        {
-          "t": 1788434434964,
-          "p": 29
-        },
-        {
-          "t": 1788452966024,
-          "p": 29
-        },
-        {
-          "t": 1788469528133,
-          "p": 33
-        },
-        {
-          "t": 1788477522159,
-          "p": 33
-        },
-        {
-          "t": 1788496751255,
-          "p": 33
-        },
-        {
-          "t": 1788521008910,
-          "p": 33
-        },
-        {
-          "t": 1788539108748,
-          "p": 33
-        },
-        {
-          "t": 1788554881328,
-          "p": 33
-        },
-        {
-          "t": 1788563024038,
-          "p": 33
-        },
-        {
-          "t": 1788582918665,
-          "p": 33
-        },
-        {
-          "t": 1788598690225,
-          "p": 33
-        },
-        {
-          "t": 1788604809910,
-          "p": 33
-        },
-        {
-          "t": 1788621466097,
-          "p": 33
-        },
-        {
-          "t": 1788639949712,
-          "p": 33
-        },
-        {
-          "t": 1788649010799,
-          "p": 33
-        },
-        {
-          "t": 1788669886014,
-          "p": 33
-        },
-        {
-          "t": 1788692530220,
-          "p": 33
-        },
-        {
-          "t": 1788708643462,
-          "p": 33
-        },
-        {
-          "t": 1788726439390,
-          "p": 33
-        },
-        {
-          "t": 1788735276236,
-          "p": 33
-        },
-        {
-          "t": 1788756486223,
-          "p": 33
-        },
-        {
-          "t": 1791910718172,
-          "p": 26
-        },
-        {
-          "t": 1791931773938,
-          "p": 26
-        },
-        {
-          "t": 1791953952644,
-          "p": 26
-        },
-        {
-          "t": 1791979165389,
-          "p": 26
-        },
-        {
-          "t": 1791998192014,
-          "p": 15
-        },
-        {
-          "t": 1792014308669,
-          "p": 22
-        },
-        {
-          "t": 1792039625273,
+          "t": 1792150216962,
           "p": 17
-        },
-        {
-          "t": 1792064168670,
-          "p": 17
-        },
-        {
-          "t": 1792083928919,
-          "p": 17
-        },
-        {
-          "t": 1792099650181,
-          "p": 17
-        },
-        {
-          "t": 1792125450150,
-          "p": 17
-        }
-      ]
-    },
-    {
-      "id": "out-pedro-porro",
-      "player": "Pedro Porro",
-      "direction": "out",
-      "directionConfidence": 1,
-      "clubs": [
-        "Real Madrid",
-        "Barcelona"
-      ],
-      "probability": 16,
-      "logit": -1.6938,
-      "done": false,
-      "confirmedBy": [],
-      "stage": {
-        "id": "mention",
-        "label": "Mentioned only",
-        "value": 0.05
-      },
-      "cooler": null,
-      "breakdown": {
-        "prior": -1.75,
-        "evidenceSum": 0.0562,
-        "corroboration": 0,
-        "distinctOutlets": 3,
-        "tier1Outlets": 1,
-        "totalArticles": 3,
-        "confirmedFloorApplied": false
-      },
-      "evidence": [
-        {
-          "outlet": "Football365",
-          "tier": 3,
-          "headline": "Tottenham: Barcelona, Real Madrid rocked as world-record Pedro Porro asking price set",
-          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPRUVHTmVqTm9maVRYNzExbHduMm5HbEZzb0oyQldTNDV4Qzh0M3ZJQ3gwTklnMkI3Yjl6aEk3V0owN1FFamdmQnRZOFM3ckI3V05oQzZGTzc4T3REbEZDbXZPejQ2TkZTRmxSdXVLVjFHSXM4YThxWnBSanpqMGVlZndaaG4yRzdDRDl6emdPVF9Qdm5VZDV4eDhpMXFhYWJuak8xOXg4RFpZSVMyOHpLWEZhVnQ0QQ?oc=5",
-          "publishedAt": "2026-10-15T09:02:40.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.939,
-          "contribution": 0.0114
-        },
-        {
-          "outlet": "BBC Sport",
-          "tier": 1,
-          "headline": "Tottenham transfer rumours: Pedro Porro, Dion Beljo, Daniel Banjaqui",
-          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1YWXpnZXJLc2lsbU9VVFlxSElZVTF4S3UwckQ3eEVadkpiX3JhVE1rNnhmRnRZQ29vb0x4US1Za3JXN0tQaVp1eC1TdldCOEtXMkEzVENKVjR4QmVPbnhPSlZYZ1BZS1h6OTdJ?oc=5",
-          "publishedAt": "2026-10-14T06:28:18.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.862,
-          "contribution": 0.041
-        },
-        {
-          "outlet": "AOL.com",
-          "tier": 4,
-          "headline": "Gossip: Porro nears Tottenham exit as Barcelona eye move",
-          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQbzZsdEpudHhYWDc1Q3ZSd2txcU5lR1RMRWpRMVM5WDlCeVYzMEc3ejlnLXpfVEt1d1lmYzRQWHNKYm1zYzVaZlZpNW5MUHZDNjFwbkVvbTZzYWU3NGtKd1FiLXhCRVNTRV9WUmJFNFBqVEFQOXRnbnpNUlpjZk42QWV5cw?oc=5",
-          "publishedAt": "2026-10-14T06:28:00.000Z",
-          "stage": "Named in a roundup",
-          "cooler": null,
-          "recency": 0.862,
-          "contribution": 0.0038
-        }
-      ],
-      "latestAt": "2026-10-15T09:02:40.000Z",
-      "earliestAt": "2026-10-14T06:28:00.000Z",
-      "heuristicProbability": 16,
-      "llm": {
-        "adjustment": 0,
-        "note": "Barcelona and Real Madrid interest is reported, but no confirmed offer or imminent departure is indicated.",
-        "renamedFrom": null,
-        "redirectedFrom": null
-      },
-      "confirmedAt": null,
-      "previousProbability": 18,
-      "change": -2,
-      "isNew": false,
-      "history": [
-        {
-          "t": 1790465993804,
-          "p": 16
-        },
-        {
-          "t": 1790486584466,
-          "p": 16
-        },
-        {
-          "t": 1790510881302,
-          "p": 16
-        },
-        {
-          "t": 1790544216095,
-          "p": 16
-        },
-        {
-          "t": 1790573388812,
-          "p": 16
-        },
-        {
-          "t": 1790604203729,
-          "p": 16
-        },
-        {
-          "t": 1790630121396,
-          "p": 16
-        },
-        {
-          "t": 1790643784717,
-          "p": 16
-        },
-        {
-          "t": 1790675672782,
-          "p": 16
-        },
-        {
-          "t": 1790705207060,
-          "p": 15
-        },
-        {
-          "t": 1790720393645,
-          "p": 16
-        },
-        {
-          "t": 1790746681433,
-          "p": 15
-        },
-        {
-          "t": 1790772078358,
-          "p": 15
-        },
-        {
-          "t": 1791874234290,
-          "p": 15
-        },
-        {
-          "t": 1791910718172,
-          "p": 15
-        },
-        {
-          "t": 1791931773938,
-          "p": 17
-        },
-        {
-          "t": 1791953952644,
-          "p": 15
-        },
-        {
-          "t": 1791979165389,
-          "p": 18
-        },
-        {
-          "t": 1791998192014,
-          "p": 19
-        },
-        {
-          "t": 1792014308669,
-          "p": 18
-        },
-        {
-          "t": 1792039625273,
-          "p": 16
-        },
-        {
-          "t": 1792064168670,
-          "p": 18
-        },
-        {
-          "t": 1792083928919,
-          "p": 18
-        },
-        {
-          "t": 1792099650181,
-          "p": 18
-        },
-        {
-          "t": 1792125450150,
-          "p": 16
         }
       ]
     },
@@ -1210,7 +698,7 @@
       "directionConfidence": 1,
       "clubs": [],
       "probability": 15,
-      "logit": -1.7418,
+      "logit": -1.7419,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -1221,7 +709,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0082,
+        "evidenceSum": 0.0081,
         "corroboration": 0,
         "distinctOutlets": 3,
         "tier1Outlets": 0,
@@ -1237,8 +725,8 @@
           "publishedAt": "2026-10-09T22:57:54.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.619,
-          "contribution": 0.0049
+          "recency": 0.605,
+          "contribution": 0.0048
         },
         {
           "outlet": "Football365",
@@ -1273,14 +761,10 @@
         "redirectedFrom": null
       },
       "confirmedAt": null,
-      "previousProbability": 20,
-      "change": -5,
+      "previousProbability": 19,
+      "change": -4,
       "isNew": false,
       "history": [
-        {
-          "t": 1790630121396,
-          "p": 46
-        },
         {
           "t": 1790643784717,
           "p": 47
@@ -1516,6 +1000,10 @@
         {
           "t": 1792125450150,
           "p": 15
+        },
+        {
+          "t": 1792150216962,
+          "p": 15
         }
       ]
     },
@@ -1526,7 +1014,7 @@
       "directionConfidence": 1,
       "clubs": [],
       "probability": 15,
-      "logit": -1.708,
+      "logit": -1.709,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -1537,7 +1025,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.042,
+        "evidenceSum": 0.041,
         "corroboration": 0,
         "distinctOutlets": 2,
         "tier1Outlets": 1,
@@ -1553,8 +1041,8 @@
           "publishedAt": "2026-10-14T13:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.881,
-          "contribution": 0.0273
+          "recency": 0.861,
+          "contribution": 0.0267
         },
         {
           "outlet": "BBC Sport",
@@ -1564,8 +1052,8 @@
           "publishedAt": "2026-10-05T06:56:46.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.432,
-          "contribution": 0.0147
+          "recency": 0.422,
+          "contribution": 0.0143
         }
       ],
       "latestAt": "2026-10-14T13:00:00.000Z",
@@ -1681,6 +1169,10 @@
         {
           "t": 1792125450150,
           "p": 15
+        },
+        {
+          "t": 1792150216962,
+          "p": 15
         }
       ]
     },
@@ -1691,7 +1183,7 @@
       "directionConfidence": 1,
       "clubs": [],
       "probability": 15,
-      "logit": -1.7418,
+      "logit": -1.7419,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -1702,7 +1194,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0082,
+        "evidenceSum": 0.0081,
         "corroboration": 0,
         "distinctOutlets": 2,
         "tier1Outlets": 0,
@@ -1718,8 +1210,8 @@
           "publishedAt": "2026-10-02T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.343,
-          "contribution": 0.002
+          "recency": 0.335,
+          "contribution": 0.0019
         },
         {
           "outlet": "Evening Standard",
@@ -1747,10 +1239,6 @@
       "change": 0,
       "isNew": false,
       "history": [
-        {
-          "t": 1790510881302,
-          "p": 98
-        },
         {
           "t": 1790604203729,
           "p": 98
@@ -1986,6 +1474,10 @@
         {
           "t": 1792125450150,
           "p": 15
+        },
+        {
+          "t": 1792150216962,
+          "p": 15
         }
       ]
     },
@@ -1996,7 +1488,7 @@
       "directionConfidence": 0.3,
       "clubs": [],
       "probability": 15,
-      "logit": -1.7278,
+      "logit": -1.7283,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -2007,7 +1499,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0222,
+        "evidenceSum": 0.0217,
         "corroboration": 0,
         "distinctOutlets": 1,
         "tier1Outlets": 1,
@@ -2023,8 +1515,8 @@
           "publishedAt": "2026-10-06T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.466,
-          "contribution": 0.0222
+          "recency": 0.456,
+          "contribution": 0.0217
         }
       ],
       "latestAt": "2026-10-06T07:00:00.000Z",
@@ -2172,6 +1664,10 @@
         {
           "t": 1792125450150,
           "p": 15
+        },
+        {
+          "t": 1792150216962,
+          "p": 15
         }
       ]
     },
@@ -2227,10 +1723,6 @@
       "change": 0,
       "isNew": false,
       "history": [
-        {
-          "t": 1790422199161,
-          "p": 15
-        },
         {
           "t": 1790440043451,
           "p": 15
@@ -2466,6 +1958,10 @@
         {
           "t": 1792125450150,
           "p": 15
+        },
+        {
+          "t": 1792150216962,
+          "p": 15
         }
       ]
     },
@@ -2479,7 +1975,7 @@
         "Everton"
       ],
       "probability": 15,
-      "logit": -1.7229,
+      "logit": -1.7235,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -2490,7 +1986,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0271,
+        "evidenceSum": 0.0265,
         "corroboration": 0,
         "distinctOutlets": 1,
         "tier1Outlets": 0,
@@ -2506,8 +2002,8 @@
           "publishedAt": "2026-10-14T11:01:28.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.875,
-          "contribution": 0.0271
+          "recency": 0.856,
+          "contribution": 0.0265
         }
       ],
       "latestAt": "2026-10-14T11:01:28.000Z",
@@ -2551,6 +2047,10 @@
         {
           "t": 1792125450150,
           "p": 15
+        },
+        {
+          "t": 1792150216962,
+          "p": 15
         }
       ]
     },
@@ -2564,7 +2064,7 @@
         "Everton"
       ],
       "probability": 15,
-      "logit": -1.7229,
+      "logit": -1.7235,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -2575,7 +2075,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0271,
+        "evidenceSum": 0.0265,
         "corroboration": 0,
         "distinctOutlets": 1,
         "tier1Outlets": 0,
@@ -2591,8 +2091,8 @@
           "publishedAt": "2026-10-14T11:01:28.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.875,
-          "contribution": 0.0271
+          "recency": 0.856,
+          "contribution": 0.0265
         }
       ],
       "latestAt": "2026-10-14T11:01:28.000Z",
@@ -2636,6 +2136,10 @@
         {
           "t": 1792125450150,
           "p": 15
+        },
+        {
+          "t": 1792150216962,
+          "p": 15
         }
       ]
     },
@@ -2646,7 +2150,7 @@
       "directionConfidence": 1,
       "clubs": [],
       "probability": 11,
-      "logit": -1.7305,
+      "logit": -1.7309,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -2657,7 +2161,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0195,
+        "evidenceSum": 0.0191,
         "corroboration": 0,
         "distinctOutlets": 1,
         "tier1Outlets": 0,
@@ -2673,8 +2177,8 @@
           "publishedAt": "2026-10-10T04:38:57.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.63,
-          "contribution": 0.0195
+          "recency": 0.616,
+          "contribution": 0.0191
         }
       ],
       "latestAt": "2026-10-10T04:38:57.000Z",
@@ -2773,6 +2277,10 @@
         },
         {
           "t": 1792125450150,
+          "p": 11
+        },
+        {
+          "t": 1792150216962,
           "p": 11
         }
       ]
