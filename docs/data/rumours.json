@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-10-22T11:59:06.613Z",
+  "generatedAt": "2026-10-22T17:15:00.133Z",
   "counts": {
-    "rumours": 5,
+    "rumours": 6,
     "incoming": 2,
-    "outgoing": 3,
+    "outgoing": 4,
     "done": 0,
-    "articles": 198,
-    "transferArticles": 78,
+    "articles": 196,
+    "transferArticles": 82,
     "likely": 0
   },
   "model": {
     "type": "heuristic + LLM review",
     "llm": {
       "model": "gpt-5.6-luna",
-      "sent": 0,
+      "sent": 1,
       "reusedFromCache": 10,
       "deferred": 0,
-      "adjusted": 0,
+      "adjusted": 1,
       "discarded": 5
     }
   },
@@ -44,12 +44,12 @@
     {
       "name": "Evening Standard — Tottenham",
       "ok": true,
-      "itemCount": 2
+      "itemCount": 4
     },
     {
       "name": "Google News — Tottenham transfer",
       "ok": true,
-      "itemCount": 54
+      "itemCount": 50
     },
     {
       "name": "Google News — Spurs transfer news",
@@ -80,6 +80,81 @@
   "squadHints": [],
   "rumours": [
     {
+      "id": "out-luka-vuskovic",
+      "player": "Luka Vuskovic",
+      "direction": "out",
+      "directionConfidence": 1,
+      "clubs": [
+        "Brighton"
+      ],
+      "probability": 25,
+      "logit": -1.7128,
+      "done": false,
+      "confirmedBy": [],
+      "stage": {
+        "id": "mention",
+        "label": "Mentioned only",
+        "value": 0.05
+      },
+      "cooler": null,
+      "breakdown": {
+        "prior": -1.75,
+        "evidenceSum": 0.0372,
+        "corroboration": 0,
+        "distinctOutlets": 2,
+        "tier1Outlets": 0,
+        "totalArticles": 2,
+        "confirmedFloorApplied": false
+      },
+      "evidence": [
+        {
+          "outlet": "football.london",
+          "tier": 2,
+          "headline": "Luka Vuskovic still does not understand one key thing about his Tottenham exit",
+          "url": "https://www.football.london/tottenham-hotspur-fc/news/luka-vuskovic-still-not-understand-34803163",
+          "publishedAt": "2026-10-22T15:31:10.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.994,
+          "contribution": 0.0308
+        },
+        {
+          "outlet": "Yahoo Sports",
+          "tier": 3,
+          "headline": "Sources: Brighton believe Luka Vuskovic is a £100m talent months after Tottenham exit",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNN181M211ZlgycGN4X2d3VVc3NWdXWnRoZl9ZVW0yd1B4WjNvakllZ3o1dVdLdG0zd0dNekt6X0dnb09aYU1KVXZUVDh4RlNIRWhMN05nQ1R0X0lUVWRVcjNOd2N6bDVkOE02S2VrQ3E2SmJ4SVg4WHJrS1FBaHpTY2xIOGwxbVV3ckRuLU9uRUs?oc=5",
+          "publishedAt": "2026-10-14T09:56:28.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.528,
+          "contribution": 0.0064
+        }
+      ],
+      "latestAt": "2026-10-22T15:31:10.000Z",
+      "earliestAt": "2026-10-14T09:56:28.000Z",
+      "heuristicProbability": 15,
+      "llm": {
+        "adjustment": 10,
+        "note": "Headlines describe Vuskovic's completed Tottenham exit and subsequent Brighton appraisal.",
+        "renamedFrom": null,
+        "redirectedFrom": null
+      },
+      "confirmedAt": null,
+      "previousProbability": 20,
+      "change": 5,
+      "isNew": false,
+      "history": [
+        {
+          "t": 1790440043451,
+          "p": 20
+        },
+        {
+          "t": 1792689300133,
+          "p": 25
+        }
+      ]
+    },
+    {
       "id": "out-pedro-porro",
       "player": "Pedro Porro",
       "direction": "out",
@@ -88,7 +163,7 @@
         "Chelsea"
       ],
       "probability": 18,
-      "logit": -1.6503,
+      "logit": -1.6508,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -99,7 +174,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0997,
+        "evidenceSum": 0.0992,
         "corroboration": 0,
         "distinctOutlets": 4,
         "tier1Outlets": 1,
@@ -112,11 +187,11 @@
           "tier": 3,
           "headline": "Tottenham target £67m Chelsea right-back in January after Pedro Porro wants out",
           "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNeHloZ0cybzZ0bkFPLXROQ284SHU1N2RKenZleHdTaWNiMlV3dkpwcnlNOWM0WW9jcE5Cam5NNFZ3STRaRGFWbWFaS2Nmdjc4bUVQN3JKTFRYeUNHdGo3T3NpRllZR1ppZGxXVllWcVJKRi0wSWJIOEZJM3VqQXJnQ3BZdmt3RWNaRGJwQzA4Z2hfOFRmNktjQTgwS2xJTHVyd09DRF93U21iSEJ5ZTBHNkQ3SGNaVEFHN041aw?oc=5",
-          "publishedAt": "2026-10-21T21:48:55.000Z",
+          "publishedAt": "2026-10-22T03:50:34.000Z",
           "stage": "Interest / link",
           "cooler": null,
-          "recency": 0.956,
-          "contribution": 0.065
+          "recency": 0.958,
+          "contribution": 0.0651
         },
         {
           "outlet": "BBC Sport",
@@ -126,8 +201,8 @@
           "publishedAt": "2026-10-21T06:13:29.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.909,
-          "contribution": 0.0308
+          "recency": 0.894,
+          "contribution": 0.0303
         },
         {
           "outlet": "AOL.co.uk",
@@ -137,8 +212,8 @@
           "publishedAt": "2026-10-14T06:28:00.000Z",
           "stage": "Named in a roundup",
           "cooler": null,
-          "recency": 0.531,
-          "contribution": 0.0024
+          "recency": 0.522,
+          "contribution": 0.0023
         },
         {
           "outlet": "Yahoo",
@@ -152,7 +227,7 @@
           "contribution": 0.0015
         }
       ],
-      "latestAt": "2026-10-21T21:48:55.000Z",
+      "latestAt": "2026-10-22T03:50:34.000Z",
       "earliestAt": "2026-09-29T07:00:00.000Z",
       "heuristicProbability": 16,
       "llm": {
@@ -377,6 +452,10 @@
         {
           "t": 1792670346613,
           "p": 18
+        },
+        {
+          "t": 1792689300133,
+          "p": 18
         }
       ]
     },
@@ -387,7 +466,7 @@
       "directionConfidence": 0.3,
       "clubs": [],
       "probability": 18,
-      "logit": -1.7346,
+      "logit": -1.7349,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -398,7 +477,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0154,
+        "evidenceSum": 0.0151,
         "corroboration": 0,
         "distinctOutlets": 2,
         "tier1Outlets": 0,
@@ -414,8 +493,8 @@
           "publishedAt": "2026-10-08T07:00:00.000Z",
           "stage": "Interest / link",
           "cooler": null,
-          "recency": 0.335,
-          "contribution": 0.0107
+          "recency": 0.329,
+          "contribution": 0.0105
         },
         {
           "outlet": "Evening Standard",
@@ -425,8 +504,8 @@
           "publishedAt": "2026-10-02T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.211,
-          "contribution": 0.0047
+          "recency": 0.207,
+          "contribution": 0.0046
         }
       ],
       "latestAt": "2026-10-08T07:00:00.000Z",
@@ -566,6 +645,10 @@
         {
           "t": 1792670346613,
           "p": 18
+        },
+        {
+          "t": 1792689300133,
+          "p": 18
         }
       ]
     },
@@ -603,7 +686,7 @@
           "publishedAt": "2026-10-10T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.391,
+          "recency": 0.384,
           "contribution": 0.0022
         },
         {
@@ -632,10 +715,6 @@
       "change": 0,
       "isNew": false,
       "history": [
-        {
-          "t": 1791302352685,
-          "p": 35
-        },
         {
           "t": 1791326428263,
           "p": 27
@@ -871,6 +950,10 @@
         {
           "t": 1792670346613,
           "p": 15
+        },
+        {
+          "t": 1792689300133,
+          "p": 15
         }
       ]
     },
@@ -881,7 +964,7 @@
       "directionConfidence": 1,
       "clubs": [],
       "probability": 15,
-      "logit": -1.7332,
+      "logit": -1.7338,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -892,7 +975,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0168,
+        "evidenceSum": 0.0162,
         "corroboration": 0,
         "distinctOutlets": 1,
         "tier1Outlets": 0,
@@ -905,15 +988,15 @@
           "tier": 2,
           "headline": "Huge Troy Parrott to Tottenham transfer claim made as £67.5m fee mooted",
           "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQQzN0c0JlN3lwUFZyZTRfMnpjNlRTb0Ntb0duMFFTLW9WRXZhcE4xcEphWFRXQTNoTk1wVXR5VVRkRkZCTjVvM0p6RGoySlVtYXVTTHotR1pBb2NhN2tMU0kzdTNFY0RHakdaSnNjMW5YRE12U3ZOVmlNNkU3VHFfU2VFaFo5WjNRdmRIWVFNN1VrNEpXS1gxR3pUZzJoM3U10gGmAUFVX3lxTFBaRHFjMTVKVGdUd1EyZzBpXzcxdEZhMnQ0MjNIVHo5Z2ktWk1zOU55SXB5cWZuZmpzUnp1emtNYno0TndmWWViYmlkRE9qckhrT1FzTnRZQ1V6NElua0k5SGRxNjc1Q2RhZVNzZDJLV3NzTXpZb1R5dzhMYmxMV3BFRk4tbURvVmlkVlJOOUgybkwyRlh1ZUplbnpOTU1KcjUtQjNCU0E?oc=5",
-          "publishedAt": "2026-10-14T13:03:34.000Z",
+          "publishedAt": "2026-10-14T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.542,
-          "contribution": 0.0168
+          "recency": 0.523,
+          "contribution": 0.0162
         }
       ],
-      "latestAt": "2026-10-14T13:03:34.000Z",
-      "earliestAt": "2026-10-14T13:03:34.000Z",
+      "latestAt": "2026-10-14T07:00:00.000Z",
+      "earliestAt": "2026-10-14T07:00:00.000Z",
       "heuristicProbability": 15,
       "llm": {
         "adjustment": 0,
@@ -1109,6 +1192,10 @@
         {
           "t": 1792670346613,
           "p": 15
+        },
+        {
+          "t": 1792689300133,
+          "p": 15
         }
       ]
     },
@@ -1119,7 +1206,7 @@
       "directionConfidence": 1,
       "clubs": [],
       "probability": 11,
-      "logit": -1.7379,
+      "logit": -1.7381,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -1130,7 +1217,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0121,
+        "evidenceSum": 0.0119,
         "corroboration": 0,
         "distinctOutlets": 1,
         "tier1Outlets": 0,
@@ -1146,8 +1233,8 @@
           "publishedAt": "2026-10-10T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.391,
-          "contribution": 0.0121
+          "recency": 0.384,
+          "contribution": 0.0119
         }
       ],
       "latestAt": "2026-10-10T07:00:00.000Z",
@@ -1358,6 +1445,10 @@
         },
         {
           "t": 1792670346613,
+          "p": 11
+        },
+        {
+          "t": 1792689300133,
           "p": 11
         }
       ]
