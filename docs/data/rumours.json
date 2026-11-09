@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-11-08T22:11:12.913Z",
+  "generatedAt": "2026-11-09T06:43:48.526Z",
   "counts": {
     "rumours": 12,
     "incoming": 6,
     "outgoing": 6,
     "done": 0,
-    "articles": 205,
-    "transferArticles": 85,
+    "articles": 202,
+    "transferArticles": 84,
     "likely": 0
   },
   "model": {
     "type": "heuristic + LLM review",
     "llm": {
       "model": "gpt-5.6-luna",
-      "sent": 6,
-      "reusedFromCache": 12,
+      "sent": 4,
+      "reusedFromCache": 14,
       "deferred": 0,
-      "adjusted": 1,
+      "adjusted": 2,
       "discarded": 5
     }
   },
@@ -44,41 +44,42 @@
     {
       "name": "Evening Standard — Tottenham",
       "ok": true,
-      "itemCount": 2
+      "itemCount": 3
     },
     {
       "name": "Google News — Tottenham transfer",
       "ok": true,
-      "itemCount": 54
+      "itemCount": 55
     },
     {
       "name": "Google News — Spurs transfer news",
       "ok": true,
-      "itemCount": 9
+      "itemCount": 6
     },
     {
       "name": "Google News — Tottenham sign",
       "ok": true,
-      "itemCount": 20
+      "itemCount": 22
     },
     {
       "name": "Google News — Tottenham exit",
       "ok": true,
-      "itemCount": 19
+      "itemCount": 17
     },
     {
       "name": "Google News — Tottenham medical/agreed",
       "ok": true,
-      "itemCount": 8
+      "itemCount": 7
     },
     {
       "name": "Google News — Tottenham loan",
       "ok": true,
-      "itemCount": 7
+      "itemCount": 6
     }
   ],
   "squadHints": [
-    "harry kane"
+    "harry kane",
+    "luca willliams-barnett"
   ],
   "rumours": [
     {
@@ -87,8 +88,8 @@
       "direction": "in",
       "directionConfidence": 0.3,
       "clubs": [],
-      "probability": 52,
-      "logit": -0.0893,
+      "probability": 51,
+      "logit": -0.1342,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -99,7 +100,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 1.6607,
+        "evidenceSum": 1.6158,
         "corroboration": 0,
         "distinctOutlets": 1,
         "tier1Outlets": 1,
@@ -115,13 +116,13 @@
           "publishedAt": "2026-11-07T20:13:50.000Z",
           "stage": "Imminent",
           "cooler": null,
-          "recency": 0.92,
-          "contribution": 1.6607
+          "recency": 0.895,
+          "contribution": 1.6158
         }
       ],
       "latestAt": "2026-11-07T20:13:50.000Z",
       "earliestAt": "2026-11-07T20:13:50.000Z",
-      "heuristicProbability": 48,
+      "heuristicProbability": 47,
       "llm": {
         "adjustment": 4,
         "note": "Tottenham are reportedly set to sign Lauren Davidson from SK Brann.",
@@ -130,7 +131,7 @@
       },
       "confirmedAt": null,
       "previousProbability": 55,
-      "change": -3,
+      "change": -4,
       "isNew": false,
       "history": [
         {
@@ -148,6 +149,10 @@
         {
           "t": 1794175872913,
           "p": 52
+        },
+        {
+          "t": 1794206628526,
+          "p": 51
         }
       ]
     },
@@ -157,8 +162,8 @@
       "direction": "in",
       "directionConfidence": 0.3,
       "clubs": [],
-      "probability": 52,
-      "logit": -0.0893,
+      "probability": 51,
+      "logit": -0.1342,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -169,7 +174,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 1.6607,
+        "evidenceSum": 1.6158,
         "corroboration": 0,
         "distinctOutlets": 1,
         "tier1Outlets": 1,
@@ -185,13 +190,13 @@
           "publishedAt": "2026-11-07T20:13:50.000Z",
           "stage": "Imminent",
           "cooler": null,
-          "recency": 0.92,
-          "contribution": 1.6607
+          "recency": 0.895,
+          "contribution": 1.6158
         }
       ],
       "latestAt": "2026-11-07T20:13:50.000Z",
       "earliestAt": "2026-11-07T20:13:50.000Z",
-      "heuristicProbability": 48,
+      "heuristicProbability": 47,
       "llm": {
         "adjustment": 4,
         "note": "Tottenham are reportedly set to sign Lauren Davidson from SK Brann.",
@@ -200,7 +205,7 @@
       },
       "confirmedAt": null,
       "previousProbability": 55,
-      "change": -3,
+      "change": -4,
       "isNew": false,
       "history": [
         {
@@ -218,17 +223,24 @@
         {
           "t": 1794175872913,
           "p": 52
+        },
+        {
+          "t": 1794206628526,
+          "p": 51
         }
       ]
     },
     {
-      "id": "out-richarlison",
-      "player": "Richarlison",
-      "direction": "out",
+      "id": "out-harry-kane",
+      "player": "Harry Kane",
+      "direction": "in",
       "directionConfidence": 1,
-      "clubs": [],
-      "probability": 18,
-      "logit": -1.6889,
+      "clubs": [
+        "Bayern Munich",
+        "Arsenal"
+      ],
+      "probability": 20,
+      "logit": -1.6752,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -239,7 +251,341 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0611,
+        "evidenceSum": 0.0748,
+        "corroboration": 0,
+        "distinctOutlets": 6,
+        "tier1Outlets": 0,
+        "totalArticles": 6,
+        "confirmedFloorApplied": false
+      },
+      "evidence": [
+        {
+          "outlet": "Spurs Web",
+          "tier": 4,
+          "headline": "Tottenham transfer roundup: Spurs could battle Arsenal for three targets, plus Harry Kane clause",
+          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQOGtfaXdMbGlWcF9GVzVkUHJSaEdidm5SWUZVREs4WVdmdjFCNHJ1X3RQdmtkcm5PRExuWjV6LS1kUGFTS3JoTU5IaGhlWkpRVnl4TVdJOWtQNmVsaUUxY1Uzdk45OHlkNG5XT0RQZVZJem9jWk5MSkszSVRsY0tQTGc5c0NtRVJZZTV6bWtGU09LVk1jbUxVckxoRUxIV2dZNDZhZVMyTjQwRmg3VmNJdVdjNUFiQnhPRnI4SzMwV0w2UjIwUUp3OEVwVC0?oc=5",
+          "publishedAt": "2026-11-08T19:00:00.000Z",
+          "stage": "Interest / link",
+          "cooler": null,
+          "recency": 0.963,
+          "contribution": 0.0308
+        },
+        {
+          "outlet": "Evening Standard",
+          "tier": 2,
+          "headline": "Tottenham 'retain clause' in Harry Kane contract after new Bayern Munich deal",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPcXNWdlVQV3pGME44WjhyU0ZaZWFyWElpdV84RWt0bVNFTTQ4QWdJYWRBeTRhYkR1TWwxd25YUk9pVVptM2hPX0Y3akRRMmotQjFJTjVwN0lpaFpIWUtBcnlFajVtUWpJSUxVQWtURWt1UXBKNEdXSVk0MWVDYzhUaFVETnZLajFMYVhPMmlheWdTQ3YyZU45OA?oc=5",
+          "publishedAt": "2026-11-06T10:17:02.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.803,
+          "contribution": 0.0178
+        },
+        {
+          "outlet": "football.london",
+          "tier": 2,
+          "headline": "Tottenham's Harry Kane transfer clause after mega Bayern Munich contract announced",
+          "url": "https://www.football.london/tottenham-hotspur-fc/transfer-news/harry-kane-tottenham-transfer-bayern-34869949",
+          "publishedAt": "2026-11-05T21:14:53.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.77,
+          "contribution": 0.0133
+        },
+        {
+          "outlet": "TEAMtalk",
+          "tier": 3,
+          "headline": "Tottenham see Harry Kane return hopes boosted despite new Bayern Munich deal",
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQVUlsZ245WXNnNjBLZTV3Y0hodmhUTkE0b2pWejFmLTVkU0toSS1Fc1pnUDdBZGpOQmhidmtseHRpSWVmMnNVaDczM3doYU03aEstZGFHQ09jUWFYSi1NWjFRNEF2U0thc01vN0pVbHJaczg4aGx0dG14NnljRXltYjM3Tmcxbm9FdndsbDkwWENfaF9WekFZYmZ1R200YU5MemRVWFF2T1p4cE41OXNrVHNoZjBzTmpUcTg4?oc=5",
+          "publishedAt": "2026-11-05T19:53:40.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.767,
+          "contribution": 0.0059
+        },
+        {
+          "outlet": "beIN SPORTS",
+          "tier": 4,
+          "headline": "Harry Kane Reveals What Convinced Him to Leave Tottenham for Bayern Munich",
+          "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOUGM4ZzF6ang5ZldfV0huSUttU1pSak9nRXZVRVhLNzVGQXlScnh6WXdMQVR1R2I2QWJUbEQ0cEFPejhZVVJnaERTVjUzUDRXekFZVE5TQnZHeDhNd1ZlaFphcE1GQ3ZWeWFJREFuREh2TmhQZklrVWtmZGQ1VlJCanc4MER1ZEh1bE9XZDgzRzhBVXpVTkdfel81SGl1aV8zSnVFYUJiN0Faazk5REU3eHZHc0xYbEtuaUZ0ekswRmZ2cmgycXZQNFByLUVTSDFfUVZ0T3BXeUV4dVJ2MXc?oc=5",
+          "publishedAt": "2026-11-05T19:14:24.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.765,
+          "contribution": 0.002
+        },
+        {
+          "outlet": "Football365",
+          "tier": 3,
+          "headline": "Harry Kane transfer boost for Tottenham as contract clause is revealed in new Bayern deal",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNUzVCUFl2UWNjWUg5cWtJZ0N6aTJLbnBVcmtTNjVaVERpdjB0UHVOT3hieHlOY3gzbmdFWi1wQWhmNlk3aERNeVpBdU4zWkJQOWFhTkd1THZrTHUxai0wMVlKZXozaG1Gd3I2bGxDbzFBOUppZ3E3am9hLVNCbkwycDc4NDR5bFJka3VQY3ExSVhWdDEwZDF2eV9QT0Z2QnFLWjdnV2lfeU82MHc?oc=5",
+          "publishedAt": "2026-11-05T16:43:50.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.759,
+          "contribution": 0.005
+        }
+      ],
+      "latestAt": "2026-11-08T19:00:00.000Z",
+      "earliestAt": "2026-11-05T16:43:50.000Z",
+      "heuristicProbability": 16,
+      "llm": {
+        "adjustment": 4,
+        "note": "A contractual clause and multiple reports concern a potential Kane return to Tottenham from Bayern Munich.",
+        "renamedFrom": null,
+        "redirectedFrom": "out"
+      },
+      "confirmedAt": null,
+      "previousProbability": 16,
+      "change": 4,
+      "isNew": false,
+      "history": [
+        {
+          "t": 1790798687364,
+          "p": 16
+        },
+        {
+          "t": 1790814909867,
+          "p": 16
+        },
+        {
+          "t": 1790849607238,
+          "p": 16
+        },
+        {
+          "t": 1790879198388,
+          "p": 16
+        },
+        {
+          "t": 1790902196932,
+          "p": 9
+        },
+        {
+          "t": 1790963617278,
+          "p": 20
+        },
+        {
+          "t": 1793922011368,
+          "p": 22
+        },
+        {
+          "t": 1793948066667,
+          "p": 22
+        },
+        {
+          "t": 1793983668533,
+          "p": 22
+        },
+        {
+          "t": 1794006817186,
+          "p": 16
+        },
+        {
+          "t": 1794031527300,
+          "p": 16
+        },
+        {
+          "t": 1794057053802,
+          "p": 16
+        },
+        {
+          "t": 1794079646970,
+          "p": 19
+        },
+        {
+          "t": 1794098527307,
+          "p": 19
+        },
+        {
+          "t": 1794133718641,
+          "p": 18
+        },
+        {
+          "t": 1794160613318,
+          "p": 18
+        },
+        {
+          "t": 1794175872913,
+          "p": 16
+        },
+        {
+          "t": 1794206628526,
+          "p": 20
+        }
+      ]
+    },
+    {
+      "id": "in-conor-gallagher",
+      "player": "Conor Gallagher",
+      "direction": "out",
+      "directionConfidence": 0.3,
+      "clubs": [
+        "Leeds",
+        "Everton"
+      ],
+      "probability": 19,
+      "logit": -1.667,
+      "done": false,
+      "confirmedBy": [],
+      "stage": {
+        "id": "interest",
+        "label": "Interest / link",
+        "value": 0.2
+      },
+      "cooler": null,
+      "breakdown": {
+        "prior": -1.75,
+        "evidenceSum": 0.083,
+        "corroboration": 0,
+        "distinctOutlets": 5,
+        "tier1Outlets": 0,
+        "totalArticles": 5,
+        "confirmedFloorApplied": false
+      },
+      "evidence": [
+        {
+          "outlet": "Spurs Web",
+          "tier": 4,
+          "headline": "Tottenham make Conor Gallagher transfer stance clear amid Premier League interest",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNa05Va19kd1Npd2VzMkQyUzhJcHNsNklQSGFsd290d3FyZ3g1dnI3Ym8yNUtMd19hSHk4djAwQzc0MFFpT05UNkdKR05lc3hReFctLUs0VDlGV0FLZkROWnhoMDZraldJYmw2LW40aG8xSWNHZXdrTTBFZWJLV2xBOUJkMjZMVnotU0YyQXFrcTB3VVVXZlpKeEdDdmQzZTJnMnpsMnlVMGdBMWEwUHVtSXQ1NHhHYkJLSEI5TEVB?oc=5",
+          "publishedAt": "2026-11-08T21:30:00.000Z",
+          "stage": "Interest / link",
+          "cooler": null,
+          "recency": 0.971,
+          "contribution": 0.0311
+        },
+        {
+          "outlet": "Football Insider",
+          "tier": 2,
+          "headline": "Tottenham backed to agree Conor Gallagher loan-to-buy deal - club adviser",
+          "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQSmNmQnlqUGk1cV9Lb2hZNXdlVXd3cHkxZmlleGZCWWgzbkxqNnFQVUNRRnA3TkNJUnVyOW5rNi1kbU1aTzBRcGJEZmlqVG5BSVBkVUN6UDU5bTNNMEQyOHB4RnB4OERiN3FHUDdRQVZDdjRmS2cybzhSa094RDFRWlFRdkFhYzZsWVZVR1NubktHcVJZaDZSSlptNTQxZ09pM3hiRHZuemZrQ2RVNHZpWDVuaG50U203MUxrVkFZTHdhYjlITjMwVk5pTUV2MXc?oc=5",
+          "publishedAt": "2026-11-08T17:00:00.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.957,
+          "contribution": 0.0165
+        },
+        {
+          "outlet": "Yahoo Sports",
+          "tier": 3,
+          "headline": "Where Tottenham stand on Conor Gallagher exit amid Everton transfer latest",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNZDZ1UWd3MTg3UHplQmo5NXdDVUQzQldaM2pqZ0tkN3hxTnRUV1ZTT3NBQjJkNXRuX0FzY0E5M2I4bF9MUTBXcGlIMElJR0xqT2FBVUZ3N0Zid2F1MHZMVklYRTJ5cjdvRFVhOXpzM0huSl8wWTNCb0ozUTE4bHZrRXJVemNhSnplOWd6Tm16OA?oc=5",
+          "publishedAt": "2026-11-08T16:00:00.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.954,
+          "contribution": 0.0074
+        },
+        {
+          "outlet": "YSscores",
+          "tier": 4,
+          "headline": "3 English clubs chase Conor Gallagher as Tottenham… | Yalla Shoot",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOb3k5VWlsMmd1OGlWWkxnOVZDQ0pCV09FZWpwYjlPM0lId2djbkQ1WnMyckhQMTNKMVVFWUtJT0RLbFpITktRX05xX3lPNUtrWnhXTW5iYldsSXlOQzhvRmhmWWYtTm9oR1JRZDNMakhrYkJGLU9YM2lYclV0X1AwS2dXLWpyUjB5TDVqVmRmSFIwdHY1QnVQeVk3QzRUNWlYZmFaUGhJVWVfMEp6SFZTZ0dn?oc=5",
+          "publishedAt": "2026-11-08T15:26:38.000Z",
+          "stage": "Interest / link",
+          "cooler": null,
+          "recency": 0.952,
+          "contribution": 0.0218
+        },
+        {
+          "outlet": "Football365",
+          "tier": 3,
+          "headline": "Tottenham: Roberto De Zerbi reaches decision on selling Conor Gallagher to Leeds",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQVUhIN0hDdTYxQ0xpckpxWlJQX3pLc3dUMVhGMmtISmVPQ2d0bDlaSkMwTlN1UjBtcEpWOWRMSG04QTBoMTEyLTRTRmh4R0VlQnhPdEhkOFBXMG9SdXpxOUtmcHRPR3BGNGZ6bEt3ODg5XzhvTl90MG53ZGZzYXktaVMxVklVWXV5MjZXeVBLWVFaTUJrWGp4X1NTODdMMEZJZl9V?oc=5",
+          "publishedAt": "2026-11-08T14:01:33.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.948,
+          "contribution": 0.0062
+        }
+      ],
+      "latestAt": "2026-11-08T21:30:00.000Z",
+      "earliestAt": "2026-11-08T14:01:33.000Z",
+      "heuristicProbability": 16,
+      "llm": {
+        "adjustment": 3,
+        "note": "Headlines consistently describe Tottenham considering Gallagher's sale or exit, including possible moves to Everton or Leeds.",
+        "renamedFrom": null,
+        "redirectedFrom": "in"
+      },
+      "confirmedAt": null,
+      "previousProbability": 9,
+      "change": 10,
+      "isNew": false,
+      "history": [
+        {
+          "t": 1793618277035,
+          "p": 15
+        },
+        {
+          "t": 1793725591054,
+          "p": 15
+        },
+        {
+          "t": 1793748417123,
+          "p": 8
+        },
+        {
+          "t": 1793773981330,
+          "p": 16
+        },
+        {
+          "t": 1793812702517,
+          "p": 16
+        },
+        {
+          "t": 1793835831285,
+          "p": 12
+        },
+        {
+          "t": 1793861688468,
+          "p": 16
+        },
+        {
+          "t": 1793899624782,
+          "p": 9
+        },
+        {
+          "t": 1793922011368,
+          "p": 9
+        },
+        {
+          "t": 1793948066667,
+          "p": 9
+        },
+        {
+          "t": 1794160613318,
+          "p": 19
+        },
+        {
+          "t": 1794175872913,
+          "p": 16
+        },
+        {
+          "t": 1794206628526,
+          "p": 19
+        }
+      ]
+    },
+    {
+      "id": "out-richarlison",
+      "player": "Richarlison",
+      "direction": "out",
+      "directionConfidence": 1,
+      "clubs": [],
+      "probability": 18,
+      "logit": -1.6905,
+      "done": false,
+      "confirmedBy": [],
+      "stage": {
+        "id": "interest",
+        "label": "Interest / link",
+        "value": 0.2
+      },
+      "cooler": null,
+      "breakdown": {
+        "prior": -1.75,
+        "evidenceSum": 0.0595,
         "corroboration": 0,
         "distinctOutlets": 2,
         "tier1Outlets": 0,
@@ -255,8 +601,8 @@
           "publishedAt": "2026-11-07T00:21:50.000Z",
           "stage": "Interest / link",
           "cooler": null,
-          "recency": 0.863,
-          "contribution": 0.0587
+          "recency": 0.84,
+          "contribution": 0.0571
         },
         {
           "outlet": "Sports Mole",
@@ -284,10 +630,6 @@
       "change": 0,
       "isNew": false,
       "history": [
-        {
-          "t": 1792619171708,
-          "p": 15
-        },
         {
           "t": 1792644952219,
           "p": 15
@@ -523,335 +865,10 @@
         {
           "t": 1794175872913,
           "p": 18
-        }
-      ]
-    },
-    {
-      "id": "in-conor-gallagher",
-      "player": "Conor Gallagher",
-      "direction": "out",
-      "directionConfidence": 0.3,
-      "clubs": [
-        "Everton",
-        "Leeds"
-      ],
-      "probability": 16,
-      "logit": -1.6623,
-      "done": false,
-      "confirmedBy": [],
-      "stage": {
-        "id": "interest",
-        "label": "Interest / link",
-        "value": 0.2
-      },
-      "cooler": null,
-      "breakdown": {
-        "prior": -1.75,
-        "evidenceSum": 0.0877,
-        "corroboration": 0,
-        "distinctOutlets": 6,
-        "tier1Outlets": 0,
-        "totalArticles": 6,
-        "confirmedFloorApplied": false
-      },
-      "evidence": [
-        {
-          "outlet": "Spurs Web",
-          "tier": 4,
-          "headline": "Tottenham make Conor Gallagher transfer stance clear amid Premier League interest",
-          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNa05Va19kd1Npd2VzMkQyUzhJcHNsNklQSGFsd290d3FyZ3g1dnI3Ym8yNUtMd19hSHk4djAwQzc0MFFpT05UNkdKR05lc3hReFctLUs0VDlGV0FLZkROWnhoMDZraldJYmw2LW40aG8xSWNHZXdrTTBFZWJLV2xBOUJkMjZMVnotU0YyQXFrcTB3VVVXZlpKeEdDdmQzZTJnMnpsMnlVMGdBMWEwUHVtSXQ1NHhHYkJLSEI5TEVB?oc=5",
-          "publishedAt": "2026-11-08T21:30:00.000Z",
-          "stage": "Interest / link",
-          "cooler": null,
-          "recency": 0.998,
-          "contribution": 0.0319
         },
         {
-          "outlet": "Football Insider",
-          "tier": 2,
-          "headline": "Tottenham backed to agree Conor Gallagher loan-to-buy deal - club adviser",
-          "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQSmNmQnlqUGk1cV9Lb2hZNXdlVXd3cHkxZmlleGZCWWgzbkxqNnFQVUNRRnA3TkNJUnVyOW5rNi1kbU1aTzBRcGJEZmlqVG5BSVBkVUN6UDU5bTNNMEQyOHB4RnB4OERiN3FHUDdRQVZDdjRmS2cybzhSa094RDFRWlFRdkFhYzZsWVZVR1NubktHcVJZaDZSSlptNTQxZ09pM3hiRHZuemZrQ2RVNHZpWDVuaG50U203MUxrVkFZTHdhYjlITjMwVk5pTUV2MXc?oc=5",
-          "publishedAt": "2026-11-08T17:00:00.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.983,
-          "contribution": 0.0169
-        },
-        {
-          "outlet": "Yahoo Sports",
-          "tier": 3,
-          "headline": "Where Tottenham stand on Conor Gallagher exit amid Everton transfer latest",
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNZDZ1UWd3MTg3UHplQmo5NXdDVUQzQldaM2pqZ0tkN3hxTnRUV1ZTT3NBQjJkNXRuX0FzY0E5M2I4bF9MUTBXcGlIMElJR0xqT2FBVUZ3N0Zid2F1MHZMVklYRTJ5cjdvRFVhOXpzM0huSl8wWTNCb0ozUTE4bHZrRXJVemNhSnplOWd6Tm16OA?oc=5",
-          "publishedAt": "2026-11-08T16:00:00.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.98,
-          "contribution": 0.0076
-        },
-        {
-          "outlet": "Goodison News",
-          "tier": 4,
-          "headline": "Where Tottenham stand on Conor Gallagher exit amid Everton transfer latest",
-          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPVDFvT2dwWkN6bHZmTk1UVjJnbmdOMXJ1cmR0amtxZXFKRUpNLVBMOXNpUHMweWlPd2dyamhIRWFvdWhYVUdMejItekZzcFRQYlUwOUJwOHNiWHpUWFFoeGRyMGZtejloQXA4Y3VMVzRiaHVabEhOLXdQd0U1dTV2MVp0MlNzcl85ekNaTzd3UHZpN01fMkVzbzhtVE1sTlBPTVBoUmgtMEd2V3F4NlVpbmgtTQ?oc=5",
-          "publishedAt": "2026-11-08T16:00:00.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.98,
-          "contribution": 0.0026
-        },
-        {
-          "outlet": "YSscores",
-          "tier": 4,
-          "headline": "3 English clubs chase Conor Gallagher as Tottenham… | Yalla Shoot",
-          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOb3k5VWlsMmd1OGlWWkxnOVZDQ0pCV09FZWpwYjlPM0lId2djbkQ1WnMyckhQMTNKMVVFWUtJT0RLbFpITktRX05xX3lPNUtrWnhXTW5iYldsSXlOQzhvRmhmWWYtTm9oR1JRZDNMakhrYkJGLU9YM2lYclV0X1AwS2dXLWpyUjB5TDVqVmRmSFIwdHY1QnVQeVk3QzRUNWlYZmFaUGhJVWVfMEp6SFZTZ0dn?oc=5",
-          "publishedAt": "2026-11-08T15:26:38.000Z",
-          "stage": "Interest / link",
-          "cooler": null,
-          "recency": 0.979,
-          "contribution": 0.0224
-        },
-        {
-          "outlet": "Football365",
-          "tier": 3,
-          "headline": "Tottenham: Roberto De Zerbi reaches decision on selling Conor Gallagher to Leeds",
-          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQVUhIN0hDdTYxQ0xpckpxWlJQX3pLc3dUMVhGMmtISmVPQ2d0bDlaSkMwTlN1UjBtcEpWOWRMSG04QTBoMTEyLTRTRmh4R0VlQnhPdEhkOFBXMG9SdXpxOUtmcHRPR3BGNGZ6bEt3ODg5XzhvTl90MG53ZGZzYXktaVMxVklVWXV5MjZXeVBLWVFaTUJrWGp4X1NTODdMMEZJZl9V?oc=5",
-          "publishedAt": "2026-11-08T12:55:14.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.971,
-          "contribution": 0.0063
-        }
-      ],
-      "latestAt": "2026-11-08T21:30:00.000Z",
-      "earliestAt": "2026-11-08T12:55:14.000Z",
-      "heuristicProbability": 16,
-      "llm": {
-        "adjustment": 0,
-        "note": "The headlines primarily discuss Tottenham potentially selling or loaning Gallagher to another club.",
-        "renamedFrom": null,
-        "redirectedFrom": "in"
-      },
-      "confirmedAt": null,
-      "previousProbability": 9,
-      "change": 7,
-      "isNew": false,
-      "history": [
-        {
-          "t": 1793618277035,
-          "p": 15
-        },
-        {
-          "t": 1793725591054,
-          "p": 15
-        },
-        {
-          "t": 1793748417123,
-          "p": 8
-        },
-        {
-          "t": 1793773981330,
-          "p": 16
-        },
-        {
-          "t": 1793812702517,
-          "p": 16
-        },
-        {
-          "t": 1793835831285,
-          "p": 12
-        },
-        {
-          "t": 1793861688468,
-          "p": 16
-        },
-        {
-          "t": 1793899624782,
-          "p": 9
-        },
-        {
-          "t": 1793922011368,
-          "p": 9
-        },
-        {
-          "t": 1793948066667,
-          "p": 9
-        },
-        {
-          "t": 1794160613318,
-          "p": 19
-        },
-        {
-          "t": 1794175872913,
-          "p": 16
-        }
-      ]
-    },
-    {
-      "id": "out-harry-kane",
-      "player": "Harry Kane",
-      "direction": "in",
-      "directionConfidence": 1,
-      "clubs": [
-        "Bayern Munich",
-        "Arsenal"
-      ],
-      "probability": 16,
-      "logit": -1.685,
-      "done": false,
-      "confirmedBy": [],
-      "stage": {
-        "id": "interest",
-        "label": "Interest / link",
-        "value": 0.2
-      },
-      "cooler": null,
-      "breakdown": {
-        "prior": -1.75,
-        "evidenceSum": 0.065,
-        "corroboration": 0,
-        "distinctOutlets": 5,
-        "tier1Outlets": 0,
-        "totalArticles": 5,
-        "confirmedFloorApplied": false
-      },
-      "evidence": [
-        {
-          "outlet": "Spurs Web",
-          "tier": 4,
-          "headline": "Tottenham transfer roundup: Spurs could battle Arsenal for three targets, plus Harry Kane clause",
-          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQOGtfaXdMbGlWcF9GVzVkUHJSaEdidm5SWUZVREs4WVdmdjFCNHJ1X3RQdmtkcm5PRExuWjV6LS1kUGFTS3JoTU5IaGhlWkpRVnl4TVdJOWtQNmVsaUUxY1Uzdk45OHlkNG5XT0RQZVZJem9jWk5MSkszSVRsY0tQTGc5c0NtRVJZZTV6bWtGU09LVk1jbUxVckxoRUxIV2dZNDZhZVMyTjQwRmg3VmNJdVdjNUFiQnhPRnI4SzMwV0w2UjIwUUp3OEVwVC0?oc=5",
-          "publishedAt": "2026-11-08T19:00:00.000Z",
-          "stage": "Interest / link",
-          "cooler": null,
-          "recency": 0.99,
-          "contribution": 0.0317
-        },
-        {
-          "outlet": "football.london",
-          "tier": 2,
-          "headline": "Tottenham's Harry Kane transfer clause after mega Bayern Munich contract announced",
-          "url": "https://www.football.london/tottenham-hotspur-fc/transfer-news/harry-kane-tottenham-transfer-bayern-34869949",
-          "publishedAt": "2026-11-05T21:14:53.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.791,
-          "contribution": 0.0175
-        },
-        {
-          "outlet": "TEAMtalk",
-          "tier": 3,
-          "headline": "Tottenham see Harry Kane return hopes boosted despite new Bayern Munich deal",
-          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQVUlsZ245WXNnNjBLZTV3Y0hodmhUTkE0b2pWejFmLTVkU0toSS1Fc1pnUDdBZGpOQmhidmtseHRpSWVmMnNVaDczM3doYU03aEstZGFHQ09jUWFYSi1NWjFRNEF2U0thc01vN0pVbHJaczg4aGx0dG14NnljRXltYjM3Tmcxbm9FdndsbDkwWENfaF9WekFZYmZ1R200YU5MemRVWFF2T1p4cE41OXNrVHNoZjBzTmpUcTg4?oc=5",
-          "publishedAt": "2026-11-05T19:53:40.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.788,
-          "contribution": 0.0074
-        },
-        {
-          "outlet": "beIN SPORTS",
-          "tier": 4,
-          "headline": "Harry Kane Reveals What Convinced Him to Leave Tottenham for Bayern Munich",
-          "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOUGM4ZzF6ang5ZldfV0huSUttU1pSak9nRXZVRVhLNzVGQXlScnh6WXdMQVR1R2I2QWJUbEQ0cEFPejhZVVJnaERTVjUzUDRXekFZVE5TQnZHeDhNd1ZlaFphcE1GQ3ZWeWFJREFuREh2TmhQZklrVWtmZGQ1VlJCanc4MER1ZEh1bE9XZDgzRzhBVXpVTkdfel81SGl1aV8zSnVFYUJiN0Faazk5REU3eHZHc0xYbEtuaUZ0ekswRmZ2cmgycXZQNFByLUVTSDFfUVZ0T3BXeUV4dVJ2MXc?oc=5",
-          "publishedAt": "2026-11-05T19:14:24.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.786,
-          "contribution": 0.0024
-        },
-        {
-          "outlet": "Football365",
-          "tier": 3,
-          "headline": "Harry Kane transfer boost for Tottenham as contract clause is revealed in new Bayern deal",
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNUzVCUFl2UWNjWUg5cWtJZ0N6aTJLbnBVcmtTNjVaVERpdjB0UHVOT3hieHlOY3gzbmdFWi1wQWhmNlk3aERNeVpBdU4zWkJQOWFhTkd1THZrTHUxai0wMVlKZXozaG1Gd3I2bGxDbzFBOUppZ3E3am9hLVNCbkwycDc4NDR5bFJka3VQY3ExSVhWdDEwZDF2eV9QT0Z2QnFLWjdnV2lfeU82MHc?oc=5",
-          "publishedAt": "2026-11-05T16:43:50.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.78,
-          "contribution": 0.006
-        }
-      ],
-      "latestAt": "2026-11-08T19:00:00.000Z",
-      "earliestAt": "2026-11-05T16:43:50.000Z",
-      "heuristicProbability": 16,
-      "llm": {
-        "adjustment": 0,
-        "note": "The headlines discuss a possible return to Tottenham, despite Kane's existing Bayern Munich deal.",
-        "renamedFrom": null,
-        "redirectedFrom": "out"
-      },
-      "confirmedAt": null,
-      "previousProbability": 16,
-      "change": 0,
-      "isNew": false,
-      "history": [
-        {
-          "t": 1790798687364,
-          "p": 16
-        },
-        {
-          "t": 1790814909867,
-          "p": 16
-        },
-        {
-          "t": 1790849607238,
-          "p": 16
-        },
-        {
-          "t": 1790879198388,
-          "p": 16
-        },
-        {
-          "t": 1790902196932,
-          "p": 9
-        },
-        {
-          "t": 1790963617278,
-          "p": 20
-        },
-        {
-          "t": 1793922011368,
-          "p": 22
-        },
-        {
-          "t": 1793948066667,
-          "p": 22
-        },
-        {
-          "t": 1793983668533,
-          "p": 22
-        },
-        {
-          "t": 1794006817186,
-          "p": 16
-        },
-        {
-          "t": 1794031527300,
-          "p": 16
-        },
-        {
-          "t": 1794057053802,
-          "p": 16
-        },
-        {
-          "t": 1794079646970,
-          "p": 19
-        },
-        {
-          "t": 1794098527307,
-          "p": 19
-        },
-        {
-          "t": 1794133718641,
+          "t": 1794206628526,
           "p": 18
-        },
-        {
-          "t": 1794160613318,
-          "p": 18
-        },
-        {
-          "t": 1794175872913,
-          "p": 16
         }
       ]
     },
@@ -864,7 +881,7 @@
         "Manchester United"
       ],
       "probability": 16,
-      "logit": -1.741,
+      "logit": -1.7413,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -875,7 +892,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.009,
+        "evidenceSum": 0.0087,
         "corroboration": 0,
         "distinctOutlets": 2,
         "tier1Outlets": 0,
@@ -891,8 +908,8 @@
           "publishedAt": "2026-11-08T07:20:55.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.953,
-          "contribution": 0.0076
+          "recency": 0.928,
+          "contribution": 0.0074
         },
         {
           "outlet": "FourFourTwo",
@@ -902,8 +919,8 @@
           "publishedAt": "2026-10-21T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.238,
-          "contribution": 0.0014
+          "recency": 0.232,
+          "contribution": 0.0013
         }
       ],
       "latestAt": "2026-11-08T07:20:55.000Z",
@@ -920,10 +937,6 @@
       "change": 1,
       "isNew": false,
       "history": [
-        {
-          "t": 1790312534982,
-          "p": 15
-        },
         {
           "t": 1790337333949,
           "p": 15
@@ -1019,301 +1032,9 @@
         {
           "t": 1794175872913,
           "p": 16
-        }
-      ]
-    },
-    {
-      "id": "out-lucas-bergvall",
-      "player": "Lucas Bergvall",
-      "direction": "out",
-      "directionConfidence": 1,
-      "clubs": [
-        "Barcelona"
-      ],
-      "probability": 16,
-      "logit": -1.6559,
-      "done": false,
-      "confirmedBy": [],
-      "stage": {
-        "id": "interest",
-        "label": "Interest / link",
-        "value": 0.2
-      },
-      "cooler": null,
-      "breakdown": {
-        "prior": -1.75,
-        "evidenceSum": 0.0941,
-        "corroboration": 0,
-        "distinctOutlets": 1,
-        "tier1Outlets": 0,
-        "totalArticles": 1,
-        "confirmedFloorApplied": false
-      },
-      "evidence": [
-        {
-          "outlet": "Goal.com",
-          "tier": 2,
-          "headline": "Tottenham set one key condition before sanctioning Lucas Bergvall exit in the January window amid fresh transfer links to Barcelona",
-          "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOWmM3dm14YnVlWkpjbnA2eHJvRTRSQVZvY0N5cExWQm03UEtfOEhNUXpMQURIU0lkeU1Va1dteTVBTm5WcF9Odk44UTh5OF9fYU9jRnlnb1NERHoyVG1lSzVYRG9ta3dINnZpem8zTkt6RWgwSHN1S01IZGNjdkxPNWJLcVpsVDBUOWsxdmJPN0t2OU92UkxoeW1aeFYxWG5aZDU0ZE95UmJsVWhPRXl1NExHUmF5NHVROHQ4aDVWdDJoR3ZtTUFVMXpWV3ZMQ1pkanJmbF9n?oc=5",
-          "publishedAt": "2026-11-05T08:09:13.000Z",
-          "stage": "Interest / link",
-          "cooler": null,
-          "recency": 0.759,
-          "contribution": 0.0941
-        }
-      ],
-      "latestAt": "2026-11-05T08:09:13.000Z",
-      "earliestAt": "2026-11-05T08:09:13.000Z",
-      "heuristicProbability": 16,
-      "llm": {
-        "adjustment": 0,
-        "note": "Tottenham are reportedly considering conditions for Bergvall's potential January departure amid Barcelona links.",
-        "renamedFrom": null,
-        "redirectedFrom": null
-      },
-      "confirmedAt": null,
-      "previousProbability": 11,
-      "change": 5,
-      "isNew": false,
-      "history": [
-        {
-          "t": 1791379851595,
-          "p": 11
         },
         {
-          "t": 1791405551651,
-          "p": 15
-        },
-        {
-          "t": 1791421355750,
-          "p": 15
-        },
-        {
-          "t": 1791456035552,
-          "p": 16
-        },
-        {
-          "t": 1791485564747,
-          "p": 16
-        },
-        {
-          "t": 1791508495602,
-          "p": 11
-        },
-        {
-          "t": 1791542375582,
-          "p": 11
-        },
-        {
-          "t": 1791570195391,
-          "p": 11
-        },
-        {
-          "t": 1791593748720,
-          "p": 11
-        },
-        {
-          "t": 1791626137764,
-          "p": 7
-        },
-        {
-          "t": 1791652916025,
-          "p": 7
-        },
-        {
-          "t": 1791668896018,
-          "p": 7
-        },
-        {
-          "t": 1791698007475,
-          "p": 7
-        },
-        {
-          "t": 1791723440072,
-          "p": 5
-        },
-        {
-          "t": 1791747284882,
-          "p": 5
-        },
-        {
-          "t": 1791765366525,
-          "p": 5
-        },
-        {
-          "t": 1791874234290,
-          "p": 15
-        },
-        {
-          "t": 1791910718172,
-          "p": 15
-        },
-        {
-          "t": 1791931773938,
-          "p": 15
-        },
-        {
-          "t": 1791953952644,
-          "p": 15
-        },
-        {
-          "t": 1791979165389,
-          "p": 15
-        },
-        {
-          "t": 1791998192014,
-          "p": 15
-        },
-        {
-          "t": 1792014308669,
-          "p": 15
-        },
-        {
-          "t": 1792039625273,
-          "p": 15
-        },
-        {
-          "t": 1792064168670,
-          "p": 15
-        },
-        {
-          "t": 1792083928919,
-          "p": 15
-        },
-        {
-          "t": 1792099650181,
-          "p": 15
-        },
-        {
-          "t": 1792125450150,
-          "p": 15
-        },
-        {
-          "t": 1792150216962,
-          "p": 15
-        },
-        {
-          "t": 1792322068242,
-          "p": 15
-        },
-        {
-          "t": 1792338913034,
-          "p": 15
-        },
-        {
-          "t": 1792356572767,
-          "p": 15
-        },
-        {
-          "t": 1792365467195,
-          "p": 15
-        },
-        {
-          "t": 1792385269855,
-          "p": 15
-        },
-        {
-          "t": 1792416366914,
-          "p": 15
-        },
-        {
-          "t": 1792442207560,
-          "p": 15
-        },
-        {
-          "t": 1792558560624,
-          "p": 15
-        },
-        {
-          "t": 1792583820831,
-          "p": 15
-        },
-        {
-          "t": 1793091909506,
-          "p": 15
-        },
-        {
-          "t": 1793114619946,
-          "p": 15
-        },
-        {
-          "t": 1793139564621,
-          "p": 16
-        },
-        {
-          "t": 1793166551903,
-          "p": 16
-        },
-        {
-          "t": 1793192563526,
-          "p": 17
-        },
-        {
-          "t": 1793218774301,
-          "p": 18
-        },
-        {
-          "t": 1793235626623,
-          "p": 16
-        },
-        {
-          "t": 1793298626406,
-          "p": 18
-        },
-        {
-          "t": 1793322321536,
-          "p": 16
-        },
-        {
-          "t": 1793354838452,
-          "p": 16
-        },
-        {
-          "t": 1793425866650,
-          "p": 15
-        },
-        {
-          "t": 1793899624782,
-          "p": 10
-        },
-        {
-          "t": 1793922011368,
-          "p": 5
-        },
-        {
-          "t": 1793948066667,
-          "p": 5
-        },
-        {
-          "t": 1793983668533,
-          "p": 19
-        },
-        {
-          "t": 1794006817186,
-          "p": 18
-        },
-        {
-          "t": 1794031527300,
-          "p": 11
-        },
-        {
-          "t": 1794057053802,
-          "p": 16
-        },
-        {
-          "t": 1794079646970,
-          "p": 19
-        },
-        {
-          "t": 1794098527307,
-          "p": 17
-        },
-        {
-          "t": 1794133718641,
-          "p": 17
-        },
-        {
-          "t": 1794175872913,
+          "t": 1794206628526,
           "p": 16
         }
       ]
@@ -1328,7 +1049,7 @@
         "Liverpool"
       ],
       "probability": 15,
-      "logit": -1.7068,
+      "logit": -1.708,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -1339,7 +1060,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0432,
+        "evidenceSum": 0.042,
         "corroboration": 0,
         "distinctOutlets": 2,
         "tier1Outlets": 0,
@@ -1355,8 +1076,8 @@
           "publishedAt": "2026-11-05T20:29:20.000Z",
           "stage": "Interest / link",
           "cooler": null,
-          "recency": 0.789,
-          "contribution": 0.0253
+          "recency": 0.768,
+          "contribution": 0.0246
         },
         {
           "outlet": "TheHardTackle.com",
@@ -1366,8 +1087,8 @@
           "publishedAt": "2026-11-05T17:46:18.000Z",
           "stage": "Interest / link",
           "cooler": null,
-          "recency": 0.783,
-          "contribution": 0.0179
+          "recency": 0.761,
+          "contribution": 0.0174
         }
       ],
       "latestAt": "2026-11-05T20:29:20.000Z",
@@ -1414,6 +1135,88 @@
         },
         {
           "t": 1794175872913,
+          "p": 15
+        },
+        {
+          "t": 1794206628526,
+          "p": 15
+        }
+      ]
+    },
+    {
+      "id": "out-luca-willliams-barnett",
+      "player": "Luca Williams-Barnett",
+      "direction": "out",
+      "directionConfidence": 1,
+      "clubs": [],
+      "probability": 15,
+      "logit": -1.7249,
+      "done": false,
+      "confirmedBy": [],
+      "stage": {
+        "id": "mention",
+        "label": "Mentioned only",
+        "value": 0.05
+      },
+      "cooler": null,
+      "breakdown": {
+        "prior": -1.75,
+        "evidenceSum": 0.0251,
+        "corroboration": 0,
+        "distinctOutlets": 1,
+        "tier1Outlets": 0,
+        "totalArticles": 1,
+        "confirmedFloorApplied": false
+      },
+      "evidence": [
+        {
+          "outlet": "Football Insider",
+          "tier": 2,
+          "headline": "Tottenham's Luca Willliams-Barnett transfer decision revealed - Sources",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOVnJFYU94TFd4VXA1emUyTUFpUmZFYWVqU24tZnBuSGdwS1doMURxMW0ydUdhYW9yNmdNa25KTGV0VGdNWEZscGZEa1I2ZE5wM1NQYml0NVdUUFAyMUNLQzdZMno5cFJ1WC1BYUZObDhhYlBiQ0ZxTW1zTm5ndEg4RHI1UUhPLVZkSFFjbjlKUVZtTXNsYy1JeklLUWJGOUVFb255TnRKYnhjUkFicDBJekUtcVhtVnptV1pMVWdn?oc=5",
+          "publishedAt": "2026-11-06T13:29:36.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.811,
+          "contribution": 0.0251
+        }
+      ],
+      "latestAt": "2026-11-06T13:29:36.000Z",
+      "earliestAt": "2026-11-06T13:29:36.000Z",
+      "heuristicProbability": 15,
+      "llm": {
+        "adjustment": 0,
+        "note": "Tottenham are reportedly deciding the young player's future, indicating a possible departure.",
+        "renamedFrom": "Luca Willliams-Barnett",
+        "redirectedFrom": null
+      },
+      "confirmedAt": null,
+      "previousProbability": 15,
+      "change": 0,
+      "isNew": false,
+      "history": [
+        {
+          "t": 1793983668533,
+          "p": 15
+        },
+        {
+          "t": 1794006817186,
+          "p": 15
+        },
+        {
+          "t": 1794031527300,
+          "p": 15
+        },
+        {
+          "t": 1794079646970,
+          "p": 15
+        },
+        {
+          "t": 1794098527307,
+          "p": 15
+        },
+        {
+          "t": 1794206628526,
           "p": 15
         }
       ]
@@ -1470,10 +1273,6 @@
       "change": 0,
       "isNew": false,
       "history": [
-        {
-          "t": 1792338913034,
-          "p": 15
-        },
         {
           "t": 1792356572767,
           "p": 15
@@ -1709,299 +1508,9 @@
         {
           "t": 1794175872913,
           "p": 15
-        }
-      ]
-    },
-    {
-      "id": "out-pedro-porro",
-      "player": "Pedro Porro",
-      "direction": "out",
-      "directionConfidence": 1,
-      "clubs": [],
-      "probability": 15,
-      "logit": -1.7336,
-      "done": false,
-      "confirmedBy": [],
-      "stage": {
-        "id": "mention",
-        "label": "Mentioned only",
-        "value": 0.05
-      },
-      "cooler": null,
-      "breakdown": {
-        "prior": -1.75,
-        "evidenceSum": 0.0164,
-        "corroboration": 0,
-        "distinctOutlets": 1,
-        "tier1Outlets": 0,
-        "totalArticles": 1,
-        "confirmedFloorApplied": false
-      },
-      "evidence": [
-        {
-          "outlet": "Football365",
-          "tier": 3,
-          "headline": "Tottenham: Pedro Porro snubs Premier League trio as decision reached on next move",
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPcXhyOXRXdC1ETGdUdlhic2xtd2liZnJlOEpCTXJubkJIempLVy1TWmRRWU9LSWRIZ25NVGxpQ2ZDOV95SWR5VWZ4aFFUVkJ5eGNzUE4zLXF6S1hLaktHd0xiQnlhZGlnQ01pa2QyWHFrbmllTWk5NlJQT1lMdWF3VkEzbXFDSTJnYTJvR0NZbmY5aEZtTHNURXlpd0lNMzN5NjBCdGJZQzhyTkE?oc=5",
-          "publishedAt": "2026-11-08T10:27:18.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.963,
-          "contribution": 0.0164
-        }
-      ],
-      "latestAt": "2026-11-08T10:27:18.000Z",
-      "earliestAt": "2026-11-08T10:27:18.000Z",
-      "heuristicProbability": 15,
-      "llm": {
-        "adjustment": 0,
-        "note": "Porro is reportedly considering his next move after rejecting interest from three Premier League clubs.",
-        "renamedFrom": null,
-        "redirectedFrom": null
-      },
-      "confirmedAt": null,
-      "previousProbability": 16,
-      "change": -1,
-      "isNew": false,
-      "history": [
-        {
-          "t": 1792603009318,
-          "p": 17
         },
         {
-          "t": 1792619171708,
-          "p": 18
-        },
-        {
-          "t": 1792644952219,
-          "p": 18
-        },
-        {
-          "t": 1792670346613,
-          "p": 18
-        },
-        {
-          "t": 1792689300133,
-          "p": 18
-        },
-        {
-          "t": 1792705253413,
-          "p": 18
-        },
-        {
-          "t": 1792731471647,
-          "p": 18
-        },
-        {
-          "t": 1792755887204,
-          "p": 18
-        },
-        {
-          "t": 1792775577101,
-          "p": 18
-        },
-        {
-          "t": 1792790855104,
-          "p": 18
-        },
-        {
-          "t": 1792816975535,
-          "p": 19
-        },
-        {
-          "t": 1792840114976,
-          "p": 18
-        },
-        {
-          "t": 1792857632611,
-          "p": 18
-        },
-        {
-          "t": 1792875252997,
-          "p": 19
-        },
-        {
-          "t": 1792883930424,
-          "p": 18
-        },
-        {
-          "t": 1792903733014,
-          "p": 19
-        },
-        {
-          "t": 1792928327212,
-          "p": 15
-        },
-        {
-          "t": 1792945715693,
-          "p": 15
-        },
-        {
-          "t": 1792961704558,
-          "p": 15
-        },
-        {
-          "t": 1792970311441,
-          "p": 15
-        },
-        {
-          "t": 1792990444401,
-          "p": 15
-        },
-        {
-          "t": 1793020272738,
-          "p": 20
-        },
-        {
-          "t": 1793046743520,
-          "p": 15
-        },
-        {
-          "t": 1793061005606,
-          "p": 15
-        },
-        {
-          "t": 1793114619946,
-          "p": 11
-        },
-        {
-          "t": 1793166551903,
-          "p": 15
-        },
-        {
-          "t": 1793192563526,
-          "p": 15
-        },
-        {
-          "t": 1793218774301,
-          "p": 12
-        },
-        {
-          "t": 1793235626623,
-          "p": 16
-        },
-        {
-          "t": 1793268263909,
-          "p": 16
-        },
-        {
-          "t": 1793298626406,
-          "p": 19
-        },
-        {
-          "t": 1793322321536,
-          "p": 16
-        },
-        {
-          "t": 1793354838452,
-          "p": 16
-        },
-        {
-          "t": 1793383330913,
-          "p": 26
-        },
-        {
-          "t": 1793399115680,
-          "p": 22
-        },
-        {
-          "t": 1793425866650,
-          "p": 22
-        },
-        {
-          "t": 1793450445412,
-          "p": 24
-        },
-        {
-          "t": 1793474389809,
-          "p": 18
-        },
-        {
-          "t": 1793491823202,
-          "p": 18
-        },
-        {
-          "t": 1793513674869,
-          "p": 18
-        },
-        {
-          "t": 1793540165361,
-          "p": 19
-        },
-        {
-          "t": 1793562213037,
-          "p": 16
-        },
-        {
-          "t": 1793580466723,
-          "p": 20
-        },
-        {
-          "t": 1793618277035,
-          "p": 19
-        },
-        {
-          "t": 1793655847167,
-          "p": 18
-        },
-        {
-          "t": 1793688868771,
-          "p": 19
-        },
-        {
-          "t": 1793725591054,
-          "p": 19
-        },
-        {
-          "t": 1793748417123,
-          "p": 18
-        },
-        {
-          "t": 1793773981330,
-          "p": 15
-        },
-        {
-          "t": 1793812702517,
-          "p": 15
-        },
-        {
-          "t": 1793835831285,
-          "p": 15
-        },
-        {
-          "t": 1793861688468,
-          "p": 17
-        },
-        {
-          "t": 1793899624782,
-          "p": 15
-        },
-        {
-          "t": 1793922011368,
-          "p": 16
-        },
-        {
-          "t": 1793948066667,
-          "p": 13
-        },
-        {
-          "t": 1793983668533,
-          "p": 16
-        },
-        {
-          "t": 1794006817186,
-          "p": 16
-        },
-        {
-          "t": 1794031527300,
-          "p": 16
-        },
-        {
-          "t": 1794160613318,
-          "p": 15
-        },
-        {
-          "t": 1794175872913,
+          "t": 1794206628526,
           "p": 15
         }
       ]
@@ -2013,7 +1522,7 @@
       "directionConfidence": 1,
       "clubs": [],
       "probability": 15,
-      "logit": -1.742,
+      "logit": -1.7422,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -2024,7 +1533,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.008,
+        "evidenceSum": 0.0078,
         "corroboration": 0,
         "distinctOutlets": 1,
         "tier1Outlets": 0,
@@ -2040,8 +1549,8 @@
           "publishedAt": "2026-10-22T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.257,
-          "contribution": 0.008
+          "recency": 0.25,
+          "contribution": 0.0078
         }
       ],
       "latestAt": "2026-10-22T07:00:00.000Z",
@@ -2277,6 +1786,304 @@
         {
           "t": 1794175872913,
           "p": 15
+        },
+        {
+          "t": 1794206628526,
+          "p": 15
+        }
+      ]
+    },
+    {
+      "id": "out-pedro-porro",
+      "player": "Pedro Porro",
+      "direction": "out",
+      "directionConfidence": 1,
+      "clubs": [],
+      "probability": 15,
+      "logit": -1.7341,
+      "done": false,
+      "confirmedBy": [],
+      "stage": {
+        "id": "mention",
+        "label": "Mentioned only",
+        "value": 0.05
+      },
+      "cooler": null,
+      "breakdown": {
+        "prior": -1.75,
+        "evidenceSum": 0.0159,
+        "corroboration": 0,
+        "distinctOutlets": 1,
+        "tier1Outlets": 0,
+        "totalArticles": 1,
+        "confirmedFloorApplied": false
+      },
+      "evidence": [
+        {
+          "outlet": "TEAMtalk",
+          "tier": 3,
+          "headline": "Tottenham: Pedro Porro reaches decision on next move as Premier League trio completely shunned - Exclusive",
+          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOTVFhLVFmd1ZnUzJSazlHS3MwU3NCd3ZCNzFGUHlJdndSN2M1S25lZmNKTzJaZUtkWlAxZUsxWEFOMF9CS0FMSlYxM3owZV9sTWRBXzVOM0hlMHJ2REZwLXBieGhFQjh0c3NESzEzR0ktSDNsdTdCa19vMDFBcWtnV2dsNEJmSGYwT0g0WmY5bVFCX1RoblN3VjYwNmUwbWlDeGhOdldxNWpXa09nNy0wNTFiT0V1R2Z5eVE?oc=5",
+          "publishedAt": "2026-11-08T09:46:47.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.935,
+          "contribution": 0.0159
+        }
+      ],
+      "latestAt": "2026-11-08T09:46:47.000Z",
+      "earliestAt": "2026-11-08T09:46:47.000Z",
+      "heuristicProbability": 15,
+      "llm": {
+        "adjustment": 0,
+        "note": "The report concerns Porro's next move and implies Tottenham are considering his departure.",
+        "renamedFrom": null,
+        "redirectedFrom": null
+      },
+      "confirmedAt": null,
+      "previousProbability": 16,
+      "change": -1,
+      "isNew": false,
+      "history": [
+        {
+          "t": 1792619171708,
+          "p": 18
+        },
+        {
+          "t": 1792644952219,
+          "p": 18
+        },
+        {
+          "t": 1792670346613,
+          "p": 18
+        },
+        {
+          "t": 1792689300133,
+          "p": 18
+        },
+        {
+          "t": 1792705253413,
+          "p": 18
+        },
+        {
+          "t": 1792731471647,
+          "p": 18
+        },
+        {
+          "t": 1792755887204,
+          "p": 18
+        },
+        {
+          "t": 1792775577101,
+          "p": 18
+        },
+        {
+          "t": 1792790855104,
+          "p": 18
+        },
+        {
+          "t": 1792816975535,
+          "p": 19
+        },
+        {
+          "t": 1792840114976,
+          "p": 18
+        },
+        {
+          "t": 1792857632611,
+          "p": 18
+        },
+        {
+          "t": 1792875252997,
+          "p": 19
+        },
+        {
+          "t": 1792883930424,
+          "p": 18
+        },
+        {
+          "t": 1792903733014,
+          "p": 19
+        },
+        {
+          "t": 1792928327212,
+          "p": 15
+        },
+        {
+          "t": 1792945715693,
+          "p": 15
+        },
+        {
+          "t": 1792961704558,
+          "p": 15
+        },
+        {
+          "t": 1792970311441,
+          "p": 15
+        },
+        {
+          "t": 1792990444401,
+          "p": 15
+        },
+        {
+          "t": 1793020272738,
+          "p": 20
+        },
+        {
+          "t": 1793046743520,
+          "p": 15
+        },
+        {
+          "t": 1793061005606,
+          "p": 15
+        },
+        {
+          "t": 1793114619946,
+          "p": 11
+        },
+        {
+          "t": 1793166551903,
+          "p": 15
+        },
+        {
+          "t": 1793192563526,
+          "p": 15
+        },
+        {
+          "t": 1793218774301,
+          "p": 12
+        },
+        {
+          "t": 1793235626623,
+          "p": 16
+        },
+        {
+          "t": 1793268263909,
+          "p": 16
+        },
+        {
+          "t": 1793298626406,
+          "p": 19
+        },
+        {
+          "t": 1793322321536,
+          "p": 16
+        },
+        {
+          "t": 1793354838452,
+          "p": 16
+        },
+        {
+          "t": 1793383330913,
+          "p": 26
+        },
+        {
+          "t": 1793399115680,
+          "p": 22
+        },
+        {
+          "t": 1793425866650,
+          "p": 22
+        },
+        {
+          "t": 1793450445412,
+          "p": 24
+        },
+        {
+          "t": 1793474389809,
+          "p": 18
+        },
+        {
+          "t": 1793491823202,
+          "p": 18
+        },
+        {
+          "t": 1793513674869,
+          "p": 18
+        },
+        {
+          "t": 1793540165361,
+          "p": 19
+        },
+        {
+          "t": 1793562213037,
+          "p": 16
+        },
+        {
+          "t": 1793580466723,
+          "p": 20
+        },
+        {
+          "t": 1793618277035,
+          "p": 19
+        },
+        {
+          "t": 1793655847167,
+          "p": 18
+        },
+        {
+          "t": 1793688868771,
+          "p": 19
+        },
+        {
+          "t": 1793725591054,
+          "p": 19
+        },
+        {
+          "t": 1793748417123,
+          "p": 18
+        },
+        {
+          "t": 1793773981330,
+          "p": 15
+        },
+        {
+          "t": 1793812702517,
+          "p": 15
+        },
+        {
+          "t": 1793835831285,
+          "p": 15
+        },
+        {
+          "t": 1793861688468,
+          "p": 17
+        },
+        {
+          "t": 1793899624782,
+          "p": 15
+        },
+        {
+          "t": 1793922011368,
+          "p": 16
+        },
+        {
+          "t": 1793948066667,
+          "p": 13
+        },
+        {
+          "t": 1793983668533,
+          "p": 16
+        },
+        {
+          "t": 1794006817186,
+          "p": 16
+        },
+        {
+          "t": 1794031527300,
+          "p": 16
+        },
+        {
+          "t": 1794160613318,
+          "p": 15
+        },
+        {
+          "t": 1794175872913,
+          "p": 15
+        },
+        {
+          "t": 1794206628526,
+          "p": 15
         }
       ]
     },
@@ -2290,7 +2097,7 @@
         "Manchester United"
       ],
       "probability": 11,
-      "logit": -1.6964,
+      "logit": -1.6978,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -2301,7 +2108,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0536,
+        "evidenceSum": 0.0522,
         "corroboration": 0,
         "distinctOutlets": 3,
         "tier1Outlets": 0,
@@ -2317,8 +2124,8 @@
           "publishedAt": "2026-11-08T18:23:15.000Z",
           "stage": "Interest / link",
           "cooler": null,
-          "recency": 0.988,
-          "contribution": 0.0316
+          "recency": 0.961,
+          "contribution": 0.0308
         },
         {
           "outlet": "Football Insider",
@@ -2328,8 +2135,8 @@
           "publishedAt": "2026-11-06T12:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.83,
-          "contribution": 0.0184
+          "recency": 0.807,
+          "contribution": 0.0179
         },
         {
           "outlet": "Premier League News Now",
@@ -2339,8 +2146,8 @@
           "publishedAt": "2026-11-06T05:05:01.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.811,
-          "contribution": 0.0036
+          "recency": 0.79,
+          "contribution": 0.0035
         }
       ],
       "latestAt": "2026-11-08T18:23:15.000Z",
@@ -2391,6 +2198,10 @@
         },
         {
           "t": 1794175872913,
+          "p": 11
+        },
+        {
+          "t": 1794206628526,
           "p": 11
         }
       ]
