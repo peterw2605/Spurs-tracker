@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-11-12T11:23:59.160Z",
+  "generatedAt": "2026-11-12T19:59:32.343Z",
   "counts": {
     "rumours": 9,
     "incoming": 3,
     "outgoing": 6,
     "done": 1,
-    "articles": 214,
-    "transferArticles": 95,
+    "articles": 215,
+    "transferArticles": 99,
     "likely": 0
   },
   "model": {
     "type": "heuristic + LLM review",
     "llm": {
       "model": "gpt-5.6-luna",
-      "sent": 8,
-      "reusedFromCache": 8,
+      "sent": 7,
+      "reusedFromCache": 11,
       "deferred": 0,
-      "adjusted": 4,
-      "discarded": 6
+      "adjusted": 3,
+      "discarded": 8
     }
   },
   "sources": [
@@ -44,22 +44,22 @@
     {
       "name": "Evening Standard — Tottenham",
       "ok": true,
-      "itemCount": 1
+      "itemCount": 0
     },
     {
       "name": "Google News — Tottenham transfer",
       "ok": true,
-      "itemCount": 55
+      "itemCount": 54
     },
     {
       "name": "Google News — Spurs transfer news",
       "ok": true,
-      "itemCount": 6
+      "itemCount": 8
     },
     {
       "name": "Google News — Tottenham sign",
       "ok": true,
-      "itemCount": 33
+      "itemCount": 34
     },
     {
       "name": "Google News — Tottenham exit",
@@ -88,7 +88,7 @@
       "directionConfidence": 0.3,
       "clubs": [],
       "probability": 98,
-      "logit": 1.2701,
+      "logit": 1.1895,
       "done": true,
       "confirmedBy": [
         {
@@ -96,7 +96,7 @@
           "tier": 1,
           "headline": "Sir James Anderson signs for Surrey after Lancashire exit",
           "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQU1ljdWtUbzQ2eWk3Z3VLWk9zc0ljQU0tMkl1N0lnX0cwZF90WU9RakRRZm9oaUN2dUZlNlZRaEtXU1FHQzJmMDVMd3JYczU4N0hKR3VnQ3Z0MjdYMzlkRFU5dmtvbzBJZnJJYUFjRWdEbWJFZF9NV1hQZ05LVTl4X3ZOOTYxTS1lSVF1T0RYMWFVbUdrUjk0Q0JKaVBaaHktaEFZRTFrWEdwMTRDZ2RSMWJSSGE?oc=5",
-          "publishedAt": "2026-11-12T09:21:11.000Z"
+          "publishedAt": "2026-11-12T09:31:13.000Z"
         }
       ],
       "stage": {
@@ -107,7 +107,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 3.0201,
+        "evidenceSum": 2.9395,
         "corroboration": 0,
         "distinctOutlets": 1,
         "tier1Outlets": 1,
@@ -120,15 +120,15 @@
           "tier": 1,
           "headline": "Sir James Anderson signs for Surrey after Lancashire exit",
           "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQU1ljdWtUbzQ2eWk3Z3VLWk9zc0ljQU0tMkl1N0lnX0cwZF90WU9RakRRZm9oaUN2dUZlNlZRaEtXU1FHQzJmMDVMd3JYczU4N0hKR3VnQ3Z0MjdYMzlkRFU5dmtvbzBJZnJJYUFjRWdEbWJFZF9NV1hQZ05LVTl4X3ZOOTYxTS1lSVF1T0RYMWFVbUdrUjk0Q0JKaVBaaHktaEFZRTFrWEdwMTRDZ2RSMWJSSGE?oc=5",
-          "publishedAt": "2026-11-12T09:21:11.000Z",
+          "publishedAt": "2026-11-12T09:31:13.000Z",
           "stage": "Done / confirmed",
           "cooler": null,
-          "recency": 0.993,
-          "contribution": 3.0201
+          "recency": 0.967,
+          "contribution": 2.9395
         }
       ],
-      "latestAt": "2026-11-12T09:21:11.000Z",
-      "earliestAt": "2026-11-12T09:21:11.000Z",
+      "latestAt": "2026-11-12T09:31:13.000Z",
+      "earliestAt": "2026-11-12T09:31:13.000Z",
       "heuristicProbability": 98,
       "llm": {
         "adjustment": 0,
@@ -139,35 +139,39 @@
       "confirmedAt": 1794475271000,
       "previousProbability": 98,
       "change": 0,
-      "isNew": true,
+      "isNew": false,
       "history": [
         {
           "t": 1794482639160,
+          "p": 98
+        },
+        {
+          "t": 1794513572343,
           "p": 98
         }
       ]
     },
     {
-      "id": "in-conor-gallagher",
-      "player": "Conor Gallagher",
+      "id": "out-mikey-moore",
+      "player": "Mikey Moore",
       "direction": "out",
-      "directionConfidence": 0.3,
+      "directionConfidence": 1,
       "clubs": [
-        "Barcelona"
+        "Rangers"
       ],
-      "probability": 21,
-      "logit": -1.6927,
+      "probability": 18,
+      "logit": -1.6889,
       "done": false,
       "confirmedBy": [],
       "stage": {
-        "id": "interest",
-        "label": "Interest / link",
-        "value": 0.2
+        "id": "mention",
+        "label": "Mentioned only",
+        "value": 0.05
       },
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0573,
+        "evidenceSum": 0.0611,
         "corroboration": 0,
         "distinctOutlets": 3,
         "tier1Outlets": 0,
@@ -176,136 +180,173 @@
       },
       "evidence": [
         {
-          "outlet": "Spurs Web",
-          "tier": 4,
-          "headline": "Tottenham transfer round-up: Conor Gallagher stance, Barcelona defender linked and Spurs' January plan",
-          "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPallEU1Rwc2ZUVDhOUV80MWpvVjRmaVNWRHR1a3N0dGtlUHZacmVHQzR6bnN4MXZNVmxfelp3aGNSQU5DU29FcEo0MXd4aXFMMVY4cHhyZGI4SFRYU3lCVnFVRURTbUU1MlJjbndyZ3hxWE1JYlZ6UkRnQ3pLMk1NeUF0dVdLeERTQXplMVhzSkJEcnZnckMzVWJIcjc2QVVQV3VvWWVicHNMX1JfNGl5ano1QVVDN2Nzb0tlWHBUYW1BZ1oyVklfZmtoS3NPTExBNUs0?oc=5",
-          "publishedAt": "2026-11-12T10:03:30.000Z",
-          "stage": "Interest / link",
-          "cooler": null,
-          "recency": 0.996,
-          "contribution": 0.0319
-        },
-        {
           "outlet": "Football Insider",
           "tier": 2,
-          "headline": "Tottenham 'ready' to accept new Conor Gallagher offer - transfer expert",
-          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNX2hMbmRpTFFwaDlxVzNEWW1XYzdOX3JWVEFHV211bjZlSVhpM3AxNzhDdzNPckRSelZSS0d3SnpodWJUeTYzN3BmRjFQa25TeWJGZzczenBjMkZyRUlyVjNzbUdPUHZmSVhHSzg4RjBiQ2EyVmNWNFVqeU9lRmNZalcxTU9GWGlEdjllZHZLV3EzQWNUd2FqOXZnWUdnLWk5aWQxeVZwa29HXzgyc0xGTDJrNVEtWUljaVEyLQ?oc=5",
-          "publishedAt": "2026-11-12T06:30:00.000Z",
+          "headline": "De Zerbi has 'clear plan' for Mikey Moore as Tottenham transfer stance revealed - expert",
+          "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNcTBoOEphTmIzZnl2T2hfaW1wT21MNFJqZElBZlR6bHJvMklmQXVSVGJtLXk1R0hqTEsxdU1KUUtfYTJuWGNlTEYtc1pLUjVkMFhScl9nUl84cVAzM3A5bE1kdzA1YmpiZkxxdDdrcEcwZ2E2ZUNrNDVySHBZQmZQNm1UcUl2ZUNDekVtSlVRUjh6SmhXOHhOWWF6bHBfMDV4eXBUREJHWGRQb1AtZUV2VnptaTQ2N2Jzc0pEVnlhUVEydlQtYi1CMG5JY1g0WUYtaE5V?oc=5",
+          "publishedAt": "2026-11-12T16:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.984,
-          "contribution": 0.0218
+          "recency": 0.987,
+          "contribution": 0.0306
         },
         {
-          "outlet": "LiveScore",
-          "tier": 4,
-          "headline": "Tottenham will 'have to' allow Conor Gallagher to leave in January - insider",
-          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQbjBrMllaYXRpb3hjNGQ5M05vZEVXSHBHZXI4S0d6NmNpTjd3eXFQQ096MWhrbmV1T1NDeGlrYUR5NS01ZTZ2WTF0Z3p1alB5N0lVZ2ZQU21Kb0liTXNWVkVaVnVaSU12OVlGTlFiSWJzbVNtN0RWUWRZUDN6LTNIR2FhM0o1RnFUUWtvTC1sdXZDcVVmVDdOMkxjS3JwZ0MyWDdtMzBzZEphSEpOX1YxNVVn?oc=5",
-          "publishedAt": "2026-11-09T15:48:03.000Z",
+          "outlet": "TEAMtalk",
+          "tier": 3,
+          "headline": "Tottenham ready to terminate Mikey Moore loan as Rangers reach decision on January return - Exclusive",
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQVDBFOTdkeThiODdoLUVTNlgyYTVUdkJDcENDVm5RQTJ3NHpfRUR1M1FSdkJPVUtPelBKaE5vZi05WkpXWXNTYUF4eXcwUGMyUUg0Q0NNbHMyNWdVcm9ka3NvNHAyVl9JWkttZ0lKTl9JNHFUUVV0cnFqMVUzLUpGalRjOWVLNGFlVDFyZWFIck9JSzE0ZHM3MVdkdWpZZ0wxSUhhQ21TTW9pWWNqaURiZjZ2bzZiY01SVVd4bA?oc=5",
+          "publishedAt": "2026-11-12T15:38:25.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.805,
-          "contribution": 0.0036
+          "recency": 0.986,
+          "contribution": 0.0093
+        },
+        {
+          "outlet": "football.london",
+          "tier": 2,
+          "headline": "Mikey Moore makes 'dream' transfer wish as Tottenham loan decision explained",
+          "url": "https://www.football.london/tottenham-hotspur-fc/transfer-news/mikey-moore-makes-rangers-dream-34897963",
+          "publishedAt": "2026-11-12T06:00:00.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.956,
+          "contribution": 0.0212
         }
       ],
-      "latestAt": "2026-11-12T10:03:30.000Z",
-      "earliestAt": "2026-11-08T21:30:00.000Z",
+      "latestAt": "2026-11-12T16:00:00.000Z",
+      "earliestAt": "2026-11-10T16:25:08.000Z",
       "heuristicProbability": 16,
       "llm": {
-        "adjustment": 5,
-        "note": "Headlines describe Tottenham accepting offers for Gallagher, making this an outgoing rather than incoming link.",
+        "adjustment": 2,
+        "note": "Tottenham are reportedly considering terminating Moore’s loan and arranging his January return.",
         "renamedFrom": null,
-        "redirectedFrom": "in"
+        "redirectedFrom": null
       },
       "confirmedAt": null,
-      "previousProbability": 18,
-      "change": 3,
+      "previousProbability": 11,
+      "change": 7,
       "isNew": false,
       "history": [
         {
-          "t": 1793618277035,
-          "p": 15
-        },
-        {
-          "t": 1793725591054,
-          "p": 15
-        },
-        {
-          "t": 1793748417123,
-          "p": 8
-        },
-        {
-          "t": 1793773981330,
-          "p": 16
-        },
-        {
           "t": 1793812702517,
-          "p": 16
-        },
-        {
-          "t": 1793835831285,
-          "p": 12
-        },
-        {
-          "t": 1793861688468,
-          "p": 16
-        },
-        {
-          "t": 1793899624782,
-          "p": 9
-        },
-        {
-          "t": 1793922011368,
-          "p": 9
-        },
-        {
-          "t": 1793948066667,
-          "p": 9
-        },
-        {
-          "t": 1794160613318,
-          "p": 19
-        },
-        {
-          "t": 1794175872913,
-          "p": 16
-        },
-        {
-          "t": 1794206628526,
-          "p": 19
-        },
-        {
-          "t": 1794253925050,
-          "p": 30
-        },
-        {
-          "t": 1794281800223,
-          "p": 30
-        },
-        {
-          "t": 1794322663782,
-          "p": 30
+          "p": 15
         },
         {
           "t": 1794345555719,
-          "p": 18
+          "p": 11
         },
         {
           "t": 1794378855194,
-          "p": 20
+          "p": 11
         },
         {
           "t": 1794417178576,
-          "p": 16
+          "p": 11
         },
         {
           "t": 1794444443831,
-          "p": 17
+          "p": 11
         },
         {
           "t": 1794482639160,
-          "p": 21
+          "p": 15
+        },
+        {
+          "t": 1794513572343,
+          "p": 18
+        }
+      ]
+    },
+    {
+      "id": "in-younes-ebnoutalib",
+      "player": "Younes Ebnoutalib",
+      "direction": "in",
+      "directionConfidence": 0.3,
+      "clubs": [],
+      "probability": 17,
+      "logit": -1.7218,
+      "done": false,
+      "confirmedBy": [],
+      "stage": {
+        "id": "mention",
+        "label": "Mentioned only",
+        "value": 0.05
+      },
+      "cooler": null,
+      "breakdown": {
+        "prior": -1.75,
+        "evidenceSum": 0.0282,
+        "corroboration": 0,
+        "distinctOutlets": 2,
+        "tier1Outlets": 0,
+        "totalArticles": 2,
+        "confirmedFloorApplied": false
+      },
+      "evidence": [
+        {
+          "outlet": "TEAMtalk",
+          "tier": 3,
+          "headline": "Tottenham: On-fire Bundesliga striker Younes Ebnoutalib reaches decision on signing in 2027",
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPM2w1TkhYblFnbEF2Vl9nX21DX3phTG5LQXpVT1NYYmZVV0MzREhtanZVUDZkRVFabUhEWUZ1WXUwaGdnMDcwdWdrLTFoVjJjT19CdWpidVFGblpyMlFwSzZjUm1kWU8xcUVyb3BiWWp5bl9QRGJCYXJOUmRBT3hmTG1QbjJtQzhzZ3B6S0EwMWV2bm45ODQyR3BkNFRHN2hwQlFaRV90YWtWTW5wdWRQUDA2RnI2cUs1YURV?oc=5",
+          "publishedAt": "2026-11-12T10:08:55.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.969,
+          "contribution": 0.0165
+        },
+        {
+          "outlet": "Football365",
+          "tier": 3,
+          "headline": "Tottenham: Younes Ebnoutalib reaches huge decision over stunning January move",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOYTN4eU5tTFVKZVBKMm9BU24tQXppbUhReDZNdWRWYmthQ3ZGRDhEWjBWNi0wN3huTVo2VzFXQmxMalFlZkQ2RloxR1pSdjFjZTl5MmhTWnRjM1lXY3d4SVhFemZmMmNUUTRwUVJhNGYzdVdaVXpyUElOa2s5Wm55OUlaNm5pam5xSjVqYnpuRko0RnpkWFE4bHBxTTN2UmJWVHdtb3J5Y1A?oc=5",
+          "publishedAt": "2026-11-12T08:53:38.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.965,
+          "contribution": 0.0117
+        }
+      ],
+      "latestAt": "2026-11-12T10:08:55.000Z",
+      "earliestAt": "2026-11-12T08:53:38.000Z",
+      "heuristicProbability": 15,
+      "llm": {
+        "adjustment": 2,
+        "note": "Reports say Ebnoutalib has decided about a potential January or 2027 move to Tottenham.",
+        "renamedFrom": null,
+        "redirectedFrom": null
+      },
+      "confirmedAt": null,
+      "previousProbability": 15,
+      "change": 2,
+      "isNew": false,
+      "history": [
+        {
+          "t": 1793812702517,
+          "p": 15
+        },
+        {
+          "t": 1793835831285,
+          "p": 15
+        },
+        {
+          "t": 1793861688468,
+          "p": 15
+        },
+        {
+          "t": 1793899624782,
+          "p": 15
+        },
+        {
+          "t": 1793948066667,
+          "p": 15
+        },
+        {
+          "t": 1794482639160,
+          "p": 17
+        },
+        {
+          "t": 1794513572343,
+          "p": 17
         }
       ]
     },
@@ -317,8 +358,8 @@
       "clubs": [
         "Barcelona"
       ],
-      "probability": 19,
-      "logit": -1.6778,
+      "probability": 16,
+      "logit": -1.6861,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -329,11 +370,11 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0722,
+        "evidenceSum": 0.0639,
         "corroboration": 0,
-        "distinctOutlets": 6,
+        "distinctOutlets": 5,
         "tier1Outlets": 0,
-        "totalArticles": 6,
+        "totalArticles": 5,
         "confirmedFloorApplied": false
       },
       "evidence": [
@@ -342,22 +383,11 @@
           "tier": 4,
           "headline": "Tottenham braced for Pedro Porro bidding war as Liverpool, Man City and Chelsea circle for record-breaking transfer",
           "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNcFlId0hJVmFKU0FfQ0tUSk5QRFlTcUNoeldXRTgzY1I5ZkNMcldsV2Q5Zjl4dVhnY01ydlZsdWlUam9XWmIwejFPYVV0Y05vejVkNVUwYzdpaVhScnR1WnRoUmd1QXVmQVhPZHQzaHJoQVRvSDI3NUlWdVdSYTBseEZqZGpGdUxaZE93QkJXaXNYdk5wa0NGdzZMU0lDWU1QLUdxamJQbDg0cGN6dG8wWHhGWXVIcWItUi1ZQTdwVk9ENnhJcjRyY3Z4bWluTThSQVpIV0RHU3Yyb21QODc1Vw?oc=5",
-          "publishedAt": "2026-11-12T10:55:44.000Z",
+          "publishedAt": "2026-11-12T10:57:48.000Z",
           "stage": "Named in a roundup",
           "cooler": null,
-          "recency": 0.998,
-          "contribution": 0.0031
-        },
-        {
-          "outlet": "Yahoo Sports",
-          "tier": 3,
-          "headline": "Tottenham Hotspur star Pedro Porro sends Barcelona transfer message",
-          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNVWplLTNRWjJueWpEMUItRDN5N01JSlJuZ0xqZldfUzNWTkVCVUNTTDhpMVJ6MXktUWhiaGVZRnlnM1NBTW5xM0FwM1p5VW9EYVNtNW5zYzNrOHRHYlFjblRSQTRoUTVQZW4wTGV3XzhlVEpaa19sZGxiUk9NcHpyaFMtQ1RwUnc1M1NJ?oc=5",
-          "publishedAt": "2026-11-11T22:39:41.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.96,
-          "contribution": 0.0091
+          "recency": 0.971,
+          "contribution": 0.0035
         },
         {
           "outlet": "Sports Mole",
@@ -367,8 +397,8 @@
           "publishedAt": "2026-11-11T18:03:35.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.946,
-          "contribution": 0.0073
+          "recency": 0.92,
+          "contribution": 0.0087
         },
         {
           "outlet": "FourFourTwo",
@@ -378,8 +408,8 @@
           "publishedAt": "2026-11-11T15:26:36.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.938,
-          "contribution": 0.0025
+          "recency": 0.912,
+          "contribution": 0.0028
         },
         {
           "outlet": "LiveScore",
@@ -389,8 +419,8 @@
           "publishedAt": "2026-11-11T13:13:17.000Z",
           "stage": "Interest / link",
           "cooler": null,
-          "recency": 0.931,
-          "contribution": 0.0298
+          "recency": 0.906,
+          "contribution": 0.029
         },
         {
           "outlet": "football.london",
@@ -400,28 +430,24 @@
           "publishedAt": "2026-11-11T10:34:51.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.923,
-          "contribution": 0.0204
+          "recency": 0.898,
+          "contribution": 0.0199
         }
       ],
-      "latestAt": "2026-11-12T10:55:44.000Z",
+      "latestAt": "2026-11-12T10:57:48.000Z",
       "earliestAt": "2026-11-11T10:34:51.000Z",
       "heuristicProbability": 16,
       "llm": {
-        "adjustment": 3,
-        "note": "Multiple headlines report sustained interest and possible bids for Porro, though no imminent move is confirmed.",
+        "adjustment": 0,
+        "note": "Multiple headlines link Porro with potential moves to Liverpool, Manchester City, Chelsea and Barcelona.",
         "renamedFrom": null,
         "redirectedFrom": null
       },
       "confirmedAt": null,
       "previousProbability": 15,
-      "change": 4,
+      "change": 1,
       "isNew": false,
       "history": [
-        {
-          "t": 1792689300133,
-          "p": 18
-        },
         {
           "t": 1792705253413,
           "p": 18
@@ -657,6 +683,191 @@
         {
           "t": 1794482639160,
           "p": 19
+        },
+        {
+          "t": 1794513572343,
+          "p": 16
+        }
+      ]
+    },
+    {
+      "id": "in-conor-gallagher",
+      "player": "Conor Gallagher",
+      "direction": "out",
+      "directionConfidence": 0.3,
+      "clubs": [
+        "Barcelona"
+      ],
+      "probability": 16,
+      "logit": -1.9558,
+      "done": false,
+      "confirmedBy": [],
+      "stage": {
+        "id": "interest",
+        "label": "Interest / link",
+        "value": 0.2
+      },
+      "cooler": {
+        "id": "rejected",
+        "label": "Rejected / not for sale",
+        "value": -1.7
+      },
+      "breakdown": {
+        "prior": -1.75,
+        "evidenceSum": -0.2058,
+        "corroboration": 0,
+        "distinctOutlets": 4,
+        "tier1Outlets": 0,
+        "totalArticles": 5,
+        "confirmedFloorApplied": false
+      },
+      "evidence": [
+        {
+          "outlet": "Hotspur HQ",
+          "tier": 4,
+          "headline": "Tottenham could get a Conor Gallagher offer they can't refuse",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPdjNFZVBXaVJMX3I0bnZaUlc0ZHYtc0Zqcmh4U2dQWElUb1JGdjVrX1loWWt5NVhYSVZKb0JMV09OWVBSQXlxclpDem1ZZ0pvQ3RqZXpSNDVLWVppS1hXZzZES2pmV0hTc05SQ2ZaZ3V6Q28xd3lFQXRXclRmVG42OWFWSjhDTXhrZkl6WkR6eDRQdTQ5MXVzLVNyZWg?oc=5",
+          "publishedAt": "2026-11-12T17:00:02.000Z",
+          "stage": "Mentioned only",
+          "cooler": "Rejected / not for sale",
+          "recency": 0.99,
+          "contribution": -0.2615
+        },
+        {
+          "outlet": "Spurs Web",
+          "tier": 4,
+          "headline": "Tottenham transfer round-up: Conor Gallagher stance, Barcelona defender linked and Spurs' January plan",
+          "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPallEU1Rwc2ZUVDhOUV80MWpvVjRmaVNWRHR1a3N0dGtlUHZacmVHQzR6bnN4MXZNVmxfelp3aGNSQU5DU29FcEo0MXd4aXFMMVY4cHhyZGI4SFRYU3lCVnFVRURTbUU1MlJjbndyZ3hxWE1JYlZ6UkRnQ3pLMk1NeUF0dVdLeERTQXplMVhzSkJEcnZnckMzVWJIcjc2QVVQV3VvWWVicHNMX1JfNGl5ano1QVVDN2Nzb0tlWHBUYW1BZ1oyVklfZmtoS3NPTExBNUs0?oc=5",
+          "publishedAt": "2026-11-12T10:03:30.000Z",
+          "stage": "Interest / link",
+          "cooler": null,
+          "recency": 0.969,
+          "contribution": 0.031
+        },
+        {
+          "outlet": "Football Insider",
+          "tier": 2,
+          "headline": "Tottenham 'ready' to accept new Conor Gallagher offer - transfer expert",
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNX2hMbmRpTFFwaDlxVzNEWW1XYzdOX3JWVEFHV211bjZlSVhpM3AxNzhDdzNPckRSelZSS0d3SnpodWJUeTYzN3BmRjFQa25TeWJGZzczenBjMkZyRUlyVjNzbUdPUHZmSVhHSzg4RjBiQ2EyVmNWNFVqeU9lRmNZalcxTU9GWGlEdjllZHZLV3EzQWNUd2FqOXZnWUdnLWk5aWQxeVZwa29HXzgyc0xGTDJrNVEtWUljaVEyLQ?oc=5",
+          "publishedAt": "2026-11-12T06:30:00.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.958,
+          "contribution": 0.0212
+        },
+        {
+          "outlet": "LiveScore",
+          "tier": 4,
+          "headline": "Tottenham will 'have to' allow Conor Gallagher to leave in January - insider",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQbjBrMllaYXRpb3hjNGQ5M05vZEVXSHBHZXI4S0d6NmNpTjd3eXFQQ096MWhrbmV1T1NDeGlrYUR5NS01ZTZ2WTF0Z3p1alB5N0lVZ2ZQU21Kb0liTXNWVkVaVnVaSU12OVlGTlFiSWJzbVNtN0RWUWRZUDN6LTNIR2FhM0o1RnFUUWtvTC1sdXZDcVVmVDdOMkxjS3JwZ0MyWDdtMzBzZEphSEpOX1YxNVVn?oc=5",
+          "publishedAt": "2026-11-09T15:48:03.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.783,
+          "contribution": 0.0035
+        }
+      ],
+      "latestAt": "2026-11-12T17:00:02.000Z",
+      "earliestAt": "2026-11-09T15:48:03.000Z",
+      "heuristicProbability": 12,
+      "llm": {
+        "adjustment": 4,
+        "note": "Headlines describe Tottenham receiving offers and potentially allowing Gallagher to leave, not signing him.",
+        "renamedFrom": null,
+        "redirectedFrom": "in"
+      },
+      "confirmedAt": null,
+      "previousProbability": 20,
+      "change": -4,
+      "isNew": false,
+      "history": [
+        {
+          "t": 1793618277035,
+          "p": 15
+        },
+        {
+          "t": 1793725591054,
+          "p": 15
+        },
+        {
+          "t": 1793748417123,
+          "p": 8
+        },
+        {
+          "t": 1793773981330,
+          "p": 16
+        },
+        {
+          "t": 1793812702517,
+          "p": 16
+        },
+        {
+          "t": 1793835831285,
+          "p": 12
+        },
+        {
+          "t": 1793861688468,
+          "p": 16
+        },
+        {
+          "t": 1793899624782,
+          "p": 9
+        },
+        {
+          "t": 1793922011368,
+          "p": 9
+        },
+        {
+          "t": 1793948066667,
+          "p": 9
+        },
+        {
+          "t": 1794160613318,
+          "p": 19
+        },
+        {
+          "t": 1794175872913,
+          "p": 16
+        },
+        {
+          "t": 1794206628526,
+          "p": 19
+        },
+        {
+          "t": 1794253925050,
+          "p": 30
+        },
+        {
+          "t": 1794281800223,
+          "p": 30
+        },
+        {
+          "t": 1794322663782,
+          "p": 30
+        },
+        {
+          "t": 1794345555719,
+          "p": 18
+        },
+        {
+          "t": 1794378855194,
+          "p": 20
+        },
+        {
+          "t": 1794417178576,
+          "p": 16
+        },
+        {
+          "t": 1794444443831,
+          "p": 17
+        },
+        {
+          "t": 1794482639160,
+          "p": 21
+        },
+        {
+          "t": 1794513572343,
+          "p": 16
         }
       ]
     },
@@ -665,9 +876,11 @@
       "player": "Richarlison",
       "direction": "out",
       "directionConfidence": 1,
-      "clubs": [],
-      "probability": 18,
-      "logit": -1.7269,
+      "clubs": [
+        "Everton"
+      ],
+      "probability": 16,
+      "logit": -1.7274,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -678,7 +891,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0231,
+        "evidenceSum": 0.0226,
         "corroboration": 0,
         "distinctOutlets": 3,
         "tier1Outlets": 0,
@@ -687,15 +900,15 @@
       },
       "evidence": [
         {
-          "outlet": "YSscores",
+          "outlet": "Spurs Web",
           "tier": 4,
-          "headline": "Trabzonspor moves to sign Richarlison as Tottenham… | Yalla Shoot",
-          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQTmlBYy0tMVNqZFpXbi0xZU10WktfaVBFUi1oSk9BNnNRTFFLaGdnRUtvb1Q1MnpTTnlZLTVIWnRhMW1NbXJjdlpDNWlKY1ROTVI5NVJ2V0hXcV9SY2M5dnB2ZjJ4NGxEVkxLNUVNREdFUkQ5RGpwdGdsd1BhMklrajFWVzZ0Z3lqVWZGUnhRR2JSaE55bUMyWUMtbG1DUWU2MlNpQy1GRGt6MDc1V3NVNWtpSjljRHUz?oc=5",
-          "publishedAt": "2026-11-12T09:27:16.000Z",
+          "headline": "Everton will only call Tottenham about January Richarlison transfer under one condition",
+          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNaUtaSlhZUnFDMjl5VlIzX0VFcEhQd1VTU050RDVfTmtGdXhHbEpnQTMxZTJVaENZcUJVcVpYeEdza0s2RjduRnVQd3MyMlQ2cWhwNWlXMk1peWxDQ3Y0R0NVa2h3YzZYMjhZSjVEVUc1MXNQWHU1MTlFWGZEX2lQanI5eE1EUFN4TC15T1FweWQ0ak9jYW0wWTUyX2V5VVh3WlluNE1ib3h0RXJzdmc5dEtQZGJHb3NfM2JvU0pKVTNISU0?oc=5",
+          "publishedAt": "2026-11-12T12:13:44.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.994,
-          "contribution": 0.0057
+          "recency": 0.975,
+          "contribution": 0.0056
         },
         {
           "outlet": "Football FanCast",
@@ -705,8 +918,8 @@
           "publishedAt": "2026-11-11T07:15:12.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.914,
-          "contribution": 0.0155
+          "recency": 0.889,
+          "contribution": 0.0151
         },
         {
           "outlet": "Sports Mole",
@@ -720,24 +933,20 @@
           "contribution": 0.0019
         }
       ],
-      "latestAt": "2026-11-12T09:27:16.000Z",
+      "latestAt": "2026-11-12T12:13:44.000Z",
       "earliestAt": "2026-10-16T07:00:00.000Z",
       "heuristicProbability": 15,
       "llm": {
-        "adjustment": 3,
-        "note": "Trabzonspor reportedly moved to sign Richarlison, with earlier reports also mentioning talks with Turkish clubs.",
+        "adjustment": 1,
+        "note": "Everton and Turkish clubs are reportedly considering moves for Richarlison, though links remain speculative.",
         "renamedFrom": null,
         "redirectedFrom": null
       },
       "confirmedAt": null,
       "previousProbability": 15,
-      "change": 3,
+      "change": 1,
       "isNew": false,
       "history": [
-        {
-          "t": 1792840114976,
-          "p": 17
-        },
         {
           "t": 1792857632611,
           "p": 17
@@ -973,95 +1182,10 @@
         {
           "t": 1794482639160,
           "p": 18
-        }
-      ]
-    },
-    {
-      "id": "in-younes-ebnoutalib",
-      "player": "Younes Ebnoutalib",
-      "direction": "in",
-      "directionConfidence": 0.3,
-      "clubs": [],
-      "probability": 17,
-      "logit": -1.7213,
-      "done": false,
-      "confirmedBy": [],
-      "stage": {
-        "id": "mention",
-        "label": "Mentioned only",
-        "value": 0.05
-      },
-      "cooler": null,
-      "breakdown": {
-        "prior": -1.75,
-        "evidenceSum": 0.0287,
-        "corroboration": 0,
-        "distinctOutlets": 2,
-        "tier1Outlets": 0,
-        "totalArticles": 2,
-        "confirmedFloorApplied": false
-      },
-      "evidence": [
-        {
-          "outlet": "TEAMtalk",
-          "tier": 3,
-          "headline": "Tottenham: On-fire Bundesliga striker Younes Ebnoutalib reaches decision on signing in 2027",
-          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPM2w1TkhYblFnbEF2Vl9nX21DX3phTG5LQXpVT1NYYmZVV0MzREhtanZVUDZkRVFabUhEWUZ1WXUwaGdnMDcwdWdrLTFoVjJjT19CdWpidVFGblpyMlFwSzZjUm1kWU8xcUVyb3BiWWp5bl9QRGJCYXJOUmRBT3hmTG1QbjJtQzhzZ3B6S0EwMWV2bm45ODQyR3BkNFRHN2hwQlFaRV90YWtWTW5wdWRQUDA2RnI2cUs1YURV?oc=5",
-          "publishedAt": "2026-11-12T10:08:55.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.996,
-          "contribution": 0.0169
         },
         {
-          "outlet": "Football365",
-          "tier": 3,
-          "headline": "Tottenham: Younes Ebnoutalib reaches huge decision over stunning January move",
-          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOYTN4eU5tTFVKZVBKMm9BU24tQXppbUhReDZNdWRWYmthQ3ZGRDhEWjBWNi0wN3huTVo2VzFXQmxMalFlZkQ2RloxR1pSdjFjZTl5MmhTWnRjM1lXY3d4SVhFemZmMmNUUTRwUVJhNGYzdVdaVXpyUElOa2s5Wm55OUlaNm5pam5xSjVqYnpuRko0RnpkWFE4bHBxTTN2UmJWVHdtb3J5Y1A?oc=5",
-          "publishedAt": "2026-11-12T02:04:46.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.971,
-          "contribution": 0.0118
-        }
-      ],
-      "latestAt": "2026-11-12T10:08:55.000Z",
-      "earliestAt": "2026-11-12T02:04:46.000Z",
-      "heuristicProbability": 15,
-      "llm": {
-        "adjustment": 2,
-        "note": "Reports say Ebnoutalib has decided about a potential January or 2027 move to Tottenham.",
-        "renamedFrom": null,
-        "redirectedFrom": null
-      },
-      "confirmedAt": null,
-      "previousProbability": 15,
-      "change": 2,
-      "isNew": false,
-      "history": [
-        {
-          "t": 1793812702517,
-          "p": 15
-        },
-        {
-          "t": 1793835831285,
-          "p": 15
-        },
-        {
-          "t": 1793861688468,
-          "p": 15
-        },
-        {
-          "t": 1793899624782,
-          "p": 15
-        },
-        {
-          "t": 1793948066667,
-          "p": 15
-        },
-        {
-          "t": 1794482639160,
-          "p": 17
+          "t": 1794513572343,
+          "p": 16
         }
       ]
     },
@@ -1074,7 +1198,7 @@
         "Crystal Palace"
       ],
       "probability": 16,
-      "logit": -1.6647,
+      "logit": -1.6671,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -1085,7 +1209,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0853,
+        "evidenceSum": 0.0829,
         "corroboration": 0,
         "distinctOutlets": 2,
         "tier1Outlets": 0,
@@ -1101,8 +1225,8 @@
           "publishedAt": "2026-11-11T17:19:57.000Z",
           "stage": "Interest / link",
           "cooler": null,
-          "recency": 0.944,
-          "contribution": 0.0642
+          "recency": 0.918,
+          "contribution": 0.0624
         },
         {
           "outlet": "Spurs Web",
@@ -1112,8 +1236,8 @@
           "publishedAt": "2026-11-11T10:04:13.000Z",
           "stage": "Interest / link",
           "cooler": null,
-          "recency": 0.922,
-          "contribution": 0.0211
+          "recency": 0.897,
+          "contribution": 0.0205
         }
       ],
       "latestAt": "2026-11-11T17:19:57.000Z",
@@ -1137,97 +1261,10 @@
         {
           "t": 1794482639160,
           "p": 16
-        }
-      ]
-    },
-    {
-      "id": "out-mikey-moore",
-      "player": "Mikey Moore",
-      "direction": "out",
-      "directionConfidence": 1,
-      "clubs": [
-        "Rangers"
-      ],
-      "probability": 15,
-      "logit": -1.6981,
-      "done": false,
-      "confirmedBy": [],
-      "stage": {
-        "id": "mention",
-        "label": "Mentioned only",
-        "value": 0.05
-      },
-      "cooler": null,
-      "breakdown": {
-        "prior": -1.75,
-        "evidenceSum": 0.0519,
-        "corroboration": 0,
-        "distinctOutlets": 2,
-        "tier1Outlets": 0,
-        "totalArticles": 4,
-        "confirmedFloorApplied": false
-      },
-      "evidence": [
-        {
-          "outlet": "football.london",
-          "tier": 2,
-          "headline": "Mikey Moore makes Rangers 'dream' transfer wish as Tottenham loan decision explained",
-          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPOFlyYURKd1V2eW9jaXFvd0tjZnFGMW9NY2E1eFhfVUd0bEhNWGc4bzQzaktrSC14Rkxwdk45b3hzZHFXWmlzZkhwei1kZmdnVWtsU2lwVnJiM3pDTDg2TEdOa2hCbFR1MmpvakZjVkRiTUxDRnB6Tk9xVTZaSURGQV9Hc3JjVXU5Y056bHJzekY2X1JhWFdRWDRLbGs2SkhpbXRjejNR0gGrAUFVX3lxTE9IZHFuUlFENzBrWmRId3lmRHFNZWFUZjBRS1ZIbFdUdXFXdW5rQ2RqRXVHSlllWHpncXJHRXc5SG1xeVUxbzhIVmRoWTJBRXRQRjRMcTF2YmFLQUY5RkJ6ZkRCclBaSlFQRDBlZ2Y3NG1uVUwyZDBnYkp5eThOY25ud3B2dVliVDBoeFJ2aXVfYjR1bzdBY1dYWjFNdlVXTTVDaUhlcG5QR1JtRQ?oc=5",
-          "publishedAt": "2026-11-12T06:02:57.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.983,
-          "contribution": 0.0305
         },
         {
-          "outlet": "Spurs Web",
-          "tier": 4,
-          "headline": "Mikey Moore permanent transfer to Köln is a non-starter, Tottenham want him back",
-          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQT24taTNUaHhYZVZ4RWxBQmZDM2xYbGtTZmRTQ21xUUJJYjZmRnRHRlhLV1h3UUwzXzRlU2k5OUlDZEwzSHplUGZHYlV1YVVFdkRTQk5Nd0g3TUN4cVh1eEhHYm1zNFd2Qjk0cDkwR09Tb2RFSlBmSlJzVkF4WGl1WXN0OHZPb2dyT1UzRzhaQmFyazdEc1lRS3NyOGpBOTVnTi1kNTVVb0F5X3BrTkV1bUtfS001SjZi?oc=5",
-          "publishedAt": "2026-11-11T14:42:51.000Z",
-          "stage": "Interest / link",
-          "cooler": null,
-          "recency": 0.936,
-          "contribution": 0.0214
-        }
-      ],
-      "latestAt": "2026-11-12T06:02:57.000Z",
-      "earliestAt": "2026-11-10T16:25:08.000Z",
-      "heuristicProbability": 15,
-      "llm": {
-        "adjustment": 0,
-        "note": "A possible loan or permanent move is discussed, while Tottenham reportedly prefer his return.",
-        "renamedFrom": null,
-        "redirectedFrom": null
-      },
-      "confirmedAt": null,
-      "previousProbability": 11,
-      "change": 4,
-      "isNew": false,
-      "history": [
-        {
-          "t": 1793812702517,
-          "p": 15
-        },
-        {
-          "t": 1794345555719,
-          "p": 11
-        },
-        {
-          "t": 1794378855194,
-          "p": 11
-        },
-        {
-          "t": 1794417178576,
-          "p": 11
-        },
-        {
-          "t": 1794444443831,
-          "p": 11
-        },
-        {
-          "t": 1794482639160,
-          "p": 15
+          "t": 1794513572343,
+          "p": 16
         }
       ]
     },
@@ -1240,7 +1277,7 @@
         "Arsenal"
       ],
       "probability": 15,
-      "logit": -1.7082,
+      "logit": -1.7094,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -1251,7 +1288,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0418,
+        "evidenceSum": 0.0406,
         "corroboration": 0,
         "distinctOutlets": 2,
         "tier1Outlets": 0,
@@ -1267,8 +1304,8 @@
           "publishedAt": "2026-11-11T20:30:00.000Z",
           "stage": "Interest / link",
           "cooler": null,
-          "recency": 0.953,
-          "contribution": 0.0305
+          "recency": 0.927,
+          "contribution": 0.0297
         },
         {
           "outlet": "TEAMtalk",
@@ -1278,8 +1315,8 @@
           "publishedAt": "2026-11-11T11:40:46.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.927,
-          "contribution": 0.0113
+          "recency": 0.902,
+          "contribution": 0.0109
         }
       ],
       "latestAt": "2026-11-11T20:30:00.000Z",
@@ -1391,6 +1428,10 @@
         {
           "t": 1794482639160,
           "p": 15
+        },
+        {
+          "t": 1794513572343,
+          "p": 15
         }
       ]
     },
@@ -1446,10 +1487,6 @@
       "change": 0,
       "isNew": false,
       "history": [
-        {
-          "t": 1792670346613,
-          "p": 15
-        },
         {
           "t": 1792689300133,
           "p": 15
@@ -1685,6 +1722,10 @@
         {
           "t": 1794482639160,
           "p": 15
+        },
+        {
+          "t": 1794513572343,
+          "p": 15
         }
       ]
     },
@@ -1740,10 +1781,6 @@
       "change": 0,
       "isNew": false,
       "history": [
-        {
-          "t": 1792755887204,
-          "p": 25
-        },
         {
           "t": 1792775577101,
           "p": 20
@@ -1978,6 +2015,10 @@
         },
         {
           "t": 1794482639160,
+          "p": 15
+        },
+        {
+          "t": 1794513572343,
           "p": 15
         }
       ]
