@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-11-15T16:24:22.184Z",
+  "generatedAt": "2026-11-15T22:53:30.288Z",
   "counts": {
     "rumours": 7,
     "incoming": 4,
     "outgoing": 3,
     "done": 0,
-    "articles": 223,
-    "transferArticles": 103,
+    "articles": 224,
+    "transferArticles": 99,
     "likely": 0
   },
   "model": {
     "type": "heuristic + LLM review",
     "llm": {
       "model": "gpt-5.6-luna",
-      "sent": 9,
-      "reusedFromCache": 11,
+      "sent": 3,
+      "reusedFromCache": 15,
       "deferred": 0,
-      "adjusted": 1,
-      "discarded": 12
+      "adjusted": 2,
+      "discarded": 10
     }
   },
   "sources": [
@@ -49,12 +49,12 @@
     {
       "name": "Google News — Tottenham transfer",
       "ok": true,
-      "itemCount": 56
+      "itemCount": 59
     },
     {
       "name": "Google News — Spurs transfer news",
       "ok": true,
-      "itemCount": 14
+      "itemCount": 13
     },
     {
       "name": "Google News — Tottenham sign",
@@ -64,7 +64,7 @@
     {
       "name": "Google News — Tottenham exit",
       "ok": true,
-      "itemCount": 21
+      "itemCount": 20
     },
     {
       "name": "Google News — Tottenham medical/agreed",
@@ -89,8 +89,8 @@
       "clubs": [
         "Barcelona"
       ],
-      "probability": 20,
-      "logit": -1.6703,
+      "probability": 17,
+      "logit": -1.6695,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -101,14 +101,25 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0797,
+        "evidenceSum": 0.0805,
         "corroboration": 0,
-        "distinctOutlets": 6,
+        "distinctOutlets": 7,
         "tier1Outlets": 0,
-        "totalArticles": 6,
+        "totalArticles": 7,
         "confirmedFloorApplied": false
       },
       "evidence": [
+        {
+          "outlet": "To The Lane And Back",
+          "tier": 4,
+          "headline": "Pedro Porro sets sights on summer Tottenham exit as valuation gap emerges with 'this' La Liga club",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPZXBuRERwLS1TQWxudmRaNEY5UHRYclJZeFliZ18yYm5hVUhxVW1hdFdEbnN1aDF2aHc1bDU5enRzNTZNUTNOME5sLTZaUTJwaGVwM0UwVHo0V2VTWTFrWnliWmpxdGY2VjRhNzBFN2ZCaGFGeHQySjl4c0pmWm1BWmU0OE5UOTR5NjhCM21qSmZKOFpKZjVLY2t0d09SLXoxQ3JDdk92LW4?oc=5",
+          "publishedAt": "2026-11-15T19:24:47.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.989,
+          "contribution": 0.0026
+        },
         {
           "outlet": "TEAMtalk",
           "tier": 3,
@@ -117,8 +128,8 @@
           "publishedAt": "2026-11-15T11:36:48.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.985,
-          "contribution": 0.0076
+          "recency": 0.964,
+          "contribution": 0.0075
         },
         {
           "outlet": "TheHardTackle.com",
@@ -128,8 +139,8 @@
           "publishedAt": "2026-11-15T08:09:32.000Z",
           "stage": "Interest / link",
           "cooler": null,
-          "recency": 0.974,
-          "contribution": 0.0312
+          "recency": 0.954,
+          "contribution": 0.0305
         },
         {
           "outlet": "YSscores",
@@ -139,8 +150,8 @@
           "publishedAt": "2026-11-14T21:58:18.000Z",
           "stage": "Interest / link",
           "cooler": null,
-          "recency": 0.943,
-          "contribution": 0.0215
+          "recency": 0.923,
+          "contribution": 0.0211
         },
         {
           "outlet": "Liverpool FC",
@@ -150,8 +161,8 @@
           "publishedAt": "2026-11-13T10:37:54.000Z",
           "stage": "Named in a roundup",
           "cooler": null,
-          "recency": 0.842,
-          "contribution": 0.0022
+          "recency": 0.824,
+          "contribution": 0.0019
         },
         {
           "outlet": "Sports Mole",
@@ -161,8 +172,8 @@
           "publishedAt": "2026-11-11T18:03:36.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.739,
-          "contribution": 0.0048
+          "recency": 0.724,
+          "contribution": 0.0047
         },
         {
           "outlet": "football.london",
@@ -172,28 +183,24 @@
           "publishedAt": "2026-11-11T10:34:51.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.721,
-          "contribution": 0.0124
+          "recency": 0.706,
+          "contribution": 0.0122
         }
       ],
-      "latestAt": "2026-11-15T11:36:48.000Z",
+      "latestAt": "2026-11-15T19:24:47.000Z",
       "earliestAt": "2026-11-11T10:34:51.000Z",
       "heuristicProbability": 16,
       "llm": {
-        "adjustment": 4,
-        "note": "Multiple reports say Porro wants Barcelona, though no confirmed offer or agreement is reported.",
+        "adjustment": 1,
+        "note": "Multiple reports claim Porro wants to leave, though the proposed destinations and valuation remain uncertain.",
         "renamedFrom": null,
         "redirectedFrom": null
       },
       "confirmedAt": null,
-      "previousProbability": 19,
-      "change": 1,
+      "previousProbability": 17,
+      "change": 0,
       "isNew": false,
       "history": [
-        {
-          "t": 1792883930424,
-          "p": 18
-        },
         {
           "t": 1792903733014,
           "p": 19
@@ -429,6 +436,10 @@
         {
           "t": 1794759862184,
           "p": 20
+        },
+        {
+          "t": 1794783210288,
+          "p": 17
         }
       ]
     },
@@ -441,7 +452,7 @@
         "Bayern Munich"
       ],
       "probability": 17,
-      "logit": -1.7396,
+      "logit": -1.7398,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -452,7 +463,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0104,
+        "evidenceSum": 0.0102,
         "corroboration": 0,
         "distinctOutlets": 2,
         "tier1Outlets": 0,
@@ -468,8 +479,8 @@
           "publishedAt": "2026-11-15T12:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.986,
-          "contribution": 0.0079
+          "recency": 0.966,
+          "contribution": 0.0077
         },
         {
           "outlet": "Sports Mole",
@@ -479,7 +490,7 @@
           "publishedAt": "2026-10-26T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.208,
+          "recency": 0.204,
           "contribution": 0.0025
         }
       ],
@@ -497,10 +508,6 @@
       "change": 2,
       "isNew": false,
       "history": [
-        {
-          "t": 1790879198388,
-          "p": 27
-        },
         {
           "t": 1790902196932,
           "p": 26
@@ -688,6 +695,10 @@
         {
           "t": 1794759862184,
           "p": 17
+        },
+        {
+          "t": 1794783210288,
+          "p": 17
         }
       ]
     },
@@ -700,7 +711,7 @@
         "Juventus"
       ],
       "probability": 16,
-      "logit": -1.6897,
+      "logit": -1.6764,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -711,11 +722,11 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0603,
+        "evidenceSum": 0.0736,
         "corroboration": 0,
-        "distinctOutlets": 4,
+        "distinctOutlets": 5,
         "tier1Outlets": 0,
-        "totalArticles": 4,
+        "totalArticles": 5,
         "confirmedFloorApplied": false
       },
       "evidence": [
@@ -727,8 +738,8 @@
           "publishedAt": "2026-11-15T14:19:27.000Z",
           "stage": "Interest / link",
           "cooler": null,
-          "recency": 0.993,
-          "contribution": 0.0318
+          "recency": 0.973,
+          "contribution": 0.0311
         },
         {
           "outlet": "Tottenham Hotspur News",
@@ -738,8 +749,8 @@
           "publishedAt": "2026-11-15T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.97,
-          "contribution": 0.0043
+          "recency": 0.95,
+          "contribution": 0.0035
         },
         {
           "outlet": "BeSoccer Livescore",
@@ -749,8 +760,19 @@
           "publishedAt": "2026-11-14T16:00:47.000Z",
           "stage": "Interest / link",
           "cooler": null,
-          "recency": 0.925,
-          "contribution": 0.0211
+          "recency": 0.906,
+          "contribution": 0.0207
+        },
+        {
+          "outlet": "Lente Desportiva",
+          "tier": 4,
+          "headline": "Tottenham face January transfer dilemma as Juventus target unhappy Destiny Udogie",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQMHhNY0FwN09TQ1Z1T2EyamFoc3NvalZrRWx1Z1BoazN6NTFQYVBsN0xjSGR5VGJvWmdXMDJ5YXlPMlU5Rm5SSnVQZ3ViMVNvaDEyWXpHZXdpMmprYVFCVndnaDd0akU0dXhUNkIxQ2tXZWZmM3FuZWxoa3lsWWxXZVpndUVubnlVNGN6REhrMW95aW5GSEVZdjZzUmRTTkI1ZnBFeGw0cEVkM0xQaXRN?oc=5",
+          "publishedAt": "2026-11-14T07:30:00.000Z",
+          "stage": "Interest / link",
+          "cooler": null,
+          "recency": 0.881,
+          "contribution": 0.0157
         },
         {
           "outlet": "Get Italian Football News",
@@ -760,8 +782,8 @@
           "publishedAt": "2026-11-13T18:54:58.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.864,
-          "contribution": 0.0031
+          "recency": 0.846,
+          "contribution": 0.0026
         }
       ],
       "latestAt": "2026-11-15T14:19:27.000Z",
@@ -769,13 +791,13 @@
       "heuristicProbability": 16,
       "llm": {
         "adjustment": 0,
-        "note": "Several reports claim Juventus are considering a January move for Udogie.",
+        "note": "Several reports link Udogie with a possible Juventus move, but all sources are low reliability.",
         "renamedFrom": null,
         "redirectedFrom": null
       },
       "confirmedAt": null,
-      "previousProbability": 17,
-      "change": -1,
+      "previousProbability": 18,
+      "change": -2,
       "isNew": false,
       "history": [
         {
@@ -877,28 +899,35 @@
         {
           "t": 1794759862184,
           "p": 16
+        },
+        {
+          "t": 1794783210288,
+          "p": 16
         }
       ]
     },
     {
-      "id": "in-junior-kroupi",
-      "player": "Eli Junior Kroupi",
+      "id": "in-igor",
+      "player": "Igor Matanović",
       "direction": "in",
       "directionConfidence": 0.3,
-      "clubs": [],
-      "probability": 15,
-      "logit": -1.7378,
+      "clubs": [
+        "Arsenal",
+        "Manchester United"
+      ],
+      "probability": 16,
+      "logit": -1.7127,
       "done": false,
       "confirmedBy": [],
       "stage": {
-        "id": "mention",
-        "label": "Mentioned only",
-        "value": 0.05
+        "id": "interest",
+        "label": "Interest / link",
+        "value": 0.2
       },
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0122,
+        "evidenceSum": 0.0373,
         "corroboration": 0,
         "distinctOutlets": 2,
         "tier1Outlets": 0,
@@ -907,177 +936,45 @@
       },
       "evidence": [
         {
-          "outlet": "LiveScore",
+          "outlet": "Spurs Web",
           "tier": 4,
-          "headline": "There is only one deal Tottenham won't do for Eli Junior Kroupi",
-          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOTms2NGs0bDdKaGI2VTZDMjVDVEFELXZnTmpUZ3NycW9RS1JyYjhySXVUYW9TMnRHb3RoWVp4OWJlSjZBWUo3emV4Ym1VLXktcXJjT0RKMVVLTlR0SnVwc183cVZxMUs4ZHRjaEdWZ0NsWnFJQnpLVWhHNFpIZFJuUlFrblVpd0UzSkFhMnJLNm0ySWFJRDFVN3ZBZW9yNVFweDBzdTRkYmsybTJRYmVVbTNUS2IxbkV4Sk1ia1djNjFDT2QwM3lTWnFiSUg?oc=5",
-          "publishedAt": "2026-11-14T15:17:40.000Z",
-          "stage": "Mentioned only",
+          "headline": "Tottenham keen on £50m 6ft 4 Igor Matanovic, but may prefer striker loan deal",
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQbUdfTEd2LWpVVnctWnItY3dLX3J3LXZ5eFY4dUNsYnA5T2dLOE9EeHloYVROQ3BXRU96ZlZFY2RMZ1JtaUdva2pLdTBteWhPdDU4eHdMR05GdUZ3VWNDVThManVkUjZUNHl3YUUzd1ptQ2JVRUJod0FsNGJNd0ZBSDFqeFkzVl9NX3BXWDg3RUtzbUx2MnpqY3pGZmkxam9vOGc2UHV6ZTZ1cy03R3c5eUdYcw?oc=5",
+          "publishedAt": "2026-11-15T22:00:00.000Z",
+          "stage": "Interest / link",
           "cooler": null,
-          "recency": 0.923,
-          "contribution": 0.0074
+          "recency": 0.997,
+          "contribution": 0.0319
         },
         {
-          "outlet": "Hotspur HQ",
+          "outlet": "Football-Talk",
           "tier": 4,
-          "headline": "5 players Tottenham would swap to sign Eli Junior Kroupi in a heartbeat",
-          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNYzd5QXpzbldGaDV2ck1pS3dJY2tiSXRBUGVTbXAyVjd4ZjM0ejREbzZwalRfVTduelVreDl1RTUtQ2JWN0N1RFFUaDlOWGtWVlg3d2ZhcFo0QkZNSzlDU0FmVFc2QkNvOE5seGhwUTJTeWc1bHFTR3JueXlzUkhKZjk4ajFkbktpdF8zR2Eta2dKdE1GM3JZT3dETElZY1VubmNIY2RIaDgtdw?oc=5",
-          "publishedAt": "2026-11-13T12:00:04.000Z",
+          "headline": "Tottenham, Man Utd & Arsenal plot swoop to sign Igor Matanović",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPaFd5MzBRUU5EX1BlRFRjVG9HTHZIMGdRWXl1c2pFbUM5V0lKcHNzcmVDazZIZHhOd3lMUVJVMzZjVFRYWmZpM2NMSEEzWGpBcjRhaERQdkdudUhwdUlIeUhBR3JkUldBeVNORERCVzU2YzVsWjc0Ymc2eVBLcnZuMU1pQTB3dFFhcFRZbkNyS0hmUzNjWkZDb2swaw?oc=5",
+          "publishedAt": "2026-11-15T07:23:27.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.845,
-          "contribution": 0.0048
+          "recency": 0.951,
+          "contribution": 0.0054
         }
       ],
-      "latestAt": "2026-11-14T15:17:40.000Z",
-      "earliestAt": "2026-11-13T12:00:04.000Z",
+      "latestAt": "2026-11-15T22:00:00.000Z",
+      "earliestAt": "2026-11-15T07:23:27.000Z",
       "heuristicProbability": 15,
       "llm": {
-        "adjustment": 0,
-        "note": "Speculative articles discuss Tottenham potentially signing Kroupi, without a concrete proposal.",
-        "renamedFrom": "Junior Kroupi",
+        "adjustment": 1,
+        "note": "Two reports identify Matanović as a Tottenham target, with a potential loan preferred over a permanent deal.",
+        "renamedFrom": "Igor",
         "redirectedFrom": null
       },
       "confirmedAt": null,
-      "previousProbability": 15,
+      "previousProbability": 16,
       "change": 0,
-      "isNew": false,
+      "isNew": true,
       "history": [
         {
-          "t": 1793046743520,
-          "p": 26
-        },
-        {
-          "t": 1793061005606,
-          "p": 26
-        },
-        {
-          "t": 1793091909506,
-          "p": 25
-        },
-        {
-          "t": 1793114619946,
-          "p": 25
-        },
-        {
-          "t": 1793298626406,
-          "p": 17
-        },
-        {
-          "t": 1793322321536,
-          "p": 17
-        },
-        {
-          "t": 1793354838452,
-          "p": 17
-        },
-        {
-          "t": 1793425866650,
-          "p": 17
-        },
-        {
-          "t": 1793450445412,
-          "p": 17
-        },
-        {
-          "t": 1793562213037,
-          "p": 15
-        },
-        {
-          "t": 1793618277035,
-          "p": 13
-        },
-        {
-          "t": 1793655847167,
+          "t": 1794783210288,
           "p": 16
-        },
-        {
-          "t": 1793688868771,
-          "p": 14
-        },
-        {
-          "t": 1793725591054,
-          "p": 10
-        },
-        {
-          "t": 1793748417123,
-          "p": 15
-        },
-        {
-          "t": 1793773981330,
-          "p": 16
-        },
-        {
-          "t": 1793812702517,
-          "p": 15
-        },
-        {
-          "t": 1793835831285,
-          "p": 16
-        },
-        {
-          "t": 1793861688468,
-          "p": 16
-        },
-        {
-          "t": 1793899624782,
-          "p": 13
-        },
-        {
-          "t": 1793922011368,
-          "p": 15
-        },
-        {
-          "t": 1793948066667,
-          "p": 15
-        },
-        {
-          "t": 1794444443831,
-          "p": 15
-        },
-        {
-          "t": 1794482639160,
-          "p": 15
-        },
-        {
-          "t": 1794513572343,
-          "p": 15
-        },
-        {
-          "t": 1794534752480,
-          "p": 15
-        },
-        {
-          "t": 1794568010926,
-          "p": 15
-        },
-        {
-          "t": 1794599232946,
-          "p": 15
-        },
-        {
-          "t": 1794619688422,
-          "p": 15
-        },
-        {
-          "t": 1794652431785,
-          "p": 16
-        },
-        {
-          "t": 1794679857917,
-          "p": 16
-        },
-        {
-          "t": 1794695388142,
-          "p": 15
-        },
-        {
-          "t": 1794724842318,
-          "p": 15
-        },
-        {
-          "t": 1794759862184,
-          "p": 15
         }
       ]
     },
@@ -1091,7 +988,7 @@
         "Arsenal"
       ],
       "probability": 15,
-      "logit": -1.7237,
+      "logit": -1.7242,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -1102,7 +999,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0263,
+        "evidenceSum": 0.0258,
         "corroboration": 0,
         "distinctOutlets": 1,
         "tier1Outlets": 0,
@@ -1118,8 +1015,8 @@
           "publishedAt": "2026-11-13T13:24:53.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.849,
-          "contribution": 0.0263
+          "recency": 0.832,
+          "contribution": 0.0258
         }
       ],
       "latestAt": "2026-11-13T13:24:53.000Z",
@@ -1175,6 +1072,10 @@
         {
           "t": 1794759862184,
           "p": 15
+        },
+        {
+          "t": 1794783210288,
+          "p": 15
         }
       ]
     },
@@ -1185,7 +1086,7 @@
       "directionConfidence": 0.3,
       "clubs": [],
       "probability": 15,
-      "logit": -1.7393,
+      "logit": -1.7396,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -1196,7 +1097,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0107,
+        "evidenceSum": 0.0104,
         "corroboration": 0,
         "distinctOutlets": 1,
         "tier1Outlets": 1,
@@ -1212,8 +1113,8 @@
           "publishedAt": "2026-10-27T07:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.225,
-          "contribution": 0.0107
+          "recency": 0.22,
+          "contribution": 0.0104
         }
       ],
       "latestAt": "2026-10-27T07:00:00.000Z",
@@ -1293,6 +1194,10 @@
         {
           "t": 1794759862184,
           "p": 15
+        },
+        {
+          "t": 1794783210288,
+          "p": 15
         }
       ]
     },
@@ -1348,10 +1253,6 @@
       "change": 0,
       "isNew": false,
       "history": [
-        {
-          "t": 1792928327212,
-          "p": 15
-        },
         {
           "t": 1792945715693,
           "p": 15
@@ -1586,6 +1487,10 @@
         },
         {
           "t": 1794759862184,
+          "p": 15
+        },
+        {
+          "t": 1794783210288,
           "p": 15
         }
       ]
