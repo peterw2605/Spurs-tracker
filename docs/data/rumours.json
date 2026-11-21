@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-11-21T11:14:06.554Z",
+  "generatedAt": "2026-11-21T19:21:58.681Z",
   "counts": {
-    "rumours": 13,
-    "incoming": 8,
-    "outgoing": 5,
+    "rumours": 7,
+    "incoming": 3,
+    "outgoing": 4,
     "done": 0,
-    "articles": 231,
-    "transferArticles": 109,
+    "articles": 195,
+    "transferArticles": 81,
     "likely": 0
   },
   "model": {
     "type": "heuristic + LLM review",
     "llm": {
       "model": "gpt-5.6-luna",
-      "sent": 10,
-      "reusedFromCache": 9,
+      "sent": 11,
+      "reusedFromCache": 4,
       "deferred": 0,
-      "adjusted": 2,
-      "discarded": 6
+      "adjusted": 0,
+      "discarded": 8
     }
   },
   "sources": [
@@ -44,27 +44,27 @@
     {
       "name": "Evening Standard — Tottenham",
       "ok": true,
-      "itemCount": 6
+      "itemCount": 9
     },
     {
       "name": "Google News — Tottenham transfer",
       "ok": true,
-      "itemCount": 65
+      "itemCount": 56
     },
     {
       "name": "Google News — Spurs transfer news",
       "ok": true,
-      "itemCount": 11
+      "itemCount": 9
     },
     {
       "name": "Google News — Tottenham sign",
       "ok": true,
-      "itemCount": 38
+      "itemCount": 10
     },
     {
       "name": "Google News — Tottenham exit",
       "ok": true,
-      "itemCount": 17
+      "itemCount": 16
     },
     {
       "name": "Google News — Tottenham medical/agreed",
@@ -74,13 +74,126 @@
     {
       "name": "Google News — Tottenham loan",
       "ok": true,
-      "itemCount": 6
+      "itemCount": 7
     }
   ],
-  "squadHints": [
-    "igor"
-  ],
+  "squadHints": [],
   "rumours": [
+    {
+      "id": "in-mykhailo-mudryk",
+      "player": "Mykhailo Mudryk",
+      "direction": "in",
+      "directionConfidence": 0.3,
+      "clubs": [
+        "Arsenal",
+        "Chelsea"
+      ],
+      "probability": 22,
+      "logit": -1.2619,
+      "done": false,
+      "confirmedBy": [],
+      "stage": {
+        "id": "advanced",
+        "label": "Advanced talks",
+        "value": 0.95
+      },
+      "cooler": null,
+      "breakdown": {
+        "prior": -1.75,
+        "evidenceSum": 0.4881,
+        "corroboration": 0,
+        "distinctOutlets": 3,
+        "tier1Outlets": 0,
+        "totalArticles": 3,
+        "confirmedFloorApplied": false
+      },
+      "evidence": [
+        {
+          "outlet": "The Mirror",
+          "tier": 3,
+          "headline": "Tottenham boss Roberto De Zerbi responds to Mykhailo Mudryk's Arsenal transfer admission",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOY0VFaUxRclFzODJ2UUdnS3hhXzRvbXlpLVhiZ2pXLVNJbVdLaFBFN0JhTHZyS3BsZjY5VjFCTnVJbm1HZkNYaDhKRHpKX1lnLWt2ckRTaWpmVzMyanZUUEs1WGhDbFAyVV9tN3NQSFlEdnlBRG5xb0lPY3YtSTl4ODJlYURIWm41bGJWd2toRdIBlAFBVV95cUxPOElhekdNY3RudHpYVmloVngzRWhfeFRYMVRtQkxNRnh0ZW1SbkwxU1JCTHhUMnI1YnoxWXJ4UHV4TExxYkEwZGZCNzA4Z1VBU2xkaWZMSnhfRmpfX2duc2RzTkRUMEJtOUFYaE5DcTZXbmhRLVMxV2VCQ21USEZ0eHFUbGp1Q21mX2tDMGhPdW9BSkZf?oc=5",
+          "publishedAt": "2026-11-20T17:51:00.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.921,
+          "contribution": 0.0112
+        },
+        {
+          "outlet": "LiveScore",
+          "tier": 4,
+          "headline": "'It was my dream!' - Chelsea star Mykhailo Mudryk makes shocking Arsenal transfer admission while on loan at Tottenham",
+          "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxQeFRkVGhiOUJBZVpDX1NNNnBVS214ckhDZGxiSDFwb1VsSld1WXNRcHRZUkE5eTFQbUhBMXh0eHV4cGdVMmNlMUxoT09qc05LTkk5SDAySmxGaVR0NldFRzd2bnhkSnZ2eHBwcVVzOFFJZ0VsWmsxYVB1djhkZm9QSUFGTU9Ha1RvM2tYczVoYW5KUEg3Wng4Zm5YaWtQYUZYZEZsWkNWd3lZNm1vNUZOR2NLMDdEWk9YYkl4YnJtUVE1c1M4QWF2dHBTTURwMXZQNUQ1bVAxRXRhbzJjNnc2d1VOSG5fWmFGWVRMY2drZGswaFJmdnE3VjBDdExKa2pWVHRnMXJvM0Q?oc=5",
+          "publishedAt": "2026-11-20T09:56:39.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.898,
+          "contribution": 0.004
+        },
+        {
+          "outlet": "talkSPORT",
+          "tier": 2,
+          "headline": "Mykhailo Mudryk not ruling out Chelsea renaissance as he names three clubs he held talks with before Tottenham loan",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQZHZqNG9QRnVLVzNucFdyYi1SYjQxRVNNQm1hZVhuYl9DZ3BXUk53VjY2a0VCdlJ4M2xnN1hPOTNDZ3VGTkdhT005bk5QWkNlYno0VGFiMVJiakN4aFlrRFhMM1pPSXV1QzZYMVA4cW12RXIwZmtMX0w2Z0NSSFRraE9sczE2M3dGV2NUQWdqa0w?oc=5",
+          "publishedAt": "2026-11-18T22:57:01.000Z",
+          "stage": "Advanced talks",
+          "cooler": null,
+          "recency": 0.803,
+          "contribution": 0.4729
+        }
+      ],
+      "latestAt": "2026-11-20T17:51:00.000Z",
+      "earliestAt": "2026-11-18T22:57:01.000Z",
+      "heuristicProbability": 22,
+      "llm": {
+        "adjustment": 0,
+        "note": "Headlines confirm Mudryk is currently on loan at Tottenham, though they do not establish advanced talks.",
+        "renamedFrom": null,
+        "redirectedFrom": null
+      },
+      "confirmedAt": null,
+      "previousProbability": 23,
+      "change": -1,
+      "isNew": false,
+      "history": [
+        {
+          "t": 1795055783944,
+          "p": 18
+        },
+        {
+          "t": 1795088824909,
+          "p": 42
+        },
+        {
+          "t": 1795120956734,
+          "p": 42
+        },
+        {
+          "t": 1795141295056,
+          "p": 23
+        },
+        {
+          "t": 1795175259666,
+          "p": 18
+        },
+        {
+          "t": 1795206429721,
+          "p": 15
+        },
+        {
+          "t": 1795227777123,
+          "p": 15
+        },
+        {
+          "t": 1795259646554,
+          "p": 15
+        },
+        {
+          "t": 1795288918681,
+          "p": 22
+        }
+      ]
+    },
     {
       "id": "out-richarlison",
       "player": "Richarlison",
@@ -89,26 +202,52 @@
       "clubs": [
         "Everton"
       ],
-      "probability": 22,
-      "logit": -1.651,
+      "probability": 21,
+      "logit": -1.2971,
       "done": false,
       "confirmedBy": [],
       "stage": {
-        "id": "mention",
-        "label": "Mentioned only",
-        "value": 0.05
+        "id": "imminent",
+        "label": "Imminent",
+        "value": 1.9
       },
-      "cooler": null,
+      "cooler": {
+        "id": "rejected",
+        "label": "Rejected / not for sale",
+        "value": -1.7
+      },
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.099,
+        "evidenceSum": 0.4529,
         "corroboration": 0,
-        "distinctOutlets": 7,
-        "tier1Outlets": 1,
-        "totalArticles": 7,
+        "distinctOutlets": 8,
+        "tier1Outlets": 0,
+        "totalArticles": 8,
         "confirmedFloorApplied": false
       },
       "evidence": [
+        {
+          "outlet": "Football FanCast",
+          "tier": 3,
+          "headline": "Tottenham: Vasco outline \"ambitious\" Richarlison plan amid imminent London talks",
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQMXAzdUo3aXhTZHJ1NGhsbG1kbmItX3RzTFRsb24wb01ORVAtUlVZTWlHZWZYeEVIeGhoS2o3WV93SFF4dXdsSzVDcEdtSW9Tejd4eWl4XzVRZk94aERDTEdsQ25WaXVkeEY0eFprSXJCOVFESTFTVXJVM2dScWtpcw?oc=5",
+          "publishedAt": "2026-11-21T18:11:13.000Z",
+          "stage": "Imminent",
+          "cooler": null,
+          "recency": 0.996,
+          "contribution": 0.6436
+        },
+        {
+          "outlet": "TheHardTackle.com",
+          "tier": 4,
+          "headline": "Tottenham unwilling to sell Richarlison to a Premier League club",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNLVpxdnB6cDJhc0U2R1FYVm5mVzFhV3RxS1FFOXNpM3E3NC1ZX0gtQmwxVV9xZVh0R005RUVja1AweU1FWGc1d1o3U2F4M0VtUkhWM1B2MExmWU9ZN0gtSkxSTkdaLWpSTFZoR1M1ckstb3o5SnlWd0w5Q2x3aFdIR0NRbEwyazVTY3lhbkpfZVF3SnhfUHVOZ3JhM3Nmeld5NTZuc0hSZTZHY01DU1FBanR5bTM2NHPSAbwBQVVfeXFMTzN0SFRWWTVTbFVhdmd3UHlHM1I4TmpkdHZBdFZ2R1JZd01Nc0lfb2FIQjdYS1FLa2stbnU2Ui1qYTR4V2lhdHNCN0FJZllLVjFQamZ0UXZfRGtzWng5dXVWQUFySFpBdnBLSnJ4elNRd1RrZ21VU296bU1RaklRMWY4U25PU3hDd2lQNVliSTlfTXZMSHVBd012NGZsN2VfUE1RcGRycGUzazhrZUNtajRwRE1MMjREWnhkU0c?oc=5",
+          "publishedAt": "2026-11-21T06:43:46.000Z",
+          "stage": "Mentioned only",
+          "cooler": "Rejected / not for sale",
+          "recency": 0.96,
+          "contribution": -0.2535
+        },
         {
           "outlet": "TEAMtalk",
           "tier": 3,
@@ -117,8 +256,8 @@
           "publishedAt": "2026-11-20T19:23:57.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.95,
-          "contribution": 0.0062
+          "recency": 0.926,
+          "contribution": 0.0061
         },
         {
           "outlet": "Goodison News",
@@ -128,8 +267,8 @@
           "publishedAt": "2026-11-20T19:00:00.000Z",
           "stage": "Interest / link",
           "cooler": null,
-          "recency": 0.949,
-          "contribution": 0.0217
+          "recency": 0.925,
+          "contribution": 0.0211
         },
         {
           "outlet": "TribalFootball",
@@ -139,8 +278,8 @@
           "publishedAt": "2026-11-20T14:30:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.936,
-          "contribution": 0.0053
+          "recency": 0.912,
+          "contribution": 0.0052
         },
         {
           "outlet": "The i Paper",
@@ -150,8 +289,8 @@
           "publishedAt": "2026-11-20T11:38:28.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.927,
-          "contribution": 0.016
+          "recency": 0.903,
+          "contribution": 0.0156
         },
         {
           "outlet": "Tottenham Hotspur News",
@@ -161,8 +300,8 @@
           "publishedAt": "2026-11-20T11:18:14.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.926,
-          "contribution": 0.0022
+          "recency": 0.902,
+          "contribution": 0.0021
         },
         {
           "outlet": "Football Insider",
@@ -172,39 +311,24 @@
           "publishedAt": "2026-11-20T10:30:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.924,
-          "contribution": 0.013
-        },
-        {
-          "outlet": "BBC Sport",
-          "tier": 1,
-          "headline": "Tottenham transfer rumours: Richarlison",
-          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9DNVYtemV5T2hyOEdCdUFjNkR5ZDdTaXpkejM4Sm5YRHBjV2UyN0lBTXZ1RVdrOVZUbFRiOUEwT0diUWszWi1jRlB1OERvd19nVDdPTkVCdHdHQS1LZ0JhczJtMGxZSzRobXlr?oc=5",
-          "publishedAt": "2026-11-17T08:03:49.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.727,
-          "contribution": 0.0346
+          "recency": 0.9,
+          "contribution": 0.0127
         }
       ],
-      "latestAt": "2026-11-20T19:23:57.000Z",
-      "earliestAt": "2026-11-17T08:03:49.000Z",
-      "heuristicProbability": 16,
+      "latestAt": "2026-11-21T18:11:13.000Z",
+      "earliestAt": "2026-11-20T10:30:00.000Z",
+      "heuristicProbability": 21,
       "llm": {
-        "adjustment": 6,
-        "note": "Multiple reports discuss a potential Spurs exit, though Tottenham may block a move and valuations remain uncertain.",
+        "adjustment": 0,
+        "note": "Multiple reports discuss potential Richarlison exits, but Tottenham may block some routes.",
         "renamedFrom": null,
         "redirectedFrom": null
       },
       "confirmedAt": null,
-      "previousProbability": 16,
+      "previousProbability": 15,
       "change": 6,
       "isNew": false,
       "history": [
-        {
-          "t": 1793383330913,
-          "p": 18
-        },
         {
           "t": 1793399115680,
           "p": 17
@@ -440,17 +564,23 @@
         {
           "t": 1795259646554,
           "p": 22
+        },
+        {
+          "t": 1795288918681,
+          "p": 21
         }
       ]
     },
     {
-      "id": "out-igor",
-      "player": "Igor Matanovic",
-      "direction": "in",
+      "id": "out-yves-bissouma",
+      "player": "Yves Bissouma",
+      "direction": "out",
       "directionConfidence": 1,
-      "clubs": [],
-      "probability": 19,
-      "logit": -1.7148,
+      "clubs": [
+        "Ajax"
+      ],
+      "probability": 15,
+      "logit": -1.7041,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -461,7 +591,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0352,
+        "evidenceSum": 0.0459,
         "corroboration": 0,
         "distinctOutlets": 2,
         "tier1Outlets": 0,
@@ -470,61 +600,201 @@
       },
       "evidence": [
         {
-          "outlet": "Yahoo Sports",
-          "tier": 3,
-          "headline": "Tottenham signing Igor Matanovic is a solution to actually making 2 problems worse",
-          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPbTJwQ25SSzdmVmRLa296Zi1qQXRiYlFVRk5CU2Y2RlR5SDhyYnNkODdSVjgyV1ViajlPaE9CVkg3SFpaM0JodkFIUGMzLTZNeVhua0NpTFhyVFRsbmRIZlFHellldnNER0paclc4UzAyTEtGRWpuMHE4WkpWN1ZnajloRnVEWnJra2RFSThfMTBic1N2?oc=5",
-          "publishedAt": "2026-11-18T13:00:06.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.798,
-          "contribution": 0.0097
-        },
-        {
-          "outlet": "Hotspur HQ",
+          "outlet": "Spurs Web",
           "tier": 4,
-          "headline": "Tottenham's Igor Matanovic interest is a compromise of combining 2 big problems",
-          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOcFJhclJELWJzM0FBbjU4QzRWQ3ZXbWxzcjFDSmJpaE5LZEZDdWdscjJYUk1WSVFZOUtOMkUwZzUzekxJdERhUG1mRWwwMlVWZVVoNFhwZS1Neks1SnRrU0E5M25ONVlHdUxjOFVCUW5lS01QTFB3WFNFQmpfeU5kcVVFal9aSnFoa2U3MGVFdlVPX3NLZUV6ZHh1UW5ERnpYVUp5MWJpRE5adnJER2p2QWFoQUZBSjRw?oc=5",
-          "publishedAt": "2026-11-18T13:00:01.000Z",
+          "headline": "'Really wanted to leave England' - Yves Bissouma opens up on swapping Tottenham for Ajax",
+          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQakEtWEVQc2VMaV9JWVVzRTFpMjhBZVBhSEhKUmhEU0E2QzF5SGtIc3M2UFlTV0NWVDNLb1pRNWozY3ZmMUU0MXVVTnhEXzdEN3NMbmdoVlBwRjFJM3BDeDFqODRCOFdkbVUyOXZ6Z0s2UmdoejNObXZGUkEtekE1cXE5WnhGbGZJazh4dFZ0NmhtVHM2WldSdHZ2UWtwRXVUMzNueWl0N2FtMnVTZlZseTE3Vks3eUtmS2Z2QU1Ddw?oc=5",
+          "publishedAt": "2026-11-20T10:00:00.000Z",
           "stage": "Interest / link",
           "cooler": null,
-          "recency": 0.798,
-          "contribution": 0.0255
+          "recency": 0.898,
+          "contribution": 0.0288
+        },
+        {
+          "outlet": "football.london",
+          "tier": 2,
+          "headline": "Yves Bissouma makes brutally honest admission over Tottenham exit after settling at new club",
+          "url": "https://www.football.london/tottenham-hotspur-fc/transfer-news/tottenham-news-yves-bissouma-ajax-34929245",
+          "publishedAt": "2026-11-18T11:29:46.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.774,
+          "contribution": 0.0171
         }
       ],
-      "latestAt": "2026-11-18T13:00:06.000Z",
-      "earliestAt": "2026-11-18T13:00:01.000Z",
+      "latestAt": "2026-11-20T10:00:00.000Z",
+      "earliestAt": "2026-11-18T11:29:46.000Z",
       "heuristicProbability": 15,
       "llm": {
-        "adjustment": 4,
-        "note": "The headlines describe Tottenham interest in signing Igor Matanovic, reversing the parsed departure direction.",
-        "renamedFrom": "Igor",
-        "redirectedFrom": "out"
+        "adjustment": 0,
+        "note": "The headlines describe Bissouma’s completed move from Tottenham to Ajax and his desire to leave England.",
+        "renamedFrom": null,
+        "redirectedFrom": null
       },
       "confirmedAt": null,
-      "previousProbability": 19,
-      "change": 0,
+      "previousProbability": 33,
+      "change": -18,
       "isNew": false,
       "history": [
         {
+          "t": 1791405551651,
+          "p": 33
+        },
+        {
+          "t": 1791421355750,
+          "p": 33
+        },
+        {
+          "t": 1791456035552,
+          "p": 33
+        },
+        {
+          "t": 1791485564747,
+          "p": 33
+        },
+        {
+          "t": 1791508495602,
+          "p": 33
+        },
+        {
+          "t": 1791542375582,
+          "p": 33
+        },
+        {
+          "t": 1791570195391,
+          "p": 33
+        },
+        {
+          "t": 1791593748720,
+          "p": 33
+        },
+        {
+          "t": 1791626137764,
+          "p": 33
+        },
+        {
+          "t": 1791652916025,
+          "p": 33
+        },
+        {
+          "t": 1791668896018,
+          "p": 33
+        },
+        {
+          "t": 1791698007475,
+          "p": 33
+        },
+        {
+          "t": 1791723440072,
+          "p": 33
+        },
+        {
+          "t": 1791747284882,
+          "p": 33
+        },
+        {
+          "t": 1791765366525,
+          "p": 33
+        },
+        {
+          "t": 1791802677683,
+          "p": 33
+        },
+        {
+          "t": 1791839874784,
+          "p": 33
+        },
+        {
+          "t": 1791874234290,
+          "p": 33
+        },
+        {
+          "t": 1791910718172,
+          "p": 33
+        },
+        {
+          "t": 1791931773938,
+          "p": 33
+        },
+        {
+          "t": 1791953952644,
+          "p": 33
+        },
+        {
+          "t": 1791979165389,
+          "p": 33
+        },
+        {
+          "t": 1791998192014,
+          "p": 33
+        },
+        {
+          "t": 1792014308669,
+          "p": 33
+        },
+        {
+          "t": 1792039625273,
+          "p": 33
+        },
+        {
+          "t": 1792064168670,
+          "p": 33
+        },
+        {
+          "t": 1792083928919,
+          "p": 33
+        },
+        {
+          "t": 1792099650181,
+          "p": 33
+        },
+        {
+          "t": 1792125450150,
+          "p": 33
+        },
+        {
+          "t": 1795002625158,
+          "p": 28
+        },
+        {
+          "t": 1795034241982,
+          "p": 27
+        },
+        {
+          "t": 1795055783944,
+          "p": 27
+        },
+        {
+          "t": 1795088824909,
+          "p": 33
+        },
+        {
+          "t": 1795120956734,
+          "p": 33
+        },
+        {
           "t": 1795141295056,
-          "p": 19
+          "p": 33
         },
         {
           "t": 1795175259666,
-          "p": 19
+          "p": 15
         },
         {
           "t": 1795206429721,
-          "p": 19
+          "p": 15
         },
         {
           "t": 1795227777123,
-          "p": 19
+          "p": 15
         },
         {
           "t": 1795259646554,
-          "p": 19
+          "p": 15
+        },
+        {
+          "t": 1795288918681,
+          "p": 15
         }
       ]
     },
@@ -532,24 +802,23 @@
       "id": "in-junior-kroupi",
       "player": "Eli Junior Kroupi",
       "direction": "in",
-      "directionConfidence": 1,
+      "directionConfidence": 0.3,
       "clubs": [
-        "Bournemouth",
         "Arsenal"
       ],
-      "probability": 18,
-      "logit": -1.6294,
+      "probability": 15,
+      "logit": -1.7369,
       "done": false,
       "confirmedBy": [],
       "stage": {
-        "id": "interest",
-        "label": "Interest / link",
-        "value": 0.2
+        "id": "mention",
+        "label": "Mentioned only",
+        "value": 0.05
       },
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.1206,
+        "evidenceSum": 0.0131,
         "corroboration": 0,
         "distinctOutlets": 2,
         "tier1Outlets": 0,
@@ -557,6 +826,17 @@
         "confirmedFloorApplied": false
       },
       "evidence": [
+        {
+          "outlet": "Spurs Web",
+          "tier": 4,
+          "headline": "Eli Junior Kroupi transfer update: Tottenham and Arsenal may struggle even with 'amazing offer'",
+          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPT19iUFhPSmZ2M2RvN0JZX000d2U5aVl6SzlaeVZicHRMb1RsWU9RMU5nRlQ3T0dFNVNHR2RIM3V5QkI2Tm9tZl8wbWxEakV1Rmk4UGJnOW5naXpKSnBQMU12ZDZ2NFpQNW5kZVVqMktaeDlFVHNtaFVmdUVBTTRVb0VnMl9iZEdicVFsMTRlMTVwUWpKX2pEWTlKRmRfejdJOTNaV0NXZEVDMV9QRWloTkdmSlVXYmtpcHRsMXpVcEk0S1ZRWk13cU1R?oc=5",
+          "publishedAt": "2026-11-21T12:00:00.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.977,
+          "contribution": 0.0078
+        },
         {
           "outlet": "Hotspur HQ",
           "tier": 4,
@@ -565,33 +845,22 @@
           "publishedAt": "2026-11-20T17:00:01.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.943,
-          "contribution": 0.0054
-        },
-        {
-          "outlet": "Evening Standard",
-          "tier": 2,
-          "headline": "Bournemouth boss reveals Eli Junior Kroupi transfer stance amid Arsenal and Tottenham interest",
-          "url": "https://www.standard.co.uk/sport/football/tottenham-transfer-news-bournemouth-kroupi-rose-b1305699.html",
-          "publishedAt": "2026-11-20T12:16:59.000Z",
-          "stage": "Interest / link",
-          "cooler": null,
-          "recency": 0.929,
-          "contribution": 0.1152
+          "recency": 0.919,
+          "contribution": 0.0053
         }
       ],
-      "latestAt": "2026-11-20T17:00:01.000Z",
-      "earliestAt": "2026-11-20T12:16:59.000Z",
-      "heuristicProbability": 16,
+      "latestAt": "2026-11-21T12:00:00.000Z",
+      "earliestAt": "2026-11-20T17:00:01.000Z",
+      "heuristicProbability": 15,
       "llm": {
-        "adjustment": 2,
-        "note": "Bournemouth’s stance is reported amid explicit Arsenal and Tottenham interest.",
+        "adjustment": 0,
+        "note": "Tottenham are linked with Eli Junior Kroupi, although the reports describe significant obstacles.",
         "renamedFrom": "Junior Kroupi",
         "redirectedFrom": null
       },
       "confirmedAt": null,
       "previousProbability": 17,
-      "change": 1,
+      "change": -2,
       "isNew": false,
       "history": [
         {
@@ -777,6 +1046,10 @@
         {
           "t": 1795259646554,
           "p": 18
+        },
+        {
+          "t": 1795288918681,
+          "p": 15
         }
       ]
     },
@@ -787,7 +1060,7 @@
       "directionConfidence": 1,
       "clubs": [],
       "probability": 15,
-      "logit": -1.7274,
+      "logit": -1.7372,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -798,11 +1071,11 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0226,
+        "evidenceSum": 0.0128,
         "corroboration": 0,
-        "distinctOutlets": 4,
-        "tier1Outlets": 1,
-        "totalArticles": 4,
+        "distinctOutlets": 2,
+        "tier1Outlets": 0,
+        "totalArticles": 2,
         "confirmedFloorApplied": false
       },
       "evidence": [
@@ -814,8 +1087,8 @@
           "publishedAt": "2026-11-15T11:36:48.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.631,
-          "contribution": 0.0107
+          "recency": 0.614,
+          "contribution": 0.0104
         },
         {
           "outlet": "Sports Mole",
@@ -826,37 +1099,15 @@
           "stage": "Mentioned only",
           "cooler": null,
           "recency": 0.2,
-          "contribution": 0.0015
-        },
-        {
-          "outlet": "BBC Sport",
-          "tier": 1,
-          "headline": "Tottenham transfer rumours: Nicolo Tresoldi, Pedro Porro",
-          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5GQS1zNGJJYVF2My1pX1ZyMUpUai02WERyWmtTXzNDOFFiNnEzSXY4VEc0Nm1JaHR1WXNQdTg0eWtGbktvMExCZXVNRnozM2ZkVzFnaEdtRFlUaEU2LXFfdWNMQVlXd290?oc=5",
-          "publishedAt": "2026-10-30T07:00:00.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.2,
-          "contribution": 0.0068
-        },
-        {
-          "outlet": "FourFourTwo",
-          "tier": 4,
-          "headline": "Pedro Porro admits 'I’d love to' when asked about 'dream' transfer - but admits it's 'unfair' on Tottenham Hotspur",
-          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNcVlDNjFzTzhRZkJsNklvdEpNam9OcnhRUUpqQzdJallIUlpJWDZpU21zdERtMFIyNndreXJiQkZRU3MxbHJiOS1HeTZCai1Ib3ZhU0dlOUNtR05CdVZ1LXA1d0ZHbExUNFF0SEVWaDBieDZKb0pCWEVjS0JKY2l5ZGdGZ0hUVWcxcXU4T1JBU0U1eTNMTlE3MkdyYjk1M0FCNDZOdnJOaWM?oc=5",
-          "publishedAt": "2026-10-30T07:00:00.000Z",
-          "stage": "Interest / link",
-          "cooler": null,
-          "recency": 0.2,
-          "contribution": 0.0036
+          "contribution": 0.0024
         }
       ],
       "latestAt": "2026-11-15T11:36:48.000Z",
-      "earliestAt": "2026-10-30T07:00:00.000Z",
+      "earliestAt": "2026-10-31T07:00:00.000Z",
       "heuristicProbability": 15,
       "llm": {
         "adjustment": 0,
-        "note": "Reports link Porro with a possible Tottenham exit, including a revealed price and his comments about a dream move.",
+        "note": "Reports discuss Porro’s possible Tottenham exit and transfer admission.",
         "renamedFrom": null,
         "redirectedFrom": null
       },
@@ -865,10 +1116,6 @@
       "change": 0,
       "isNew": false,
       "history": [
-        {
-          "t": 1793298626406,
-          "p": 19
-        },
         {
           "t": 1793322321536,
           "p": 16
@@ -1104,1039 +1351,9 @@
         {
           "t": 1795259646554,
           "p": 15
-        }
-      ]
-    },
-    {
-      "id": "in-mykhailo-mudryk",
-      "player": "Mykhailo Mudryk",
-      "direction": "in",
-      "directionConfidence": 0.3,
-      "clubs": [
-        "Arsenal",
-        "Chelsea"
-      ],
-      "probability": 15,
-      "logit": -1.2353,
-      "done": false,
-      "confirmedBy": [],
-      "stage": {
-        "id": "advanced",
-        "label": "Advanced talks",
-        "value": 0.95
-      },
-      "cooler": null,
-      "breakdown": {
-        "prior": -1.75,
-        "evidenceSum": 0.5147,
-        "corroboration": 0,
-        "distinctOutlets": 3,
-        "tier1Outlets": 0,
-        "totalArticles": 3,
-        "confirmedFloorApplied": false
-      },
-      "evidence": [
-        {
-          "outlet": "The Mirror",
-          "tier": 3,
-          "headline": "Tottenham boss Roberto De Zerbi responds to Mykhailo Mudryk's Arsenal transfer admission",
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOY0VFaUxRclFzODJ2UUdnS3hhXzRvbXlpLVhiZ2pXLVNJbVdLaFBFN0JhTHZyS3BsZjY5VjFCTnVJbm1HZkNYaDhKRHpKX1lnLWt2ckRTaWpmVzMyanZUUEs1WGhDbFAyVV9tN3NQSFlEdnlBRG5xb0lPY3YtSTl4ODJlYURIWm41bGJWd2toRdIBlAFBVV95cUxPOElhekdNY3RudHpYVmloVngzRWhfeFRYMVRtQkxNRnh0ZW1SbkwxU1JCTHhUMnI1YnoxWXJ4UHV4TExxYkEwZGZCNzA4Z1VBU2xkaWZMSnhfRmpfX2duc2RzTkRUMEJtOUFYaE5DcTZXbmhRLVMxV2VCQ21USEZ0eHFUbGp1Q21mX2tDMGhPdW9BSkZf?oc=5",
-          "publishedAt": "2026-11-20T17:51:00.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.946,
-          "contribution": 0.0089
-        },
-        {
-          "outlet": "Goal.com",
-          "tier": 2,
-          "headline": "'It was my dream!' - Chelsea star Mykhailo Mudryk makes shocking Arsenal transfer admission while on loan at Tottenham",
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQWldFemh2MjVNQVJmd0hsZFQ4dnFPR1ZpZXdnclhTeVgzbUlZSzUwb0lHbVdqVEdQTlV1UFRoaExjcGxfQ1VBYk9QTVJwa18wdGdkSDVOcE5hQlBKVEgwbFFKeTZIbmZDV3NZY01KTUJURklmWERGVDRSQ1VXbG9ObHZFR1BTZFVFbk5ZcUhYUWRvektKS1VIejF2QTREMFEy?oc=5",
-          "publishedAt": "2026-11-20T09:33:36.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.921,
-          "contribution": 0.0204
-        },
-        {
-          "outlet": "talkSPORT",
-          "tier": 2,
-          "headline": "Mykhailo Mudryk not ruling out Chelsea renaissance as he names three clubs he held talks with before Tottenham loan",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQZHZqNG9QRnVLVzNucFdyYi1SYjQxRVNNQm1hZVhuYl9DZ3BXUk53VjY2a0VCdlJ4M2xnN1hPOTNDZ3VGTkdhT005bk5QWkNlYno0VGFiMVJiakN4aFlrRFhMM1pPSXV1QzZYMVA4cW12RXIwZmtMX0w2Z0NSSFRraE9sczE2M3dGV2NUQWdqa0w?oc=5",
-          "publishedAt": "2026-11-18T22:57:01.000Z",
-          "stage": "Advanced talks",
-          "cooler": null,
-          "recency": 0.824,
-          "contribution": 0.4854
-        }
-      ],
-      "latestAt": "2026-11-20T17:51:00.000Z",
-      "earliestAt": "2026-11-18T22:57:01.000Z",
-      "heuristicProbability": 23,
-      "llm": {
-        "adjustment": -8,
-        "note": "Headlines describe his existing Tottenham loan and past discussions, not advanced negotiations for a new permanent transfer.",
-        "renamedFrom": null,
-        "redirectedFrom": null
-      },
-      "confirmedAt": null,
-      "previousProbability": 42,
-      "change": -27,
-      "isNew": false,
-      "history": [
-        {
-          "t": 1795055783944,
-          "p": 18
-        },
-        {
-          "t": 1795088824909,
-          "p": 42
-        },
-        {
-          "t": 1795120956734,
-          "p": 42
-        },
-        {
-          "t": 1795141295056,
-          "p": 23
-        },
-        {
-          "t": 1795175259666,
-          "p": 18
-        },
-        {
-          "t": 1795206429721,
-          "p": 15
-        },
-        {
-          "t": 1795227777123,
-          "p": 15
-        },
-        {
-          "t": 1795259646554,
-          "p": 15
-        }
-      ]
-    },
-    {
-      "id": "out-yves-bissouma",
-      "player": "Yves Bissouma",
-      "direction": "out",
-      "directionConfidence": 1,
-      "clubs": [
-        "Ajax"
-      ],
-      "probability": 15,
-      "logit": -1.7029,
-      "done": false,
-      "confirmedBy": [],
-      "stage": {
-        "id": "interest",
-        "label": "Interest / link",
-        "value": 0.2
-      },
-      "cooler": null,
-      "breakdown": {
-        "prior": -1.75,
-        "evidenceSum": 0.0471,
-        "corroboration": 0,
-        "distinctOutlets": 2,
-        "tier1Outlets": 0,
-        "totalArticles": 2,
-        "confirmedFloorApplied": false
-      },
-      "evidence": [
-        {
-          "outlet": "Spurs Web",
-          "tier": 4,
-          "headline": "'Really wanted to leave England' - Yves Bissouma opens up on swapping Tottenham for Ajax",
-          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQakEtWEVQc2VMaV9JWVVzRTFpMjhBZVBhSEhKUmhEU0E2QzF5SGtIc3M2UFlTV0NWVDNLb1pRNWozY3ZmMUU0MXVVTnhEXzdEN3NMbmdoVlBwRjFJM3BDeDFqODRCOFdkbVUyOXZ6Z0s2UmdoejNObXZGUkEtekE1cXE5WnhGbGZJazh4dFZ0NmhtVHM2WldSdHZ2UWtwRXVUMzNueWl0N2FtMnVTZlZseTE3Vks3eUtmS2Z2QU1Ddw?oc=5",
-          "publishedAt": "2026-11-20T10:00:00.000Z",
-          "stage": "Interest / link",
-          "cooler": null,
-          "recency": 0.922,
-          "contribution": 0.0295
-        },
-        {
-          "outlet": "football.london",
-          "tier": 2,
-          "headline": "Yves Bissouma makes brutally honest admission over Tottenham exit after settling at new club",
-          "url": "https://www.football.london/tottenham-hotspur-fc/transfer-news/tottenham-news-yves-bissouma-ajax-34929245",
-          "publishedAt": "2026-11-18T11:29:46.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.794,
-          "contribution": 0.0176
-        }
-      ],
-      "latestAt": "2026-11-20T10:00:00.000Z",
-      "earliestAt": "2026-11-18T11:29:46.000Z",
-      "heuristicProbability": 15,
-      "llm": {
-        "adjustment": 0,
-        "note": "The headlines describe Bissouma’s completed move from Tottenham to Ajax and his desire to leave England.",
-        "renamedFrom": null,
-        "redirectedFrom": null
-      },
-      "confirmedAt": null,
-      "previousProbability": 33,
-      "change": -18,
-      "isNew": false,
-      "history": [
-        {
-          "t": 1791379851595,
-          "p": 33
-        },
-        {
-          "t": 1791405551651,
-          "p": 33
-        },
-        {
-          "t": 1791421355750,
-          "p": 33
-        },
-        {
-          "t": 1791456035552,
-          "p": 33
-        },
-        {
-          "t": 1791485564747,
-          "p": 33
-        },
-        {
-          "t": 1791508495602,
-          "p": 33
-        },
-        {
-          "t": 1791542375582,
-          "p": 33
-        },
-        {
-          "t": 1791570195391,
-          "p": 33
-        },
-        {
-          "t": 1791593748720,
-          "p": 33
-        },
-        {
-          "t": 1791626137764,
-          "p": 33
-        },
-        {
-          "t": 1791652916025,
-          "p": 33
-        },
-        {
-          "t": 1791668896018,
-          "p": 33
-        },
-        {
-          "t": 1791698007475,
-          "p": 33
-        },
-        {
-          "t": 1791723440072,
-          "p": 33
-        },
-        {
-          "t": 1791747284882,
-          "p": 33
-        },
-        {
-          "t": 1791765366525,
-          "p": 33
-        },
-        {
-          "t": 1791802677683,
-          "p": 33
-        },
-        {
-          "t": 1791839874784,
-          "p": 33
-        },
-        {
-          "t": 1791874234290,
-          "p": 33
-        },
-        {
-          "t": 1791910718172,
-          "p": 33
-        },
-        {
-          "t": 1791931773938,
-          "p": 33
-        },
-        {
-          "t": 1791953952644,
-          "p": 33
-        },
-        {
-          "t": 1791979165389,
-          "p": 33
-        },
-        {
-          "t": 1791998192014,
-          "p": 33
-        },
-        {
-          "t": 1792014308669,
-          "p": 33
-        },
-        {
-          "t": 1792039625273,
-          "p": 33
-        },
-        {
-          "t": 1792064168670,
-          "p": 33
-        },
-        {
-          "t": 1792083928919,
-          "p": 33
-        },
-        {
-          "t": 1792099650181,
-          "p": 33
-        },
-        {
-          "t": 1792125450150,
-          "p": 33
-        },
-        {
-          "t": 1795002625158,
-          "p": 28
-        },
-        {
-          "t": 1795034241982,
-          "p": 27
-        },
-        {
-          "t": 1795055783944,
-          "p": 27
-        },
-        {
-          "t": 1795088824909,
-          "p": 33
-        },
-        {
-          "t": 1795120956734,
-          "p": 33
-        },
-        {
-          "t": 1795141295056,
-          "p": 33
-        },
-        {
-          "t": 1795175259666,
-          "p": 15
-        },
-        {
-          "t": 1795206429721,
-          "p": 15
-        },
-        {
-          "t": 1795227777123,
-          "p": 15
-        },
-        {
-          "t": 1795259646554,
-          "p": 15
-        }
-      ]
-    },
-    {
-      "id": "out-mikey-moore",
-      "player": "Mikey Moore",
-      "direction": "out",
-      "directionConfidence": 1,
-      "clubs": [
-        "Rangers"
-      ],
-      "probability": 15,
-      "logit": -1.7332,
-      "done": false,
-      "confirmedBy": [],
-      "stage": {
-        "id": "mention",
-        "label": "Mentioned only",
-        "value": 0.05
-      },
-      "cooler": null,
-      "breakdown": {
-        "prior": -1.75,
-        "evidenceSum": 0.0168,
-        "corroboration": 0,
-        "distinctOutlets": 1,
-        "tier1Outlets": 0,
-        "totalArticles": 1,
-        "confirmedFloorApplied": false
-      },
-      "evidence": [
-        {
-          "outlet": "Yahoo",
-          "tier": 3,
-          "headline": "Mikey Moore 'will return to Rangers' -Tottenham transfer plan revealed by transfer source",
-          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNZnE3c1MxY2JhenVwbHVlUXlGVTJ2VkJNSm9sanJLZXJuZWhJQjVEYlV4S29rNi1KakF4dE5NbXdGcThPZ3lhbDNQaDFockwzblU1Yk5uT0tvRjVkbXBDV3RieEFEeWkydndHN2h6WUxLN2pKa3JUa1gtOVM1aXlpdmdabVNnVkQybWlheQ?oc=5",
-          "publishedAt": "2026-11-21T08:15:00.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.99,
-          "contribution": 0.0168
-        }
-      ],
-      "latestAt": "2026-11-21T08:15:00.000Z",
-      "earliestAt": "2026-11-21T08:15:00.000Z",
-      "heuristicProbability": 15,
-      "llm": {
-        "adjustment": 0,
-        "note": "A report says Moore will return to Rangers under Tottenham’s transfer plan.",
-        "renamedFrom": null,
-        "redirectedFrom": null
-      },
-      "confirmedAt": null,
-      "previousProbability": 17,
-      "change": -2,
-      "isNew": false,
-      "history": [
-        {
-          "t": 1793812702517,
-          "p": 15
-        },
-        {
-          "t": 1794345555719,
-          "p": 11
-        },
-        {
-          "t": 1794378855194,
-          "p": 11
-        },
-        {
-          "t": 1794417178576,
-          "p": 11
-        },
-        {
-          "t": 1794444443831,
-          "p": 11
-        },
-        {
-          "t": 1794482639160,
-          "p": 15
-        },
-        {
-          "t": 1794513572343,
-          "p": 18
-        },
-        {
-          "t": 1794534752480,
-          "p": 18
-        },
-        {
-          "t": 1794679857917,
-          "p": 18
-        },
-        {
-          "t": 1794695388142,
-          "p": 18
-        },
-        {
-          "t": 1794724842318,
-          "p": 19
-        },
-        {
-          "t": 1794887800168,
-          "p": 15
-        },
-        {
-          "t": 1794931656271,
-          "p": 15
-        },
-        {
-          "t": 1794963549859,
-          "p": 15
-        },
-        {
-          "t": 1795002625158,
-          "p": 19
-        },
-        {
-          "t": 1795120956734,
-          "p": 17
-        },
-        {
-          "t": 1795141295056,
-          "p": 15
-        },
-        {
-          "t": 1795259646554,
-          "p": 15
-        }
-      ]
-    },
-    {
-      "id": "in-pavlidis-moore",
-      "player": "Vangelis Pavlidis",
-      "direction": "in",
-      "directionConfidence": 0.3,
-      "clubs": [],
-      "probability": 15,
-      "logit": -1.7098,
-      "done": false,
-      "confirmedBy": [],
-      "stage": {
-        "id": "mention",
-        "label": "Mentioned only",
-        "value": 0.05
-      },
-      "cooler": null,
-      "breakdown": {
-        "prior": -1.75,
-        "evidenceSum": 0.0402,
-        "corroboration": 0,
-        "distinctOutlets": 1,
-        "tier1Outlets": 1,
-        "totalArticles": 1,
-        "confirmedFloorApplied": false
-      },
-      "evidence": [
-        {
-          "outlet": "BBC Sport",
-          "tier": 1,
-          "headline": "Tottenham transfer rumours: Pavlidis, Moore",
-          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE8zVWUxaEpJTFEwZm0wR04tWldDNF8xSVJRcTZBSzNzeHRacnotdHE2em9UTU92dk9vRk1KY1FtRGxoTC1RX1J0S3lxd2RpLUs1aFJiWVRLNGF6WmtxY2M3dnFSMTItX21TTWlR?oc=5",
-          "publishedAt": "2026-11-19T07:27:02.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.847,
-          "contribution": 0.0402
-        }
-      ],
-      "latestAt": "2026-11-19T07:27:02.000Z",
-      "earliestAt": "2026-11-19T07:27:02.000Z",
-      "heuristicProbability": 15,
-      "llm": {
-        "adjustment": 0,
-        "note": "A BBC transfer-rumours roundup names Pavlidis, but provides no specific destination, terms, or progress.",
-        "renamedFrom": "Pavlidis Moore",
-        "redirectedFrom": null
-      },
-      "confirmedAt": null,
-      "previousProbability": 15,
-      "change": 0,
-      "isNew": false,
-      "history": [
-        {
-          "t": 1795141295056,
-          "p": 15
-        },
-        {
-          "t": 1795206429721,
-          "p": 15
-        },
-        {
-          "t": 1795259646554,
-          "p": 15
-        }
-      ]
-    },
-    {
-      "id": "in-nathan-collins",
-      "player": "Nathan Collins",
-      "direction": "in",
-      "directionConfidence": 0.3,
-      "clubs": [],
-      "probability": 15,
-      "logit": -1.7181,
-      "done": false,
-      "confirmedBy": [],
-      "stage": {
-        "id": "mention",
-        "label": "Mentioned only",
-        "value": 0.05
-      },
-      "cooler": null,
-      "breakdown": {
-        "prior": -1.75,
-        "evidenceSum": 0.0319,
-        "corroboration": 0,
-        "distinctOutlets": 1,
-        "tier1Outlets": 1,
-        "totalArticles": 1,
-        "confirmedFloorApplied": false
-      },
-      "evidence": [
-        {
-          "outlet": "BBC Sport",
-          "tier": 1,
-          "headline": "Tottenham transfer rumours: Nathan Collins",
-          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE01R2tmTXZSbEpTYW92azBsTTJ5bnhLMjRpWnZuVEVLZjlqRmdzQ2l5cWFMblpMM3FPcHdJSElxY3ZOSkNYRkMzRmEtdDlHWXN0ckR0UlVxaHJabWtYck5obEV4bWlwd3NRSEMw?oc=5",
-          "publishedAt": "2026-11-16T07:28:50.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.672,
-          "contribution": 0.0319
-        }
-      ],
-      "latestAt": "2026-11-16T07:28:50.000Z",
-      "earliestAt": "2026-11-16T07:28:50.000Z",
-      "heuristicProbability": 15,
-      "llm": {
-        "adjustment": 0,
-        "note": "A BBC roundup identifies Collins as a Tottenham transfer-rumour subject without further detail.",
-        "renamedFrom": null,
-        "redirectedFrom": null
-      },
-      "confirmedAt": null,
-      "previousProbability": 17,
-      "change": -2,
-      "isNew": false,
-      "history": [
-        {
-          "t": 1794857970484,
-          "p": 15
-        },
-        {
-          "t": 1794931656271,
-          "p": 17
-        },
-        {
-          "t": 1794963549859,
-          "p": 17
-        },
-        {
-          "t": 1795002625158,
-          "p": 17
-        },
-        {
-          "t": 1795034241982,
-          "p": 17
-        },
-        {
-          "t": 1795055783944,
-          "p": 17
-        },
-        {
-          "t": 1795088824909,
-          "p": 17
-        },
-        {
-          "t": 1795120956734,
-          "p": 17
-        },
-        {
-          "t": 1795141295056,
-          "p": 15
-        },
-        {
-          "t": 1795206429721,
-          "p": 15
-        },
-        {
-          "t": 1795259646554,
-          "p": 15
-        }
-      ]
-    },
-    {
-      "id": "out-lucas-bergvall",
-      "player": "Lucas Bergvall",
-      "direction": "out",
-      "directionConfidence": 1,
-      "clubs": [],
-      "probability": 15,
-      "logit": -1.7405,
-      "done": false,
-      "confirmedBy": [],
-      "stage": {
-        "id": "mention",
-        "label": "Mentioned only",
-        "value": 0.05
-      },
-      "cooler": null,
-      "breakdown": {
-        "prior": -1.75,
-        "evidenceSum": 0.0095,
-        "corroboration": 0,
-        "distinctOutlets": 1,
-        "tier1Outlets": 1,
-        "totalArticles": 1,
-        "confirmedFloorApplied": false
-      },
-      "evidence": [
-        {
-          "outlet": "BBC Sport",
-          "tier": 1,
-          "headline": "Tottenham transfer rumours: Lucas Bergvall",
-          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9aYXh2ZzM5b0dRM2pJcHpFdDAtanVZOVdqeTZwUF9MQXctS0doQUdJV3psVjRXZE1nNnhZbWZGZ1c4dlJscEtGdTI3Yi10REUtMFJBTmNKVERVeUZEaE1Gdl9BZmVXRVBlcWNn?oc=5",
-          "publishedAt": "2026-10-26T07:00:00.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.2,
-          "contribution": 0.0095
-        }
-      ],
-      "latestAt": "2026-10-26T07:00:00.000Z",
-      "earliestAt": "2026-10-26T07:00:00.000Z",
-      "heuristicProbability": 15,
-      "llm": {
-        "adjustment": 0,
-        "note": "A BBC roundup names Bergvall among Tottenham transfer rumours but gives no specific departure information.",
-        "renamedFrom": null,
-        "redirectedFrom": null
-      },
-      "confirmedAt": null,
-      "previousProbability": 16,
-      "change": -1,
-      "isNew": false,
-      "history": [
-        {
-          "t": 1791456035552,
-          "p": 16
-        },
-        {
-          "t": 1791485564747,
-          "p": 16
-        },
-        {
-          "t": 1791508495602,
-          "p": 11
-        },
-        {
-          "t": 1791542375582,
-          "p": 11
-        },
-        {
-          "t": 1791570195391,
-          "p": 11
-        },
-        {
-          "t": 1791593748720,
-          "p": 11
-        },
-        {
-          "t": 1791626137764,
-          "p": 7
-        },
-        {
-          "t": 1791652916025,
-          "p": 7
-        },
-        {
-          "t": 1791668896018,
-          "p": 7
-        },
-        {
-          "t": 1791698007475,
-          "p": 7
-        },
-        {
-          "t": 1791723440072,
-          "p": 5
-        },
-        {
-          "t": 1791747284882,
-          "p": 5
-        },
-        {
-          "t": 1791765366525,
-          "p": 5
-        },
-        {
-          "t": 1791874234290,
-          "p": 15
-        },
-        {
-          "t": 1791910718172,
-          "p": 15
-        },
-        {
-          "t": 1791931773938,
-          "p": 15
-        },
-        {
-          "t": 1791953952644,
-          "p": 15
-        },
-        {
-          "t": 1791979165389,
-          "p": 15
-        },
-        {
-          "t": 1791998192014,
-          "p": 15
-        },
-        {
-          "t": 1792014308669,
-          "p": 15
-        },
-        {
-          "t": 1792039625273,
-          "p": 15
-        },
-        {
-          "t": 1792064168670,
-          "p": 15
-        },
-        {
-          "t": 1792083928919,
-          "p": 15
-        },
-        {
-          "t": 1792099650181,
-          "p": 15
-        },
-        {
-          "t": 1792125450150,
-          "p": 15
-        },
-        {
-          "t": 1792150216962,
-          "p": 15
-        },
-        {
-          "t": 1792322068242,
-          "p": 15
-        },
-        {
-          "t": 1792338913034,
-          "p": 15
-        },
-        {
-          "t": 1792356572767,
-          "p": 15
-        },
-        {
-          "t": 1792365467195,
-          "p": 15
-        },
-        {
-          "t": 1792385269855,
-          "p": 15
-        },
-        {
-          "t": 1792416366914,
-          "p": 15
-        },
-        {
-          "t": 1792442207560,
-          "p": 15
-        },
-        {
-          "t": 1792558560624,
-          "p": 15
-        },
-        {
-          "t": 1792583820831,
-          "p": 15
-        },
-        {
-          "t": 1793091909506,
-          "p": 15
-        },
-        {
-          "t": 1793114619946,
-          "p": 15
-        },
-        {
-          "t": 1793139564621,
-          "p": 16
-        },
-        {
-          "t": 1793166551903,
-          "p": 16
-        },
-        {
-          "t": 1793192563526,
-          "p": 17
-        },
-        {
-          "t": 1793218774301,
-          "p": 18
-        },
-        {
-          "t": 1793235626623,
-          "p": 16
-        },
-        {
-          "t": 1793298626406,
-          "p": 18
-        },
-        {
-          "t": 1793322321536,
-          "p": 16
-        },
-        {
-          "t": 1793354838452,
-          "p": 16
-        },
-        {
-          "t": 1793425866650,
-          "p": 15
-        },
-        {
-          "t": 1793899624782,
-          "p": 10
-        },
-        {
-          "t": 1793922011368,
-          "p": 5
-        },
-        {
-          "t": 1793948066667,
-          "p": 5
-        },
-        {
-          "t": 1793983668533,
-          "p": 19
-        },
-        {
-          "t": 1794006817186,
-          "p": 18
-        },
-        {
-          "t": 1794031527300,
-          "p": 11
-        },
-        {
-          "t": 1794057053802,
-          "p": 16
-        },
-        {
-          "t": 1794079646970,
-          "p": 19
-        },
-        {
-          "t": 1794098527307,
-          "p": 17
-        },
-        {
-          "t": 1794133718641,
-          "p": 17
-        },
-        {
-          "t": 1794175872913,
-          "p": 16
-        },
-        {
-          "t": 1795141295056,
-          "p": 15
-        },
-        {
-          "t": 1795206429721,
-          "p": 15
-        },
-        {
-          "t": 1795259646554,
-          "p": 15
-        }
-      ]
-    },
-    {
-      "id": "in-nicolo-tresoldi",
-      "player": "Nicolo Tresoldi",
-      "direction": "in",
-      "directionConfidence": 0.3,
-      "clubs": [],
-      "probability": 15,
-      "logit": -1.7405,
-      "done": false,
-      "confirmedBy": [],
-      "stage": {
-        "id": "mention",
-        "label": "Mentioned only",
-        "value": 0.05
-      },
-      "cooler": null,
-      "breakdown": {
-        "prior": -1.75,
-        "evidenceSum": 0.0095,
-        "corroboration": 0,
-        "distinctOutlets": 1,
-        "tier1Outlets": 1,
-        "totalArticles": 1,
-        "confirmedFloorApplied": false
-      },
-      "evidence": [
-        {
-          "outlet": "BBC Sport",
-          "tier": 1,
-          "headline": "Tottenham transfer rumours: Nicolo Tresoldi",
-          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9qTEVBZlY5NmJrTlJWY05tN3lCc0hnRl9keTFOLXBoXzFsMmQ0OGFBVVBDNElaODNwQ0IxclFsYnFmOHgwSTJkaW5OYXJIb3JockthVjNDNHp3cm9Oa2ZXMTk3SWJpY3Js?oc=5",
-          "publishedAt": "2026-10-28T07:00:00.000Z",
-          "stage": "Mentioned only",
-          "cooler": null,
-          "recency": 0.2,
-          "contribution": 0.0095
-        }
-      ],
-      "latestAt": "2026-10-28T07:00:00.000Z",
-      "earliestAt": "2026-10-28T07:00:00.000Z",
-      "heuristicProbability": 15,
-      "llm": {
-        "adjustment": 0,
-        "note": "A BBC roundup names Tresoldi among Tottenham transfer rumours but provides no specific deal details.",
-        "renamedFrom": null,
-        "redirectedFrom": null
-      },
-      "confirmedAt": null,
-      "previousProbability": 15,
-      "change": 0,
-      "isNew": false,
-      "history": [
-        {
-          "t": 1792603009318,
-          "p": 17
-        },
-        {
-          "t": 1793192563526,
-          "p": 15
-        },
-        {
-          "t": 1793235626623,
-          "p": 15
-        },
-        {
-          "t": 1793268263909,
-          "p": 15
-        },
-        {
-          "t": 1793322321536,
-          "p": 15
-        },
-        {
-          "t": 1793354838452,
-          "p": 15
-        },
-        {
-          "t": 1793383330913,
-          "p": 15
-        },
-        {
-          "t": 1793491823202,
-          "p": 15
-        },
-        {
-          "t": 1793540165361,
-          "p": 15
-        },
-        {
-          "t": 1793725591054,
-          "p": 15
-        },
-        {
-          "t": 1793748417123,
-          "p": 15
-        },
-        {
-          "t": 1795141295056,
-          "p": 15
-        },
-        {
-          "t": 1795206429721,
-          "p": 15
         },
         {
-          "t": 1795259646554,
+          "t": 1795288918681,
           "p": 15
         }
       ]
@@ -2316,17 +1533,23 @@
         {
           "t": 1795259646554,
           "p": 15
+        },
+        {
+          "t": 1795288918681,
+          "p": 15
         }
       ]
     },
     {
-      "id": "in-georges-mikautadze",
-      "player": "Georges Mikautadze",
-      "direction": "in",
-      "directionConfidence": 0.3,
-      "clubs": [],
+      "id": "out-mikey-moore",
+      "player": "Mikey Moore",
+      "direction": "out",
+      "directionConfidence": 1,
+      "clubs": [
+        "Rangers"
+      ],
       "probability": 15,
-      "logit": -1.7249,
+      "logit": -1.7201,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -2337,7 +1560,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0251,
+        "evidenceSum": 0.0299,
         "corroboration": 0,
         "distinctOutlets": 1,
         "tier1Outlets": 0,
@@ -2348,21 +1571,21 @@
         {
           "outlet": "Football Insider",
           "tier": 2,
-          "headline": "Sources: Tottenham's chances of signing Georges Mikautadze in January revealed",
-          "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNTFRTZDVndFh4cmsxUWhXczNDTWVMRzVWNldqMFh2Tndqb2JHTjdTMnB2cnY5SG1FRDB2Y1p6MU12NzI4UHp4STNXNW9zOFgxNS1vd1BVdC1CdTZSa2c2X0FpdFZpWTZzQ0NoaGN5QzNqTEhQSU1PUmMxSEh4TTBGYWRySFExNEE3T3cxSml2ZTBCTWFSUExmYWJqN3R0Q29fc3pxc2loVGlEampIYXVCU29OZnVXc3g0ZDhYSXNURUhfaGhNTDNsckF4Nnk0SFR1V2t6RXZR?oc=5",
-          "publishedAt": "2026-11-18T18:00:00.000Z",
+          "headline": "Mikey Moore 'will return to Rangers' -Tottenham transfer plan revealed by transfer source",
+          "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPVDJSWmh2RTdRSjE4YXBtRmtCMmlFelBOSzVBTkxvNDNMY0lZS2xWbTUtNXRVbVB0UGh6OHlBLWpVMDZ3LUx4MVh0R1VueTh1VUZxeWpBMUNPZ3BxSWpTWjBORmtSdVFySmpPeG1VZmNDQy1VdUtBVHVoUGpYV1ZsRW9DTldCVWxlRVVMR3dRX1d5aW5zRkRpQVZESWI4SXhxSU1OTnpKUkZvYm1RLWtmNGV3TlZPTGZ3bjk3dTNzOGNEbTcxVjd0Zk8waTd4VDd2UXBkWmdR?oc=5",
+          "publishedAt": "2026-11-21T08:15:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.811,
-          "contribution": 0.0251
+          "recency": 0.965,
+          "contribution": 0.0299
         }
       ],
-      "latestAt": "2026-11-18T18:00:00.000Z",
-      "earliestAt": "2026-11-18T18:00:00.000Z",
+      "latestAt": "2026-11-21T08:15:00.000Z",
+      "earliestAt": "2026-11-21T08:15:00.000Z",
       "heuristicProbability": 15,
       "llm": {
         "adjustment": 0,
-        "note": "A report discusses Tottenham’s chances of signing Mikautadze in January without revealing a firm development.",
+        "note": "A report claims Moore will return to Rangers as part of Tottenham’s transfer planning.",
         "renamedFrom": null,
         "redirectedFrom": null
       },
@@ -2372,39 +1595,79 @@
       "isNew": false,
       "history": [
         {
-          "t": 1795034241982,
-          "p": 17
-        },
-        {
-          "t": 1795055783944,
+          "t": 1793812702517,
           "p": 15
         },
         {
-          "t": 1795088824909,
+          "t": 1794345555719,
+          "p": 11
+        },
+        {
+          "t": 1794378855194,
+          "p": 11
+        },
+        {
+          "t": 1794417178576,
+          "p": 11
+        },
+        {
+          "t": 1794444443831,
+          "p": 11
+        },
+        {
+          "t": 1794482639160,
           "p": 15
+        },
+        {
+          "t": 1794513572343,
+          "p": 18
+        },
+        {
+          "t": 1794534752480,
+          "p": 18
+        },
+        {
+          "t": 1794679857917,
+          "p": 18
+        },
+        {
+          "t": 1794695388142,
+          "p": 18
+        },
+        {
+          "t": 1794724842318,
+          "p": 19
+        },
+        {
+          "t": 1794887800168,
+          "p": 15
+        },
+        {
+          "t": 1794931656271,
+          "p": 15
+        },
+        {
+          "t": 1794963549859,
+          "p": 15
+        },
+        {
+          "t": 1795002625158,
+          "p": 19
         },
         {
           "t": 1795120956734,
-          "p": 15
+          "p": 17
         },
         {
           "t": 1795141295056,
           "p": 15
         },
         {
-          "t": 1795175259666,
-          "p": 15
-        },
-        {
-          "t": 1795206429721,
-          "p": 15
-        },
-        {
-          "t": 1795227777123,
-          "p": 15
-        },
-        {
           "t": 1795259646554,
+          "p": 15
+        },
+        {
+          "t": 1795288918681,
           "p": 15
         }
       ]
