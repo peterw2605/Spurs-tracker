@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-11-22T19:45:29.208Z",
+  "generatedAt": "2026-11-23T01:47:02.218Z",
   "counts": {
-    "rumours": 7,
-    "incoming": 3,
+    "rumours": 8,
+    "incoming": 4,
     "outgoing": 4,
     "done": 0,
-    "articles": 197,
-    "transferArticles": 81,
+    "articles": 200,
+    "transferArticles": 82,
     "likely": 0
   },
   "model": {
     "type": "heuristic + LLM review",
     "llm": {
       "model": "gpt-5.6-luna",
-      "sent": 7,
-      "reusedFromCache": 6,
+      "sent": 6,
+      "reusedFromCache": 10,
       "deferred": 0,
-      "adjusted": 2,
-      "discarded": 6
+      "adjusted": 0,
+      "discarded": 8
     }
   },
   "sources": [
@@ -54,17 +54,17 @@
     {
       "name": "Google News — Spurs transfer news",
       "ok": true,
-      "itemCount": 11
+      "itemCount": 8
     },
     {
       "name": "Google News — Tottenham sign",
       "ok": true,
-      "itemCount": 23
+      "itemCount": 26
     },
     {
       "name": "Google News — Tottenham exit",
       "ok": true,
-      "itemCount": 17
+      "itemCount": 19
     },
     {
       "name": "Google News — Tottenham medical/agreed",
@@ -74,7 +74,7 @@
     {
       "name": "Google News — Tottenham loan",
       "ok": true,
-      "itemCount": 5
+      "itemCount": 6
     }
   ],
   "squadHints": [],
@@ -88,7 +88,7 @@
         "Ajax"
       ],
       "probability": 33,
-      "logit": -1.7075,
+      "logit": -1.7083,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -99,7 +99,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0425,
+        "evidenceSum": 0.0417,
         "corroboration": 0,
         "distinctOutlets": 2,
         "tier1Outlets": 0,
@@ -115,8 +115,8 @@
           "publishedAt": "2026-11-20T10:00:00.000Z",
           "stage": "Interest / link",
           "cooler": null,
-          "recency": 0.831,
-          "contribution": 0.0266
+          "recency": 0.815,
+          "contribution": 0.0261
         },
         {
           "outlet": "football.london",
@@ -126,8 +126,8 @@
           "publishedAt": "2026-11-18T12:00:47.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.717,
-          "contribution": 0.0159
+          "recency": 0.703,
+          "contribution": 0.0156
         }
       ],
       "latestAt": "2026-11-20T10:00:00.000Z",
@@ -144,10 +144,6 @@
       "change": 18,
       "isNew": false,
       "history": [
-        {
-          "t": 1791508495602,
-          "p": 33
-        },
         {
           "t": 1791542375582,
           "p": 33
@@ -299,6 +295,118 @@
         {
           "t": 1795376729208,
           "p": 33
+        },
+        {
+          "t": 1795398422218,
+          "p": 33
+        }
+      ]
+    },
+    {
+      "id": "in-mykhailo-mudryk",
+      "player": "Mykhailo Mudryk",
+      "direction": "in",
+      "directionConfidence": 0.3,
+      "clubs": [
+        "Chelsea"
+      ],
+      "probability": 21,
+      "logit": -1.3211,
+      "done": false,
+      "confirmedBy": [],
+      "stage": {
+        "id": "advanced",
+        "label": "Advanced talks",
+        "value": 0.95
+      },
+      "cooler": null,
+      "breakdown": {
+        "prior": -1.75,
+        "evidenceSum": 0.4289,
+        "corroboration": 0,
+        "distinctOutlets": 1,
+        "tier1Outlets": 0,
+        "totalArticles": 1,
+        "confirmedFloorApplied": false
+      },
+      "evidence": [
+        {
+          "outlet": "talkSPORT",
+          "tier": 2,
+          "headline": "Mykhailo Mudryk not ruling out Chelsea renaissance as he names three clubs he held talks with before Tottenham loan",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQZHZqNG9QRnVLVzNucFdyYi1SYjQxRVNNQm1hZVhuYl9DZ3BXUk53VjY2a0VCdlJ4M2xnN1hPOTNDZ3VGTkdhT005bk5QWkNlYno0VGFiMVJiakN4aFlrRFhMM1pPSXV1QzZYMVA4cW12RXIwZmtMX0w2Z0NSSFRraE9sczE2M3dGV2NUQWdqa0w?oc=5",
+          "publishedAt": "2026-11-18T22:57:01.000Z",
+          "stage": "Advanced talks",
+          "cooler": null,
+          "recency": 0.728,
+          "contribution": 0.4289
+        }
+      ],
+      "latestAt": "2026-11-18T22:57:01.000Z",
+      "earliestAt": "2026-11-18T22:57:01.000Z",
+      "heuristicProbability": 21,
+      "llm": {
+        "adjustment": 0,
+        "note": "Headline references his Tottenham loan while discussing a possible Chelsea revival.",
+        "renamedFrom": null,
+        "redirectedFrom": null
+      },
+      "confirmedAt": null,
+      "previousProbability": 15,
+      "change": 6,
+      "isNew": false,
+      "history": [
+        {
+          "t": 1795055783944,
+          "p": 18
+        },
+        {
+          "t": 1795088824909,
+          "p": 42
+        },
+        {
+          "t": 1795120956734,
+          "p": 42
+        },
+        {
+          "t": 1795141295056,
+          "p": 23
+        },
+        {
+          "t": 1795175259666,
+          "p": 18
+        },
+        {
+          "t": 1795206429721,
+          "p": 15
+        },
+        {
+          "t": 1795227777123,
+          "p": 15
+        },
+        {
+          "t": 1795259646554,
+          "p": 15
+        },
+        {
+          "t": 1795288918681,
+          "p": 22
+        },
+        {
+          "t": 1795310546424,
+          "p": 22
+        },
+        {
+          "t": 1795347174011,
+          "p": 39
+        },
+        {
+          "t": 1795376729208,
+          "p": 11
+        },
+        {
+          "t": 1795398422218,
+          "p": 21
         }
       ]
     },
@@ -311,7 +419,7 @@
         "Arsenal"
       ],
       "probability": 15,
-      "logit": -1.7379,
+      "logit": -1.7381,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -322,7 +430,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0121,
+        "evidenceSum": 0.0119,
         "corroboration": 0,
         "distinctOutlets": 2,
         "tier1Outlets": 0,
@@ -338,8 +446,8 @@
           "publishedAt": "2026-11-21T12:00:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.903,
-          "contribution": 0.0072
+          "recency": 0.886,
+          "contribution": 0.0071
         },
         {
           "outlet": "Hotspur HQ",
@@ -349,8 +457,8 @@
           "publishedAt": "2026-11-20T17:00:01.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.85,
-          "contribution": 0.0049
+          "recency": 0.833,
+          "contribution": 0.0048
         }
       ],
       "latestAt": "2026-11-21T12:00:00.000Z",
@@ -566,6 +674,10 @@
         {
           "t": 1795376729208,
           "p": 15
+        },
+        {
+          "t": 1795398422218,
+          "p": 15
         }
       ]
     },
@@ -578,7 +690,7 @@
         "Rangers"
       ],
       "probability": 15,
-      "logit": -1.7226,
+      "logit": -1.7112,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -589,7 +701,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0274,
+        "evidenceSum": 0.0388,
         "corroboration": 0,
         "distinctOutlets": 2,
         "tier1Outlets": 0,
@@ -605,19 +717,19 @@
           "publishedAt": "2026-11-22T13:07:32.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.979,
-          "contribution": 0.0166
+          "recency": 0.96,
+          "contribution": 0.0117
         },
         {
-          "outlet": "Yahoo",
-          "tier": 3,
+          "outlet": "Football Insider",
+          "tier": 2,
           "headline": "Mikey Moore 'will return to Rangers' -Tottenham transfer plan revealed by transfer source",
-          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNZnE3c1MxY2JhenVwbHVlUXlGVTJ2VkJNSm9sanJLZXJuZWhJQjVEYlV4S29rNi1KakF4dE5NbXdGcThPZ3lhbDNQaDFockwzblU1Yk5uT0tvRjVkbXBDV3RieEFEeWkydndHN2h6WUxLN2pKa3JUa1gtOVM1aXlpdmdabVNnVkQybWlheQ?oc=5",
+          "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPVDJSWmh2RTdRSjE4YXBtRmtCMmlFelBOSzVBTkxvNDNMY0lZS2xWbTUtNXRVbVB0UGh6OHlBLWpVMDZ3LUx4MVh0R1VueTh1VUZxeWpBMUNPZ3BxSWpTWjBORmtSdVFySmpPeG1VZmNDQy1VdUtBVHVoUGpYV1ZsRW9DTldCVWxlRVVMR3dRX1d5aW5zRkRpQVZESWI4SXhxSU1OTnpKUkZvYm1RLWtmNGV3TlZPTGZ3bjk3dTNzOGNEbTcxVjd0Zk8waTd4VDd2UXBkWmdR?oc=5",
           "publishedAt": "2026-11-21T08:15:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.892,
-          "contribution": 0.0108
+          "recency": 0.875,
+          "contribution": 0.0271
         }
       ],
       "latestAt": "2026-11-22T13:07:32.000Z",
@@ -625,7 +737,7 @@
       "heuristicProbability": 15,
       "llm": {
         "adjustment": 0,
-        "note": "The headlines discuss his potential recall or return from loan, representing a possible departure from Tottenham.",
+        "note": "Reports discuss potential January changes to Moore’s loan arrangements.",
         "renamedFrom": null,
         "redirectedFrom": null
       },
@@ -721,6 +833,10 @@
         {
           "t": 1795376729208,
           "p": 15
+        },
+        {
+          "t": 1795398422218,
+          "p": 15
         }
       ]
     },
@@ -733,7 +849,7 @@
         "Liverpool"
       ],
       "probability": 15,
-      "logit": -1.7002,
+      "logit": -1.7012,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -744,7 +860,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0498,
+        "evidenceSum": 0.0488,
         "corroboration": 0,
         "distinctOutlets": 2,
         "tier1Outlets": 0,
@@ -760,8 +876,8 @@
           "publishedAt": "2026-11-22T18:30:00.000Z",
           "stage": "Interest / link",
           "cooler": null,
-          "recency": 0.996,
-          "contribution": 0.0319
+          "recency": 0.977,
+          "contribution": 0.0313
         },
         {
           "outlet": "Liverpool FC",
@@ -771,8 +887,8 @@
           "publishedAt": "2026-11-19T14:43:28.000Z",
           "stage": "Interest / link",
           "cooler": null,
-          "recency": 0.781,
-          "contribution": 0.0179
+          "recency": 0.766,
+          "contribution": 0.0175
         }
       ],
       "latestAt": "2026-11-22T18:30:00.000Z",
@@ -812,6 +928,10 @@
         {
           "t": 1795376729208,
           "p": 15
+        },
+        {
+          "t": 1795398422218,
+          "p": 15
         }
       ]
     },
@@ -822,7 +942,7 @@
       "directionConfidence": 1,
       "clubs": [],
       "probability": 15,
-      "logit": -1.7379,
+      "logit": -1.7381,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -833,7 +953,7 @@
       "cooler": null,
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": 0.0121,
+        "evidenceSum": 0.0119,
         "corroboration": 0,
         "distinctOutlets": 2,
         "tier1Outlets": 0,
@@ -849,8 +969,8 @@
           "publishedAt": "2026-11-15T11:36:48.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.568,
-          "contribution": 0.0097
+          "recency": 0.557,
+          "contribution": 0.0095
         },
         {
           "outlet": "Sports Mole",
@@ -874,14 +994,10 @@
         "redirectedFrom": null
       },
       "confirmedAt": null,
-      "previousProbability": 19,
-      "change": -4,
+      "previousProbability": 15,
+      "change": 0,
       "isNew": false,
       "history": [
-        {
-          "t": 1793399115680,
-          "p": 22
-        },
         {
           "t": 1793425866650,
           "p": 22
@@ -1117,6 +1233,204 @@
         {
           "t": 1795376729208,
           "p": 15
+        },
+        {
+          "t": 1795398422218,
+          "p": 15
+        }
+      ]
+    },
+    {
+      "id": "in-alex-scott",
+      "player": "Alex Scott",
+      "direction": "in",
+      "directionConfidence": 0.3,
+      "clubs": [],
+      "probability": 15,
+      "logit": -1.7405,
+      "done": false,
+      "confirmedBy": [],
+      "stage": {
+        "id": "mention",
+        "label": "Mentioned only",
+        "value": 0.05
+      },
+      "cooler": null,
+      "breakdown": {
+        "prior": -1.75,
+        "evidenceSum": 0.0095,
+        "corroboration": 0,
+        "distinctOutlets": 1,
+        "tier1Outlets": 1,
+        "totalArticles": 1,
+        "confirmedFloorApplied": false
+      },
+      "evidence": [
+        {
+          "outlet": "BBC Sport",
+          "tier": 1,
+          "headline": "Tottenham transfer rumours: Alex Scott",
+          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5FLVBlNk9vejVCVl9tM2J6UEFMWHk4a1RNV0lmU0JYQnJibmpwc2I4T1VLSTBPTDJJcmJoRHpmM3p0YWFWX1RMNXBtWjBqbVJHMTFseXFTb2pXZkRsZnRQM1U5M0VIRkJu?oc=5",
+          "publishedAt": "2026-10-27T07:00:00.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.2,
+          "contribution": 0.0095
+        }
+      ],
+      "latestAt": "2026-10-27T07:00:00.000Z",
+      "earliestAt": "2026-10-27T07:00:00.000Z",
+      "heuristicProbability": 15,
+      "llm": {
+        "adjustment": 0,
+        "note": "The headline identifies Scott in Tottenham transfer rumours without providing further detail.",
+        "renamedFrom": null,
+        "redirectedFrom": null
+      },
+      "confirmedAt": null,
+      "previousProbability": 15,
+      "change": 0,
+      "isNew": false,
+      "history": [
+        {
+          "t": 1793114619946,
+          "p": 15
+        },
+        {
+          "t": 1793139564621,
+          "p": 15
+        },
+        {
+          "t": 1793166551903,
+          "p": 15
+        },
+        {
+          "t": 1793192563526,
+          "p": 15
+        },
+        {
+          "t": 1793218774301,
+          "p": 15
+        },
+        {
+          "t": 1793235626623,
+          "p": 15
+        },
+        {
+          "t": 1793268263909,
+          "p": 15
+        },
+        {
+          "t": 1793298626406,
+          "p": 15
+        },
+        {
+          "t": 1793322321536,
+          "p": 15
+        },
+        {
+          "t": 1793354838452,
+          "p": 15
+        },
+        {
+          "t": 1793383330913,
+          "p": 15
+        },
+        {
+          "t": 1793399115680,
+          "p": 16
+        },
+        {
+          "t": 1794679857917,
+          "p": 15
+        },
+        {
+          "t": 1794695388142,
+          "p": 15
+        },
+        {
+          "t": 1794724842318,
+          "p": 15
+        },
+        {
+          "t": 1794759862184,
+          "p": 15
+        },
+        {
+          "t": 1794783210288,
+          "p": 15
+        },
+        {
+          "t": 1794811123686,
+          "p": 15
+        },
+        {
+          "t": 1794857970484,
+          "p": 15
+        },
+        {
+          "t": 1794931656271,
+          "p": 15
+        },
+        {
+          "t": 1794963549859,
+          "p": 15
+        },
+        {
+          "t": 1795002625158,
+          "p": 15
+        },
+        {
+          "t": 1795034241982,
+          "p": 15
+        },
+        {
+          "t": 1795055783944,
+          "p": 15
+        },
+        {
+          "t": 1795088824909,
+          "p": 15
+        },
+        {
+          "t": 1795120956734,
+          "p": 15
+        },
+        {
+          "t": 1795141295056,
+          "p": 15
+        },
+        {
+          "t": 1795175259666,
+          "p": 15
+        },
+        {
+          "t": 1795206429721,
+          "p": 15
+        },
+        {
+          "t": 1795227777123,
+          "p": 15
+        },
+        {
+          "t": 1795259646554,
+          "p": 15
+        },
+        {
+          "t": 1795288918681,
+          "p": 15
+        },
+        {
+          "t": 1795310546424,
+          "p": 15
+        },
+        {
+          "t": 1795347174011,
+          "p": 15
+        },
+        {
+          "t": 1795398422218,
+          "p": 15
         }
       ]
     },
@@ -1129,7 +1443,7 @@
         "Everton"
       ],
       "probability": 13,
-      "logit": -1.9024,
+      "logit": -1.8975,
       "done": false,
       "confirmedBy": [],
       "stage": {
@@ -1144,14 +1458,25 @@
       },
       "breakdown": {
         "prior": -1.75,
-        "evidenceSum": -0.1524,
+        "evidenceSum": -0.1475,
         "corroboration": 0,
-        "distinctOutlets": 9,
+        "distinctOutlets": 10,
         "tier1Outlets": 0,
-        "totalArticles": 9,
+        "totalArticles": 10,
         "confirmedFloorApplied": false
       },
       "evidence": [
+        {
+          "outlet": "Spurs Web",
+          "tier": 4,
+          "headline": "Tottenham open to taking £50m hit on Richarlison as Trabzonspor plot January bid",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPckdscWZqNzNlZWluTVVwOURYR0xPU1hWaGFmN0pUT04zaVc5cEM0NExlUlNvSGMzcXlySC15YnZEREluYmNKMmpsVXhPQmZGd1JXTW1abnM5NDVFLWZscG15eTJ3Qnk0TXJrNkRyejdhNGw4N2FFZFctMWhwTHc4Q3lEc2d1OHVjLThfdEd4SjBzMS1DSlJuMzZweWNGOG8xX001ZnpjbWhCb1RCQnc?oc=5",
+          "publishedAt": "2026-11-22T22:00:00.000Z",
+          "stage": "Mentioned only",
+          "cooler": null,
+          "recency": 0.988,
+          "contribution": 0.0023
+        },
         {
           "outlet": "CaughtOffside",
           "tier": 3,
@@ -1160,8 +1485,8 @@
           "publishedAt": "2026-11-22T05:56:35.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.957,
-          "contribution": 0.0074
+          "recency": 0.938,
+          "contribution": 0.0073
         },
         {
           "outlet": "LiveScore",
@@ -1171,8 +1496,8 @@
           "publishedAt": "2026-11-22T04:13:43.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.951,
-          "contribution": 0.0022
+          "recency": 0.933,
+          "contribution": 0.002
         },
         {
           "outlet": "TheHardTackle.com",
@@ -1182,8 +1507,8 @@
           "publishedAt": "2026-11-21T06:43:46.000Z",
           "stage": "Mentioned only",
           "cooler": "Rejected / not for sale",
-          "recency": 0.888,
-          "contribution": -0.2344
+          "recency": 0.871,
+          "contribution": -0.2299
         },
         {
           "outlet": "TEAMtalk",
@@ -1193,8 +1518,8 @@
           "publishedAt": "2026-11-20T19:23:57.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.856,
-          "contribution": 0.0056
+          "recency": 0.84,
+          "contribution": 0.0055
         },
         {
           "outlet": "Goodison News",
@@ -1204,8 +1529,8 @@
           "publishedAt": "2026-11-20T19:00:00.000Z",
           "stage": "Interest / link",
           "cooler": null,
-          "recency": 0.855,
-          "contribution": 0.0274
+          "recency": 0.839,
+          "contribution": 0.0268
         },
         {
           "outlet": "TribalFootball",
@@ -1215,8 +1540,8 @@
           "publishedAt": "2026-11-20T14:30:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.843,
-          "contribution": 0.0048
+          "recency": 0.827,
+          "contribution": 0.0047
         },
         {
           "outlet": "The i Paper",
@@ -1226,8 +1551,8 @@
           "publishedAt": "2026-11-20T11:38:28.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.835,
-          "contribution": 0.0185
+          "recency": 0.819,
+          "contribution": 0.0181
         },
         {
           "outlet": "Tottenham Hotspur News",
@@ -1237,8 +1562,8 @@
           "publishedAt": "2026-11-20T11:18:14.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.834,
-          "contribution": 0.0018
+          "recency": 0.818,
+          "contribution": 0.0016
         },
         {
           "outlet": "Football Insider",
@@ -1248,28 +1573,24 @@
           "publishedAt": "2026-11-20T10:30:00.000Z",
           "stage": "Mentioned only",
           "cooler": null,
-          "recency": 0.832,
-          "contribution": 0.0143
+          "recency": 0.816,
+          "contribution": 0.0141
         }
       ],
-      "latestAt": "2026-11-22T05:56:35.000Z",
+      "latestAt": "2026-11-22T22:00:00.000Z",
       "earliestAt": "2026-11-20T10:30:00.000Z",
       "heuristicProbability": 13,
       "llm": {
         "adjustment": 0,
-        "note": "Multiple reports discuss possible January exits, but Tottenham’s stance and destinations remain uncertain.",
+        "note": "Multiple reports link Richarlison with a possible January departure, though exit routes remain uncertain.",
         "renamedFrom": null,
         "redirectedFrom": null
       },
       "confirmedAt": null,
-      "previousProbability": 25,
-      "change": -12,
+      "previousProbability": 22,
+      "change": -9,
       "isNew": false,
       "history": [
-        {
-          "t": 1793491823202,
-          "p": 17
-        },
         {
           "t": 1793513674869,
           "p": 19
@@ -1505,126 +1826,10 @@
         {
           "t": 1795376729208,
           "p": 13
-        }
-      ]
-    },
-    {
-      "id": "in-mykhailo-mudryk",
-      "player": "Mykhailo Mudryk",
-      "direction": "in",
-      "directionConfidence": 0.3,
-      "clubs": [
-        "Chelsea",
-        "Arsenal"
-      ],
-      "probability": 11,
-      "logit": -1.4534,
-      "done": false,
-      "confirmedBy": [],
-      "stage": {
-        "id": "advanced",
-        "label": "Advanced talks",
-        "value": 0.95
-      },
-      "cooler": {
-        "id": "rival",
-        "label": "Rival competition",
-        "value": -0.55
-      },
-      "breakdown": {
-        "prior": -1.75,
-        "evidenceSum": 0.2966,
-        "corroboration": 0,
-        "distinctOutlets": 2,
-        "tier1Outlets": 0,
-        "totalArticles": 2,
-        "confirmedFloorApplied": false
-      },
-      "evidence": [
-        {
-          "outlet": "Yahoo",
-          "tier": 3,
-          "headline": "Chelsea star Mykhailo Mudryk in stunning Arsenal transfer admission ahead of Tottenham return",
-          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOdDVpa01UUUxKeGx2R2d0aHJ6WWRpeHdpRHN1c3lmMFg2LXR1MlduODZ2R2VkVE5tYjNLZ3dwMG1nbzdHckhpTWwtazd2c3hCUnRpazgza3ozNkhLejg5aTZFZ0lLQXJ4Sjl1QWJCWGtmRV9uOV9USS1FZDJyQWswTnJuLXNzVjhXak1KZURB?oc=5",
-          "publishedAt": "2026-11-20T08:51:19.000Z",
-          "stage": "Mentioned only",
-          "cooler": "Rival competition",
-          "recency": 0.828,
-          "contribution": -0.1407
         },
         {
-          "outlet": "talkSPORT",
-          "tier": 2,
-          "headline": "Mykhailo Mudryk not ruling out Chelsea renaissance as he names three clubs he held talks with before Tottenham loan",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQZHZqNG9QRnVLVzNucFdyYi1SYjQxRVNNQm1hZVhuYl9DZ3BXUk53VjY2a0VCdlJ4M2xnN1hPOTNDZ3VGTkdhT005bk5QWkNlYno0VGFiMVJiakN4aFlrRFhMM1pPSXV1QzZYMVA4cW12RXIwZmtMX0w2Z0NSSFRraE9sczE2M3dGV2NUQWdqa0w?oc=5",
-          "publishedAt": "2026-11-18T22:57:01.000Z",
-          "stage": "Advanced talks",
-          "cooler": null,
-          "recency": 0.742,
-          "contribution": 0.4373
-        }
-      ],
-      "latestAt": "2026-11-20T08:51:19.000Z",
-      "earliestAt": "2026-11-18T22:57:01.000Z",
-      "heuristicProbability": 19,
-      "llm": {
-        "adjustment": -8,
-        "note": "Mudryk is linked mainly with a Chelsea renaissance, while Tottenham references concern past talks and a possible return.",
-        "renamedFrom": null,
-        "redirectedFrom": null
-      },
-      "confirmedAt": null,
-      "previousProbability": 15,
-      "change": -4,
-      "isNew": false,
-      "history": [
-        {
-          "t": 1795055783944,
-          "p": 18
-        },
-        {
-          "t": 1795088824909,
-          "p": 42
-        },
-        {
-          "t": 1795120956734,
-          "p": 42
-        },
-        {
-          "t": 1795141295056,
-          "p": 23
-        },
-        {
-          "t": 1795175259666,
-          "p": 18
-        },
-        {
-          "t": 1795206429721,
-          "p": 15
-        },
-        {
-          "t": 1795227777123,
-          "p": 15
-        },
-        {
-          "t": 1795259646554,
-          "p": 15
-        },
-        {
-          "t": 1795288918681,
-          "p": 22
-        },
-        {
-          "t": 1795310546424,
-          "p": 22
-        },
-        {
-          "t": 1795347174011,
-          "p": 39
-        },
-        {
-          "t": 1795376729208,
-          "p": 11
+          "t": 1795398422218,
+          "p": 13
         }
       ]
     }
